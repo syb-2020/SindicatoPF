@@ -28,63 +28,63 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnbuscarsocio = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnbuscarsocioadmi = new System.Windows.Forms.Button();
+            this.btneliminarsocioadmi = new System.Windows.Forms.Button();
+            this.btnagregarsocioadm = new System.Windows.Forms.Button();
+            this.btnplantasadmi = new System.Windows.Forms.Button();
+            this.btnnavidadadm = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnbuscarsocio
+            // btnbuscarsocioadmi
             // 
-            this.btnbuscarsocio.Location = new System.Drawing.Point(31, 30);
-            this.btnbuscarsocio.Name = "btnbuscarsocio";
-            this.btnbuscarsocio.Size = new System.Drawing.Size(122, 23);
-            this.btnbuscarsocio.TabIndex = 0;
-            this.btnbuscarsocio.Text = "Buscar Socio";
-            this.btnbuscarsocio.UseVisualStyleBackColor = true;
-            this.btnbuscarsocio.Click += new System.EventHandler(this.button1_Click);
+            this.btnbuscarsocioadmi.Location = new System.Drawing.Point(31, 30);
+            this.btnbuscarsocioadmi.Name = "btnbuscarsocioadmi";
+            this.btnbuscarsocioadmi.Size = new System.Drawing.Size(122, 23);
+            this.btnbuscarsocioadmi.TabIndex = 0;
+            this.btnbuscarsocioadmi.Text = "Buscar Socio";
+            this.btnbuscarsocioadmi.UseVisualStyleBackColor = true;
+            this.btnbuscarsocioadmi.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btneliminarsocioadmi
             // 
-            this.button2.Location = new System.Drawing.Point(36, 80);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(117, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Eliminar Socio";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btneliminarsocioadmi.Location = new System.Drawing.Point(36, 80);
+            this.btneliminarsocioadmi.Name = "btneliminarsocioadmi";
+            this.btneliminarsocioadmi.Size = new System.Drawing.Size(117, 23);
+            this.btneliminarsocioadmi.TabIndex = 1;
+            this.btneliminarsocioadmi.Text = "Eliminar Socio";
+            this.btneliminarsocioadmi.UseVisualStyleBackColor = true;
+            this.btneliminarsocioadmi.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // btnagregarsocioadm
             // 
-            this.button3.Location = new System.Drawing.Point(36, 134);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(117, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Agregar Socio";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnagregarsocioadm.Location = new System.Drawing.Point(36, 134);
+            this.btnagregarsocioadm.Name = "btnagregarsocioadm";
+            this.btnagregarsocioadm.Size = new System.Drawing.Size(117, 23);
+            this.btnagregarsocioadm.TabIndex = 2;
+            this.btnagregarsocioadm.Text = "Agregar Socio";
+            this.btnagregarsocioadm.UseVisualStyleBackColor = true;
+            this.btnagregarsocioadm.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // btnplantasadmi
             // 
-            this.button4.Location = new System.Drawing.Point(36, 185);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(117, 23);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Plantas";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnplantasadmi.Location = new System.Drawing.Point(36, 185);
+            this.btnplantasadmi.Name = "btnplantasadmi";
+            this.btnplantasadmi.Size = new System.Drawing.Size(117, 23);
+            this.btnplantasadmi.TabIndex = 3;
+            this.btnplantasadmi.Text = "Plantas";
+            this.btnplantasadmi.UseVisualStyleBackColor = true;
+            this.btnplantasadmi.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button5
+            // btnnavidadadm
             // 
-            this.button5.Location = new System.Drawing.Point(36, 240);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(117, 23);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Listado Navidad";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btnnavidadadm.Location = new System.Drawing.Point(36, 240);
+            this.btnnavidadadm.Name = "btnnavidadadm";
+            this.btnnavidadadm.Size = new System.Drawing.Size(117, 23);
+            this.btnnavidadadm.TabIndex = 4;
+            this.btnnavidadadm.Text = "Listado Navidad";
+            this.btnnavidadadm.UseVisualStyleBackColor = true;
+            this.btnnavidadadm.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -102,11 +102,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.btnbuscarsocio);
+            this.Controls.Add(this.btnnavidadadm);
+            this.Controls.Add(this.btnplantasadmi);
+            this.Controls.Add(this.btnagregarsocioadm);
+            this.Controls.Add(this.btneliminarsocioadmi);
+            this.Controls.Add(this.btnbuscarsocioadmi);
             this.Name = "Administrador";
             this.Text = "Administrador";
             this.ResumeLayout(false);
@@ -115,11 +115,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnbuscarsocio;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnbuscarsocioadmi;
+        private System.Windows.Forms.Button btneliminarsocioadmi;
+        private System.Windows.Forms.Button btnagregarsocioadm;
+        private System.Windows.Forms.Button btnplantasadmi;
+        private System.Windows.Forms.Button btnnavidadadm;
         private System.Windows.Forms.Button button6;
     }
 }

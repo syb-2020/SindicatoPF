@@ -81,7 +81,9 @@
             this.ofdseleccionarimagensocio = new System.Windows.Forms.OpenFileDialog();
             this.btnseleccionarimagen = new System.Windows.Forms.Button();
             this.label26 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboconvivienteconyugesocio = new System.Windows.Forms.ComboBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.txtedadconyugesocio = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.fotosocio)).BeginInit();
             this.SuspendLayout();
             // 
@@ -552,23 +554,41 @@
             this.label26.TabIndex = 53;
             this.label26.Text = "Conviviente";
             // 
-            // comboBox1
+            // comboconvivienteconyugesocio
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboconvivienteconyugesocio.FormattingEnabled = true;
+            this.comboconvivienteconyugesocio.Items.AddRange(new object[] {
             "SI",
             "NO"});
-            this.comboBox1.Location = new System.Drawing.Point(532, 93);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 21);
-            this.comboBox1.TabIndex = 54;
+            this.comboconvivienteconyugesocio.Location = new System.Drawing.Point(532, 93);
+            this.comboconvivienteconyugesocio.Name = "comboconvivienteconyugesocio";
+            this.comboconvivienteconyugesocio.Size = new System.Drawing.Size(200, 21);
+            this.comboconvivienteconyugesocio.TabIndex = 54;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(406, 192);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(32, 13);
+            this.label27.TabIndex = 55;
+            this.label27.Text = "Edad";
+            // 
+            // txtedadconyugesocio
+            // 
+            this.txtedadconyugesocio.Location = new System.Drawing.Point(532, 195);
+            this.txtedadconyugesocio.Name = "txtedadconyugesocio";
+            this.txtedadconyugesocio.Size = new System.Drawing.Size(200, 20);
+            this.txtedadconyugesocio.TabIndex = 56;
             // 
             // AgregarSocio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1002, 646);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.txtedadconyugesocio);
+            this.Controls.Add(this.label27);
+            this.Controls.Add(this.comboconvivienteconyugesocio);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.btnseleccionarimagen);
             this.Controls.Add(this.fotosocio);
@@ -684,6 +704,8 @@
         private System.Windows.Forms.OpenFileDialog ofdseleccionarimagensocio;
         private System.Windows.Forms.Button btnseleccionarimagen;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboconvivienteconyugesocio;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.TextBox txtedadconyugesocio;
     }
 }

@@ -40,6 +40,7 @@ namespace SocioSindicato.ViewsAdministrador
         {
             using (sindicatoPFEntities context = new sindicatoPFEntities())
             {
+               
                 try
                 {
                     Socio nuevosocio = new Socio {
@@ -59,9 +60,24 @@ namespace SocioSindicato.ViewsAdministrador
                         nacionalidad = txtnacionalidadsocio.Text,
                         correo = txtcorreosocio.Text,
                         datos_papa = txtnombrepadre.Text,
-                        datos_mama = txtnombremadre.Text,
-                        
+                        datos_mama = txtnombremadre.Text,                        
+                    };
 
+                    Conyuge con = new Conyuge
+                    {
+                        rut_socio = txtrutsocio.Text,
+                        nombre = txtconyugesocio.Text,
+                        conviviente = comboconvivienteconyugesocio.Text,
+                        rut = txtrutconyugesocio.Text,
+                        nacimiento = Convert.ToDateTime(datefechanacimientoconyugesocio),
+                        edad = Convert.ToInt32(txtedadconyugesocio.Text)
+                    };
+
+                    Hijo hs = new Hijo { 
+                    rut_socio = txtrutsocio.Text,
+                    nombre = txtnombrehijosocio.Text,
+                    rut_hijo = txtruthijosocio.Text,
+                    nacimiento = Convert.ToDateTime(datenacimientohijosocio)
                     };
                         
                 }
