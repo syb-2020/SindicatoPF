@@ -40,8 +40,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtnombresocio = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.boxcontratosi = new System.Windows.Forms.CheckBox();
-            this.boxcontratono = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
             this.datefechanacimientosocio = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
@@ -51,7 +49,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtestadocivilsocio = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.boxcargassocio = new System.Windows.Forms.ComboBox();
+            this.combocargasocio = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtnacionalidadsocio = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -75,6 +73,10 @@
             this.txtnombrehijosocio = new System.Windows.Forms.TextBox();
             this.txtruthijosocio = new System.Windows.Forms.TextBox();
             this.datenacimientohijosocio = new System.Windows.Forms.DateTimePicker();
+            this.btnagregarsocio = new System.Windows.Forms.Button();
+            this.combocontratosocio = new System.Windows.Forms.ComboBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.txttelefonosocio = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnvolveragregar
@@ -137,7 +139,7 @@
             "Planta 4",
             "Planta Pizza",
             "CDT",
-            "Carnicos "});
+            "Planta Carnicos "});
             this.comboplantasocio.Location = new System.Drawing.Point(117, 192);
             this.comboplantasocio.Name = "comboplantasocio";
             this.comboplantasocio.Size = new System.Drawing.Size(121, 21);
@@ -192,26 +194,6 @@
             this.label6.Size = new System.Drawing.Size(96, 13);
             this.label6.TabIndex = 11;
             this.label6.Text = "Contrato Indefinido";
-            // 
-            // boxcontratosi
-            // 
-            this.boxcontratosi.AutoSize = true;
-            this.boxcontratosi.Location = new System.Drawing.Point(126, 162);
-            this.boxcontratosi.Name = "boxcontratosi";
-            this.boxcontratosi.Size = new System.Drawing.Size(36, 17);
-            this.boxcontratosi.TabIndex = 12;
-            this.boxcontratosi.Text = "SI";
-            this.boxcontratosi.UseVisualStyleBackColor = true;
-            // 
-            // boxcontratono
-            // 
-            this.boxcontratono.AutoSize = true;
-            this.boxcontratono.Location = new System.Drawing.Point(175, 161);
-            this.boxcontratono.Name = "boxcontratono";
-            this.boxcontratono.Size = new System.Drawing.Size(42, 17);
-            this.boxcontratono.TabIndex = 13;
-            this.boxcontratono.Text = "NO";
-            this.boxcontratono.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
@@ -280,16 +262,16 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(19, 368);
+            this.label11.Location = new System.Drawing.Point(16, 422);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(94, 13);
             this.label11.TabIndex = 22;
             this.label11.Text = "Numero de cargas";
             // 
-            // boxcargassocio
+            // combocargasocio
             // 
-            this.boxcargassocio.FormattingEnabled = true;
-            this.boxcargassocio.Items.AddRange(new object[] {
+            this.combocargasocio.FormattingEnabled = true;
+            this.combocargasocio.Items.AddRange(new object[] {
             "0",
             "1",
             "2",
@@ -306,15 +288,15 @@
             "13",
             "14",
             "15"});
-            this.boxcargassocio.Location = new System.Drawing.Point(117, 368);
-            this.boxcargassocio.Name = "boxcargassocio";
-            this.boxcargassocio.Size = new System.Drawing.Size(121, 21);
-            this.boxcargassocio.TabIndex = 23;
+            this.combocargasocio.Location = new System.Drawing.Point(117, 422);
+            this.combocargasocio.Name = "combocargasocio";
+            this.combocargasocio.Size = new System.Drawing.Size(121, 21);
+            this.combocargasocio.TabIndex = 23;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(19, 413);
+            this.label12.Location = new System.Drawing.Point(21, 449);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(69, 13);
             this.label12.TabIndex = 24;
@@ -322,7 +304,7 @@
             // 
             // txtnacionalidadsocio
             // 
-            this.txtnacionalidadsocio.Location = new System.Drawing.Point(117, 406);
+            this.txtnacionalidadsocio.Location = new System.Drawing.Point(117, 449);
             this.txtnacionalidadsocio.Name = "txtnacionalidadsocio";
             this.txtnacionalidadsocio.Size = new System.Drawing.Size(100, 20);
             this.txtnacionalidadsocio.TabIndex = 25;
@@ -330,7 +312,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(17, 451);
+            this.label13.Location = new System.Drawing.Point(17, 487);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(94, 13);
             this.label13.TabIndex = 26;
@@ -338,7 +320,7 @@
             // 
             // txtcorreosocio
             // 
-            this.txtcorreosocio.Location = new System.Drawing.Point(117, 448);
+            this.txtcorreosocio.Location = new System.Drawing.Point(117, 487);
             this.txtcorreosocio.Name = "txtcorreosocio";
             this.txtcorreosocio.Size = new System.Drawing.Size(100, 20);
             this.txtcorreosocio.TabIndex = 27;
@@ -346,7 +328,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(19, 485);
+            this.label14.Location = new System.Drawing.Point(21, 523);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(89, 13);
             this.label14.TabIndex = 28;
@@ -355,7 +337,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(19, 521);
+            this.label15.Location = new System.Drawing.Point(19, 552);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(91, 13);
             this.label15.TabIndex = 29;
@@ -363,14 +345,14 @@
             // 
             // txtnombrepadre
             // 
-            this.txtnombrepadre.Location = new System.Drawing.Point(117, 485);
+            this.txtnombrepadre.Location = new System.Drawing.Point(117, 523);
             this.txtnombrepadre.Name = "txtnombrepadre";
             this.txtnombrepadre.Size = new System.Drawing.Size(100, 20);
             this.txtnombrepadre.TabIndex = 30;
             // 
             // txtnombremadre
             // 
-            this.txtnombremadre.Location = new System.Drawing.Point(117, 521);
+            this.txtnombremadre.Location = new System.Drawing.Point(117, 549);
             this.txtnombremadre.Name = "txtnombremadre";
             this.txtnombremadre.Size = new System.Drawing.Size(100, 20);
             this.txtnombremadre.TabIndex = 31;
@@ -498,11 +480,52 @@
             this.datenacimientohijosocio.Size = new System.Drawing.Size(200, 20);
             this.datenacimientohijosocio.TabIndex = 46;
             // 
+            // btnagregarsocio
+            // 
+            this.btnagregarsocio.Location = new System.Drawing.Point(441, 576);
+            this.btnagregarsocio.Name = "btnagregarsocio";
+            this.btnagregarsocio.Size = new System.Drawing.Size(118, 23);
+            this.btnagregarsocio.TabIndex = 47;
+            this.btnagregarsocio.Text = "Agregar Socio";
+            this.btnagregarsocio.UseVisualStyleBackColor = true;
+            this.btnagregarsocio.Click += new System.EventHandler(this.btnagregarsocio_Click);
+            // 
+            // combocontratosocio
+            // 
+            this.combocontratosocio.FormattingEnabled = true;
+            this.combocontratosocio.Items.AddRange(new object[] {
+            "SI",
+            "NO"});
+            this.combocontratosocio.Location = new System.Drawing.Point(117, 158);
+            this.combocontratosocio.Name = "combocontratosocio";
+            this.combocontratosocio.Size = new System.Drawing.Size(121, 21);
+            this.combocontratosocio.TabIndex = 48;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(21, 368);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(49, 13);
+            this.label25.TabIndex = 49;
+            this.label25.Text = "Telefono";
+            // 
+            // txttelefonosocio
+            // 
+            this.txttelefonosocio.Location = new System.Drawing.Point(117, 368);
+            this.txttelefonosocio.Name = "txttelefonosocio";
+            this.txttelefonosocio.Size = new System.Drawing.Size(100, 20);
+            this.txttelefonosocio.TabIndex = 50;
+            // 
             // AgregarSocio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1002, 646);
+            this.Controls.Add(this.txttelefonosocio);
+            this.Controls.Add(this.label25);
+            this.Controls.Add(this.combocontratosocio);
+            this.Controls.Add(this.btnagregarsocio);
             this.Controls.Add(this.datenacimientohijosocio);
             this.Controls.Add(this.txtruthijosocio);
             this.Controls.Add(this.txtnombrehijosocio);
@@ -526,7 +549,7 @@
             this.Controls.Add(this.label13);
             this.Controls.Add(this.txtnacionalidadsocio);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.boxcargassocio);
+            this.Controls.Add(this.combocargasocio);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtestadocivilsocio);
             this.Controls.Add(this.label10);
@@ -536,8 +559,6 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.datefechanacimientosocio);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.boxcontratono);
-            this.Controls.Add(this.boxcontratosi);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtnombresocio);
             this.Controls.Add(this.label5);
@@ -571,8 +592,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtnombresocio;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.CheckBox boxcontratosi;
-        private System.Windows.Forms.CheckBox boxcontratono;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker datefechanacimientosocio;
         private System.Windows.Forms.Label label8;
@@ -582,7 +601,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtestadocivilsocio;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox boxcargassocio;
+        private System.Windows.Forms.ComboBox combocargasocio;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtnacionalidadsocio;
         private System.Windows.Forms.Label label13;
@@ -606,5 +625,9 @@
         private System.Windows.Forms.TextBox txtnombrehijosocio;
         private System.Windows.Forms.TextBox txtruthijosocio;
         private System.Windows.Forms.DateTimePicker datenacimientohijosocio;
+        private System.Windows.Forms.Button btnagregarsocio;
+        private System.Windows.Forms.ComboBox combocontratosocio;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TextBox txttelefonosocio;
     }
 }
