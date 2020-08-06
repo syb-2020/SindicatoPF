@@ -46,7 +46,7 @@ namespace SocioSindicato.ViewsAdministrador
                         grideliminar.DataSource = listRut.ToList();
                         lbeliminar.Text = "Socio encontrado!";
                         rut_socio = listRut.ToList()[0].Nombre;
-                        txteliminar.Text = "";
+                        
                     }
                     else
                     {
