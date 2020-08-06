@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,15 @@ namespace SocioSindicato.ViewsAdministrador
         public AgregarSocio()
         {
             InitializeComponent();
+            sindicatoPFEntities context = new sindicatoPFEntities();
+            combocategoriasocio.DataSource = context.Categoria.ToList();
+            combocategoriasocio.DisplayMember = "numero_categoria";
+            combocategoriasocio.ValueMember = "id_categoria";
+
+            comboplantasocio.DataSource = context.Planta.ToList();
+            comboplantasocio.DisplayMember = "nombre";
+            comboplantasocio.ValueMember = "id_planta";
+
         }
 
         private void btnvolveragregar_Click(object sender, EventArgs e)
@@ -62,5 +72,25 @@ namespace SocioSindicato.ViewsAdministrador
                 }
             }
             }
+
+       
+        private void combocategoriasocio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+         
+
+        }
+
+        private void btnseleccionarimagen_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog seleccion = new OpenFileDialog();
+            seleccion.Filter = "Imagenes |*.jpg; *.png";
+            seleccion.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
+            seleccion.Title = "Seleccionar Imagen";
+
+            if (seleccion.ShowDialog() == DialogResult.OK)
+            {
+                fotosocio.Image = Image.FromFile(seleccion.FileName);
+            }
+        }
     }
 }
