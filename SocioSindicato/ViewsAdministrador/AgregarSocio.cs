@@ -28,6 +28,8 @@ namespace SocioSindicato.ViewsAdministrador
 
         }
 
+        public string cadena = "";
+
         private void btnvolveragregar_Click(object sender, EventArgs e)
         {
             Administrador bs = new Administrador();
@@ -60,7 +62,10 @@ namespace SocioSindicato.ViewsAdministrador
                 fotosocio.Image = img;
 
                 byte[] byteImg = ImageToByteArray(fotosocio.Image, fotosocio);
+                //cadena = Encoding.UTF8.GetString(byteImg);
             }
+            
+           
         }
 
         private void btnagregarsocio_Click(object sender, EventArgs e)

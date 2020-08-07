@@ -62,8 +62,9 @@ namespace SocioSindicato.ViewsAdministrador
       
         private void btneliminar_Click(object sender, EventArgs e)
         {
-           
-            using (sindicatoPFEntities context = new sindicatoPFEntities()) {
+
+            using (sindicatoPFEntities context = new sindicatoPFEntities())
+            {
 
                 string eli = txteliminar.Text;
                 if (txteliminar.Text == "")
@@ -74,34 +75,43 @@ namespace SocioSindicato.ViewsAdministrador
                 }
                 else
                 {
-
-                    var result = from c in context.Socio
-                                 where c.rut_socio.Equals(eli)
-                                 select c;
-                    string rut_soc = result.ToList()[0].rut_socio;
-                    if (result.Count() != 0)
+                    try
                     {
-                        
-                            Socio users = new Socio();
-                            users.rut_socio = txteliminar.Text;
-                            context.Socio.Remove(context.Socio.Find(rut_soc));
-                            context.SaveChanges();
+                        var result1 = from c in context.Conyuge
+                                      where c.rut_socio.Equals(eli)
+                                      select new { id_con = c.id_conyuge };
+                        int rut_soc1 = result1.ToList()[0].id_con;
 
-                            lbeliminar.Text = "Socio Eliminado!";
-                            grideliminar.DataSource = "";
-                            txteliminar.Text = "";
+                        var result2 = from c in context.Hijo
+                                      where c.rut_socio.Equals(eli)
+                                      select new { id_hij = c.id_hijo };
+                        int rut_soc2 = result2.ToList()[0].id_hij;
+
+                        var result3 = from c in context.Socio
+                                      where c.rut_socio.Equals(eli)
+                                      select c;
+                        string rut_soc3 = result3.ToList()[0].rut_socio;
+
+
+                        context.Conyuge.Remove(context.Conyuge.Find(rut_soc1));
+                        context.Hijo.Remove(context.Hijo.Find(rut_soc2));
+                        context.Socio.Remove(context.Socio.Find(rut_soc3));
+                        context.SaveChanges();
+
+                        lbeliminar.Text = "Socio Eliminado!";
+                        grideliminar.DataSource = "";
+                        txteliminar.Text = "";
 
                     }
-                    else
+                    catch (Exception)
                     {
                         lbeliminar.Text = "Socio no eliminado!";
                         grideliminar.DataSource = "";
                         txteliminar.Text = "";
                     }
-
                 }
             }
-                
+
         }
 
         private void btnvolvereliminar_Click(object sender, EventArgs e)
