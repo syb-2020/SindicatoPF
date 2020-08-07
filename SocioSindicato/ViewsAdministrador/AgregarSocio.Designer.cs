@@ -84,6 +84,7 @@
             this.comboconvivienteconyugesocio = new System.Windows.Forms.ComboBox();
             this.label27 = new System.Windows.Forms.Label();
             this.txtedadconyugesocio = new System.Windows.Forms.TextBox();
+            this.lbagregadosocio = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.fotosocio)).BeginInit();
             this.SuspendLayout();
             // 
@@ -129,7 +130,7 @@
             this.combocategoriasocio.Name = "combocategoriasocio";
             this.combocategoriasocio.Size = new System.Drawing.Size(200, 21);
             this.combocategoriasocio.TabIndex = 4;
-            this.combocategoriasocio.SelectedIndexChanged += new System.EventHandler(this.combocategoriasocio_SelectedIndexChanged);
+            
             // 
             // comboplantasocio
             // 
@@ -581,11 +582,20 @@
             this.txtedadconyugesocio.Size = new System.Drawing.Size(200, 20);
             this.txtedadconyugesocio.TabIndex = 56;
             // 
+            // lbagregadosocio
+            // 
+            this.lbagregadosocio.AutoSize = true;
+            this.lbagregadosocio.Location = new System.Drawing.Point(493, 409);
+            this.lbagregadosocio.Name = "lbagregadosocio";
+            this.lbagregadosocio.Size = new System.Drawing.Size(0, 13);
+            this.lbagregadosocio.TabIndex = 57;
+            // 
             // AgregarSocio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1002, 646);
+            this.Controls.Add(this.lbagregadosocio);
             this.Controls.Add(this.txtedadconyugesocio);
             this.Controls.Add(this.label27);
             this.Controls.Add(this.comboconvivienteconyugesocio);
@@ -707,5 +717,6 @@
         private System.Windows.Forms.ComboBox comboconvivienteconyugesocio;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.TextBox txtedadconyugesocio;
+        private System.Windows.Forms.Label lbagregadosocio;
     }
 }

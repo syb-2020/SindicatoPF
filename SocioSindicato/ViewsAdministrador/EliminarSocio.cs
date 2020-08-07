@@ -83,7 +83,7 @@ namespace SocioSindicato.ViewsAdministrador
                     try
                     {
                         Usuario users = new Usuario();
-                    context.Usuario.Remove(context.Usuario.Find(id_socio));
+                        context.Usuario.Remove(context.Usuario.Find(id_socio));
                         context.SaveChanges();
 
                         lbeliminar.Text = "Socio Eliminado!";
