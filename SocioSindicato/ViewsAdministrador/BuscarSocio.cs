@@ -25,10 +25,9 @@ namespace SocioSindicato.ViewsAdministrador
 
                 string buscar_rut = txtbuscar.Text;
                 
-                var listRut = from sociorut in context.Usuario join sociorol in context.Rol
-                              on sociorut.id_rol equals sociorol.id_rol
-                              where sociorut.nombre.Equals(buscar_rut)
-                              select new { IDUSUARIO= sociorut.id_usuario,Nombre = sociorut.nombre, IDROL = sociorol.id_rol };
+                var listRut = from sociorut in context.Socio 
+                              where sociorut.rut_socio.Equals(buscar_rut)
+                              select new { Rut= sociorut.rut_socio,Nombre = sociorut.nombre_socio, Categoria = sociorut.id_categoria, Planta = sociorut.Planta.nombre, FechaDeIngreso= sociorut.fecha_ingreso };
 
                 if (txtbuscar.Text=="")
                 {

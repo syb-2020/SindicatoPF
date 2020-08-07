@@ -84,7 +84,7 @@ namespace SocioSindicato.ViewsAdministrador
                         domicilio = txtdomiciliosocio.Text,
                         estado_civil = txtestadocivilsocio.Text,
                         telefono = Convert.ToInt32(txttelefonosocio.Text),
-                        cantidad_carga = Convert.ToInt32(combocargasocio.SelectedValue),
+                        cantidad_carga = Convert.ToInt32(combocargasocio.SelectedItem.ToString()),
                         nacionalidad = txtnacionalidadsocio.Text,
                         correo = txtcorreosocio.Text,
                         datos_papa = txtnombrepadre.Text,

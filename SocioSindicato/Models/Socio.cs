@@ -45,7 +45,5 @@ namespace SocioSindicato.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Hijo> Hijo { get; set; }
         public virtual Planta Planta { get; set; }
-
-        
     }
 }

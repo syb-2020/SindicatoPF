@@ -24,14 +24,12 @@ namespace SocioSindicato.ViewsAdministrador
 
             using (sindicatoPFEntities context = new sindicatoPFEntities())
             {
+
                 string buscar_rut = txteliminar.Text;
 
-                var listRut = from sociorut in context.Usuario
-                              join sociorol in context.Rol
-                              on sociorut.id_rol equals sociorol.id_rol
-                              where sociorut.nombre.Equals(buscar_rut)
-                              select new { IDUSUARIO = sociorut.id_usuario, Nombre = sociorut.nombre, IDROL = sociorol.id_rol };
-
+                var listRut = from sociorut in context.Socio
+                              where sociorut.rut_socio.Equals(buscar_rut)
+                              select new { Rut = sociorut.rut_socio, Nombre = sociorut.nombre_socio, Categoria = sociorut.id_categoria, Planta = sociorut.Planta.nombre, FechaDeIngreso = sociorut.fecha_ingreso };
 
                 if (txteliminar.Text == "")
                 {
@@ -43,10 +41,10 @@ namespace SocioSindicato.ViewsAdministrador
                 {
                     if (listRut.Count() != 0)
                     {
-                        grideliminar.DataSource = listRut.ToList();
+
                         lbeliminar.Text = "Socio encontrado!";
-                        rut_socio = listRut.ToList()[0].Nombre;
-                        
+                        grideliminar.DataSource = listRut.ToList();                   
+
                     }
                     else
                     {
@@ -54,8 +52,10 @@ namespace SocioSindicato.ViewsAdministrador
                         grideliminar.DataSource = "";
                         txteliminar.Text = "";
 
+
                     }
                 }
+
             }
 
         }
@@ -75,29 +75,30 @@ namespace SocioSindicato.ViewsAdministrador
                 else
                 {
 
-                    var result = from c in context.Usuario
-                                 where c.nombre.Equals(rut_socio)
+                    var result = from c in context.Socio
+                                 where c.rut_socio.Equals(eli)
                                  select c;
-                int id_socio = result.ToList()[0].id_usuario;
-
-                    try
+                    string rut_soc = result.ToList()[0].rut_socio;
+                    if (result.Count() != 0)
                     {
-                        Usuario users = new Usuario();
-                        context.Usuario.Remove(context.Usuario.Find(id_socio));
-                        context.SaveChanges();
+                        
+                            Socio users = new Socio();
+                            users.rut_socio = txteliminar.Text;
+                            context.Socio.Remove(context.Socio.Find(rut_soc));
+                            context.SaveChanges();
 
-                        lbeliminar.Text = "Socio Eliminado!";
-                        grideliminar.DataSource = "";
-                        txteliminar.Text = "";
+                            lbeliminar.Text = "Socio Eliminado!";
+                            grideliminar.DataSource = "";
+                            txteliminar.Text = "";
 
                     }
-                    catch (Exception)
+                    else
                     {
                         lbeliminar.Text = "Socio no eliminado!";
                         grideliminar.DataSource = "";
                         txteliminar.Text = "";
-
                     }
+
                 }
             }
                 
