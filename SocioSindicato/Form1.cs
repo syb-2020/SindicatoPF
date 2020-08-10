@@ -32,16 +32,20 @@ namespace SocioSindicato
                 var result = from c in context.Usuario
                              where c.clave.Equals(clave) && c.nombre.Equals(nombre)
                              select c;
+                
 
                 if (result.ToList().Count == 0)
                 {
-                    lbmensaje.Text = "Usuario no valido";
+                  
+                   // MessageBox.Show("Usuario y/o Contraseña invalida");
+                    MessageBox.Show("Usuario y/o Contraseña invalida", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
 
                     int usuario_rol = result.ToList()[0].id_rol;
                     int usuario_id = result.ToList()[0].id_usuario;
+
 
                     txtusuario.Text = "";
                     txtclave.Text = "";
@@ -50,17 +54,20 @@ namespace SocioSindicato
 
                         Administrador oAdm = new Administrador();
                         this.Hide();
-                        oAdm.ShowDialog();
+                        MessageBox.Show("Bienvenido: " + nombre);
+                        oAdm.ShowDialog();                       
                         this.Close();
+                       
+
 
 
                     }
                     if (usuario_rol == 2)
                     {
                         
-                        Visitor oVis = new Visitor();
-                    
+                        Visitor oVis = new Visitor();                   
                         this.Hide();
+                        MessageBox.Show("Bienvenido: " + nombre);
                         oVis.ShowDialog();
                         this.Close();
                         
@@ -72,12 +79,16 @@ namespace SocioSindicato
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            MessageBox.Show("Programa Cerrado!");
             this.Close();
         }
 
         private void btncerrar_Click(object sender, EventArgs e)
         {
+            
             this.Close();
+            
+            
         }
 
 

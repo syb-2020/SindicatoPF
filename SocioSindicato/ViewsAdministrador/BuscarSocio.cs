@@ -36,7 +36,11 @@ namespace SocioSindicato.ViewsAdministrador
                 
                 if (txtbuscar.Text=="")
                 {
-                    lbbuscarsocio.Text = "Ingrese Rut Socio!";
+                    //lbbuscarsocio.Text = "Ingrese Rut Socio!";
+                    
+                    MessageBox.Show("Ingrese Rut del socio!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+
                     gridbuscar.DataSource = "";
                     txtbuscar.Text = "";
                 }
@@ -45,20 +49,23 @@ namespace SocioSindicato.ViewsAdministrador
                     if (listRut.Count() != 0)
                     {
 
-                        lbbuscarsocio.Text = "Socio encontrado!";
+                        MessageBox.Show("Socio encontrado!");
+
                         gridbuscar.DataSource = listRut.ToList();
                         txtbuscar.Text = "";
                                             
-                        MemoryStream ms = new MemoryStream(Convert.ToInt32(listimg));
-                        Bitmap bmp = new Bitmap(ms);
-                        imagenbuscarsociomostrar.Image = bmp;
+                        //MemoryStream ms = new MemoryStream(Convert.ToInt32(listimg));
+                        //Bitmap bmp = new Bitmap(ms);
+                        //imagenbuscarsociomostrar.Image = bmp;
 
                         //imagenbuscarsociomostrar.Image = new Bitmap(Convert.ToString(mf));
 
                     }
                     else
                     {
-                        lbbuscarsocio.Text = "Socio no encontrado!";
+                        
+                      
+                        MessageBox.Show("Socio No Encontrado!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         gridbuscar.DataSource = "";
                         txtbuscar.Text = "";
 

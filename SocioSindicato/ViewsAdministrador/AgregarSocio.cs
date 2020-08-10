@@ -119,13 +119,14 @@ namespace SocioSindicato.ViewsAdministrador
                     context.SaveChanges();
 
 
-                    lbagregadosocio.Text = "Socio Ingresado!";
+                    MessageBox.Show("Socio Agregado Correctamente!");
 
                 }
                 catch (Exception)
                 {
 
-                    lbagregadosocio.Text = "Socio No Ingresado!";
+                   
+                    MessageBox.Show("Socio No Agregado", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             }

@@ -135,12 +135,6 @@
     <Compile Include="ViewsAdministrador\Plantas.Designer.cs">
       <DependentUpon>Plantas.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewsAdministrador\pruebaverfoto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ViewsAdministrador\pruebaverfoto.Designer.cs">
-      <DependentUpon>pruebaverfoto.cs</DependentUpon>
-    </Compile>
     <Compile Include="Visitor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,9 +171,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ViewsAdministrador\Plantas.resx">
       <DependentUpon>Plantas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ViewsAdministrador\pruebaverfoto.resx">
-      <DependentUpon>pruebaverfoto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Visitor.resx">
       <DependentUpon>Visitor.cs</DependentUpon>

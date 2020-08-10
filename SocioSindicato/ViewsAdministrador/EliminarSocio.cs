@@ -33,7 +33,9 @@ namespace SocioSindicato.ViewsAdministrador
 
                 if (txteliminar.Text == "")
                 {
-                    lbeliminar.Text = "Ingrese Rut Socio!";
+                    
+                    
+                    MessageBox.Show("Ingrese Rut del socio!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     grideliminar.DataSource = "";
                     txteliminar.Text = "";
                 }
@@ -42,13 +44,15 @@ namespace SocioSindicato.ViewsAdministrador
                     if (listRut.Count() != 0)
                     {
 
-                        lbeliminar.Text = "Socio encontrado!";
+                        
                         grideliminar.DataSource = listRut.ToList();                   
 
                     }
                     else
                     {
-                        lbeliminar.Text = "Socio no encontrado!";
+                    
+                       
+                        MessageBox.Show("Socio No Encontrado!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         grideliminar.DataSource = "";
                         txteliminar.Text = "";
 
@@ -69,7 +73,8 @@ namespace SocioSindicato.ViewsAdministrador
                 string eli = txteliminar.Text;
                 if (txteliminar.Text == "")
                 {
-                    lbeliminar.Text = "Ingrese Rut para eliminar socio";
+                    
+                    MessageBox.Show("Ingrese Rut Del Socio Para Eliminar!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     grideliminar.DataSource = "";
                     txteliminar.Text = "";
                 }
@@ -98,14 +103,17 @@ namespace SocioSindicato.ViewsAdministrador
                         context.Socio.Remove(context.Socio.Find(rut_soc3));
                         context.SaveChanges();
 
-                        lbeliminar.Text = "Socio Eliminado!";
+                      
+                        MessageBox.Show("Socio Eliminado!");
                         grideliminar.DataSource = "";
                         txteliminar.Text = "";
 
                     }
                     catch (Exception)
                     {
-                        lbeliminar.Text = "Socio no eliminado!";
+                        
+
+                        MessageBox.Show("Socio No Eliminado!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         grideliminar.DataSource = "";
                         txteliminar.Text = "";
                     }

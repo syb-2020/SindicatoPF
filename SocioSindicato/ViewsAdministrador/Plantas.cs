@@ -37,7 +37,8 @@ namespace SocioSindicato.ViewsAdministrador
                                     where plansoc.id_planta.Equals(idp1)
                                     select new { NOMBRE = socplan.nombre_socio, RUT = socplan.rut_socio, PLANTA = plansoc.nombre };
 
-                lbsocioplantaencontrado.Text = "Socios Planta 1 encontrados!";
+               
+                MessageBox.Show("Socio Planta 1 Encontrados!");
                 gridverplantas.DataSource = sociosplanta1.ToList();
 
 
@@ -47,17 +48,25 @@ namespace SocioSindicato.ViewsAdministrador
 
         private void btnplanta2_Click(object sender, EventArgs e)
         {
+            
             using (sindicatoPFEntities context = new sindicatoPFEntities())
             {
                 int idp2 = 2;
+                
                 var sociosplanta2 = from socplan in context.Socio
                                     join plansoc in context.Planta
                                     on socplan.id_planta equals plansoc.id_planta
                                     where plansoc.id_planta.Equals(idp2)
                                     select new { NOMBRE = socplan.nombre_socio, RUT = socplan.rut_socio, PLANTA = plansoc.nombre };
 
-                lbsocioplantaencontrado.Text = "Socios Planta 2 encontrados!";
-                gridverplantas.DataSource = sociosplanta2.ToList();
+               
+                    MessageBox.Show("Socio Planta 2 Encontrados!");
+                    gridverplantas.DataSource = sociosplanta2.ToList();
+               
+               
+                  
+
+               
 
 
             }
@@ -74,7 +83,8 @@ namespace SocioSindicato.ViewsAdministrador
                                     where plansoc.id_planta.Equals(idp3)
                                     select new { NOMBRE = socplan.nombre_socio, RUT = socplan.rut_socio, PLANTA = plansoc.nombre };
 
-                lbsocioplantaencontrado.Text = "Socios Planta 3 encontrados!";
+                
+                MessageBox.Show("Socio Planta 3 Encontrados!");
                 gridverplantas.DataSource = sociosplanta3.ToList();
 
 
@@ -92,7 +102,8 @@ namespace SocioSindicato.ViewsAdministrador
                                     where plansoc.id_planta.Equals(idp4)
                                     select new { NOMBRE = socplan.nombre_socio, RUT = socplan.rut_socio, PLANTA = plansoc.nombre };
 
-                lbsocioplantaencontrado.Text = "Socios Planta 4 encontrados!";
+                
+                MessageBox.Show("Socio Planta 4 Encontrados!");
                 gridverplantas.DataSource = sociosplanta4.ToList();
 
 
@@ -109,7 +120,8 @@ namespace SocioSindicato.ViewsAdministrador
                                     where plansoc.id_planta.Equals(idpcdt)
                                     select new { NOMBRE = socplan.nombre_socio, RUT = socplan.rut_socio, PLANTA = plansoc.nombre };
 
-                lbsocioplantaencontrado.Text = "Socios Planta CDT encontrados!";
+        
+                MessageBox.Show("Socio Planta CDT Encontrados!");
                 gridverplantas.DataSource = sociosplantacdt.ToList();
 
 
@@ -127,7 +139,8 @@ namespace SocioSindicato.ViewsAdministrador
                                     where plansoc.id_planta.Equals(idpp)
                                     select new { NOMBRE = socplan.nombre_socio, RUT = socplan.rut_socio, PLANTA = plansoc.nombre };
 
-                lbsocioplantaencontrado.Text = "Socios Planta Pizza encontrados!";
+                
+                MessageBox.Show("Socio Planta Pizza Encontrados!");
                 gridverplantas.DataSource = sociosplantapizza.ToList();
 
 
@@ -145,7 +158,8 @@ namespace SocioSindicato.ViewsAdministrador
                                     where plansoc.id_planta.Equals(idpcrn)
                                     select new { NOMBRE = socplan.nombre_socio, RUT = socplan.rut_socio, PLANTA = plansoc.nombre };
 
-                lbsocioplantaencontrado.Text = "Socios Planta Carnico encontrados!";
+         
+                MessageBox.Show("Socio Planta Carnicos Encontrados!");
                 gridverplantas.DataSource = sociosplantacarnico.ToList();
 
 
@@ -163,7 +177,7 @@ namespace SocioSindicato.ViewsAdministrador
                                     orderby plansoc.id_planta
                                     select new { NOMBRE = socplan.nombre_socio, RUT = socplan.rut_socio, PLANTA = plansoc.nombre };
 
-                lbsocioplantaencontrado.Text = "Todos los socios encontrados!";
+                MessageBox.Show("Todos Los Socios!");
                 gridverplantas.DataSource = allsociosplanta.ToList();
 
 

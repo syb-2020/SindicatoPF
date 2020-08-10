@@ -21,6 +21,7 @@ namespace SocioSindicato
         {
             Form1 bs = new Form1();
             this.Hide();
+            MessageBox.Show("Cuenta cerrada!");
             bs.ShowDialog();
             this.Close();
 
