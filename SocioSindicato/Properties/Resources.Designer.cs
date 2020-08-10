@@ -63,6 +63,16 @@ namespace SocioSindicato.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _56726595_608012969610677_8790191896057085952_n {
+            get {
+                object obj = ResourceManager.GetObject("56726595_608012969610677_8790191896057085952_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Close_Icon {
             get {
                 object obj = ResourceManager.GetObject("Close_Icon", resourceCulture);
@@ -76,6 +86,26 @@ namespace SocioSindicato.Properties {
         internal static System.Drawing.Bitmap computer_icons_physician_login_medicine_user_avatar_thumb {
             get {
                 object obj = ResourceManager.GetObject("computer-icons-physician-login-medicine-user-avatar-thumb", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FondoSindicato {
+            get {
+                object obj = ResourceManager.GetObject("FondoSindicato", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FondoSindicatointento2 {
+            get {
+                object obj = ResourceManager.GetObject("FondoSindicatointento2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

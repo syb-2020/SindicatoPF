@@ -183,5 +183,36 @@ namespace SocioSindicato.ViewsAdministrador
 
             }
         }
+
+        public void exportardatos(DataGridView datalistado)
+        {
+
+            Microsoft.Office.Interop.Excel.Application exportarexcel = new Microsoft.Office.Interop.Excel.Application();
+            exportarexcel.Application.Workbooks.Add(true);
+
+            int indicecolum = 0;
+            foreach (DataGridViewColumn columna in datalistado.Columns)
+            {
+                indicecolum++;
+                exportarexcel.Cells[1, indicecolum] = columna.Name;
+            }
+            int indicefila = 0;
+            foreach (DataGridViewRow fila in datalistado.Rows)
+            {
+                indicefila++;
+                indicecolum = 0;
+                foreach (DataGridViewColumn columna in datalistado.Columns)
+                {
+                    indicecolum++;
+                    exportarexcel.Cells[indicefila + 1, indicecolum] = fila.Cells[columna.Name].Value;
+                }
+            }
+            exportarexcel.Visible = true;
+        }
+
+        private void btnddexcel_Click(object sender, EventArgs e)
+        {
+            exportardatos(gridverplantas);
+        }
     }
 }

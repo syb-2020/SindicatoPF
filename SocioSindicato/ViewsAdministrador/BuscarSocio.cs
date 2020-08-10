@@ -1,4 +1,5 @@
 ﻿using SocioSindicato.Models;
+using SpreadsheetLight;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,6 +12,7 @@ using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace SocioSindicato.ViewsAdministrador
 {
@@ -36,7 +38,7 @@ namespace SocioSindicato.ViewsAdministrador
                 
                 if (txtbuscar.Text=="")
                 {
-                    //lbbuscarsocio.Text = "Ingrese Rut Socio!";
+                    
                     
                     MessageBox.Show("Ingrese Rut del socio!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
@@ -53,13 +55,15 @@ namespace SocioSindicato.ViewsAdministrador
 
                         gridbuscar.DataSource = listRut.ToList();
                         txtbuscar.Text = "";
-                                            
-                        //MemoryStream ms = new MemoryStream(Convert.ToInt32(listimg));
-                        //Bitmap bmp = new Bitmap(ms);
-                        //imagenbuscarsociomostrar.Image = bmp;
 
-                        //imagenbuscarsociomostrar.Image = new Bitmap(Convert.ToString(mf));
-
+                        string rut = gridbuscar.Rows[gridbuscar.CurrentRow.Index].Cells[0].Value.ToString();
+                        using (sindicatoPFEntities db = new sindicatoPFEntities())
+                        {
+                            var oImage = db.Socio.Find(rut);
+                            MemoryStream ms = new MemoryStream(oImage.imagen);
+                            Bitmap bmp = new Bitmap(ms);
+                            imagenbuscarsociomostrar.Image = bmp;
+                        }
                     }
                     else
                     {
@@ -88,6 +92,36 @@ namespace SocioSindicato.ViewsAdministrador
         private void imagenbuscarsociomostrar_Click(object sender, EventArgs e)
         {
            
+        }
+
+        public void exportardatos(DataGridView datalistado) {
+
+            Microsoft.Office.Interop.Excel.Application exportarexcel = new Microsoft.Office.Interop.Excel.Application();
+            exportarexcel.Application.Workbooks.Add(true);
+
+            int indicecolum = 0;
+            foreach (DataGridViewColumn columna in datalistado.Columns)
+            {
+                indicecolum++;
+                exportarexcel.Cells[1, indicecolum] = columna.Name;
+            }
+            int indicefila = 0;
+            foreach (DataGridViewRow fila in datalistado.Rows)
+            {
+                indicefila++;
+                indicecolum = 0;
+                foreach (DataGridViewColumn columna in datalistado.Columns)
+                {
+                    indicecolum++;
+                    exportarexcel.Cells[indicefila + 1, indicecolum] = fila.Cells[columna.Name].Value;
+                }                              
+            }
+            exportarexcel.Visible = true;
+        }
+
+        private void btnddexcel_Click(object sender, EventArgs e)
+        {
+            exportardatos(gridbuscar);
         }
     }
 }

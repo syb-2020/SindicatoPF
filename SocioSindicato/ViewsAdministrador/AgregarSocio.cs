@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,7 +29,7 @@ namespace SocioSindicato.ViewsAdministrador
 
         }
 
-        public string cadena = "";
+        public byte[] file = null;
 
         private void btnvolveragregar_Click(object sender, EventArgs e)
         {
@@ -39,33 +40,31 @@ namespace SocioSindicato.ViewsAdministrador
         }
 
 
-        public static byte[] ImageToByteArray(Image img, PictureBox fotosocio)
-        {
-            System.IO.MemoryStream ms = new System.IO.MemoryStream();
-            if (fotosocio.Image != null)
-            { img.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg); }
-            return ms.ToArray();
-        }
+       
 
         private void btnseleccionarimagen_Click(object sender, EventArgs e)
         {
-            OpenFileDialog seleccion = new OpenFileDialog();
-            seleccion.Filter = "Images (*.JPEG;*.BMP;*.JPG;*.GIF;*.PNG;*.)|*.JPEG;*.BMP;*.JPG;*.GIF;*.PNG";
-            seleccion.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
-            seleccion.Title = "Seleccionar Imagen";
+            openFileDialog1.InitialDirectory = "C:/";
+            openFileDialog1.Filter = "Images (.JPEG;.BMP;.JPG;.GIF;.PNG;.)|.JPEG;.BMP;.JPG;.GIF;*.PNG";
+            openFileDialog1.FilterIndex = 1;
+            openFileDialog1.RestoreDirectory = true;
 
-            if (seleccion.ShowDialog() == DialogResult.OK)
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-
-
-                Image img = new Bitmap(seleccion.FileName);
+                Image img = new Bitmap(openFileDialog1.FileName);
                 fotosocio.Image = img;
 
-                byte[] byteImg = ImageToByteArray(fotosocio.Image, fotosocio);
-                //cadena = Encoding.UTF8.GetString(byteImg);
+
+                Stream mySream = openFileDialog1.OpenFile();
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    mySream.CopyTo(ms);
+                    file = ms.ToArray();
+                }
+
+
             }
-            
-           
+
         }
 
         private void btnagregarsocio_Click(object sender, EventArgs e)
@@ -78,7 +77,7 @@ namespace SocioSindicato.ViewsAdministrador
                 {
                     Socio nuevosocio = new Socio {
                         rut_socio = txtrutsocio.Text,
-                        imagen = fotosocio.ToString(),
+                        imagen = file,
                         nombre_socio = txtnombresocio.Text,
                         fecha_ingreso = Convert.ToDateTime(dateingresoempresasocio.Text),
                         id_categoria = Convert.ToInt32(combocategoriasocio.SelectedValue),

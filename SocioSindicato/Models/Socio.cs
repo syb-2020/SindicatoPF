@@ -22,7 +22,7 @@ namespace SocioSindicato.Models
         }
     
         public string rut_socio { get; set; }
-        public string imagen { get; set; }
+        public byte[] imagen { get; set; }
         public string nombre_socio { get; set; }
         public Nullable<System.DateTime> fecha_ingreso { get; set; }
         public int id_categoria { get; set; }

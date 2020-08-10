@@ -35,6 +35,8 @@
             this.txtcerrar = new System.Windows.Forms.Button();
             this.lbmensaje = new System.Windows.Forms.Label();
             this.txtiniciarsesion = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -97,11 +99,22 @@
             this.txtiniciarsesion.UseVisualStyleBackColor = true;
             this.txtiniciarsesion.Click += new System.EventHandler(this.button1_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SocioSindicato.Properties.Resources.FondoSindicatointento2;
+            this.pictureBox1.Location = new System.Drawing.Point(68, 244);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(234, 210);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(370, 504);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lbmensaje);
             this.Controls.Add(this.txtcerrar);
             this.Controls.Add(this.txtclave);
@@ -111,6 +124,7 @@
             this.Controls.Add(this.txtiniciarsesion);
             this.Name = "Form1";
             this.Text = "Socios Sindicato";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -125,6 +139,7 @@
         private System.Windows.Forms.TextBox txtclave;
         private System.Windows.Forms.Button txtcerrar;
         private System.Windows.Forms.Label lbmensaje;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

@@ -34,7 +34,9 @@
             this.btneliminar = new System.Windows.Forms.Button();
             this.lbeliminar = new System.Windows.Forms.Label();
             this.btnvolvereliminar = new System.Windows.Forms.Button();
+            this.pb = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.grideliminar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb)).BeginInit();
             this.SuspendLayout();
             // 
             // txteliminar
@@ -91,11 +93,21 @@
             this.btnvolvereliminar.UseVisualStyleBackColor = true;
             this.btnvolvereliminar.Click += new System.EventHandler(this.btnvolvereliminar_Click);
             // 
+            // pb
+            // 
+            this.pb.Location = new System.Drawing.Point(590, 141);
+            this.pb.Name = "pb";
+            this.pb.Size = new System.Drawing.Size(137, 114);
+            this.pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb.TabIndex = 6;
+            this.pb.TabStop = false;
+            // 
             // EliminarSocio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pb);
             this.Controls.Add(this.btnvolvereliminar);
             this.Controls.Add(this.lbeliminar);
             this.Controls.Add(this.btneliminar);
@@ -105,6 +117,7 @@
             this.Name = "EliminarSocio";
             this.Text = "EliminarSocio";
             ((System.ComponentModel.ISupportInitialize)(this.grideliminar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -118,5 +131,6 @@
         private System.Windows.Forms.Button btneliminar;
         private System.Windows.Forms.Label lbeliminar;
         private System.Windows.Forms.Button btnvolvereliminar;
+        private System.Windows.Forms.PictureBox pb;
     }
 }

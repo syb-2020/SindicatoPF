@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -45,7 +46,15 @@ namespace SocioSindicato.ViewsAdministrador
                     {
 
                         
-                        grideliminar.DataSource = listRut.ToList();                   
+                        grideliminar.DataSource = listRut.ToList();
+                        string rut = grideliminar.Rows[grideliminar.CurrentRow.Index].Cells[0].Value.ToString();
+                        using (sindicatoPFEntities db = new sindicatoPFEntities())
+                        {
+                            var oImage = db.Socio.Find(rut);
+                            MemoryStream ms = new MemoryStream(oImage.imagen);
+                            Bitmap bmp = new Bitmap(ms);
+                            pb.Image = bmp;
+                        }
 
                     }
                     else

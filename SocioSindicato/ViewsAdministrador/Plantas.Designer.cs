@@ -39,6 +39,7 @@
             this.btntodos = new System.Windows.Forms.Button();
             this.gridverplantas = new System.Windows.Forms.DataGridView();
             this.lbsocioplantaencontrado = new System.Windows.Forms.Label();
+            this.btnddexcel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridverplantas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -149,11 +150,22 @@
             this.lbsocioplantaencontrado.Size = new System.Drawing.Size(0, 13);
             this.lbsocioplantaencontrado.TabIndex = 10;
             // 
+            // btnddexcel
+            // 
+            this.btnddexcel.Location = new System.Drawing.Point(115, 328);
+            this.btnddexcel.Name = "btnddexcel";
+            this.btnddexcel.Size = new System.Drawing.Size(75, 23);
+            this.btnddexcel.TabIndex = 11;
+            this.btnddexcel.Text = "Descargar";
+            this.btnddexcel.UseVisualStyleBackColor = true;
+            this.btnddexcel.Click += new System.EventHandler(this.btnddexcel_Click);
+            // 
             // Plantas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnddexcel);
             this.Controls.Add(this.lbsocioplantaencontrado);
             this.Controls.Add(this.gridverplantas);
             this.Controls.Add(this.btntodos);
@@ -186,5 +198,6 @@
         private System.Windows.Forms.Button btntodos;
         private System.Windows.Forms.DataGridView gridverplantas;
         private System.Windows.Forms.Label lbsocioplantaencontrado;
+        private System.Windows.Forms.Button btnddexcel;
     }
 }

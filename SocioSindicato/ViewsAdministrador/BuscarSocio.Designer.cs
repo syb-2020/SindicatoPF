@@ -34,6 +34,7 @@
             this.gridbuscar = new System.Windows.Forms.DataGridView();
             this.btnvolverbuscar = new System.Windows.Forms.Button();
             this.imagenbuscarsociomostrar = new System.Windows.Forms.PictureBox();
+            this.btnddexcel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridbuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenbuscarsociomostrar)).BeginInit();
             this.SuspendLayout();
@@ -92,11 +93,22 @@
             this.imagenbuscarsociomostrar.TabStop = false;
             this.imagenbuscarsociomostrar.Click += new System.EventHandler(this.imagenbuscarsociomostrar_Click);
             // 
+            // btnddexcel
+            // 
+            this.btnddexcel.Location = new System.Drawing.Point(75, 364);
+            this.btnddexcel.Name = "btnddexcel";
+            this.btnddexcel.Size = new System.Drawing.Size(75, 23);
+            this.btnddexcel.TabIndex = 6;
+            this.btnddexcel.Text = "Descargar";
+            this.btnddexcel.UseVisualStyleBackColor = true;
+            this.btnddexcel.Click += new System.EventHandler(this.btnddexcel_Click);
+            // 
             // BuscarSocio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(922, 618);
+            this.Controls.Add(this.btnddexcel);
             this.Controls.Add(this.imagenbuscarsociomostrar);
             this.Controls.Add(this.btnvolverbuscar);
             this.Controls.Add(this.gridbuscar);
@@ -120,5 +132,6 @@
         private System.Windows.Forms.DataGridView gridbuscar;
         private System.Windows.Forms.Button btnvolverbuscar;
         private System.Windows.Forms.PictureBox imagenbuscarsociomostrar;
+        private System.Windows.Forms.Button btnddexcel;
     }
 }

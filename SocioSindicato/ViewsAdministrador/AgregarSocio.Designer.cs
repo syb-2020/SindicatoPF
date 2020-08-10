@@ -85,6 +85,7 @@
             this.label27 = new System.Windows.Forms.Label();
             this.txtedadconyugesocio = new System.Windows.Forms.TextBox();
             this.lbagregadosocio = new System.Windows.Forms.Label();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.fotosocio)).BeginInit();
             this.SuspendLayout();
             // 
@@ -130,7 +131,6 @@
             this.combocategoriasocio.Name = "combocategoriasocio";
             this.combocategoriasocio.Size = new System.Drawing.Size(200, 21);
             this.combocategoriasocio.TabIndex = 4;
-            
             // 
             // comboplantasocio
             // 
@@ -590,6 +590,10 @@
             this.lbagregadosocio.Size = new System.Drawing.Size(0, 13);
             this.lbagregadosocio.TabIndex = 57;
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // AgregarSocio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -718,5 +722,6 @@
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.TextBox txtedadconyugesocio;
         private System.Windows.Forms.Label lbagregadosocio;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

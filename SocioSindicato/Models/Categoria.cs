@@ -21,7 +21,6 @@ namespace SocioSindicato.Models
         }
     
         public int id_categoria { get; set; }
-        public int numero_categoria { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Socio> Socio { get; set; }
