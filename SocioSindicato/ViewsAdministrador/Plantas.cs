@@ -37,9 +37,19 @@ namespace SocioSindicato.ViewsAdministrador
                                     where plansoc.id_planta.Equals(idp1)
                                     select new { NOMBRE = socplan.nombre_socio, RUT = socplan.rut_socio, PLANTA = plansoc.nombre };
 
-               
-                MessageBox.Show("Socio Planta 1 Encontrados!");
+
                 gridverplantas.DataSource = sociosplanta1.ToList();
+
+                if (gridverplantas.Rows.Count == 0)
+                {
+                    MessageBox.Show("No hay Socios en esta planta", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    MessageBox.Show("Socio Planta 1 Encontrados!");
+                  
+
+                }
 
 
             }
@@ -59,14 +69,23 @@ namespace SocioSindicato.ViewsAdministrador
                                     where plansoc.id_planta.Equals(idp2)
                                     select new { NOMBRE = socplan.nombre_socio, RUT = socplan.rut_socio, PLANTA = plansoc.nombre };
 
-               
-                    MessageBox.Show("Socio Planta 2 Encontrados!");
-                    gridverplantas.DataSource = sociosplanta2.ToList();
-               
-               
-                  
 
-               
+
+                gridverplantas.DataSource = sociosplanta2.ToList();
+
+                if (gridverplantas.Rows.Count == 0)
+                {
+                    MessageBox.Show("No hay Socios en esta planta", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    MessageBox.Show("Socio Planta 2 Encontrados!");
+                   
+
+                }
+
+
+
 
 
             }
@@ -83,10 +102,19 @@ namespace SocioSindicato.ViewsAdministrador
                                     where plansoc.id_planta.Equals(idp3)
                                     select new { NOMBRE = socplan.nombre_socio, RUT = socplan.rut_socio, PLANTA = plansoc.nombre };
 
-                
-                MessageBox.Show("Socio Planta 3 Encontrados!");
                 gridverplantas.DataSource = sociosplanta3.ToList();
 
+                if (gridverplantas.Rows.Count == 0)
+                {
+                    MessageBox.Show("No hay Socios en esta planta", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    MessageBox.Show("Socio Planta 3 Encontrados!");
+                    
+
+
+                }
 
             }
         }
@@ -102,9 +130,21 @@ namespace SocioSindicato.ViewsAdministrador
                                     where plansoc.id_planta.Equals(idp4)
                                     select new { NOMBRE = socplan.nombre_socio, RUT = socplan.rut_socio, PLANTA = plansoc.nombre };
 
-                
-                MessageBox.Show("Socio Planta 4 Encontrados!");
+
+
                 gridverplantas.DataSource = sociosplanta4.ToList();
+
+                if (gridverplantas.Rows.Count == 0)
+                {
+                    MessageBox.Show("No hay Socios en esta planta", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    MessageBox.Show("Socio Planta 4 Encontrados!");
+                    
+
+
+                }
 
 
             }
@@ -120,9 +160,19 @@ namespace SocioSindicato.ViewsAdministrador
                                     where plansoc.id_planta.Equals(idpcdt)
                                     select new { NOMBRE = socplan.nombre_socio, RUT = socplan.rut_socio, PLANTA = plansoc.nombre };
 
-        
-                MessageBox.Show("Socio Planta CDT Encontrados!");
+
                 gridverplantas.DataSource = sociosplantacdt.ToList();
+
+                if (gridverplantas.Rows.Count == 0)
+                {
+                    MessageBox.Show("No hay Socios en esta planta", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    MessageBox.Show("Socio Planta CDT Encontrados!");
+                   
+
+                }
 
 
             }
@@ -139,9 +189,20 @@ namespace SocioSindicato.ViewsAdministrador
                                     where plansoc.id_planta.Equals(idpp)
                                     select new { NOMBRE = socplan.nombre_socio, RUT = socplan.rut_socio, PLANTA = plansoc.nombre };
 
-                
-                MessageBox.Show("Socio Planta Pizza Encontrados!");
+
                 gridverplantas.DataSource = sociosplantapizza.ToList();
+
+
+                if (gridverplantas.Rows.Count == 0)
+                {
+                    MessageBox.Show("No hay Socios en esta planta", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    MessageBox.Show("Socio Planta Pizza Encontrados!");
+                   
+
+                }
 
 
             }
@@ -158,9 +219,19 @@ namespace SocioSindicato.ViewsAdministrador
                                     where plansoc.id_planta.Equals(idpcrn)
                                     select new { NOMBRE = socplan.nombre_socio, RUT = socplan.rut_socio, PLANTA = plansoc.nombre };
 
-         
-                MessageBox.Show("Socio Planta Carnicos Encontrados!");
                 gridverplantas.DataSource = sociosplantacarnico.ToList();
+
+                if (gridverplantas.Rows.Count == 0)
+                {
+                    MessageBox.Show("No hay Socios en esta planta", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    MessageBox.Show("Socio Planta Carnicos Encontrados!");
+                   
+
+
+                }
 
 
             }
@@ -177,8 +248,19 @@ namespace SocioSindicato.ViewsAdministrador
                                     orderby plansoc.id_planta
                                     select new { NOMBRE = socplan.nombre_socio, RUT = socplan.rut_socio, PLANTA = plansoc.nombre };
 
-                MessageBox.Show("Todos Los Socios!");
                 gridverplantas.DataSource = allsociosplanta.ToList();
+
+                if (gridverplantas.Rows.Count == 0)
+                {
+                    MessageBox.Show("No Existen Socios En Ninguna Planta", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    MessageBox.Show("Todos Los Socios!");
+                    
+
+
+                }
 
 
             }

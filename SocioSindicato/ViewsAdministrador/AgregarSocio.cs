@@ -115,7 +115,7 @@ namespace SocioSindicato.ViewsAdministrador
                         fecha_nacimiento = Convert.ToDateTime(datefechanacimientosocio.Text),
                         edad = Convert.ToInt32(txtedadsocio.Text),
                         domicilio = txtdomiciliosocio.Text,
-                        estado_civil = txtestadocivilsocio.Text,
+                        estado_civil = comboestadocivilagregar.Text,
                         telefono = Convert.ToInt32(txttelefonosocio.Text),
                         cantidad_carga = Convert.ToInt32(combocargasocio.SelectedItem.ToString()),
                         nacionalidad = txtnacionalidadsocio.Text,

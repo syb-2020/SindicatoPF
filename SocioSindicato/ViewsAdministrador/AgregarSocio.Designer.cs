@@ -47,7 +47,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtdomiciliosocio = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtestadocivilsocio = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.combocargasocio = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -86,6 +85,7 @@
             this.txtedadconyugesocio = new System.Windows.Forms.TextBox();
             this.lbagregadosocio = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.comboestadocivilagregar = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.fotosocio)).BeginInit();
             this.SuspendLayout();
             // 
@@ -255,13 +255,6 @@
             this.label10.Size = new System.Drawing.Size(62, 13);
             this.label10.TabIndex = 20;
             this.label10.Text = "Estado Civil";
-            // 
-            // txtestadocivilsocio
-            // 
-            this.txtestadocivilsocio.Location = new System.Drawing.Point(145, 329);
-            this.txtestadocivilsocio.Name = "txtestadocivilsocio";
-            this.txtestadocivilsocio.Size = new System.Drawing.Size(200, 20);
-            this.txtestadocivilsocio.TabIndex = 21;
             // 
             // label11
             // 
@@ -596,11 +589,25 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // comboestadocivilagregar
+            // 
+            this.comboestadocivilagregar.FormattingEnabled = true;
+            this.comboestadocivilagregar.Items.AddRange(new object[] {
+            "Soltero",
+            "Casado",
+            "Divorciado",
+            "Viudo"});
+            this.comboestadocivilagregar.Location = new System.Drawing.Point(145, 329);
+            this.comboestadocivilagregar.Name = "comboestadocivilagregar";
+            this.comboestadocivilagregar.Size = new System.Drawing.Size(200, 21);
+            this.comboestadocivilagregar.TabIndex = 58;
+            // 
             // AgregarSocio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1002, 646);
+            this.Controls.Add(this.comboestadocivilagregar);
             this.Controls.Add(this.lbagregadosocio);
             this.Controls.Add(this.txtedadconyugesocio);
             this.Controls.Add(this.label27);
@@ -637,7 +644,6 @@
             this.Controls.Add(this.label12);
             this.Controls.Add(this.combocargasocio);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.txtestadocivilsocio);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtdomiciliosocio);
             this.Controls.Add(this.label9);
@@ -686,7 +692,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtdomiciliosocio;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtestadocivilsocio;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox combocargasocio;
         private System.Windows.Forms.Label label12;
@@ -725,5 +730,6 @@
         private System.Windows.Forms.TextBox txtedadconyugesocio;
         private System.Windows.Forms.Label lbagregadosocio;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.ComboBox comboestadocivilagregar;
     }
 }

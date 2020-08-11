@@ -34,9 +34,11 @@ namespace SocioSindicato.ViewsAdministrador
                 var listRut = from sociorut in context.Socio 
                               where sociorut.rut_socio.Equals(buscar_rut)
                               select new { Rut= sociorut.rut_socio,Nombre = sociorut.nombre_socio, Categoria = sociorut.id_categoria, Planta = sociorut.Planta.nombre, FechaDeIngreso= sociorut.fecha_ingreso };
-                var listimg = from imgsocio in context.Socio
-                              select imgsocio.imagen;
-                
+
+                var listConyu = from conyu in context.Conyuge
+                                where buscar_rut.Equals(conyu.rut_socio)
+                                select new { RUT = conyu.rut, NOMBRE = conyu.nombre, NACIMIENTO = conyu.nacimiento };
+                               
                 if (txtbuscar.Text=="")
                 {
                     
@@ -55,6 +57,7 @@ namespace SocioSindicato.ViewsAdministrador
 
                         gridbuscar.DataSource = listRut.ToList();
                         txtbuscar.Text = "";
+                       
 
                         string rut = gridbuscar.Rows[gridbuscar.CurrentRow.Index].Cells[0].Value.ToString();
                         using (sindicatoPFEntities db = new sindicatoPFEntities())
