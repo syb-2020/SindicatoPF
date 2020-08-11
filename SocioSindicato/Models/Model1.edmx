@@ -69,6 +69,16 @@
           <Property Name="datos_papa" Type="varchar" MaxLength="500" Nullable="false" />
           <Property Name="datos_mama" Type="varchar" MaxLength="500" Nullable="false" />
         </EntityType>
+        <EntityType Name="socioEliminado">
+          <Key>
+            <PropertyRef Name="rut" />
+          </Key>
+          <Property Name="rut" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="categoria" Type="int" Nullable="false" />
+          <Property Name="fechaIngreso" Type="datetime" />
+          <Property Name="planta" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
         <EntityType Name="Usuario">
           <Key>
             <PropertyRef Name="id_usuario" />
@@ -145,6 +155,7 @@
           <EntitySet Name="Planta" EntityType="Self.Planta" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Rol" EntityType="Self.Rol" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Socio" EntityType="Self.Socio" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="socioEliminado" EntityType="Self.socioEliminado" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK__Conyuge__rut_soc__34C8D9D1" Association="Self.FK__Conyuge__rut_soc__34C8D9D1">
             <End Role="Socio" EntitySet="Socio" />
@@ -245,6 +256,16 @@
           <NavigationProperty Name="Hijo" Relationship="Self.FK__Hijo__rut_socio__38996AB5" FromRole="Socio" ToRole="Hijo" />
           <NavigationProperty Name="Planta" Relationship="Self.FK__Socio__id_planta__30F848ED" FromRole="Socio" ToRole="Planta" />
         </EntityType>
+        <EntityType Name="socioEliminado">
+          <Key>
+            <PropertyRef Name="rut" />
+          </Key>
+          <Property Name="rut" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nombre" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="categoria" Type="Int32" Nullable="false" />
+          <Property Name="fechaIngreso" Type="DateTime" Precision="3" />
+          <Property Name="planta" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
         <EntityType Name="Usuario">
           <Key>
             <PropertyRef Name="id_usuario" />
@@ -322,6 +343,7 @@
           <EntitySet Name="Planta" EntityType="Self.Planta" />
           <EntitySet Name="Rol" EntityType="Self.Rol" />
           <EntitySet Name="Socio" EntityType="Self.Socio" />
+          <EntitySet Name="socioEliminado" EntityType="Self.socioEliminado" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" />
           <AssociationSet Name="FK__Socio__id_catego__300424B4" Association="Self.FK__Socio__id_catego__300424B4">
             <End Role="Categoria" EntitySet="Categoria" />
@@ -417,6 +439,17 @@
                 <ScalarProperty Name="correo" ColumnName="correo" />
                 <ScalarProperty Name="datos_papa" ColumnName="datos_papa" />
                 <ScalarProperty Name="datos_mama" ColumnName="datos_mama" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="socioEliminado">
+            <EntityTypeMapping TypeName="sindicatoPFModel.socioEliminado">
+              <MappingFragment StoreEntitySet="socioEliminado">
+                <ScalarProperty Name="rut" ColumnName="rut" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="categoria" ColumnName="categoria" />
+                <ScalarProperty Name="fechaIngreso" ColumnName="fechaIngreso" />
+                <ScalarProperty Name="planta" ColumnName="planta" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

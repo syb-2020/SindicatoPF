@@ -35,7 +35,10 @@
             this.btnnavidadadm = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btneliminadosadm = new System.Windows.Forms.Button();
+            this.gridvereliminadosadm = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridvereliminadosadm)).BeginInit();
             this.SuspendLayout();
             // 
             // btnbuscarsocioadmi
@@ -108,11 +111,33 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
+            // btneliminadosadm
+            // 
+            this.btneliminadosadm.Location = new System.Drawing.Point(36, 326);
+            this.btneliminadosadm.Name = "btneliminadosadm";
+            this.btneliminadosadm.Size = new System.Drawing.Size(117, 23);
+            this.btneliminadosadm.TabIndex = 7;
+            this.btneliminadosadm.Text = "Eliminados";
+            this.btneliminadosadm.UseVisualStyleBackColor = true;
+            this.btneliminadosadm.Click += new System.EventHandler(this.btneliminadosadm_Click);
+            // 
+            // gridvereliminadosadm
+            // 
+            this.gridvereliminadosadm.AllowUserToOrderColumns = true;
+            this.gridvereliminadosadm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridvereliminadosadm.Location = new System.Drawing.Point(257, 288);
+            this.gridvereliminadosadm.Name = "gridvereliminadosadm";
+            this.gridvereliminadosadm.Size = new System.Drawing.Size(240, 150);
+            this.gridvereliminadosadm.TabIndex = 8;
+            this.gridvereliminadosadm.Visible = false;
+            // 
             // Administrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.gridvereliminadosadm);
+            this.Controls.Add(this.btneliminadosadm);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.btnnavidadadm);
@@ -123,6 +148,7 @@
             this.Name = "Administrador";
             this.Text = "Administrador";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridvereliminadosadm)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -136,5 +162,7 @@
         private System.Windows.Forms.Button btnnavidadadm;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btneliminadosadm;
+        private System.Windows.Forms.DataGridView gridvereliminadosadm;
     }
 }

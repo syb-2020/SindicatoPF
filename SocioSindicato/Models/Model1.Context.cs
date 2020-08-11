@@ -31,6 +31,7 @@ namespace SocioSindicato.Models
         public virtual DbSet<Planta> Planta { get; set; }
         public virtual DbSet<Rol> Rol { get; set; }
         public virtual DbSet<Socio> Socio { get; set; }
+        public virtual DbSet<socioEliminado> socioEliminado { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SocioSindicato.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -66,6 +67,67 @@ namespace SocioSindicato
             this.Hide();
             bs.ShowDialog();
             this.Close();
+        }
+
+        public void exportardatos(DataGridView datalistado)
+        {
+
+            Microsoft.Office.Interop.Excel.Application exportarexcel = new Microsoft.Office.Interop.Excel.Application();
+            exportarexcel.Application.Workbooks.Add(true);
+
+            int indicecolum = 0;
+            foreach (DataGridViewColumn columna in datalistado.Columns)
+            {
+                indicecolum++;
+                exportarexcel.Cells[1, indicecolum] = columna.Name;
+            }
+            int indicefila = 0;
+            foreach (DataGridViewRow fila in datalistado.Rows)
+            {
+                indicefila++;
+                indicecolum = 0;
+                foreach (DataGridViewColumn columna in datalistado.Columns)
+                {
+                    indicecolum++;
+                    exportarexcel.Cells[indicefila + 1, indicecolum] = fila.Cells[columna.Name].Value;
+                }
+            }
+            exportarexcel.Visible = true;
+        }
+
+        
+
+        private void btneliminadosadm_Click(object sender, EventArgs e)
+        {
+            using (sindicatoPFEntities context = new sindicatoPFEntities()) {
+
+
+                var listEliminados = from soceli in context.socioEliminado
+                                     select new
+                                     {
+                                         RUT = soceli.rut,
+                                         NOMBRE = soceli.nombre,
+                                         CATEGORIA = soceli.categoria,
+                                         INGRESO = soceli.fechaIngreso,
+                                         PLANTA = soceli.planta,
+                                     };
+
+                gridvereliminadosadm.DataSource = listEliminados.ToList();
+
+                if (gridvereliminadosadm.Rows.Count == 0)
+                {
+                    MessageBox.Show("No hay Socios Eliminados", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                 
+                    exportardatos(gridvereliminadosadm);
+                }
+
+
+            }
+            
+                
         }
     }
 }

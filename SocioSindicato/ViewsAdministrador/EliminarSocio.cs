@@ -56,7 +56,7 @@ namespace SocioSindicato.ViewsAdministrador
                             pb.Image = bmp;
                         }
 
-                        txteliminar.Text = "";
+                       
 
                     }
                     else
@@ -107,6 +107,39 @@ namespace SocioSindicato.ViewsAdministrador
                                       where c.rut_socio.Equals(eli)
                                       select c;
                         string rut_soc3 = result3.ToList()[0].rut_socio;
+                      
+                        
+
+                        var rellenarSocioEliminado = from c in context.Socio
+                                                     join plansoc in context.Planta                                                  
+                                                     on c.id_planta equals plansoc.id_planta
+                                                     where c.rut_socio.Equals(eli)
+                                                     select new{ 
+                                                        c.rut_socio,
+                                                        c.nombre_socio,
+                                                        c.id_categoria,
+                                                        c.fecha_ingreso,
+                                                        plansoc.nombre                       
+                                                        };
+
+                        string rut2 = rellenarSocioEliminado.ToList()[0].rut_socio;
+                        string nombre2 = rellenarSocioEliminado.ToList()[0].nombre_socio;
+                        int categoria2 = rellenarSocioEliminado.ToList()[0].id_categoria;                    
+                        DateTime fecha2 = Convert.ToDateTime(rellenarSocioEliminado.ToList()[0].fecha_ingreso) ;
+                        string planta2 = rellenarSocioEliminado.ToList()[0].nombre;
+
+                        socioEliminado nuevoSocioEliminado = new socioEliminado { 
+                        
+                            rut = rut2,
+                            nombre = nombre2,
+                            categoria = categoria2,
+                            fechaIngreso = fecha2,
+                            planta = planta2,
+
+                        };
+
+                        context.socioEliminado.Add(nuevoSocioEliminado);
+                        context.SaveChanges();
 
 
                         context.Conyuge.Remove(context.Conyuge.Find(rut_soc1));
