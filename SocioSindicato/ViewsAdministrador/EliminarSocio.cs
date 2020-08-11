@@ -44,8 +44,8 @@ namespace SocioSindicato.ViewsAdministrador
                 {
                     if (listRut.Count() != 0)
                     {
-
                         
+
                         grideliminar.DataSource = listRut.ToList();
                         string rut = grideliminar.Rows[grideliminar.CurrentRow.Index].Cells[0].Value.ToString();
                         using (sindicatoPFEntities db = new sindicatoPFEntities())
@@ -55,6 +55,8 @@ namespace SocioSindicato.ViewsAdministrador
                             Bitmap bmp = new Bitmap(ms);
                             pb.Image = bmp;
                         }
+
+                        txteliminar.Text = "";
 
                     }
                     else

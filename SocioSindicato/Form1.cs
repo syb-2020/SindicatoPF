@@ -39,6 +39,8 @@ namespace SocioSindicato
                   
                    // MessageBox.Show("Usuario y/o Contraseña invalida");
                     MessageBox.Show("Usuario y/o Contraseña invalida", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtusuario.Text = "";
+                    txtclave.Text = "";
                 }
                 else
                 {

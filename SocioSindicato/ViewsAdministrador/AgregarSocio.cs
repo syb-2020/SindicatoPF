@@ -29,6 +29,32 @@ namespace SocioSindicato.ViewsAdministrador
 
         }
 
+        private void solonumeros(KeyPressEventArgs e ) {
+
+            try
+            {
+                if (char.IsNumber(e.KeyChar))
+                {
+                    e.Handled = false;
+                } else if(char.IsControl(e.KeyChar)){
+                    e.Handled = false;
+                }
+                else if (char.IsSeparator(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    e.Handled = true;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         public byte[] file = null;
 
         private void btnvolveragregar_Click(object sender, EventArgs e)
@@ -66,6 +92,9 @@ namespace SocioSindicato.ViewsAdministrador
             }
 
         }
+
+
+
 
         private void btnagregarsocio_Click(object sender, EventArgs e)
         {
@@ -129,5 +158,15 @@ namespace SocioSindicato.ViewsAdministrador
                 }
             }
             }
+
+        private void txtedadsocio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            solonumeros(e);
+        }
+
+        private void txtedadconyugesocio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            solonumeros(e);
+        }
     }
 }

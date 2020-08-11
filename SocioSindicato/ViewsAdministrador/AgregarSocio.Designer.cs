@@ -229,6 +229,7 @@
             this.txtedadsocio.Name = "txtedadsocio";
             this.txtedadsocio.Size = new System.Drawing.Size(200, 20);
             this.txtedadsocio.TabIndex = 17;
+            this.txtedadsocio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtedadsocio_KeyPress);
             // 
             // label9
             // 
@@ -581,6 +582,7 @@
             this.txtedadconyugesocio.Name = "txtedadconyugesocio";
             this.txtedadconyugesocio.Size = new System.Drawing.Size(200, 20);
             this.txtedadconyugesocio.TabIndex = 56;
+            this.txtedadconyugesocio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtedadconyugesocio_KeyPress);
             // 
             // lbagregadosocio
             // 

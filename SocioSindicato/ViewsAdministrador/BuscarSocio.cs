@@ -22,7 +22,8 @@ namespace SocioSindicato.ViewsAdministrador
         {
             InitializeComponent();
         }
-     
+
+        
 
         private void btnbuscar_Click(object sender, EventArgs e)
         {
@@ -41,8 +42,7 @@ namespace SocioSindicato.ViewsAdministrador
                     
                     
                     MessageBox.Show("Ingrese Rut del socio!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-
+                    imagenbuscarsociomostrar.Image = null;
                     gridbuscar.DataSource = "";
                     txtbuscar.Text = "";
                 }
@@ -121,7 +121,18 @@ namespace SocioSindicato.ViewsAdministrador
 
         private void btnddexcel_Click(object sender, EventArgs e)
         {
-            exportardatos(gridbuscar);
+            if (gridbuscar.Rows.Count == 0)
+            {
+                MessageBox.Show("No hay datos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                
+                exportardatos(gridbuscar);
+            }
+
+            
+
         }
     }
 }
