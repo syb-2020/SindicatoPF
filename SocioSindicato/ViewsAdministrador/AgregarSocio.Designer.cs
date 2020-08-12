@@ -493,6 +493,7 @@
             // 
             this.combocontratosocio.FormattingEnabled = true;
             this.combocontratosocio.Items.AddRange(new object[] {
+            "",
             "SI",
             "NO"});
             this.combocontratosocio.Location = new System.Drawing.Point(145, 158);
@@ -555,6 +556,7 @@
             // 
             this.comboconvivienteconyugesocio.FormattingEnabled = true;
             this.comboconvivienteconyugesocio.Items.AddRange(new object[] {
+            "",
             "SI",
             "NO"});
             this.comboconvivienteconyugesocio.Location = new System.Drawing.Point(532, 93);
@@ -595,6 +597,7 @@
             // 
             this.comboestadocivilagregar.FormattingEnabled = true;
             this.comboestadocivilagregar.Items.AddRange(new object[] {
+            "",
             "Soltero",
             "Casado",
             "Divorciado",
@@ -617,6 +620,7 @@
             // 
             this.cbSexo.FormattingEnabled = true;
             this.cbSexo.Items.AddRange(new object[] {
+            "",
             "Hombre",
             "Mujer"});
             this.cbSexo.Location = new System.Drawing.Point(532, 322);

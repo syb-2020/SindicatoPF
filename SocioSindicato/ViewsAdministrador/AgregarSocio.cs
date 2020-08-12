@@ -123,6 +123,9 @@ namespace SocioSindicato.ViewsAdministrador
                         datos_papa = txtnombrepadre.Text,
                         datos_mama = txtnombremadre.Text,                        
                     };
+                   
+
+
 
                     Conyuge con = new Conyuge
                     {
@@ -134,6 +137,7 @@ namespace SocioSindicato.ViewsAdministrador
                         edad = Convert.ToInt32(txtedadconyugesocio.Text)
                     };
 
+                    
                     Hijo hs = new Hijo { 
                     rut_socio = txtrutsocio.Text,
                     nombre = txtnombrehijosocio.Text,
@@ -142,13 +146,50 @@ namespace SocioSindicato.ViewsAdministrador
                     nacimiento = Convert.ToDateTime(datenacimientohijosocio.Text)
                     };
 
+                   
+
                     context.Socio.Add(nuevosocio);
                     context.Conyuge.Add(con);
                     context.Hijo.Add(hs);
                     context.SaveChanges();
 
 
+                    
+                    //BORRAR DATOS SOCIO
+                    txtrutsocio.Text = "";
+                    file = null;
+                    txtnombresocio.Text = "";
+                    dateingresoempresasocio.Value = DateTime.Now;
+                    combocategoriasocio.SelectedIndex = 0;
+                    combocontratosocio.SelectedIndex = 0; ;
+                    comboplantasocio.SelectedIndex = 0; ;
+                    datefechanacimientosocio.Value = DateTime.Now;
+                    txtedadsocio.Text = "";
+                    txtdomiciliosocio.Text = "";
+                    comboestadocivilagregar.SelectedIndex = 0;
+                    txttelefonosocio.Text = "";
+                    combocargasocio.SelectedIndex = 0; 
+                    txtnacionalidadsocio.Text = "";
+                    txtcorreosocio.Text = "";
+                    txtnombrepadre.Text = "";
+                    txtnombremadre.Text = "";
+                    //BORRAR DATOS CONYUGE
+                    txtconyugesocio.Text = "";
+                    comboconvivienteconyugesocio.SelectedIndex = 0; ;
+                    txtrutconyugesocio.Text = "";
+                    datefechanacimientoconyugesocio.Value = DateTime.Now;
+                    txtedadconyugesocio.Text = "";
+                    //BORRAR DATOS HIJOS
+                    txtnombrehijosocio.Text = "";
+                    txtruthijosocio.Text = "";
+                    cbSexo.SelectedIndex = 0;
+                    datenacimientohijosocio.Value = DateTime.Now;
+
                     MessageBox.Show("Socio Agregado Correctamente!");
+
+
+
+
 
                 }
                 catch (Exception)
@@ -158,6 +199,7 @@ namespace SocioSindicato.ViewsAdministrador
                     MessageBox.Show("Socio No Agregado", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
+
             }
 
         private void txtedadsocio_KeyPress(object sender, KeyPressEventArgs e)

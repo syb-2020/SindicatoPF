@@ -273,5 +273,19 @@ namespace SocioSindicato.ViewsAdministrador
                 }
             }
         }
+
+        private void btnexcelsocio_Click(object sender, EventArgs e)
+        {
+            if (gridbuscar.Rows.Count == 0)
+            {
+                MessageBox.Show("No hay datos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+
+                exportardatos(gridbuscar);
+            }
+
+        }
     }
 }
