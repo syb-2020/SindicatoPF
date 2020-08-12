@@ -4,18 +4,18 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="d44874b267de4b2ea20b0fb54cdaad51" Name="Diagram1">
-        <EntityTypeShape EntityType="sindicatoPFModel.Categoria" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+      <Diagram DiagramId="0aba0b7c5974408e84c52765e4691fe2" Name="Diagram1">
+        <EntityTypeShape EntityType="sindicatoPFModel.Categoria" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="sindicatoPFModel.Conyuge" Width="1.5" PointX="5.25" PointY="1.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="sindicatoPFModel.Hijo" Width="1.5" PointX="5.25" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="sindicatoPFModel.Hijo" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
         <EntityTypeShape EntityType="sindicatoPFModel.Planta" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="sindicatoPFModel.Rol" Width="1.5" PointX="7.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="sindicatoPFModel.Rol" Width="1.5" PointX="7.75" PointY="1.75" IsExpanded="true" />
         <EntityTypeShape EntityType="sindicatoPFModel.Socio" Width="1.5" PointX="3" PointY="2" IsExpanded="true" />
-        <EntityTypeShape EntityType="sindicatoPFModel.socioEliminado" Width="1.5" PointX="0.75" PointY="8.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="sindicatoPFModel.Usuario" Width="1.5" PointX="10" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="sindicatoPFModel.socioEliminado" Width="1.5" PointX="0.75" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="sindicatoPFModel.Usuario" Width="1.5" PointX="10" PointY="1.5" IsExpanded="true" />
         <AssociationConnector Association="sindicatoPFModel.FK__Socio__id_catego__300424B4" ManuallyRouted="false" />
-        <AssociationConnector Association="sindicatoPFModel.FK__Conyuge__rut_soc__34C8D9D1" ManuallyRouted="false" />
-        <AssociationConnector Association="sindicatoPFModel.FK__Hijo__rut_socio__38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="sindicatoPFModel.FK__Conyuge__rut_soc__36B12243" ManuallyRouted="false" />
+        <AssociationConnector Association="sindicatoPFModel.FK__Hijo__rut_socio__3A81B327" ManuallyRouted="false" />
         <AssociationConnector Association="sindicatoPFModel.FK__Socio__id_planta__30F848ED" ManuallyRouted="false" />
         <AssociationConnector Association="sindicatoPFModel.FK__Usuario__id_rol__276EDEB3" ManuallyRouted="false" />
       </Diagram>

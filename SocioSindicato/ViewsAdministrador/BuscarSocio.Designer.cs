@@ -35,8 +35,16 @@
             this.btnvolverbuscar = new System.Windows.Forms.Button();
             this.imagenbuscarsociomostrar = new System.Windows.Forms.PictureBox();
             this.btnddexcel = new System.Windows.Forms.Button();
+            this.btcargas = new System.Windows.Forms.Button();
+            this.gridConyuge = new System.Windows.Forms.DataGridView();
+            this.gridHijo = new System.Windows.Forms.DataGridView();
+            this.btconyuge = new System.Windows.Forms.Button();
+            this.gbtodo = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.gridbuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenbuscarsociomostrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridConyuge)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridHijo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gbtodo)).BeginInit();
             this.SuspendLayout();
             // 
             // btnbuscar
@@ -70,7 +78,7 @@
             this.gridbuscar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridbuscar.Location = new System.Drawing.Point(44, 153);
             this.gridbuscar.Name = "gridbuscar";
-            this.gridbuscar.Size = new System.Drawing.Size(575, 189);
+            this.gridbuscar.Size = new System.Drawing.Size(575, 175);
             this.gridbuscar.TabIndex = 3;
             // 
             // btnvolverbuscar
@@ -95,7 +103,7 @@
             // 
             // btnddexcel
             // 
-            this.btnddexcel.Location = new System.Drawing.Point(75, 364);
+            this.btnddexcel.Location = new System.Drawing.Point(44, 560);
             this.btnddexcel.Name = "btnddexcel";
             this.btnddexcel.Size = new System.Drawing.Size(75, 23);
             this.btnddexcel.TabIndex = 6;
@@ -103,11 +111,63 @@
             this.btnddexcel.UseVisualStyleBackColor = true;
             this.btnddexcel.Click += new System.EventHandler(this.btnddexcel_Click);
             // 
+            // btcargas
+            // 
+            this.btcargas.Location = new System.Drawing.Point(244, 560);
+            this.btcargas.Name = "btcargas";
+            this.btcargas.Size = new System.Drawing.Size(75, 23);
+            this.btcargas.TabIndex = 7;
+            this.btcargas.Text = "Cargas";
+            this.btcargas.UseVisualStyleBackColor = true;
+            this.btcargas.Click += new System.EventHandler(this.btcargas_Click);
+            // 
+            // gridConyuge
+            // 
+            this.gridConyuge.AllowUserToOrderColumns = true;
+            this.gridConyuge.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridConyuge.Location = new System.Drawing.Point(44, 334);
+            this.gridConyuge.Name = "gridConyuge";
+            this.gridConyuge.Size = new System.Drawing.Size(575, 77);
+            this.gridConyuge.TabIndex = 8;
+            // 
+            // gridHijo
+            // 
+            this.gridHijo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridHijo.Location = new System.Drawing.Point(44, 417);
+            this.gridHijo.Name = "gridHijo";
+            this.gridHijo.Size = new System.Drawing.Size(575, 81);
+            this.gridHijo.TabIndex = 9;
+            // 
+            // btconyuge
+            // 
+            this.btconyuge.Location = new System.Drawing.Point(143, 560);
+            this.btconyuge.Name = "btconyuge";
+            this.btconyuge.Size = new System.Drawing.Size(75, 23);
+            this.btconyuge.TabIndex = 10;
+            this.btconyuge.Text = "Conyuge";
+            this.btconyuge.UseVisualStyleBackColor = true;
+            this.btconyuge.Click += new System.EventHandler(this.btconyuge_Click);
+            // 
+            // gbtodo
+            // 
+            this.gbtodo.AllowUserToOrderColumns = true;
+            this.gbtodo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gbtodo.Location = new System.Drawing.Point(44, 120);
+            this.gbtodo.Name = "gbtodo";
+            this.gbtodo.Size = new System.Drawing.Size(575, 27);
+            this.gbtodo.TabIndex = 11;
+            this.gbtodo.Visible = false;
+            // 
             // BuscarSocio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(922, 618);
+            this.Controls.Add(this.gbtodo);
+            this.Controls.Add(this.btconyuge);
+            this.Controls.Add(this.gridHijo);
+            this.Controls.Add(this.gridConyuge);
+            this.Controls.Add(this.btcargas);
             this.Controls.Add(this.btnddexcel);
             this.Controls.Add(this.imagenbuscarsociomostrar);
             this.Controls.Add(this.btnvolverbuscar);
@@ -119,6 +179,9 @@
             this.Text = "BuscarSocio";
             ((System.ComponentModel.ISupportInitialize)(this.gridbuscar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenbuscarsociomostrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridConyuge)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridHijo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gbtodo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -133,5 +196,10 @@
         private System.Windows.Forms.Button btnvolverbuscar;
         private System.Windows.Forms.PictureBox imagenbuscarsociomostrar;
         private System.Windows.Forms.Button btnddexcel;
+        private System.Windows.Forms.Button btcargas;
+        private System.Windows.Forms.DataGridView gridConyuge;
+        private System.Windows.Forms.DataGridView gridHijo;
+        private System.Windows.Forms.Button btconyuge;
+        private System.Windows.Forms.DataGridView gbtodo;
     }
 }

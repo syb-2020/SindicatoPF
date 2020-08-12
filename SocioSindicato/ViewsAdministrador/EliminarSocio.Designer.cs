@@ -41,14 +41,14 @@
             // 
             // txteliminar
             // 
-            this.txteliminar.Location = new System.Drawing.Point(208, 56);
+            this.txteliminar.Location = new System.Drawing.Point(87, 56);
             this.txteliminar.Name = "txteliminar";
-            this.txteliminar.Size = new System.Drawing.Size(180, 20);
+            this.txteliminar.Size = new System.Drawing.Size(301, 20);
             this.txteliminar.TabIndex = 0;
             // 
             // btnbuscarel
             // 
-            this.btnbuscarel.Location = new System.Drawing.Point(425, 54);
+            this.btnbuscarel.Location = new System.Drawing.Point(470, 54);
             this.btnbuscarel.Name = "btnbuscarel";
             this.btnbuscarel.Size = new System.Drawing.Size(75, 23);
             this.btnbuscarel.TabIndex = 1;
@@ -60,14 +60,14 @@
             // 
             this.grideliminar.AllowUserToOrderColumns = true;
             this.grideliminar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grideliminar.Location = new System.Drawing.Point(208, 118);
+            this.grideliminar.Location = new System.Drawing.Point(87, 118);
             this.grideliminar.Name = "grideliminar";
-            this.grideliminar.Size = new System.Drawing.Size(337, 150);
+            this.grideliminar.Size = new System.Drawing.Size(458, 150);
             this.grideliminar.TabIndex = 2;
             // 
             // btneliminar
             // 
-            this.btneliminar.Location = new System.Drawing.Point(233, 313);
+            this.btneliminar.Location = new System.Drawing.Point(87, 313);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Size = new System.Drawing.Size(75, 23);
             this.btneliminar.TabIndex = 3;
@@ -85,7 +85,7 @@
             // 
             // btnvolvereliminar
             // 
-            this.btnvolvereliminar.Location = new System.Drawing.Point(684, 410);
+            this.btnvolvereliminar.Location = new System.Drawing.Point(684, 394);
             this.btnvolvereliminar.Name = "btnvolvereliminar";
             this.btnvolvereliminar.Size = new System.Drawing.Size(75, 23);
             this.btnvolvereliminar.TabIndex = 5;
@@ -95,9 +95,9 @@
             // 
             // pb
             // 
-            this.pb.Location = new System.Drawing.Point(590, 141);
+            this.pb.Location = new System.Drawing.Point(581, 118);
             this.pb.Name = "pb";
-            this.pb.Size = new System.Drawing.Size(137, 114);
+            this.pb.Size = new System.Drawing.Size(178, 150);
             this.pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb.TabIndex = 6;
             this.pb.TabStop = false;

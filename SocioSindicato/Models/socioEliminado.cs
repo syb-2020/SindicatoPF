@@ -17,7 +17,7 @@ namespace SocioSindicato.Models
         public string rut { get; set; }
         public string nombre { get; set; }
         public int categoria { get; set; }
-        public Nullable<System.DateTime> fechaIngreso { get; set; }
+        public System.DateTime fechaIngreso { get; set; }
         public string planta { get; set; }
     }
 }

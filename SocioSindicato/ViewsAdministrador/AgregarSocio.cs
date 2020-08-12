@@ -138,6 +138,7 @@ namespace SocioSindicato.ViewsAdministrador
                     rut_socio = txtrutsocio.Text,
                     nombre = txtnombrehijosocio.Text,
                     rut_hijo = txtruthijosocio.Text,
+                    sexo = cbSexo.Text,
                     nacimiento = Convert.ToDateTime(datenacimientohijosocio.Text)
                     };
 

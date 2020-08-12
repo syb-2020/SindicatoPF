@@ -293,8 +293,16 @@ namespace SocioSindicato.ViewsAdministrador
         }
 
         private void btnddexcel_Click(object sender, EventArgs e)
-        {
-            exportardatos(gridverplantas);
+        {            
+            if (gridverplantas.Rows.Count == 0)
+            {
+                MessageBox.Show("No hay datos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+
+                exportardatos(gridverplantas);
+            }
         }
     }
 }

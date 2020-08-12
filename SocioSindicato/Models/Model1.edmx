@@ -9,7 +9,8 @@
           <Key>
             <PropertyRef Name="id_categoria" />
           </Key>
-          <Property Name="id_categoria" Type="int" Nullable="false" />
+          <Property Name="id_categoria" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="numero_categoria" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Conyuge">
           <Key>
@@ -30,6 +31,7 @@
           <Property Name="id_hijo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nombre" Type="varchar" MaxLength="500" Nullable="false" />
           <Property Name="rut_hijo" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="sexo" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="nacimiento" Type="datetime" />
           <Property Name="rut_socio" Type="varchar" MaxLength="100" Nullable="false" />
         </EntityType>
@@ -76,7 +78,7 @@
           <Property Name="rut" Type="varchar" MaxLength="500" Nullable="false" />
           <Property Name="nombre" Type="varchar" MaxLength="500" Nullable="false" />
           <Property Name="categoria" Type="int" Nullable="false" />
-          <Property Name="fechaIngreso" Type="datetime" />
+          <Property Name="fechaIngreso" Type="datetime" Nullable="false" />
           <Property Name="planta" Type="varchar" MaxLength="100" Nullable="false" />
         </EntityType>
         <EntityType Name="Usuario">
@@ -88,7 +90,7 @@
           <Property Name="clave" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="id_rol" Type="int" Nullable="false" />
         </EntityType>
-        <Association Name="FK__Conyuge__rut_soc__34C8D9D1">
+        <Association Name="FK__Conyuge__rut_soc__36B12243">
           <End Role="Socio" Type="Self.Socio" Multiplicity="1" />
           <End Role="Conyuge" Type="Self.Conyuge" Multiplicity="*" />
           <ReferentialConstraint>
@@ -100,7 +102,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Hijo__rut_socio__38996AB5">
+        <Association Name="FK__Hijo__rut_socio__3A81B327">
           <End Role="Socio" Type="Self.Socio" Multiplicity="1" />
           <End Role="Hijo" Type="Self.Hijo" Multiplicity="*" />
           <ReferentialConstraint>
@@ -157,11 +159,11 @@
           <EntitySet Name="Socio" EntityType="Self.Socio" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="socioEliminado" EntityType="Self.socioEliminado" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__Conyuge__rut_soc__34C8D9D1" Association="Self.FK__Conyuge__rut_soc__34C8D9D1">
+          <AssociationSet Name="FK__Conyuge__rut_soc__36B12243" Association="Self.FK__Conyuge__rut_soc__36B12243">
             <End Role="Socio" EntitySet="Socio" />
             <End Role="Conyuge" EntitySet="Conyuge" />
           </AssociationSet>
-          <AssociationSet Name="FK__Hijo__rut_socio__38996AB5" Association="Self.FK__Hijo__rut_socio__38996AB5">
+          <AssociationSet Name="FK__Hijo__rut_socio__3A81B327" Association="Self.FK__Hijo__rut_socio__3A81B327">
             <End Role="Socio" EntitySet="Socio" />
             <End Role="Hijo" EntitySet="Hijo" />
           </AssociationSet>
@@ -187,7 +189,8 @@
           <Key>
             <PropertyRef Name="id_categoria" />
           </Key>
-          <Property Name="id_categoria" Type="Int32" Nullable="false" />
+          <Property Name="id_categoria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="numero_categoria" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Socio" Relationship="Self.FK__Socio__id_catego__300424B4" FromRole="Categoria" ToRole="Socio" />
         </EntityType>
         <EntityType Name="Conyuge">
@@ -201,7 +204,7 @@
           <Property Name="nacimiento" Type="DateTime" Precision="3" />
           <Property Name="edad" Type="Int32" Nullable="false" />
           <Property Name="rut_socio" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Socio" Relationship="Self.FK__Conyuge__rut_soc__34C8D9D1" FromRole="Conyuge" ToRole="Socio" />
+          <NavigationProperty Name="Socio" Relationship="Self.FK__Conyuge__rut_soc__36B12243" FromRole="Conyuge" ToRole="Socio" />
         </EntityType>
         <EntityType Name="Hijo">
           <Key>
@@ -210,9 +213,10 @@
           <Property Name="id_hijo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="nombre" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="rut_hijo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="sexo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="nacimiento" Type="DateTime" Precision="3" />
           <Property Name="rut_socio" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Socio" Relationship="Self.FK__Hijo__rut_socio__38996AB5" FromRole="Hijo" ToRole="Socio" />
+          <NavigationProperty Name="Socio" Relationship="Self.FK__Hijo__rut_socio__3A81B327" FromRole="Hijo" ToRole="Socio" />
         </EntityType>
         <EntityType Name="Planta">
           <Key>
@@ -252,8 +256,8 @@
           <Property Name="datos_papa" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="datos_mama" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Categoria" Relationship="Self.FK__Socio__id_catego__300424B4" FromRole="Socio" ToRole="Categoria" />
-          <NavigationProperty Name="Conyuge" Relationship="Self.FK__Conyuge__rut_soc__34C8D9D1" FromRole="Socio" ToRole="Conyuge" />
-          <NavigationProperty Name="Hijo" Relationship="Self.FK__Hijo__rut_socio__38996AB5" FromRole="Socio" ToRole="Hijo" />
+          <NavigationProperty Name="Conyuge" Relationship="Self.FK__Conyuge__rut_soc__36B12243" FromRole="Socio" ToRole="Conyuge" />
+          <NavigationProperty Name="Hijo" Relationship="Self.FK__Hijo__rut_socio__3A81B327" FromRole="Socio" ToRole="Hijo" />
           <NavigationProperty Name="Planta" Relationship="Self.FK__Socio__id_planta__30F848ED" FromRole="Socio" ToRole="Planta" />
         </EntityType>
         <EntityType Name="socioEliminado">
@@ -263,7 +267,7 @@
           <Property Name="rut" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="nombre" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="categoria" Type="Int32" Nullable="false" />
-          <Property Name="fechaIngreso" Type="DateTime" Precision="3" />
+          <Property Name="fechaIngreso" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="planta" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
         <EntityType Name="Usuario">
@@ -288,7 +292,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Conyuge__rut_soc__34C8D9D1">
+        <Association Name="FK__Conyuge__rut_soc__36B12243">
           <End Role="Socio" Type="Self.Socio" Multiplicity="1" />
           <End Role="Conyuge" Type="Self.Conyuge" Multiplicity="*" />
           <ReferentialConstraint>
@@ -300,7 +304,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Hijo__rut_socio__38996AB5">
+        <Association Name="FK__Hijo__rut_socio__3A81B327">
           <End Role="Socio" Type="Self.Socio" Multiplicity="1" />
           <End Role="Hijo" Type="Self.Hijo" Multiplicity="*" />
           <ReferentialConstraint>
@@ -349,11 +353,11 @@
             <End Role="Categoria" EntitySet="Categoria" />
             <End Role="Socio" EntitySet="Socio" />
           </AssociationSet>
-          <AssociationSet Name="FK__Conyuge__rut_soc__34C8D9D1" Association="Self.FK__Conyuge__rut_soc__34C8D9D1">
+          <AssociationSet Name="FK__Conyuge__rut_soc__36B12243" Association="Self.FK__Conyuge__rut_soc__36B12243">
             <End Role="Socio" EntitySet="Socio" />
             <End Role="Conyuge" EntitySet="Conyuge" />
           </AssociationSet>
-          <AssociationSet Name="FK__Hijo__rut_socio__38996AB5" Association="Self.FK__Hijo__rut_socio__38996AB5">
+          <AssociationSet Name="FK__Hijo__rut_socio__3A81B327" Association="Self.FK__Hijo__rut_socio__3A81B327">
             <End Role="Socio" EntitySet="Socio" />
             <End Role="Hijo" EntitySet="Hijo" />
           </AssociationSet>
@@ -376,6 +380,7 @@
             <EntityTypeMapping TypeName="sindicatoPFModel.Categoria">
               <MappingFragment StoreEntitySet="Categoria">
                 <ScalarProperty Name="id_categoria" ColumnName="id_categoria" />
+                <ScalarProperty Name="numero_categoria" ColumnName="numero_categoria" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -398,6 +403,7 @@
                 <ScalarProperty Name="id_hijo" ColumnName="id_hijo" />
                 <ScalarProperty Name="nombre" ColumnName="nombre" />
                 <ScalarProperty Name="rut_hijo" ColumnName="rut_hijo" />
+                <ScalarProperty Name="sexo" ColumnName="sexo" />
                 <ScalarProperty Name="nacimiento" ColumnName="nacimiento" />
                 <ScalarProperty Name="rut_socio" ColumnName="rut_socio" />
               </MappingFragment>

@@ -86,6 +86,8 @@
             this.lbagregadosocio = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.comboestadocivilagregar = new System.Windows.Forms.ComboBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.cbSexo = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.fotosocio)).BeginInit();
             this.SuspendLayout();
             // 
@@ -450,7 +452,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(406, 332);
+            this.label24.Location = new System.Drawing.Point(406, 361);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(108, 13);
             this.label24.TabIndex = 43;
@@ -472,7 +474,7 @@
             // 
             // datenacimientohijosocio
             // 
-            this.datenacimientohijosocio.Location = new System.Drawing.Point(532, 329);
+            this.datenacimientohijosocio.Location = new System.Drawing.Point(532, 358);
             this.datenacimientohijosocio.Name = "datenacimientohijosocio";
             this.datenacimientohijosocio.Size = new System.Drawing.Size(200, 20);
             this.datenacimientohijosocio.TabIndex = 46;
@@ -602,11 +604,33 @@
             this.comboestadocivilagregar.Size = new System.Drawing.Size(200, 21);
             this.comboestadocivilagregar.TabIndex = 58;
             // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(409, 331);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(31, 13);
+            this.label28.TabIndex = 59;
+            this.label28.Text = "Sexo";
+            // 
+            // cbSexo
+            // 
+            this.cbSexo.FormattingEnabled = true;
+            this.cbSexo.Items.AddRange(new object[] {
+            "Hombre",
+            "Mujer"});
+            this.cbSexo.Location = new System.Drawing.Point(532, 322);
+            this.cbSexo.Name = "cbSexo";
+            this.cbSexo.Size = new System.Drawing.Size(200, 21);
+            this.cbSexo.TabIndex = 60;
+            // 
             // AgregarSocio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1002, 646);
+            this.Controls.Add(this.cbSexo);
+            this.Controls.Add(this.label28);
             this.Controls.Add(this.comboestadocivilagregar);
             this.Controls.Add(this.lbagregadosocio);
             this.Controls.Add(this.txtedadconyugesocio);
@@ -731,5 +755,7 @@
         private System.Windows.Forms.Label lbagregadosocio;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.ComboBox comboestadocivilagregar;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.ComboBox cbSexo;
     }
 }

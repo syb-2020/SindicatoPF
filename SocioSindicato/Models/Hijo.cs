@@ -17,6 +17,7 @@ namespace SocioSindicato.Models
         public int id_hijo { get; set; }
         public string nombre { get; set; }
         public string rut_hijo { get; set; }
+        public string sexo { get; set; }
         public Nullable<System.DateTime> nacimiento { get; set; }
         public string rut_socio { get; set; }
     
