@@ -153,7 +153,7 @@ namespace SocioSindicato.ViewsAdministrador
                     context.Hijo.Add(hs);
                     context.SaveChanges();
 
-
+                    //nice
                     
                     //BORRAR DATOS SOCIO
                     txtrutsocio.Text = "";
