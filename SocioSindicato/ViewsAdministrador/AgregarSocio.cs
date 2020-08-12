@@ -185,6 +185,37 @@ namespace SocioSindicato.ViewsAdministrador
                     cbSexo.SelectedIndex = 0;
                     datenacimientohijosocio.Value = DateTime.Now;
 
+                    //BORRAR DATOS SOCIO
+                    txtrutsocio.Text = "";
+                    file = null;
+                    txtnombresocio.Text = "";
+                    dateingresoempresasocio.Value = DateTime.Now;
+                    combocategoriasocio.SelectedIndex = 0;
+                    combocontratosocio.SelectedIndex = 0; ;
+                    comboplantasocio.SelectedIndex = 0; ;
+                    datefechanacimientosocio.Value = DateTime.Now;
+                    txtedadsocio.Text = "";
+                    txtdomiciliosocio.Text = "";
+                    comboestadocivilagregar.SelectedIndex = 0;
+                    txttelefonosocio.Text = "";
+                    combocargasocio.SelectedIndex = 0;
+                    txtnacionalidadsocio.Text = "";
+                    txtcorreosocio.Text = "";
+                    txtnombrepadre.Text = "";
+                    txtnombremadre.Text = "";
+                    //BORRAR DATOS CONYUGE
+                    txtconyugesocio.Text = "";
+                    comboconvivienteconyugesocio.SelectedIndex = 0; ;
+                    txtrutconyugesocio.Text = "";
+                    datefechanacimientoconyugesocio.Value = DateTime.Now;
+                    txtedadconyugesocio.Text = "";
+                    //BORRAR DATOS HIJOS
+                    txtnombrehijosocio.Text = "";
+                    txtruthijosocio.Text = "";
+                    cbSexo.SelectedIndex = 0;
+                    datenacimientohijosocio.Value = DateTime.Now;
+
+
                     MessageBox.Show("Socio Agregado Correctamente!");
 
 

@@ -129,6 +129,8 @@
             // combocategoriasocio
             // 
             this.combocategoriasocio.FormattingEnabled = true;
+            this.combocategoriasocio.Items.AddRange(new object[] {
+            ""});
             this.combocategoriasocio.Location = new System.Drawing.Point(145, 126);
             this.combocategoriasocio.Name = "combocategoriasocio";
             this.combocategoriasocio.Size = new System.Drawing.Size(200, 21);
