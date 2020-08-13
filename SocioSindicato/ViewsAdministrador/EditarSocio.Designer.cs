@@ -619,6 +619,8 @@
             this.cbhijossocio.Name = "cbhijossocio";
             this.cbhijossocio.Size = new System.Drawing.Size(200, 21);
             this.cbhijossocio.TabIndex = 97;
+            this.cbhijossocio.SelectedIndexChanged += new System.EventHandler(this.cbhijossocio_SelectedIndexChanged);
+            this.cbhijossocio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbhijossocio_KeyPress);
             // 
             // btneliminarcon
             // 
