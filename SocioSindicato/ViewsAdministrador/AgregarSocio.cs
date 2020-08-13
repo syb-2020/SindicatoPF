@@ -1,5 +1,6 @@
 ﻿using SocioSindicato.Models;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -93,6 +94,53 @@ namespace SocioSindicato.ViewsAdministrador
 
         }
 
+        public class Datos
+        {
+
+            public string rutsocio { get; set; }
+            public string nombrehijo { get; set; }
+            public string ruthijo { get; set; }
+            public string sexohijo { get; set; }
+            public DateTime nacimientohijo { get; set; }
+
+        }
+
+        List<Datos> mashijos = new List<Datos>();
+
+        private void btnagregarotrohijo_Click(object sender, EventArgs e)
+        {
+            using (sindicatoPFEntities context = new sindicatoPFEntities())
+            {
+
+               
+
+               
+                Datos dato = new Datos()
+                {
+                    rutsocio = txtrutsocio.Text,
+                    nombrehijo = txtnombrehijosocio.Text,
+                    ruthijo = txtruthijosocio.Text,
+                    sexohijo = cbSexo.Text,
+                    nacimientohijo = Convert.ToDateTime(datenacimientohijosocio.Text),
+                    
+                };
+                mashijos.Add(dato);
+
+
+
+                txtnombrehijosocio.Text = "";
+                txtruthijosocio.Text = "";
+                cbSexo.SelectedIndex = 0;
+                datenacimientohijosocio.Value = DateTime.Now;
+               
+                gridpruebahijo.DataSource = mashijos.ToArray();
+            }
+
+            
+                
+        }
+
+
 
 
 
@@ -117,7 +165,6 @@ namespace SocioSindicato.ViewsAdministrador
                         domicilio = txtdomiciliosocio.Text,
                         estado_civil = comboestadocivilagregar.Text,
                         telefono = Convert.ToInt32(txttelefonosocio.Text),
-                        cantidad_carga = Convert.ToInt32(combocargasocio.SelectedItem.ToString()),
                         nacionalidad = txtnacionalidadsocio.Text,
                         correo = txtcorreosocio.Text,
                         datos_papa = txtnombrepadre.Text,
@@ -137,53 +184,24 @@ namespace SocioSindicato.ViewsAdministrador
                         edad = Convert.ToInt32(txtedadconyugesocio.Text)
                     };
 
-                    
-                    Hijo hs = new Hijo { 
-                    rut_socio = txtrutsocio.Text,
-                    nombre = txtnombrehijosocio.Text,
-                    rut_hijo = txtruthijosocio.Text,
-                    sexo = cbSexo.Text,
-                    nacimiento = Convert.ToDateTime(datenacimientohijosocio.Text)
-                    };
-
-                   
+                    foreach (var a in mashijos)
+                    {
+                        Hijo hs = new Hijo
+                        {
+                            rut_socio = a.rutsocio,
+                            nombre = a.nombrehijo,
+                            rut_hijo = a.ruthijo,
+                            sexo = a.sexohijo,
+                            nacimiento = a.nacimientohijo
+                        };
+                        context.Hijo.Add(hs);
+                    }
 
                     context.Socio.Add(nuevosocio);
                     context.Conyuge.Add(con);
-                    context.Hijo.Add(hs);
+
                     context.SaveChanges();
 
-                    //nice
-                    
-                    //BORRAR DATOS SOCIO
-                    txtrutsocio.Text = "";
-                    file = null;
-                    txtnombresocio.Text = "";
-                    dateingresoempresasocio.Value = DateTime.Now;
-                    combocategoriasocio.SelectedIndex = 0;
-                    combocontratosocio.SelectedIndex = 0; ;
-                    comboplantasocio.SelectedIndex = 0; ;
-                    datefechanacimientosocio.Value = DateTime.Now;
-                    txtedadsocio.Text = "";
-                    txtdomiciliosocio.Text = "";
-                    comboestadocivilagregar.SelectedIndex = 0;
-                    txttelefonosocio.Text = "";
-                    combocargasocio.SelectedIndex = 0; 
-                    txtnacionalidadsocio.Text = "";
-                    txtcorreosocio.Text = "";
-                    txtnombrepadre.Text = "";
-                    txtnombremadre.Text = "";
-                    //BORRAR DATOS CONYUGE
-                    txtconyugesocio.Text = "";
-                    comboconvivienteconyugesocio.SelectedIndex = 0; ;
-                    txtrutconyugesocio.Text = "";
-                    datefechanacimientoconyugesocio.Value = DateTime.Now;
-                    txtedadconyugesocio.Text = "";
-                    //BORRAR DATOS HIJOS
-                    txtnombrehijosocio.Text = "";
-                    txtruthijosocio.Text = "";
-                    cbSexo.SelectedIndex = 0;
-                    datenacimientohijosocio.Value = DateTime.Now;
 
                     //BORRAR DATOS SOCIO
                     txtrutsocio.Text = "";
@@ -198,7 +216,6 @@ namespace SocioSindicato.ViewsAdministrador
                     txtdomiciliosocio.Text = "";
                     comboestadocivilagregar.SelectedIndex = 0;
                     txttelefonosocio.Text = "";
-                    combocargasocio.SelectedIndex = 0;
                     txtnacionalidadsocio.Text = "";
                     txtcorreosocio.Text = "";
                     txtnombrepadre.Text = "";
@@ -217,6 +234,8 @@ namespace SocioSindicato.ViewsAdministrador
 
 
                     MessageBox.Show("Socio Agregado Correctamente!");
+
+                    gridpruebahijo.DataSource = "";
 
 
 
@@ -242,5 +261,12 @@ namespace SocioSindicato.ViewsAdministrador
         {
             solonumeros(e);
         }
+
+        private void AgregarSocio_Load(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }

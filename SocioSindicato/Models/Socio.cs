@@ -33,7 +33,6 @@ namespace SocioSindicato.Models
         public string domicilio { get; set; }
         public string estado_civil { get; set; }
         public int telefono { get; set; }
-        public int cantidad_carga { get; set; }
         public string nacionalidad { get; set; }
         public string correo { get; set; }
         public string datos_papa { get; set; }

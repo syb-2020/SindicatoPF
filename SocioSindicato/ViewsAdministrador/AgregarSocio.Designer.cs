@@ -47,8 +47,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtdomiciliosocio = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.combocargasocio = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtnacionalidadsocio = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -88,12 +86,15 @@
             this.comboestadocivilagregar = new System.Windows.Forms.ComboBox();
             this.label28 = new System.Windows.Forms.Label();
             this.cbSexo = new System.Windows.Forms.ComboBox();
+            this.btnagregarotrohijo = new System.Windows.Forms.Button();
+            this.gridpruebahijo = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.fotosocio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridpruebahijo)).BeginInit();
             this.SuspendLayout();
             // 
             // btnvolveragregar
             // 
-            this.btnvolveragregar.Location = new System.Drawing.Point(631, 530);
+            this.btnvolveragregar.Location = new System.Drawing.Point(912, 609);
             this.btnvolveragregar.Name = "btnvolveragregar";
             this.btnvolveragregar.Size = new System.Drawing.Size(75, 23);
             this.btnvolveragregar.TabIndex = 0;
@@ -260,44 +261,10 @@
             this.label10.TabIndex = 20;
             this.label10.Text = "Estado Civil";
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(19, 406);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(94, 13);
-            this.label11.TabIndex = 22;
-            this.label11.Text = "Numero de cargas";
-            // 
-            // combocargasocio
-            // 
-            this.combocargasocio.FormattingEnabled = true;
-            this.combocargasocio.Items.AddRange(new object[] {
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15"});
-            this.combocargasocio.Location = new System.Drawing.Point(145, 403);
-            this.combocargasocio.Name = "combocargasocio";
-            this.combocargasocio.Size = new System.Drawing.Size(200, 21);
-            this.combocargasocio.TabIndex = 23;
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(17, 440);
+            this.label12.Location = new System.Drawing.Point(17, 406);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(69, 13);
             this.label12.TabIndex = 24;
@@ -305,7 +272,7 @@
             // 
             // txtnacionalidadsocio
             // 
-            this.txtnacionalidadsocio.Location = new System.Drawing.Point(145, 440);
+            this.txtnacionalidadsocio.Location = new System.Drawing.Point(145, 406);
             this.txtnacionalidadsocio.Name = "txtnacionalidadsocio";
             this.txtnacionalidadsocio.Size = new System.Drawing.Size(200, 20);
             this.txtnacionalidadsocio.TabIndex = 25;
@@ -313,7 +280,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(17, 474);
+            this.label13.Location = new System.Drawing.Point(17, 440);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(94, 13);
             this.label13.TabIndex = 26;
@@ -321,7 +288,7 @@
             // 
             // txtcorreosocio
             // 
-            this.txtcorreosocio.Location = new System.Drawing.Point(145, 471);
+            this.txtcorreosocio.Location = new System.Drawing.Point(145, 437);
             this.txtcorreosocio.Name = "txtcorreosocio";
             this.txtcorreosocio.Size = new System.Drawing.Size(200, 20);
             this.txtcorreosocio.TabIndex = 27;
@@ -329,7 +296,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(16, 509);
+            this.label14.Location = new System.Drawing.Point(16, 475);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(89, 13);
             this.label14.TabIndex = 28;
@@ -338,7 +305,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(19, 540);
+            this.label15.Location = new System.Drawing.Point(19, 506);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(91, 13);
             this.label15.TabIndex = 29;
@@ -346,14 +313,14 @@
             // 
             // txtnombrepadre
             // 
-            this.txtnombrepadre.Location = new System.Drawing.Point(145, 509);
+            this.txtnombrepadre.Location = new System.Drawing.Point(145, 475);
             this.txtnombrepadre.Name = "txtnombrepadre";
             this.txtnombrepadre.Size = new System.Drawing.Size(200, 20);
             this.txtnombrepadre.TabIndex = 30;
             // 
             // txtnombremadre
             // 
-            this.txtnombremadre.Location = new System.Drawing.Point(145, 540);
+            this.txtnombremadre.Location = new System.Drawing.Point(145, 506);
             this.txtnombremadre.Name = "txtnombremadre";
             this.txtnombremadre.Size = new System.Drawing.Size(200, 20);
             this.txtnombremadre.TabIndex = 31;
@@ -483,7 +450,7 @@
             // 
             // btnagregarsocio
             // 
-            this.btnagregarsocio.Location = new System.Drawing.Point(475, 530);
+            this.btnagregarsocio.Location = new System.Drawing.Point(768, 609);
             this.btnagregarsocio.Name = "btnagregarsocio";
             this.btnagregarsocio.Size = new System.Drawing.Size(118, 23);
             this.btnagregarsocio.TabIndex = 47;
@@ -630,11 +597,32 @@
             this.cbSexo.Size = new System.Drawing.Size(200, 21);
             this.cbSexo.TabIndex = 60;
             // 
+            // btnagregarotrohijo
+            // 
+            this.btnagregarotrohijo.Location = new System.Drawing.Point(412, 543);
+            this.btnagregarotrohijo.Name = "btnagregarotrohijo";
+            this.btnagregarotrohijo.Size = new System.Drawing.Size(105, 23);
+            this.btnagregarotrohijo.TabIndex = 61;
+            this.btnagregarotrohijo.Text = "Agregar Hijo";
+            this.btnagregarotrohijo.UseVisualStyleBackColor = true;
+            this.btnagregarotrohijo.Click += new System.EventHandler(this.btnagregarotrohijo_Click);
+            // 
+            // gridpruebahijo
+            // 
+            this.gridpruebahijo.AllowUserToOrderColumns = true;
+            this.gridpruebahijo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridpruebahijo.Location = new System.Drawing.Point(412, 404);
+            this.gridpruebahijo.Name = "gridpruebahijo";
+            this.gridpruebahijo.Size = new System.Drawing.Size(392, 115);
+            this.gridpruebahijo.TabIndex = 62;
+            // 
             // AgregarSocio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1002, 646);
+            this.ClientSize = new System.Drawing.Size(1091, 673);
+            this.Controls.Add(this.gridpruebahijo);
+            this.Controls.Add(this.btnagregarotrohijo);
             this.Controls.Add(this.cbSexo);
             this.Controls.Add(this.label28);
             this.Controls.Add(this.comboestadocivilagregar);
@@ -672,8 +660,6 @@
             this.Controls.Add(this.label13);
             this.Controls.Add(this.txtnacionalidadsocio);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.combocargasocio);
-            this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtdomiciliosocio);
             this.Controls.Add(this.label9);
@@ -695,7 +681,9 @@
             this.Controls.Add(this.btnvolveragregar);
             this.Name = "AgregarSocio";
             this.Text = "AgregarSocio";
+            this.Load += new System.EventHandler(this.AgregarSocio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.fotosocio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridpruebahijo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -722,8 +710,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtdomiciliosocio;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox combocargasocio;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtnacionalidadsocio;
         private System.Windows.Forms.Label label13;
@@ -763,5 +749,7 @@
         private System.Windows.Forms.ComboBox comboestadocivilagregar;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.ComboBox cbSexo;
+        private System.Windows.Forms.Button btnagregarotrohijo;
+        private System.Windows.Forms.DataGridView gridpruebahijo;
     }
 }

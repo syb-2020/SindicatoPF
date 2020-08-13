@@ -129,5 +129,13 @@ namespace SocioSindicato
             
                 
         }
+
+        private void btneditarsocioADM_Click(object sender, EventArgs e)
+        {
+            ViewsAdministrador.EditarSocio bs = new ViewsAdministrador.EditarSocio();
+            this.Hide();
+            bs.ShowDialog();
+            this.Close();
+        }
     }
 }

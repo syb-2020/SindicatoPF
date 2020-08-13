@@ -65,7 +65,6 @@
           <Property Name="domicilio" Type="varchar" MaxLength="500" Nullable="false" />
           <Property Name="estado_civil" Type="varchar" MaxLength="500" Nullable="false" />
           <Property Name="telefono" Type="int" Nullable="false" />
-          <Property Name="cantidad_carga" Type="int" Nullable="false" />
           <Property Name="nacionalidad" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="correo" Type="varchar" MaxLength="200" Nullable="false" />
           <Property Name="datos_papa" Type="varchar" MaxLength="500" Nullable="false" />
@@ -250,7 +249,6 @@
           <Property Name="domicilio" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="estado_civil" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="telefono" Type="Int32" Nullable="false" />
-          <Property Name="cantidad_carga" Type="Int32" Nullable="false" />
           <Property Name="nacionalidad" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="correo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="datos_papa" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
@@ -440,7 +438,6 @@
                 <ScalarProperty Name="domicilio" ColumnName="domicilio" />
                 <ScalarProperty Name="estado_civil" ColumnName="estado_civil" />
                 <ScalarProperty Name="telefono" ColumnName="telefono" />
-                <ScalarProperty Name="cantidad_carga" ColumnName="cantidad_carga" />
                 <ScalarProperty Name="nacionalidad" ColumnName="nacionalidad" />
                 <ScalarProperty Name="correo" ColumnName="correo" />
                 <ScalarProperty Name="datos_papa" ColumnName="datos_papa" />

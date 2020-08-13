@@ -132,6 +132,12 @@
     <Compile Include="ViewsAdministrador\BuscarSocio.Designer.cs">
       <DependentUpon>BuscarSocio.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewsAdministrador\EditarSocio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewsAdministrador\EditarSocio.Designer.cs">
+      <DependentUpon>EditarSocio.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewsAdministrador\EliminarSocio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ViewsAdministrador\BuscarSocio.resx">
       <DependentUpon>BuscarSocio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewsAdministrador\EditarSocio.resx">
+      <DependentUpon>EditarSocio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewsAdministrador\EliminarSocio.resx">
       <DependentUpon>EliminarSocio.cs</DependentUpon>
