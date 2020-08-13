@@ -63,13 +63,6 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.datefechanacimientoconyugesocio = new System.Windows.Forms.DateTimePicker();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.txtnombrehijosocio = new System.Windows.Forms.TextBox();
-            this.txtruthijosocio = new System.Windows.Forms.TextBox();
-            this.datenacimientohijosocio = new System.Windows.Forms.DateTimePicker();
             this.btnagregarsocio = new System.Windows.Forms.Button();
             this.combocontratosocio = new System.Windows.Forms.ComboBox();
             this.label25 = new System.Windows.Forms.Label();
@@ -84,10 +77,17 @@
             this.lbagregadosocio = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.comboestadocivilagregar = new System.Windows.Forms.ComboBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.cbSexo = new System.Windows.Forms.ComboBox();
             this.btnagregarotrohijo = new System.Windows.Forms.Button();
             this.gridpruebahijo = new System.Windows.Forms.DataGridView();
+            this.cbSexo = new System.Windows.Forms.ComboBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.datenacimientohijosocio = new System.Windows.Forms.DateTimePicker();
+            this.txtruthijosocio = new System.Windows.Forms.TextBox();
+            this.txtnombrehijosocio = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.fotosocio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridpruebahijo)).BeginInit();
             this.SuspendLayout();
@@ -391,63 +391,6 @@
             this.datefechanacimientoconyugesocio.Size = new System.Drawing.Size(200, 20);
             this.datefechanacimientoconyugesocio.TabIndex = 39;
             // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(406, 229);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(137, 13);
-            this.label21.TabIndex = 40;
-            this.label21.Text = "Datos de los Hijos del socio";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(404, 267);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(44, 13);
-            this.label22.TabIndex = 41;
-            this.label22.Text = "Nombre";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(406, 300);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(24, 13);
-            this.label23.TabIndex = 42;
-            this.label23.Text = "Rut";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(406, 361);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(108, 13);
-            this.label24.TabIndex = 43;
-            this.label24.Text = "Fecha de Nacimiento";
-            // 
-            // txtnombrehijosocio
-            // 
-            this.txtnombrehijosocio.Location = new System.Drawing.Point(532, 263);
-            this.txtnombrehijosocio.Name = "txtnombrehijosocio";
-            this.txtnombrehijosocio.Size = new System.Drawing.Size(200, 20);
-            this.txtnombrehijosocio.TabIndex = 44;
-            // 
-            // txtruthijosocio
-            // 
-            this.txtruthijosocio.Location = new System.Drawing.Point(532, 294);
-            this.txtruthijosocio.Name = "txtruthijosocio";
-            this.txtruthijosocio.Size = new System.Drawing.Size(200, 20);
-            this.txtruthijosocio.TabIndex = 45;
-            // 
-            // datenacimientohijosocio
-            // 
-            this.datenacimientohijosocio.Location = new System.Drawing.Point(532, 358);
-            this.datenacimientohijosocio.Name = "datenacimientohijosocio";
-            this.datenacimientohijosocio.Size = new System.Drawing.Size(200, 20);
-            this.datenacimientohijosocio.TabIndex = 46;
-            // 
             // btnagregarsocio
             // 
             this.btnagregarsocio.Location = new System.Drawing.Point(768, 609);
@@ -576,27 +519,6 @@
             this.comboestadocivilagregar.Size = new System.Drawing.Size(200, 21);
             this.comboestadocivilagregar.TabIndex = 58;
             // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(409, 331);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(31, 13);
-            this.label28.TabIndex = 59;
-            this.label28.Text = "Sexo";
-            // 
-            // cbSexo
-            // 
-            this.cbSexo.FormattingEnabled = true;
-            this.cbSexo.Items.AddRange(new object[] {
-            "",
-            "Hombre",
-            "Mujer"});
-            this.cbSexo.Location = new System.Drawing.Point(532, 322);
-            this.cbSexo.Name = "cbSexo";
-            this.cbSexo.Size = new System.Drawing.Size(200, 21);
-            this.cbSexo.TabIndex = 60;
-            // 
             // btnagregarotrohijo
             // 
             this.btnagregarotrohijo.Location = new System.Drawing.Point(412, 543);
@@ -615,6 +537,84 @@
             this.gridpruebahijo.Name = "gridpruebahijo";
             this.gridpruebahijo.Size = new System.Drawing.Size(392, 115);
             this.gridpruebahijo.TabIndex = 62;
+            // 
+            // cbSexo
+            // 
+            this.cbSexo.FormattingEnabled = true;
+            this.cbSexo.Items.AddRange(new object[] {
+            "",
+            "Hombre",
+            "Mujer"});
+            this.cbSexo.Location = new System.Drawing.Point(532, 322);
+            this.cbSexo.Name = "cbSexo";
+            this.cbSexo.Size = new System.Drawing.Size(200, 21);
+            this.cbSexo.TabIndex = 60;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(409, 331);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(31, 13);
+            this.label28.TabIndex = 59;
+            this.label28.Text = "Sexo";
+            // 
+            // datenacimientohijosocio
+            // 
+            this.datenacimientohijosocio.Location = new System.Drawing.Point(532, 358);
+            this.datenacimientohijosocio.Name = "datenacimientohijosocio";
+            this.datenacimientohijosocio.Size = new System.Drawing.Size(200, 20);
+            this.datenacimientohijosocio.TabIndex = 46;
+            // 
+            // txtruthijosocio
+            // 
+            this.txtruthijosocio.Location = new System.Drawing.Point(532, 294);
+            this.txtruthijosocio.Name = "txtruthijosocio";
+            this.txtruthijosocio.Size = new System.Drawing.Size(200, 20);
+            this.txtruthijosocio.TabIndex = 45;
+            // 
+            // txtnombrehijosocio
+            // 
+            this.txtnombrehijosocio.Location = new System.Drawing.Point(532, 263);
+            this.txtnombrehijosocio.Name = "txtnombrehijosocio";
+            this.txtnombrehijosocio.Size = new System.Drawing.Size(200, 20);
+            this.txtnombrehijosocio.TabIndex = 44;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(406, 361);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(108, 13);
+            this.label24.TabIndex = 43;
+            this.label24.Text = "Fecha de Nacimiento";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(406, 300);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(24, 13);
+            this.label23.TabIndex = 42;
+            this.label23.Text = "Rut";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(404, 267);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(44, 13);
+            this.label22.TabIndex = 41;
+            this.label22.Text = "Nombre";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(406, 229);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(137, 13);
+            this.label21.TabIndex = 40;
+            this.label21.Text = "Datos de los Hijos del socio";
             // 
             // AgregarSocio
             // 
@@ -726,13 +726,6 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.DateTimePicker datefechanacimientoconyugesocio;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox txtnombrehijosocio;
-        private System.Windows.Forms.TextBox txtruthijosocio;
-        private System.Windows.Forms.DateTimePicker datenacimientohijosocio;
         private System.Windows.Forms.Button btnagregarsocio;
         private System.Windows.Forms.ComboBox combocontratosocio;
         private System.Windows.Forms.Label label25;
@@ -747,9 +740,16 @@
         private System.Windows.Forms.Label lbagregadosocio;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.ComboBox comboestadocivilagregar;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.ComboBox cbSexo;
         private System.Windows.Forms.Button btnagregarotrohijo;
         private System.Windows.Forms.DataGridView gridpruebahijo;
+        private System.Windows.Forms.ComboBox cbSexo;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.DateTimePicker datenacimientohijosocio;
+        private System.Windows.Forms.TextBox txtruthijosocio;
+        private System.Windows.Forms.TextBox txtnombrehijosocio;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
     }
 }
