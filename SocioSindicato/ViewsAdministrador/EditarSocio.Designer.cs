@@ -87,6 +87,11 @@
             this.btnbuscareditar = new System.Windows.Forms.Button();
             this.txtbuscar = new System.Windows.Forms.TextBox();
             this.gridcapdatosedi = new System.Windows.Forms.DataGridView();
+            this.cbhijossocio = new System.Windows.Forms.ComboBox();
+            this.btneliminarcon = new System.Windows.Forms.Button();
+            this.btnagregarcon = new System.Windows.Forms.Button();
+            this.btneliminarhi = new System.Windows.Forms.Button();
+            this.btnagregarhij = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.fotosocio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridcapdatosedi)).BeginInit();
             this.SuspendLayout();
@@ -103,11 +108,11 @@
             // 
             // btneditar
             // 
-            this.btneditar.Location = new System.Drawing.Point(410, 654);
+            this.btneditar.Location = new System.Drawing.Point(37, 701);
             this.btneditar.Name = "btneditar";
-            this.btneditar.Size = new System.Drawing.Size(75, 23);
+            this.btneditar.Size = new System.Drawing.Size(90, 23);
             this.btneditar.TabIndex = 1;
-            this.btneditar.Text = "Editar";
+            this.btneditar.Text = "Editar Socio";
             this.btneditar.UseVisualStyleBackColor = true;
             this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
             // 
@@ -378,7 +383,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(500, 99);
+            this.label17.Location = new System.Drawing.Point(527, 22);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(106, 13);
             this.label17.TabIndex = 70;
@@ -386,7 +391,7 @@
             // 
             // txtedadconyugesocio
             // 
-            this.txtedadconyugesocio.Location = new System.Drawing.Point(496, 256);
+            this.txtedadconyugesocio.Location = new System.Drawing.Point(508, 200);
             this.txtedadconyugesocio.Name = "txtedadconyugesocio";
             this.txtedadconyugesocio.Size = new System.Drawing.Size(200, 20);
             this.txtedadconyugesocio.TabIndex = 80;
@@ -394,7 +399,7 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(370, 253);
+            this.label27.Location = new System.Drawing.Point(382, 197);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(32, 13);
             this.label27.TabIndex = 79;
@@ -407,7 +412,7 @@
             "",
             "SI",
             "NO"});
-            this.comboconvivienteconyugesocio.Location = new System.Drawing.Point(496, 154);
+            this.comboconvivienteconyugesocio.Location = new System.Drawing.Point(508, 98);
             this.comboconvivienteconyugesocio.Name = "comboconvivienteconyugesocio";
             this.comboconvivienteconyugesocio.Size = new System.Drawing.Size(200, 21);
             this.comboconvivienteconyugesocio.TabIndex = 78;
@@ -415,7 +420,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(368, 157);
+            this.label26.Location = new System.Drawing.Point(380, 101);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(63, 13);
             this.label26.TabIndex = 77;
@@ -423,7 +428,7 @@
             // 
             // datefechanacimientoconyugesocio
             // 
-            this.datefechanacimientoconyugesocio.Location = new System.Drawing.Point(496, 222);
+            this.datefechanacimientoconyugesocio.Location = new System.Drawing.Point(508, 166);
             this.datefechanacimientoconyugesocio.Name = "datefechanacimientoconyugesocio";
             this.datefechanacimientoconyugesocio.Size = new System.Drawing.Size(200, 20);
             this.datefechanacimientoconyugesocio.TabIndex = 76;
@@ -431,7 +436,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(368, 227);
+            this.label20.Location = new System.Drawing.Point(380, 171);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(108, 13);
             this.label20.TabIndex = 75;
@@ -440,7 +445,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(370, 191);
+            this.label19.Location = new System.Drawing.Point(382, 135);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(24, 13);
             this.label19.TabIndex = 74;
@@ -448,14 +453,14 @@
             // 
             // txtrutconyugesocio
             // 
-            this.txtrutconyugesocio.Location = new System.Drawing.Point(496, 188);
+            this.txtrutconyugesocio.Location = new System.Drawing.Point(508, 132);
             this.txtrutconyugesocio.Name = "txtrutconyugesocio";
             this.txtrutconyugesocio.Size = new System.Drawing.Size(200, 20);
             this.txtrutconyugesocio.TabIndex = 73;
             // 
             // txtconyugesocio
             // 
-            this.txtconyugesocio.Location = new System.Drawing.Point(496, 122);
+            this.txtconyugesocio.Location = new System.Drawing.Point(508, 66);
             this.txtconyugesocio.Name = "txtconyugesocio";
             this.txtconyugesocio.Size = new System.Drawing.Size(200, 20);
             this.txtconyugesocio.TabIndex = 72;
@@ -463,7 +468,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(368, 122);
+            this.label18.Location = new System.Drawing.Point(380, 66);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(44, 13);
             this.label18.TabIndex = 71;
@@ -476,7 +481,7 @@
             "",
             "Hombre",
             "Mujer"});
-            this.cbSexo.Location = new System.Drawing.Point(496, 403);
+            this.cbSexo.Location = new System.Drawing.Point(508, 418);
             this.cbSexo.Name = "cbSexo";
             this.cbSexo.Size = new System.Drawing.Size(200, 21);
             this.cbSexo.TabIndex = 89;
@@ -484,7 +489,7 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(373, 412);
+            this.label28.Location = new System.Drawing.Point(385, 427);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(31, 13);
             this.label28.TabIndex = 88;
@@ -492,21 +497,21 @@
             // 
             // datenacimientohijosocio
             // 
-            this.datenacimientohijosocio.Location = new System.Drawing.Point(496, 439);
+            this.datenacimientohijosocio.Location = new System.Drawing.Point(508, 454);
             this.datenacimientohijosocio.Name = "datenacimientohijosocio";
             this.datenacimientohijosocio.Size = new System.Drawing.Size(200, 20);
             this.datenacimientohijosocio.TabIndex = 87;
             // 
             // txtruthijosocio
             // 
-            this.txtruthijosocio.Location = new System.Drawing.Point(496, 375);
+            this.txtruthijosocio.Location = new System.Drawing.Point(508, 390);
             this.txtruthijosocio.Name = "txtruthijosocio";
             this.txtruthijosocio.Size = new System.Drawing.Size(200, 20);
             this.txtruthijosocio.TabIndex = 86;
             // 
             // txtnombrehijosocio
             // 
-            this.txtnombrehijosocio.Location = new System.Drawing.Point(496, 344);
+            this.txtnombrehijosocio.Location = new System.Drawing.Point(508, 359);
             this.txtnombrehijosocio.Name = "txtnombrehijosocio";
             this.txtnombrehijosocio.Size = new System.Drawing.Size(200, 20);
             this.txtnombrehijosocio.TabIndex = 85;
@@ -514,7 +519,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(370, 442);
+            this.label24.Location = new System.Drawing.Point(382, 457);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(108, 13);
             this.label24.TabIndex = 84;
@@ -523,7 +528,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(370, 381);
+            this.label23.Location = new System.Drawing.Point(382, 396);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(24, 13);
             this.label23.TabIndex = 83;
@@ -532,7 +537,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(368, 348);
+            this.label22.Location = new System.Drawing.Point(380, 363);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(44, 13);
             this.label22.TabIndex = 82;
@@ -541,7 +546,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(469, 305);
+            this.label21.Location = new System.Drawing.Point(527, 274);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(137, 13);
             this.label21.TabIndex = 81;
@@ -607,11 +612,64 @@
             this.gridcapdatosedi.TabIndex = 95;
             this.gridcapdatosedi.Visible = false;
             // 
+            // cbhijossocio
+            // 
+            this.cbhijossocio.FormattingEnabled = true;
+            this.cbhijossocio.Location = new System.Drawing.Point(508, 313);
+            this.cbhijossocio.Name = "cbhijossocio";
+            this.cbhijossocio.Size = new System.Drawing.Size(200, 21);
+            this.cbhijossocio.TabIndex = 97;
+            // 
+            // btneliminarcon
+            // 
+            this.btneliminarcon.Location = new System.Drawing.Point(426, 239);
+            this.btneliminarcon.Name = "btneliminarcon";
+            this.btneliminarcon.Size = new System.Drawing.Size(112, 23);
+            this.btneliminarcon.TabIndex = 98;
+            this.btneliminarcon.Text = "Eliminar Conyuge";
+            this.btneliminarcon.UseVisualStyleBackColor = true;
+            this.btneliminarcon.Click += new System.EventHandler(this.btneliminarcon_Click);
+            // 
+            // btnagregarcon
+            // 
+            this.btnagregarcon.Location = new System.Drawing.Point(586, 239);
+            this.btnagregarcon.Name = "btnagregarcon";
+            this.btnagregarcon.Size = new System.Drawing.Size(113, 23);
+            this.btnagregarcon.TabIndex = 99;
+            this.btnagregarcon.Text = "Agregar Conyuge";
+            this.btnagregarcon.UseVisualStyleBackColor = true;
+            this.btnagregarcon.Click += new System.EventHandler(this.btnagregarcon_Click);
+            // 
+            // btneliminarhi
+            // 
+            this.btneliminarhi.Location = new System.Drawing.Point(426, 531);
+            this.btneliminarhi.Name = "btneliminarhi";
+            this.btneliminarhi.Size = new System.Drawing.Size(112, 23);
+            this.btneliminarhi.TabIndex = 100;
+            this.btneliminarhi.Text = "Eliminar Hijo";
+            this.btneliminarhi.UseVisualStyleBackColor = true;
+            this.btneliminarhi.Click += new System.EventHandler(this.btneliminarhi_Click);
+            // 
+            // btnagregarhij
+            // 
+            this.btnagregarhij.Location = new System.Drawing.Point(586, 531);
+            this.btnagregarhij.Name = "btnagregarhij";
+            this.btnagregarhij.Size = new System.Drawing.Size(113, 23);
+            this.btnagregarhij.TabIndex = 101;
+            this.btnagregarhij.Text = "Agregar Hijo";
+            this.btnagregarhij.UseVisualStyleBackColor = true;
+            this.btnagregarhij.Click += new System.EventHandler(this.btnagregarhij_Click);
+            // 
             // EditarSocio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1095, 736);
+            this.Controls.Add(this.btnagregarhij);
+            this.Controls.Add(this.btneliminarhi);
+            this.Controls.Add(this.btnagregarcon);
+            this.Controls.Add(this.btneliminarcon);
+            this.Controls.Add(this.cbhijossocio);
             this.Controls.Add(this.gridcapdatosedi);
             this.Controls.Add(this.txtbuscar);
             this.Controls.Add(this.btnbuscareditar);
@@ -740,5 +798,10 @@
         private System.Windows.Forms.Button btnbuscareditar;
         private System.Windows.Forms.TextBox txtbuscar;
         private System.Windows.Forms.DataGridView gridcapdatosedi;
+        private System.Windows.Forms.ComboBox cbhijossocio;
+        private System.Windows.Forms.Button btneliminarcon;
+        private System.Windows.Forms.Button btnagregarcon;
+        private System.Windows.Forms.Button btneliminarhi;
+        private System.Windows.Forms.Button btnagregarhij;
     }
 }

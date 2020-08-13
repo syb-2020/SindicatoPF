@@ -17,6 +17,7 @@ namespace SocioSindicato.ViewsAdministrador
         public EditarSocio()
         {
             InitializeComponent();
+
         }
 
         private void btnvolvereditar_Click(object sender, EventArgs e)
@@ -54,11 +55,13 @@ namespace SocioSindicato.ViewsAdministrador
             }
         }
 
-        private void btnbuscareditar_Click(object sender, EventArgs e)
+        string buscar_rut = "";
+
+    private void btnbuscareditar_Click(object sender, EventArgs e)
         {
             using (sindicatoPFEntities context = new sindicatoPFEntities())
             {
-                string buscar_rut = txtbuscar.Text;
+                 buscar_rut = txtbuscar.Text;
 
                 var listRut = from sociorut in context.Socio
                                   join conyu in context.Conyuge
@@ -91,12 +94,12 @@ namespace SocioSindicato.ViewsAdministrador
                                   nombrehij = hij.nombre,
                                   ruthij = hij.rut_hijo,
                                   sexohijo = hij.sexo,
-                                  fechahij = hij.nacimiento
+                                  fechahij = hij.nacimiento                                 
                               };
 
                 gridcapdatosedi.DataSource = listRut.ToList();
 
-
+               
 
 
                 if (txtbuscar.Text == "")
@@ -134,19 +137,32 @@ namespace SocioSindicato.ViewsAdministrador
                                 combocontratosocio.Text = Convert.ToString(row.Cells[19].Value);
 
                                 //datos de la conyu
-                                txtconyugesocio.Text = Convert.ToString(row.Cells[14].Value);
-                                comboconvivienteconyugesocio.Text = Convert.ToString(row.Cells[15].Value);
-                                txtrutconyugesocio.Text = Convert.ToString(row.Cells[16].Value);
-                                datefechanacimientoconyugesocio.Value = Convert.ToDateTime(row.Cells[17].Value);
-                                txtedadconyugesocio.Text = Convert.ToString(row.Cells[18].Value);
-
-                                //datos del hijo
-                                txtnombrehijosocio.Text = Convert.ToString(row.Cells[20].Value);
-                                txtruthijosocio.Text = Convert.ToString(row.Cells[21].Value);
-                                cbSexo.Text = Convert.ToString(row.Cells[22].Value);
-                                datenacimientohijosocio.Value = Convert.ToDateTime(row.Cells[23].Value);
-
                                 
+                               
+                                    txtconyugesocio.Text = Convert.ToString(row.Cells[14].Value);
+                                    comboconvivienteconyugesocio.Text = Convert.ToString(row.Cells[15].Value);
+                                    txtrutconyugesocio.Text = Convert.ToString(row.Cells[16].Value);
+                                    datefechanacimientoconyugesocio.Value = Convert.ToDateTime(row.Cells[17].Value);
+                                    txtedadconyugesocio.Text = Convert.ToString(row.Cells[18].Value);
+
+                                var bushij = from c in context.Socio
+                                             join h in context.Hijo
+                                             on c.rut_socio equals h.rut_socio
+                                             where h.rut_socio.Equals(buscar_rut)
+                                             select new { h.nombre,c.rut_socio};
+
+
+                                cbhijossocio.DataSource = bushij.ToList();
+                                cbhijossocio.DisplayMember = "nombre";
+                                cbhijossocio.ValueMember = "rut_socio";
+
+                               
+                                    //datos del hijo
+                                    txtnombrehijosocio.Text = Convert.ToString(row.Cells[20].Value);
+                                    txtruthijosocio.Text = Convert.ToString(row.Cells[21].Value);
+                                    cbSexo.Text = Convert.ToString(row.Cells[22].Value);
+                                    datenacimientohijosocio.Value = Convert.ToDateTime(row.Cells[23].Value);
+
                                 using (sindicatoPFEntities db = new sindicatoPFEntities())
                                 {
                                     var oImage = db.Socio.Find(buscar_rut);
@@ -198,21 +214,11 @@ namespace SocioSindicato.ViewsAdministrador
                         correo = txtcorreosocio.Text,
                         datos_papa = txtnombrepadre.Text,
                         datos_mama = txtnombremadre.Text,
-                    };
-                    Conyuge con = new Conyuge
-                    {
-                        rut_socio = txtrutsocio.Text,
-                        nombre = txtconyugesocio.Text,
-                        conviviente = comboconvivienteconyugesocio.Text,
-                        rut = txtrutconyugesocio.Text,
-                        nacimiento = Convert.ToDateTime(datefechanacimientoconyugesocio.Text),
-                        edad = Convert.ToInt32(txtedadconyugesocio.Text)
-                    };
+                    };                    
 
                     //falta el hijo como poder editar si son varios.
 
                     context.Socio.Add(nuevosocio);
-                    context.Conyuge.Add(con);
                     context.SaveChanges();
 
 
@@ -233,20 +239,9 @@ namespace SocioSindicato.ViewsAdministrador
                     txtcorreosocio.Text = "";
                     txtnombrepadre.Text = "";
                     txtnombremadre.Text = "";
-                    //BORRAR DATOS CONYUGE
-                    txtconyugesocio.Text = "";
-                    comboconvivienteconyugesocio.SelectedIndex = 0; ;
-                    txtrutconyugesocio.Text = "";
-                    datefechanacimientoconyugesocio.Value = DateTime.Now;
-                    txtedadconyugesocio.Text = "";
-                    //BORRAR DATOS HIJOS
-                    txtnombrehijosocio.Text = "";
-                    txtruthijosocio.Text = "";
-                    cbSexo.SelectedIndex = 0;
-                    datenacimientohijosocio.Value = DateTime.Now;
+                   
 
-
-                    MessageBox.Show("Socio Agregado Correctamente!");
+                    MessageBox.Show("Socio Editado Correctamente!");
 
                     gridcapdatosedi.DataSource = "";
                 }
@@ -257,6 +252,118 @@ namespace SocioSindicato.ViewsAdministrador
                     MessageBox.Show("Socio no pudo ser eliminado", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
+
+        }
+
+        private void btneliminarcon_Click(object sender, EventArgs e)
+        {
+
+            if (buscar_rut == "")
+            {
+
+                MessageBox.Show("Ingrese Rut Del Socio Para Eliminar!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+            else
+            {
+                try
+                {
+                    using (sindicatoPFEntities context = new sindicatoPFEntities())
+                    {
+                        var result1 = from c in context.Conyuge
+                                      where c.rut_socio.Equals(buscar_rut)
+                                      select new { id_con = c.id_conyuge };
+                        int rut_soc1 = result1.ToList()[0].id_con;
+
+
+                        context.Conyuge.Remove(context.Conyuge.Find(rut_soc1));
+                        context.SaveChanges();
+
+                        MessageBox.Show("Conyuge Eliminada!");
+                        //BORRAR DATOS CONYUGE
+                        txtconyugesocio.Text = "";
+                        comboconvivienteconyugesocio.SelectedIndex = 0; ;
+                        txtrutconyugesocio.Text = "";
+                        datefechanacimientoconyugesocio.Value = DateTime.Now;
+                        txtedadconyugesocio.Text = "";
+                    }
+                }
+                catch {
+                    MessageBox.Show("Conyuge No Eliminado!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }      
+            }
+           
+        }
+
+        private void btnagregarcon_Click(object sender, EventArgs e)
+        {
+
+            using (sindicatoPFEntities context = new sindicatoPFEntities())
+            {
+                Conyuge con = new Conyuge
+                {
+                    rut_socio = txtrutsocio.Text,
+                    nombre = txtconyugesocio.Text,
+                    conviviente = comboconvivienteconyugesocio.Text,
+                    rut = txtrutconyugesocio.Text,
+                    nacimiento = Convert.ToDateTime(datefechanacimientoconyugesocio.Text),
+                    edad = Convert.ToInt32(txtedadconyugesocio.Text)
+                };
+
+                context.Conyuge.Add(con);
+                context.SaveChanges();
+                MessageBox.Show("Conyuge Agregada!");
+
+                //BORRAR DATOS CONYUGE
+                txtconyugesocio.Text = "";
+                comboconvivienteconyugesocio.SelectedIndex = 0; ;
+                txtrutconyugesocio.Text = "";
+                datefechanacimientoconyugesocio.Value = DateTime.Now;
+                txtedadconyugesocio.Text = "";
+            }
+               
+        }
+
+        private void btneliminarhi_Click(object sender, EventArgs e)
+        {
+            //if (buscar_rut == "")
+            //{
+
+            //    MessageBox.Show("Ingrese Rut Del Socio Para Eliminar!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            //}
+            //else
+            //{
+            //    try
+            //    {
+            //        using (sindicatoPFEntities context = new sindicatoPFEntities())
+            //        {
+            //            var result2 = from c in context.Hijo
+            //                          where c.rut_socio.Equals(buscar_rut)
+            //                          select new { id_hij = c.id_hijo };
+            //            int rut_soc2 = result2.ToList()[0].id_hij;
+
+
+            //            context.Hijo.Remove(context.Hijo.Find(rut_soc2));
+            //            context.SaveChanges();
+
+            //            MessageBox.Show("Hijo Eliminado!");
+            //            //BORRAR DATOS HIJOS
+            //            txtnombrehijosocio.Text = "";
+            //            txtruthijosocio.Text = "";
+            //            cbSexo.SelectedIndex = 0;
+            //            datenacimientohijosocio.Value = DateTime.Now;
+            //        }
+            //    }
+            //    catch
+            //    {
+            //        MessageBox.Show("Conyuge No Eliminado!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    }
+            //}
+        }
+
+        private void btnagregarhij_Click(object sender, EventArgs e)
+        {
 
         }
     }
