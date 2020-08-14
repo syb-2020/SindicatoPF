@@ -36,7 +36,7 @@ namespace SocioSindicato.ViewsAdministrador
             this.Close();
         }
 
-       
+
         public byte[] file = null;
 
         private void btnseleccionarimagen_Click(object sender, EventArgs e)
@@ -65,24 +65,24 @@ namespace SocioSindicato.ViewsAdministrador
 
         string buscar_rut = "";
 
-    private void btnbuscareditar_Click(object sender, EventArgs e)
+        private void btnbuscareditar_Click(object sender, EventArgs e)
         {
             using (sindicatoPFEntities context = new sindicatoPFEntities())
             {
-                 buscar_rut = txtbuscar.Text;
+                buscar_rut = txtbuscar.Text;
 
                 var listRut = from sociorut in context.Socio
-                                  join conyu in context.Conyuge
-                                  on sociorut.rut_socio equals conyu.rut_socio
-                                  where sociorut.rut_socio.Equals(buscar_rut)
-                                  join hij in context.Hijo on sociorut.rut_socio equals hij.rut_socio
-                                  where sociorut.rut_socio.Equals(buscar_rut)
-                                  select new
-                                  { 
-                                  Rut = sociorut.rut_socio, 
+                              join conyu in context.Conyuge
+                              on sociorut.rut_socio equals conyu.rut_socio
+                              where sociorut.rut_socio.Equals(buscar_rut)
+                              join hij in context.Hijo on sociorut.rut_socio equals hij.rut_socio
+                              where sociorut.rut_socio.Equals(buscar_rut)
+                              select new
+                              {
+                                  Rut = sociorut.rut_socio,
                                   Nombre = sociorut.nombre_socio,
                                   FechaDeIngreso = sociorut.fecha_ingreso,
-                                  Categoria = sociorut.id_categoria, 
+                                  Categoria = sociorut.id_categoria,
                                   Planta = sociorut.Planta.nombre,
                                   fechanacimiento = sociorut.fecha_ingreso,
                                   EDAD = sociorut.edad,
@@ -96,18 +96,18 @@ namespace SocioSindicato.ViewsAdministrador
                                   nombrecon = conyu.nombre,
                                   convivientecon = conyu.conviviente,
                                   rutcon = conyu.rut,
-                                  nacimientocon=conyu.nacimiento,
-                                  edadcon=conyu.edad,
+                                  nacimientocon = conyu.nacimiento,
+                                  edadcon = conyu.edad,
                                   contratosocio = sociorut.tipo_contrato,
                                   nombrehij = hij.nombre,
                                   ruthij = hij.rut_hijo,
                                   sexohijo = hij.sexo,
-                                  fechahij = hij.nacimiento                                 
+                                  fechahij = hij.nacimiento
                               };
 
                 gridcapdatosedi.DataSource = listRut.ToList();
 
-               
+
 
 
                 if (txtbuscar.Text == "")
@@ -123,53 +123,53 @@ namespace SocioSindicato.ViewsAdministrador
                 {
                     if (listRut.Count() != 0)
                     {
-                        
+
                         foreach (DataGridViewRow row in gridcapdatosedi.Rows)
                         {
                             for (int i = 0; i < gridcapdatosedi.Columns.Count; i++)
                             {
                                 //datos del socio
                                 txtrutsocio.Text = Convert.ToString(row.Cells[0].Value);
-                                txtnombresocio.Text = Convert.ToString(row.Cells[1].Value);                               
+                                txtnombresocio.Text = Convert.ToString(row.Cells[1].Value);
                                 dateingresoempresasocio.Value = Convert.ToDateTime(row.Cells[2].Value);
                                 combocategoriasocio.Text = Convert.ToString(row.Cells[3].Value);
-                                comboplantasocio.Text= Convert.ToString(row.Cells[4].Value);
+                                comboplantasocio.Text = Convert.ToString(row.Cells[4].Value);
                                 datefechanacimientosocio.Value = Convert.ToDateTime(row.Cells[5].Value);
                                 txtedadsocio.Text = Convert.ToString(row.Cells[6].Value);
                                 txtdomiciliosocio.Text = Convert.ToString(row.Cells[7].Value);
                                 comboestadocivilagregar.Text = Convert.ToString(row.Cells[8].Value);
                                 txttelefonosocio.Text = Convert.ToString(row.Cells[9].Value);
                                 txtnacionalidadsocio.Text = Convert.ToString(row.Cells[10].Value);
-                                txtcorreosocio.Text= Convert.ToString(row.Cells[11].Value);
+                                txtcorreosocio.Text = Convert.ToString(row.Cells[11].Value);
                                 txtnombrepadre.Text = Convert.ToString(row.Cells[12].Value);
                                 txtnombremadre.Text = Convert.ToString(row.Cells[13].Value);
                                 combocontratosocio.Text = Convert.ToString(row.Cells[19].Value);
 
                                 //datos de la conyu
-                                
-                               
-                                    txtconyugesocio.Text = Convert.ToString(row.Cells[14].Value);
-                                    comboconvivienteconyugesocio.Text = Convert.ToString(row.Cells[15].Value);
-                                    txtrutconyugesocio.Text = Convert.ToString(row.Cells[16].Value);
-                                    datefechanacimientoconyugesocio.Value = Convert.ToDateTime(row.Cells[17].Value);
-                                    txtedadconyugesocio.Text = Convert.ToString(row.Cells[18].Value);
+
+
+                                txtconyugesocio.Text = Convert.ToString(row.Cells[14].Value);
+                                comboconvivienteconyugesocio.Text = Convert.ToString(row.Cells[15].Value);
+                                txtrutconyugesocio.Text = Convert.ToString(row.Cells[16].Value);
+                                datefechanacimientoconyugesocio.Value = Convert.ToDateTime(row.Cells[17].Value);
+                                txtedadconyugesocio.Text = Convert.ToString(row.Cells[18].Value);
 
                                 var bushij = from c in context.Socio
                                              join h in context.Hijo
                                              on c.rut_socio equals h.rut_socio
                                              where h.rut_socio.Equals(buscar_rut)
-                                             select new { h.nombre,c.rut_socio};
+                                             select new { h.id_hijo,h.nombre, c.rut_socio };
 
 
                                 cbhijossocio.DataSource = bushij.ToList();
                                 cbhijossocio.DisplayMember = "nombre";
-                                cbhijossocio.ValueMember = "rut_socio";
-                              
-                                    //datos del hijo
-                                    txtnombrehijosocio.Text = Convert.ToString(row.Cells[20].Value);
-                                    txtruthijosocio.Text = Convert.ToString(row.Cells[21].Value);
-                                    cbSexo.Text = Convert.ToString(row.Cells[22].Value);
-                                    datenacimientohijosocio.Value = Convert.ToDateTime(row.Cells[23].Value);
+                                cbhijossocio.ValueMember = "id_hijo";
+
+                                ////datos del hijo
+                                //txtnombrehijosocio.Text = Convert.ToString(row.Cells[20].Value);
+                                //txtruthijosocio.Text = Convert.ToString(row.Cells[21].Value);
+                                //cbSexo.Text = Convert.ToString(row.Cells[22].Value);
+                                //datenacimientohijosocio.Value = Convert.ToDateTime(row.Cells[23].Value);
 
                                 using (sindicatoPFEntities db = new sindicatoPFEntities())
                                 {
@@ -179,7 +179,7 @@ namespace SocioSindicato.ViewsAdministrador
                                     fotosocio.Image = bmp;
                                 }
 
-                              
+
                             }
                         }
 
@@ -204,9 +204,9 @@ namespace SocioSindicato.ViewsAdministrador
             {
                 buscar_rut = txtbuscar.Text;
 
-              
 
-                if (txtbuscar.Text=="")
+
+                if (txtbuscar.Text == "")
                 {
                     MessageBox.Show("Socio no pudo ser editado", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
@@ -232,7 +232,7 @@ namespace SocioSindicato.ViewsAdministrador
                     nuevosocio.datos_mama = txtnombremadre.Text;
 
 
-                    
+
                     context.SaveChanges();
 
                     using (sindicatoPFEntities db = new sindicatoPFEntities())
@@ -246,7 +246,7 @@ namespace SocioSindicato.ViewsAdministrador
 
                     //BORRAR DATOS SOCIO
                     txtrutsocio.Text = "";
-                    fotosocio.Image= null;
+                    fotosocio.Image = null;
                     txtnombresocio.Text = "";
                     dateingresoempresasocio.Value = DateTime.Now;
                     combocategoriasocio.SelectedIndex = 0;
@@ -309,11 +309,12 @@ namespace SocioSindicato.ViewsAdministrador
                         txtedadconyugesocio.Text = "";
                     }
                 }
-                catch {
+                catch
+                {
                     MessageBox.Show("Conyuge No Eliminado!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }      
+                }
             }
-           
+
         }
 
         private void btnagregarcon_Click(object sender, EventArgs e)
@@ -342,7 +343,7 @@ namespace SocioSindicato.ViewsAdministrador
                 datefechanacimientoconyugesocio.Value = DateTime.Now;
                 txtedadconyugesocio.Text = "";
             }
-               
+
         }
 
         private void btneliminarhi_Click(object sender, EventArgs e)
@@ -369,7 +370,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
 
-                        context.Hijo.Remove(context.Hijo.Find(rut_soc2));                       
+                        context.Hijo.Remove(context.Hijo.Find(rut_soc2));
 
                         context.SaveChanges();
 
@@ -377,12 +378,12 @@ namespace SocioSindicato.ViewsAdministrador
                                      join h in context.Hijo
                                      on c.rut_socio equals h.rut_socio
                                      where h.rut_socio.Equals(buscar_rut)
-                                     select new { h.nombre, c.rut_socio };
+                                     select new { h.id_hijo,h.nombre, c.rut_socio };
 
 
                         cbhijossocio.DataSource = bushij.ToList();
                         cbhijossocio.DisplayMember = "nombre";
-                        cbhijossocio.ValueMember = "rut_socio";
+                        cbhijossocio.ValueMember = "id_hijo";
 
                         MessageBox.Show("Hijo Eliminado!");
                         //BORRAR DATOS HIJOS
@@ -416,7 +417,7 @@ namespace SocioSindicato.ViewsAdministrador
             using (sindicatoPFEntities context = new sindicatoPFEntities())
             {
 
-                if (txtnombrehijosocio.Text=="")
+                if (txtnombrehijosocio.Text == "")
                 {
                     MessageBox.Show("Hijo No Agregado!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
@@ -452,7 +453,7 @@ namespace SocioSindicato.ViewsAdministrador
                         };
                         context.Hijo.Add(hs);
 
-                        
+
 
                     }
                     context.SaveChanges();
@@ -460,12 +461,12 @@ namespace SocioSindicato.ViewsAdministrador
                                  join h in context.Hijo
                                  on c.rut_socio equals h.rut_socio
                                  where h.rut_socio.Equals(buscar_rut)
-                                 select new { h.nombre, c.rut_socio };
+                                 select new { h.id_hijo, h.nombre, c.rut_socio };
 
 
                     cbhijossocio.DataSource = bushij.ToList();
                     cbhijossocio.DisplayMember = "nombre";
-                    cbhijossocio.ValueMember = "rut_socio";
+                    cbhijossocio.ValueMember = "id_hijo";
 
                     MessageBox.Show("Hijo Agregado!");
                 }
@@ -475,49 +476,77 @@ namespace SocioSindicato.ViewsAdministrador
 
         }
 
-        private void cbhijossocio_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            using (sindicatoPFEntities context = new sindicatoPFEntities())
-            {
-                string nombrexd = Convert.ToString(cbhijossocio.SelectedValue);
-                var listhijo = from h in context.Hijo
-                               where h.nombre.Equals(nombrexd)
-                               select new { nombrehij = h.nombre, ruthijo = h.rut_hijo, sexohi = h.sexo, fechanah = h.nacimiento };
-
-                string nombrehi = listhijo.ToList()[0].nombrehij;
-                string ruthij = listhijo.ToList()[0].ruthijo;
-                string sexohj = listhijo.ToList()[0].sexohi;
-                DateTime nacimhi = Convert.ToDateTime(listhijo.ToList()[0].fechanah);
-
-                txtnombrehijosocio.Text = nombrehi;
-                txtruthijosocio.Text = ruthij;
-                cbhijossocio.Text = sexohj;
-                datenacimientohijosocio.Value = nacimhi;
-
-            }
-        }
+       
 
         private void cbhijossocio_KeyPress(object sender, KeyPressEventArgs e)
         {
+            
+
+        }
+
+        private void gridcapdatosedi_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            using (SolidBrush b = new SolidBrush(gridcapdatosedi.RowHeadersDefaultCellStyle.ForeColor))
+            {
+                e.Graphics.DrawString((e.RowIndex + 1).ToString(), e.InheritedRowStyle.Font, b, e.RowBounds.Location.X + 10, e.RowBounds.Location.Y + 4);
+            }
+        }
+
+        private void cbhijossocio_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
             using (sindicatoPFEntities context = new sindicatoPFEntities())
             {
-                string nombrexd = Convert.ToString(cbhijossocio.SelectedValue);
-                var listhijo = from h in context.Hijo                               
-                               where h.nombre.Equals(nombrexd)
-                               select new {nombrehij= h.nombre, ruthijo= h.rut_hijo,sexohi=h.sexo, fechanah = h.nacimiento };
+                //txtnombrehijosocio.Text = listhijo.ToList()[0].nombrehij; ;
+                //txtruthijosocio.Text = listhijo.ToList()[0].ruthijo;
+                //cbhijossocio.Text = listhijo.ToList()[0].sexohi;
+                //datenacimientohijosocio.Value = Convert.ToDateTime(listhijo.ToList()[0].fechanah);
 
-                string nombrehi = listhijo.ToList()[0].nombrehij;
-                string ruthij = listhijo.ToList()[0].ruthijo;
-                string sexohj = listhijo.ToList()[0].sexohi;
-                DateTime nacimhi =  Convert.ToDateTime(listhijo.ToList()[0].fechanah);
+                int nombrexd = Convert.ToInt32(cbhijossocio.SelectedValue.ToString());
+                //var bushij = from c in context.Socio
+                //             join h in context.Hijo
+                //             on c.rut_socio equals h.rut_socio
+                //             where h.rut_socio.Equals(buscar_rut)
+                //             select new { idji = h.id_hijo, h.nombre, c.rut_socio };
 
-                txtnombrehijosocio.Text = nombrehi;
-                txtruthijosocio.Text = ruthij;
-                cbhijossocio.Text = sexohj;
-                datenacimientohijosocio.Value = nacimhi;
+                var bushij = from c in context.Socio
+                             join h in context.Hijo
+                             on c.rut_socio equals h.rut_socio
+                             where h.id_hijo.Equals(nombrexd)
+                             select new { h.id_hijo, h.nombre, c.rut_socio };
+
+
+
+           
+                int cod = bushij.ToList()[0].id_hijo;
+                Hijo nuevohij = new Hijo();
+                nuevohij = context.Hijo.Find(cod);
+
+
+                txtnombrehijosocio.Text = nuevohij.nombre;
+                txtruthijosocio.Text = nuevohij.rut_hijo;
+                cbSexo.Text = nuevohij.sexo;
+                datenacimientohijosocio.Value = Convert.ToDateTime(nuevohij.nacimiento);
+
+                string rut3 = bushij.ToList()[0].rut_socio;
+                var bushij2 = from c in context.Socio
+                             join h in context.Hijo
+                             on c.rut_socio equals h.rut_socio
+                             where h.rut_socio.Equals(rut3)
+                             select new { h.id_hijo, h.nombre, c.rut_socio };
+
+
+              
+                cbhijossocio.DataSource = bushij2.ToList();
+                    cbhijossocio.DisplayMember = "nombre";
+                    cbhijossocio.ValueMember = "id_hijo";
+                MessageBox.Show("Hijo Seleccionado!");
 
             }
-                
         }
     }
 }

@@ -72,13 +72,13 @@ namespace SocioSindicato.ViewsAdministrador
                 {
                     if (listRut.Count() != 0)
                     {
-
+                        
                         MessageBox.Show("Socio encontrado!");
-
                         gridbuscar.DataSource = listRut.ToList();
                         gridConyuge.DataSource = "";
                         gridHijo.DataSource = "";
                         gbtodo.DataSource = listadoTodo.ToList();
+
 
 
                         string rut = gridbuscar.Rows[gridbuscar.CurrentRow.Index].Cells[0].Value.ToString();
@@ -286,6 +286,31 @@ namespace SocioSindicato.ViewsAdministrador
                 exportardatos(gridbuscar);
             }
 
+        }
+
+        private void gridbuscar_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+
+            using (SolidBrush b = new SolidBrush(gridbuscar.RowHeadersDefaultCellStyle.ForeColor))
+            {
+                e.Graphics.DrawString((e.RowIndex + 1).ToString(), e.InheritedRowStyle.Font, b, e.RowBounds.Location.X + 10, e.RowBounds.Location.Y + 4);
+            }
+        }
+
+        private void gridConyuge_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            using (SolidBrush b = new SolidBrush(gridConyuge.RowHeadersDefaultCellStyle.ForeColor))
+            {
+                e.Graphics.DrawString((e.RowIndex + 1).ToString(), e.InheritedRowStyle.Font, b, e.RowBounds.Location.X + 10, e.RowBounds.Location.Y + 4);
+            }
+        }
+
+        private void gridHijo_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            using (SolidBrush b = new SolidBrush(gridHijo.RowHeadersDefaultCellStyle.ForeColor))
+            {
+                e.Graphics.DrawString((e.RowIndex + 1).ToString(), e.InheritedRowStyle.Font, b, e.RowBounds.Location.X + 10, e.RowBounds.Location.Y + 4);
+            }
         }
     }
 }

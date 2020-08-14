@@ -141,6 +141,7 @@
             this.gridverplantas.Name = "gridverplantas";
             this.gridverplantas.Size = new System.Drawing.Size(508, 155);
             this.gridverplantas.TabIndex = 9;
+            this.gridverplantas.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.gridverplantas_RowPostPaint);
             // 
             // lbsocioplantaencontrado
             // 

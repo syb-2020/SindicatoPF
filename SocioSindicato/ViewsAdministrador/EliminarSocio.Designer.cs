@@ -64,6 +64,7 @@
             this.grideliminar.Name = "grideliminar";
             this.grideliminar.Size = new System.Drawing.Size(458, 150);
             this.grideliminar.TabIndex = 2;
+            this.grideliminar.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.grideliminar_RowPostPaint);
             // 
             // btneliminar
             // 

@@ -81,6 +81,7 @@
             this.gridbuscar.Name = "gridbuscar";
             this.gridbuscar.Size = new System.Drawing.Size(575, 175);
             this.gridbuscar.TabIndex = 3;
+            this.gridbuscar.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.gridbuscar_RowPostPaint);
             // 
             // btnvolverbuscar
             // 
@@ -130,6 +131,7 @@
             this.gridConyuge.Name = "gridConyuge";
             this.gridConyuge.Size = new System.Drawing.Size(575, 77);
             this.gridConyuge.TabIndex = 8;
+            this.gridConyuge.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.gridConyuge_RowPostPaint);
             // 
             // gridHijo
             // 
@@ -138,6 +140,7 @@
             this.gridHijo.Name = "gridHijo";
             this.gridHijo.Size = new System.Drawing.Size(575, 81);
             this.gridHijo.TabIndex = 9;
+            this.gridHijo.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.gridHijo_RowPostPaint);
             // 
             // btconyuge
             // 

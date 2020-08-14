@@ -89,6 +89,7 @@
             this.gridnavidadniños.Name = "gridnavidadniños";
             this.gridnavidadniños.Size = new System.Drawing.Size(530, 155);
             this.gridnavidadniños.TabIndex = 2;
+            this.gridnavidadniños.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.gridnavidadniños_RowPostPaint);
             // 
             // btnbuscarniñosnavidad
             // 

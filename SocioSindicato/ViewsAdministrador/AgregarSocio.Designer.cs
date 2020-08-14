@@ -537,6 +537,7 @@
             this.gridpruebahijo.Name = "gridpruebahijo";
             this.gridpruebahijo.Size = new System.Drawing.Size(392, 115);
             this.gridpruebahijo.TabIndex = 62;
+            this.gridpruebahijo.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.gridpruebahijo_RowPostPaint);
             // 
             // cbSexo
             // 

@@ -92,8 +92,12 @@
             this.btnagregarcon = new System.Windows.Forms.Button();
             this.btneliminarhi = new System.Windows.Forms.Button();
             this.btnagregarhij = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.button1 = new System.Windows.Forms.Button();
+            this.gbhijo = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.fotosocio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridcapdatosedi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gbhijo)).BeginInit();
             this.SuspendLayout();
             // 
             // btnvolvereditar
@@ -611,6 +615,7 @@
             this.gridcapdatosedi.Size = new System.Drawing.Size(240, 150);
             this.gridcapdatosedi.TabIndex = 95;
             this.gridcapdatosedi.Visible = false;
+            this.gridcapdatosedi.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.gridcapdatosedi_RowPostPaint);
             // 
             // cbhijossocio
             // 
@@ -619,7 +624,7 @@
             this.cbhijossocio.Name = "cbhijossocio";
             this.cbhijossocio.Size = new System.Drawing.Size(200, 21);
             this.cbhijossocio.TabIndex = 97;
-            this.cbhijossocio.SelectedIndexChanged += new System.EventHandler(this.cbhijossocio_SelectedIndexChanged);
+            this.cbhijossocio.TextChanged += new System.EventHandler(this.cbhijossocio_TextChanged);
             this.cbhijossocio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbhijossocio_KeyPress);
             // 
             // btneliminarcon
@@ -662,11 +667,33 @@
             this.btnagregarhij.UseVisualStyleBackColor = true;
             this.btnagregarhij.Click += new System.EventHandler(this.btnagregarhij_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(383, 313);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(105, 21);
+            this.button1.TabIndex = 102;
+            this.button1.Text = "Seleccionar Hijo";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // gbhijo
+            // 
+            this.gbhijo.AllowUserToOrderColumns = true;
+            this.gbhijo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gbhijo.Location = new System.Drawing.Point(786, 473);
+            this.gbhijo.Name = "gbhijo";
+            this.gbhijo.Size = new System.Drawing.Size(240, 62);
+            this.gbhijo.TabIndex = 103;
+            this.gbhijo.Visible = false;
+            // 
             // EditarSocio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1095, 736);
+            this.Controls.Add(this.gbhijo);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnagregarhij);
             this.Controls.Add(this.btneliminarhi);
             this.Controls.Add(this.btnagregarcon);
@@ -734,6 +761,7 @@
             this.Text = "EditarSocio";
             ((System.ComponentModel.ISupportInitialize)(this.fotosocio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridcapdatosedi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gbhijo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -805,5 +833,8 @@
         private System.Windows.Forms.Button btnagregarcon;
         private System.Windows.Forms.Button btneliminarhi;
         private System.Windows.Forms.Button btnagregarhij;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView gbhijo;
     }
 }
