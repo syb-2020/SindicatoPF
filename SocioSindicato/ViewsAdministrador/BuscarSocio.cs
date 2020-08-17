@@ -1,4 +1,5 @@
-﻿using SocioSindicato.Models;
+﻿using Microsoft.Office.Interop.Excel;
+using SocioSindicato.Models;
 using SpreadsheetLight;
 using System;
 using System.Collections.Generic;
@@ -118,11 +119,13 @@ namespace SocioSindicato.ViewsAdministrador
         {
            
         }
-
+       
         public void exportardatos(DataGridView datalistado) {
 
             Microsoft.Office.Interop.Excel.Application exportarexcel = new Microsoft.Office.Interop.Excel.Application();
             exportarexcel.Application.Workbooks.Add(true);
+           
+            
 
             int indicecolum = 0;
         
@@ -132,16 +135,7 @@ namespace SocioSindicato.ViewsAdministrador
                 indicecolum++;
                 exportarexcel.Cells[1, indicecolum] = columna.Name;              
             }
-            //foreach (DataGridViewColumn columna2 in datalistado2.Columns)
-            //{
-            //    indicecolum2++;
-            //    exportarexcel.Cells[1, indicecolum2] = columna2.Name;
-            //}
-            //foreach (DataGridViewColumn columna3 in datalistado3.Columns)
-            //{
-            //    indicecolum3++;
-            //    exportarexcel.Cells[1, indicecolum3] = columna3.Name;
-            //}
+           
             int indicefila = 0;
             foreach (DataGridViewRow fila in datalistado.Rows )
             {
@@ -154,29 +148,7 @@ namespace SocioSindicato.ViewsAdministrador
                 }
                 
             }
-            //int indicefila2 = 0;
-            //foreach (DataGridViewRow fila in datalistado2.Rows)
-            //{
-            //    indicefila2++;
-            //    indicecolum2 = 0;
-            //    foreach (DataGridViewColumn columna2 in datalistado2.Columns)
-            //    {
-            //        indicecolum2++;
-            //        exportarexcel.Cells[indicefila + 1, indicecolum2] = fila.Cells[columna2.Name].Value;
-            //    }                
-            //}
-            //int indicefila3 = 0;
-            //foreach (DataGridViewRow fila in datalistado3.Rows)
-            //{
-            //    indicefila3++;
-            //    indicecolum3 = 0;
-            //    foreach (DataGridViewColumn columna3 in datalistado3.Columns)
-            //    {
-            //        indicecolum3++;
-            //        exportarexcel.Cells[indicefila + 1, indicecolum3] = fila.Cells[columna3.Name].Value;
-            //    }
-            //}
-
+    
             exportarexcel.Visible = true;
         }
 

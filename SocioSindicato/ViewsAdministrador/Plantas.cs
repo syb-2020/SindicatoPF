@@ -16,6 +16,7 @@ namespace SocioSindicato.ViewsAdministrador
         public Plantas()
         {
             InitializeComponent();
+            mostrarAllplantas();
         }
 
         private void btnplantasvolver_Click(object sender, EventArgs e)
@@ -305,7 +306,24 @@ namespace SocioSindicato.ViewsAdministrador
             }
         }
 
-        private void gridverplantas_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        public void mostrarAllplantas()
+        {
+            using (sindicatoPFEntities context = new sindicatoPFEntities())
+            {
+
+                var allsociosplanta = from socplan in context.Socio
+                                      join plansoc in context.Planta
+                                      on socplan.id_planta equals plansoc.id_planta
+                                      orderby plansoc.id_planta
+                                      select new { NOMBRE = socplan.nombre_socio, RUT = socplan.rut_socio, PLANTA = plansoc.nombre, CATEGORIA = socplan.id_categoria };
+
+                gridverplantas.DataSource = allsociosplanta.ToList();
+                gridverplantas.DataSource = allsociosplanta.OrderBy(s => s.PLANTA).ToList();
+
+            }
+        }
+
+            private void gridverplantas_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
         {
             using (SolidBrush b = new SolidBrush(gridverplantas.RowHeadersDefaultCellStyle.ForeColor))
             {

@@ -165,12 +165,7 @@ namespace SocioSindicato.ViewsAdministrador
                                 cbhijossocio.DisplayMember = "nombre";
                                 cbhijossocio.ValueMember = "id_hijo";
 
-                                ////datos del hijo
-                                //txtnombrehijosocio.Text = Convert.ToString(row.Cells[20].Value);
-                                //txtruthijosocio.Text = Convert.ToString(row.Cells[21].Value);
-                                //cbSexo.Text = Convert.ToString(row.Cells[22].Value);
-                                //datenacimientohijosocio.Value = Convert.ToDateTime(row.Cells[23].Value);
-
+                               
                                 using (sindicatoPFEntities db = new sindicatoPFEntities())
                                 {
                                     var oImage = db.Socio.Find(buscar_rut);
@@ -265,7 +260,7 @@ namespace SocioSindicato.ViewsAdministrador
 
                     MessageBox.Show("Socio Editado Correctamente!");
 
-                    //gridcapdatosedi.DataSource = "";  
+                  
                 }
 
 
@@ -363,7 +358,8 @@ namespace SocioSindicato.ViewsAdministrador
                         var result2 = from c in context.Hijo
                                       where c.rut_socio.Equals(buscar_rut)
                                       select new { id_hij = c.id_hijo };
-                        int rut_soc2 = result2.ToList()[0].id_hij;
+
+                        int rut_soc2 = result2.ToList()[1].id_hij;
 
 
                         //cbhijossocio
@@ -395,7 +391,7 @@ namespace SocioSindicato.ViewsAdministrador
                 }
                 catch
                 {
-                    MessageBox.Show("Conyuge No Eliminado!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Hijo No Eliminado!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
         }
@@ -501,18 +497,10 @@ namespace SocioSindicato.ViewsAdministrador
         {
             using (sindicatoPFEntities context = new sindicatoPFEntities())
             {
-                //txtnombrehijosocio.Text = listhijo.ToList()[0].nombrehij; ;
-                //txtruthijosocio.Text = listhijo.ToList()[0].ruthijo;
-                //cbhijossocio.Text = listhijo.ToList()[0].sexohi;
-                //datenacimientohijosocio.Value = Convert.ToDateTime(listhijo.ToList()[0].fechanah);
+                
 
                 int nombrexd = Convert.ToInt32(cbhijossocio.SelectedValue.ToString());
-                //var bushij = from c in context.Socio
-                //             join h in context.Hijo
-                //             on c.rut_socio equals h.rut_socio
-                //             where h.rut_socio.Equals(buscar_rut)
-                //             select new { idji = h.id_hijo, h.nombre, c.rut_socio };
-
+               
                 var bushij = from c in context.Socio
                              join h in context.Hijo
                              on c.rut_socio equals h.rut_socio
@@ -542,9 +530,10 @@ namespace SocioSindicato.ViewsAdministrador
 
               
                 cbhijossocio.DataSource = bushij2.ToList();
-                    cbhijossocio.DisplayMember = "nombre";
-                    cbhijossocio.ValueMember = "id_hijo";
+                cbhijossocio.DisplayMember = "nombre";
+                cbhijossocio.ValueMember = "id_hijo";
                 MessageBox.Show("Hijo Seleccionado!");
+               
 
             }
         }
