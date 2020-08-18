@@ -703,7 +703,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
                         var listaSoc = from Soc in context.Socio
-
+                                       where Soc.rut_socio.Equals(rut_soc)
                                        select new { Soc.nombre_socio, Soc.id_planta };
 
                         string nombreSoc = listaSoc.ToList()[0].nombre_socio;
@@ -790,7 +790,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
                         var listaSoc = from Soc in context.Socio
-
+                                       where Soc.rut_socio.Equals(rut_soc)
                                        select new { Soc.nombre_socio, Soc.id_planta };
 
                         string nombreSoc = listaSoc.ToList()[0].nombre_socio;
@@ -878,7 +878,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
                         var listaSoc = from Soc in context.Socio
-
+                                       where Soc.rut_socio.Equals(rut_soc)
                                        select new { Soc.nombre_socio, Soc.id_planta };
 
                         string nombreSoc = listaSoc.ToList()[0].nombre_socio;
@@ -963,7 +963,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
                         var listaSoc = from Soc in context.Socio
-
+                                       where Soc.rut_socio.Equals(rut_soc)
                                        select new { Soc.nombre_socio, Soc.id_planta };
 
                         string nombreSoc = listaSoc.ToList()[0].nombre_socio;
@@ -1047,7 +1047,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
                         var listaSoc = from Soc in context.Socio
-
+                                       where Soc.rut_socio.Equals(rut_soc)
                                        select new { Soc.nombre_socio, Soc.id_planta };
 
                         string nombreSoc = listaSoc.ToList()[0].nombre_socio;
@@ -1131,7 +1131,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
                         var listaSoc = from Soc in context.Socio
-
+                                       where Soc.rut_socio.Equals(rut_soc)
                                        select new { Soc.nombre_socio, Soc.id_planta };
 
                         string nombreSoc = listaSoc.ToList()[0].nombre_socio;
@@ -1215,7 +1215,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
                         var listaSoc = from Soc in context.Socio
-
+                                       where Soc.rut_socio.Equals(rut_soc)
                                        select new { Soc.nombre_socio, Soc.id_planta };
 
                         string nombreSoc = listaSoc.ToList()[0].nombre_socio;
@@ -1299,7 +1299,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
                         var listaSoc = from Soc in context.Socio
-
+                                       where Soc.rut_socio.Equals(rut_soc)
                                        select new { Soc.nombre_socio, Soc.id_planta };
 
                         string nombreSoc = listaSoc.ToList()[0].nombre_socio;
@@ -1383,7 +1383,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
                         var listaSoc = from Soc in context.Socio
-
+                                       where Soc.rut_socio.Equals(rut_soc)
                                        select new { Soc.nombre_socio, Soc.id_planta };
 
                         string nombreSoc = listaSoc.ToList()[0].nombre_socio;
@@ -1467,7 +1467,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
                         var listaSoc = from Soc in context.Socio
-
+                                       where Soc.rut_socio.Equals(rut_soc)
                                        select new { Soc.nombre_socio, Soc.id_planta };
 
                         string nombreSoc = listaSoc.ToList()[0].nombre_socio;
@@ -1551,7 +1551,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
                         var listaSoc = from Soc in context.Socio
-
+                                       where Soc.rut_socio.Equals(rut_soc)
                                        select new { Soc.nombre_socio, Soc.id_planta };
 
                         string nombreSoc = listaSoc.ToList()[0].nombre_socio;
@@ -1635,7 +1635,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
                         var listaSoc = from Soc in context.Socio
-
+                                       where Soc.rut_socio.Equals(rut_soc)
                                        select new { Soc.nombre_socio, Soc.id_planta };
 
                         string nombreSoc = listaSoc.ToList()[0].nombre_socio;
@@ -1719,7 +1719,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
                         var listaSoc = from Soc in context.Socio
-
+                                       where Soc.rut_socio.Equals(rut_soc)
                                        select new { Soc.nombre_socio, Soc.id_planta };
 
                         string nombreSoc = listaSoc.ToList()[0].nombre_socio;
@@ -1803,7 +1803,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
                         var listaSoc = from Soc in context.Socio
-
+                                       where Soc.rut_socio.Equals(rut_soc)
                                        select new { Soc.nombre_socio, Soc.id_planta };
 
                         string nombreSoc = listaSoc.ToList()[0].nombre_socio;
@@ -1887,7 +1887,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
                         var listaSoc = from Soc in context.Socio
-
+                                       where Soc.rut_socio.Equals(rut_soc)
                                        select new { Soc.nombre_socio, Soc.id_planta };
 
                         string nombreSoc = listaSoc.ToList()[0].nombre_socio;
@@ -1971,7 +1971,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
                         var listaSoc = from Soc in context.Socio
-
+                                       where Soc.rut_socio.Equals(rut_soc)
                                        select new { Soc.nombre_socio, Soc.id_planta };
 
                         string nombreSoc = listaSoc.ToList()[0].nombre_socio;
@@ -2055,7 +2055,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
                         var listaSoc = from Soc in context.Socio
-
+                                       where Soc.rut_socio.Equals(rut_soc)
                                        select new { Soc.nombre_socio, Soc.id_planta };
 
                         string nombreSoc = listaSoc.ToList()[0].nombre_socio;
@@ -2139,7 +2139,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
                         var listaSoc = from Soc in context.Socio
-
+                                       where Soc.rut_socio.Equals(rut_soc)
                                        select new { Soc.nombre_socio, Soc.id_planta };
 
                         string nombreSoc = listaSoc.ToList()[0].nombre_socio;
@@ -2222,7 +2222,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
                         var listaSoc = from Soc in context.Socio
-
+                                       where Soc.rut_socio.Equals(rut_soc)
                                        select new { Soc.nombre_socio, Soc.id_planta };
 
                         string nombreSoc = listaSoc.ToList()[0].nombre_socio;
@@ -2306,7 +2306,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
                         var listaSoc = from Soc in context.Socio
-
+                                       where Soc.rut_socio.Equals(rut_soc)
                                        select new { Soc.nombre_socio, Soc.id_planta };
 
                         string nombreSoc = listaSoc.ToList()[0].nombre_socio;
@@ -2390,7 +2390,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
                         var listaSoc = from Soc in context.Socio
-
+                                       where Soc.rut_socio.Equals(rut_soc)
                                        select new { Soc.nombre_socio, Soc.id_planta };
 
                         string nombreSoc = listaSoc.ToList()[0].nombre_socio;
@@ -2473,7 +2473,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
                         var listaSoc = from Soc in context.Socio
-
+                                       where Soc.rut_socio.Equals(rut_soc)
                                        select new { Soc.nombre_socio, Soc.id_planta };
 
                         string nombreSoc = listaSoc.ToList()[0].nombre_socio;
@@ -2557,7 +2557,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
                         var listaSoc = from Soc in context.Socio
-
+                                       where Soc.rut_socio.Equals(rut_soc)
                                        select new { Soc.nombre_socio, Soc.id_planta };
 
                         string nombreSoc = listaSoc.ToList()[0].nombre_socio;
@@ -2640,7 +2640,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
                         var listaSoc = from Soc in context.Socio
-
+                                       where Soc.rut_socio.Equals(rut_soc)
                                        select new { Soc.nombre_socio, Soc.id_planta };
 
                         string nombreSoc = listaSoc.ToList()[0].nombre_socio;
@@ -2724,7 +2724,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
                         var listaSoc = from Soc in context.Socio
-
+                                       where Soc.rut_socio.Equals(rut_soc)
                                        select new { Soc.nombre_socio, Soc.id_planta };
 
                         string nombreSoc = listaSoc.ToList()[0].nombre_socio;
@@ -2808,7 +2808,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
                         var listaSoc = from Soc in context.Socio
-
+                                       where Soc.rut_socio.Equals(rut_soc)
                                        select new { Soc.nombre_socio, Soc.id_planta };
 
                         string nombreSoc = listaSoc.ToList()[0].nombre_socio;

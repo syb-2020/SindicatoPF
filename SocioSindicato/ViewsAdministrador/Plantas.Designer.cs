@@ -40,6 +40,8 @@
             this.gridverplantas = new System.Windows.Forms.DataGridView();
             this.lbsocioplantaencontrado = new System.Windows.Forms.Label();
             this.btnddexcel = new System.Windows.Forms.Button();
+            this.cbordenarcatplant = new System.Windows.Forms.ComboBox();
+            this.btnordenarplanta = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridverplantas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -161,11 +163,38 @@
             this.btnddexcel.UseVisualStyleBackColor = true;
             this.btnddexcel.Click += new System.EventHandler(this.btnddexcel_Click);
             // 
+            // cbordenarcatplant
+            // 
+            this.cbordenarcatplant.FormattingEnabled = true;
+            this.cbordenarcatplant.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"});
+            this.cbordenarcatplant.Location = new System.Drawing.Point(439, 328);
+            this.cbordenarcatplant.Name = "cbordenarcatplant";
+            this.cbordenarcatplant.Size = new System.Drawing.Size(121, 21);
+            this.cbordenarcatplant.TabIndex = 12;
+            // 
+            // btnordenarplanta
+            // 
+            this.btnordenarplanta.Location = new System.Drawing.Point(264, 328);
+            this.btnordenarplanta.Name = "btnordenarplanta";
+            this.btnordenarplanta.Size = new System.Drawing.Size(128, 23);
+            this.btnordenarplanta.TabIndex = 13;
+            this.btnordenarplanta.Text = "Ordenar Por Categoria";
+            this.btnordenarplanta.UseVisualStyleBackColor = true;
+            this.btnordenarplanta.Click += new System.EventHandler(this.btnordenarplanta_Click);
+            // 
             // Plantas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnordenarplanta);
+            this.Controls.Add(this.cbordenarcatplant);
             this.Controls.Add(this.btnddexcel);
             this.Controls.Add(this.lbsocioplantaencontrado);
             this.Controls.Add(this.gridverplantas);
@@ -200,5 +229,7 @@
         private System.Windows.Forms.DataGridView gridverplantas;
         private System.Windows.Forms.Label lbsocioplantaencontrado;
         private System.Windows.Forms.Button btnddexcel;
+        private System.Windows.Forms.ComboBox cbordenarcatplant;
+        private System.Windows.Forms.Button btnordenarplanta;
     }
 }
