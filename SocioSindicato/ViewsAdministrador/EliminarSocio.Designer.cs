@@ -48,12 +48,16 @@
             // 
             // btnbuscarel
             // 
+            this.btnbuscarel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnbuscarel.FlatAppearance.BorderSize = 0;
+            this.btnbuscarel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnbuscarel.ForeColor = System.Drawing.Color.White;
             this.btnbuscarel.Location = new System.Drawing.Point(470, 54);
             this.btnbuscarel.Name = "btnbuscarel";
             this.btnbuscarel.Size = new System.Drawing.Size(75, 23);
             this.btnbuscarel.TabIndex = 1;
             this.btnbuscarel.Text = "BuscarSocio";
-            this.btnbuscarel.UseVisualStyleBackColor = true;
+            this.btnbuscarel.UseVisualStyleBackColor = false;
             this.btnbuscarel.Click += new System.EventHandler(this.btnbuscarel_Click);
             // 
             // grideliminar
@@ -68,12 +72,16 @@
             // 
             // btneliminar
             // 
+            this.btneliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btneliminar.FlatAppearance.BorderSize = 0;
+            this.btneliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btneliminar.ForeColor = System.Drawing.Color.White;
             this.btneliminar.Location = new System.Drawing.Point(87, 313);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Size = new System.Drawing.Size(75, 23);
             this.btneliminar.TabIndex = 3;
             this.btneliminar.Text = "Eliminar";
-            this.btneliminar.UseVisualStyleBackColor = true;
+            this.btneliminar.UseVisualStyleBackColor = false;
             this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
             // 
             // lbeliminar
@@ -86,12 +94,16 @@
             // 
             // btnvolvereliminar
             // 
+            this.btnvolvereliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnvolvereliminar.FlatAppearance.BorderSize = 0;
+            this.btnvolvereliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnvolvereliminar.ForeColor = System.Drawing.Color.White;
             this.btnvolvereliminar.Location = new System.Drawing.Point(684, 394);
             this.btnvolvereliminar.Name = "btnvolvereliminar";
             this.btnvolvereliminar.Size = new System.Drawing.Size(75, 23);
             this.btnvolvereliminar.TabIndex = 5;
             this.btnvolvereliminar.Text = "Volver";
-            this.btnvolvereliminar.UseVisualStyleBackColor = true;
+            this.btnvolvereliminar.UseVisualStyleBackColor = false;
             this.btnvolvereliminar.Click += new System.EventHandler(this.btnvolvereliminar_Click);
             // 
             // pb
@@ -107,6 +119,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(56)))), ((int)(((byte)(104)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pb);
             this.Controls.Add(this.btnvolvereliminar);

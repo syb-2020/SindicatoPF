@@ -47,92 +47,128 @@
             // 
             // btnplantasvolver
             // 
+            this.btnplantasvolver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnplantasvolver.FlatAppearance.BorderSize = 0;
+            this.btnplantasvolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnplantasvolver.ForeColor = System.Drawing.Color.White;
             this.btnplantasvolver.Location = new System.Drawing.Point(677, 411);
             this.btnplantasvolver.Name = "btnplantasvolver";
             this.btnplantasvolver.Size = new System.Drawing.Size(75, 23);
             this.btnplantasvolver.TabIndex = 0;
             this.btnplantasvolver.Text = "Volver";
-            this.btnplantasvolver.UseVisualStyleBackColor = true;
+            this.btnplantasvolver.UseVisualStyleBackColor = false;
             this.btnplantasvolver.Click += new System.EventHandler(this.btnplantasvolver_Click);
             // 
             // btnplanta1
             // 
+            this.btnplanta1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnplanta1.FlatAppearance.BorderSize = 0;
+            this.btnplanta1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnplanta1.ForeColor = System.Drawing.Color.White;
             this.btnplanta1.Location = new System.Drawing.Point(115, 34);
             this.btnplanta1.Name = "btnplanta1";
             this.btnplanta1.Size = new System.Drawing.Size(75, 23);
             this.btnplanta1.TabIndex = 1;
             this.btnplanta1.Text = "Planta 1";
-            this.btnplanta1.UseVisualStyleBackColor = true;
+            this.btnplanta1.UseVisualStyleBackColor = false;
             this.btnplanta1.Click += new System.EventHandler(this.btnplanta1_Click);
             // 
             // btnplanta2
             // 
+            this.btnplanta2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnplanta2.FlatAppearance.BorderSize = 0;
+            this.btnplanta2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnplanta2.ForeColor = System.Drawing.Color.White;
             this.btnplanta2.Location = new System.Drawing.Point(264, 34);
             this.btnplanta2.Name = "btnplanta2";
             this.btnplanta2.Size = new System.Drawing.Size(75, 23);
             this.btnplanta2.TabIndex = 2;
             this.btnplanta2.Text = "Planta 2";
-            this.btnplanta2.UseVisualStyleBackColor = true;
+            this.btnplanta2.UseVisualStyleBackColor = false;
             this.btnplanta2.Click += new System.EventHandler(this.btnplanta2_Click);
             // 
             // btnplanta3
             // 
+            this.btnplanta3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnplanta3.FlatAppearance.BorderSize = 0;
+            this.btnplanta3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnplanta3.ForeColor = System.Drawing.Color.White;
             this.btnplanta3.Location = new System.Drawing.Point(397, 34);
             this.btnplanta3.Name = "btnplanta3";
             this.btnplanta3.Size = new System.Drawing.Size(75, 23);
             this.btnplanta3.TabIndex = 3;
             this.btnplanta3.Text = "Planta 3";
-            this.btnplanta3.UseVisualStyleBackColor = true;
+            this.btnplanta3.UseVisualStyleBackColor = false;
             this.btnplanta3.Click += new System.EventHandler(this.btnplanta3_Click);
             // 
             // btncdt
             // 
+            this.btncdt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btncdt.FlatAppearance.BorderSize = 0;
+            this.btncdt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncdt.ForeColor = System.Drawing.Color.White;
             this.btncdt.Location = new System.Drawing.Point(115, 83);
             this.btncdt.Name = "btncdt";
             this.btncdt.Size = new System.Drawing.Size(75, 23);
             this.btncdt.TabIndex = 4;
             this.btncdt.Text = "CDT";
-            this.btncdt.UseVisualStyleBackColor = true;
+            this.btncdt.UseVisualStyleBackColor = false;
             this.btncdt.Click += new System.EventHandler(this.btncdt_Click);
             // 
             // btnplantapizza
             // 
+            this.btnplantapizza.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnplantapizza.FlatAppearance.BorderSize = 0;
+            this.btnplantapizza.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnplantapizza.ForeColor = System.Drawing.Color.White;
             this.btnplantapizza.Location = new System.Drawing.Point(264, 83);
             this.btnplantapizza.Name = "btnplantapizza";
             this.btnplantapizza.Size = new System.Drawing.Size(75, 23);
             this.btnplantapizza.TabIndex = 5;
             this.btnplantapizza.Text = "Planta Pizza";
-            this.btnplantapizza.UseVisualStyleBackColor = true;
+            this.btnplantapizza.UseVisualStyleBackColor = false;
             this.btnplantapizza.Click += new System.EventHandler(this.btnplantapizza_Click);
             // 
             // btnplantacarnicos
             // 
+            this.btnplantacarnicos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnplantacarnicos.FlatAppearance.BorderSize = 0;
+            this.btnplantacarnicos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnplantacarnicos.ForeColor = System.Drawing.Color.White;
             this.btnplantacarnicos.Location = new System.Drawing.Point(368, 83);
             this.btnplantacarnicos.Name = "btnplantacarnicos";
             this.btnplantacarnicos.Size = new System.Drawing.Size(125, 23);
             this.btnplantacarnicos.TabIndex = 6;
             this.btnplantacarnicos.Text = "Planta Carnicos";
-            this.btnplantacarnicos.UseVisualStyleBackColor = true;
+            this.btnplantacarnicos.UseVisualStyleBackColor = false;
             this.btnplantacarnicos.Click += new System.EventHandler(this.btnplantacarnicos_Click);
             // 
             // btnplanta4
             // 
+            this.btnplanta4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnplanta4.FlatAppearance.BorderSize = 0;
+            this.btnplanta4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnplanta4.ForeColor = System.Drawing.Color.White;
             this.btnplanta4.Location = new System.Drawing.Point(548, 34);
             this.btnplanta4.Name = "btnplanta4";
             this.btnplanta4.Size = new System.Drawing.Size(75, 23);
             this.btnplanta4.TabIndex = 7;
             this.btnplanta4.Text = "Planta 4";
-            this.btnplanta4.UseVisualStyleBackColor = true;
+            this.btnplanta4.UseVisualStyleBackColor = false;
             this.btnplanta4.Click += new System.EventHandler(this.btnplanta4_Click);
             // 
             // btntodos
             // 
+            this.btntodos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btntodos.FlatAppearance.BorderSize = 0;
+            this.btntodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btntodos.ForeColor = System.Drawing.Color.White;
             this.btntodos.Location = new System.Drawing.Point(548, 83);
             this.btntodos.Name = "btntodos";
             this.btntodos.Size = new System.Drawing.Size(75, 23);
             this.btntodos.TabIndex = 8;
             this.btntodos.Text = "Todos";
-            this.btntodos.UseVisualStyleBackColor = true;
+            this.btntodos.UseVisualStyleBackColor = false;
             this.btntodos.Click += new System.EventHandler(this.btntodos_Click);
             // 
             // gridverplantas
@@ -155,12 +191,16 @@
             // 
             // btnddexcel
             // 
+            this.btnddexcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnddexcel.FlatAppearance.BorderSize = 0;
+            this.btnddexcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnddexcel.ForeColor = System.Drawing.Color.White;
             this.btnddexcel.Location = new System.Drawing.Point(115, 328);
             this.btnddexcel.Name = "btnddexcel";
             this.btnddexcel.Size = new System.Drawing.Size(75, 23);
             this.btnddexcel.TabIndex = 11;
             this.btnddexcel.Text = "Descargar";
-            this.btnddexcel.UseVisualStyleBackColor = true;
+            this.btnddexcel.UseVisualStyleBackColor = false;
             this.btnddexcel.Click += new System.EventHandler(this.btnddexcel_Click);
             // 
             // cbordenarcatplant
@@ -180,18 +220,23 @@
             // 
             // btnordenarplanta
             // 
+            this.btnordenarplanta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnordenarplanta.FlatAppearance.BorderSize = 0;
+            this.btnordenarplanta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnordenarplanta.ForeColor = System.Drawing.Color.White;
             this.btnordenarplanta.Location = new System.Drawing.Point(264, 328);
             this.btnordenarplanta.Name = "btnordenarplanta";
             this.btnordenarplanta.Size = new System.Drawing.Size(128, 23);
             this.btnordenarplanta.TabIndex = 13;
             this.btnordenarplanta.Text = "Ordenar Por Categoria";
-            this.btnordenarplanta.UseVisualStyleBackColor = true;
+            this.btnordenarplanta.UseVisualStyleBackColor = false;
             this.btnordenarplanta.Click += new System.EventHandler(this.btnordenarplanta_Click);
             // 
             // Plantas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(56)))), ((int)(((byte)(104)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnordenarplanta);
             this.Controls.Add(this.cbordenarcatplant);

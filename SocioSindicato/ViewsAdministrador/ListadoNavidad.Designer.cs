@@ -41,12 +41,16 @@
             // 
             // btnvolvernavidad
             // 
+            this.btnvolvernavidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnvolvernavidad.FlatAppearance.BorderSize = 0;
+            this.btnvolvernavidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnvolvernavidad.ForeColor = System.Drawing.Color.White;
             this.btnvolvernavidad.Location = new System.Drawing.Point(942, 677);
             this.btnvolvernavidad.Name = "btnvolvernavidad";
             this.btnvolvernavidad.Size = new System.Drawing.Size(142, 36);
             this.btnvolvernavidad.TabIndex = 0;
             this.btnvolvernavidad.Text = "Volver";
-            this.btnvolvernavidad.UseVisualStyleBackColor = true;
+            this.btnvolvernavidad.UseVisualStyleBackColor = false;
             this.btnvolvernavidad.Click += new System.EventHandler(this.btnvolvernavidad_Click);
             // 
             // comboniñosporedad
@@ -96,22 +100,30 @@
             // 
             // btnbuscarniñosnavidad
             // 
-            this.btnbuscarniñosnavidad.Location = new System.Drawing.Point(942, 44);
+            this.btnbuscarniñosnavidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnbuscarniñosnavidad.FlatAppearance.BorderSize = 0;
+            this.btnbuscarniñosnavidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnbuscarniñosnavidad.ForeColor = System.Drawing.Color.White;
+            this.btnbuscarniñosnavidad.Location = new System.Drawing.Point(942, 47);
             this.btnbuscarniñosnavidad.Name = "btnbuscarniñosnavidad";
-            this.btnbuscarniñosnavidad.Size = new System.Drawing.Size(142, 36);
+            this.btnbuscarniñosnavidad.Size = new System.Drawing.Size(142, 31);
             this.btnbuscarniñosnavidad.TabIndex = 3;
             this.btnbuscarniñosnavidad.Text = "Buscar";
-            this.btnbuscarniñosnavidad.UseVisualStyleBackColor = true;
+            this.btnbuscarniñosnavidad.UseVisualStyleBackColor = false;
             this.btnbuscarniñosnavidad.Click += new System.EventHandler(this.btnbuscarniñosnavidad_Click);
             // 
             // btndescargarexcel
             // 
+            this.btndescargarexcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btndescargarexcel.FlatAppearance.BorderSize = 0;
+            this.btndescargarexcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btndescargarexcel.ForeColor = System.Drawing.Color.White;
             this.btndescargarexcel.Location = new System.Drawing.Point(107, 677);
             this.btndescargarexcel.Name = "btndescargarexcel";
             this.btndescargarexcel.Size = new System.Drawing.Size(126, 36);
             this.btndescargarexcel.TabIndex = 4;
             this.btndescargarexcel.Text = "Descargar";
-            this.btndescargarexcel.UseVisualStyleBackColor = true;
+            this.btndescargarexcel.UseVisualStyleBackColor = false;
             this.btndescargarexcel.Click += new System.EventHandler(this.btndescargarexcel_Click);
             // 
             // lbprueba
@@ -136,6 +148,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(56)))), ((int)(((byte)(104)))));
             this.ClientSize = new System.Drawing.Size(1143, 745);
             this.Controls.Add(this.gridcargarn);
             this.Controls.Add(this.lbprueba);

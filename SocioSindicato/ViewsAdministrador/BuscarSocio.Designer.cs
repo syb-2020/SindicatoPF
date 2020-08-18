@@ -50,12 +50,16 @@
             // 
             // btnbuscar
             // 
+            this.btnbuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnbuscar.FlatAppearance.BorderSize = 0;
+            this.btnbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnbuscar.ForeColor = System.Drawing.Color.White;
             this.btnbuscar.Location = new System.Drawing.Point(409, 63);
             this.btnbuscar.Name = "btnbuscar";
             this.btnbuscar.Size = new System.Drawing.Size(107, 23);
             this.btnbuscar.TabIndex = 0;
             this.btnbuscar.Text = "Buscar Socio";
-            this.btnbuscar.UseVisualStyleBackColor = true;
+            this.btnbuscar.UseVisualStyleBackColor = false;
             this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
             // 
             // txtbuscar
@@ -85,17 +89,21 @@
             // 
             // btnvolverbuscar
             // 
+            this.btnvolverbuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnvolverbuscar.FlatAppearance.BorderSize = 0;
+            this.btnvolverbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnvolverbuscar.ForeColor = System.Drawing.Color.White;
             this.btnvolverbuscar.Location = new System.Drawing.Point(821, 560);
             this.btnvolverbuscar.Name = "btnvolverbuscar";
             this.btnvolverbuscar.Size = new System.Drawing.Size(75, 23);
             this.btnvolverbuscar.TabIndex = 4;
             this.btnvolverbuscar.Text = "Volver";
-            this.btnvolverbuscar.UseVisualStyleBackColor = true;
+            this.btnvolverbuscar.UseVisualStyleBackColor = false;
             this.btnvolverbuscar.Click += new System.EventHandler(this.btnvolverbuscar_Click);
             // 
             // imagenbuscarsociomostrar
             // 
-            this.imagenbuscarsociomostrar.Location = new System.Drawing.Point(681, 153);
+            this.imagenbuscarsociomostrar.Location = new System.Drawing.Point(668, 120);
             this.imagenbuscarsociomostrar.Name = "imagenbuscarsociomostrar";
             this.imagenbuscarsociomostrar.Size = new System.Drawing.Size(173, 189);
             this.imagenbuscarsociomostrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -105,22 +113,30 @@
             // 
             // btnddexcel
             // 
+            this.btnddexcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnddexcel.FlatAppearance.BorderSize = 0;
+            this.btnddexcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnddexcel.ForeColor = System.Drawing.Color.White;
             this.btnddexcel.Location = new System.Drawing.Point(44, 560);
             this.btnddexcel.Name = "btnddexcel";
             this.btnddexcel.Size = new System.Drawing.Size(164, 23);
             this.btnddexcel.TabIndex = 6;
             this.btnddexcel.Text = "Descargar Socios Con Cargas";
-            this.btnddexcel.UseVisualStyleBackColor = true;
+            this.btnddexcel.UseVisualStyleBackColor = false;
             this.btnddexcel.Click += new System.EventHandler(this.btnddexcel_Click);
             // 
             // btcargas
             // 
+            this.btcargas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btcargas.FlatAppearance.BorderSize = 0;
+            this.btcargas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btcargas.ForeColor = System.Drawing.Color.White;
             this.btcargas.Location = new System.Drawing.Point(444, 560);
             this.btcargas.Name = "btcargas";
             this.btcargas.Size = new System.Drawing.Size(75, 23);
             this.btcargas.TabIndex = 7;
             this.btcargas.Text = "Cargas";
-            this.btcargas.UseVisualStyleBackColor = true;
+            this.btcargas.UseVisualStyleBackColor = false;
             this.btcargas.Click += new System.EventHandler(this.btcargas_Click);
             // 
             // gridConyuge
@@ -144,12 +160,16 @@
             // 
             // btconyuge
             // 
+            this.btconyuge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btconyuge.FlatAppearance.BorderSize = 0;
+            this.btconyuge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btconyuge.ForeColor = System.Drawing.Color.White;
             this.btconyuge.Location = new System.Drawing.Point(354, 560);
             this.btconyuge.Name = "btconyuge";
             this.btconyuge.Size = new System.Drawing.Size(75, 23);
             this.btconyuge.TabIndex = 10;
             this.btconyuge.Text = "Conyuge";
-            this.btconyuge.UseVisualStyleBackColor = true;
+            this.btconyuge.UseVisualStyleBackColor = false;
             this.btconyuge.Click += new System.EventHandler(this.btconyuge_Click);
             // 
             // gbtodo
@@ -164,18 +184,23 @@
             // 
             // btnexcelsocio
             // 
+            this.btnexcelsocio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnexcelsocio.FlatAppearance.BorderSize = 0;
+            this.btnexcelsocio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnexcelsocio.ForeColor = System.Drawing.Color.White;
             this.btnexcelsocio.Location = new System.Drawing.Point(224, 560);
             this.btnexcelsocio.Name = "btnexcelsocio";
             this.btnexcelsocio.Size = new System.Drawing.Size(110, 23);
             this.btnexcelsocio.TabIndex = 12;
             this.btnexcelsocio.Text = "Descargar Socio";
-            this.btnexcelsocio.UseVisualStyleBackColor = true;
+            this.btnexcelsocio.UseVisualStyleBackColor = false;
             this.btnexcelsocio.Click += new System.EventHandler(this.btnexcelsocio_Click);
             // 
             // BuscarSocio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(56)))), ((int)(((byte)(104)))));
             this.ClientSize = new System.Drawing.Size(922, 618);
             this.Controls.Add(this.btnexcelsocio);
             this.Controls.Add(this.gbtodo);
