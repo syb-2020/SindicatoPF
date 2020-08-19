@@ -39,6 +39,7 @@ namespace SocioSindicato.ViewsAdministrador
                     MessageBox.Show("Ingrese Rut del socio!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     grideliminar.DataSource = "";
                     txteliminar.Text = "";
+                    pb.Image = null;
                 }
                 else
                 {
@@ -56,7 +57,7 @@ namespace SocioSindicato.ViewsAdministrador
                             pb.Image = bmp;
                         }
 
-                       
+                        MessageBox.Show("Socio Encontrado!");
 
                     }
                     else
@@ -66,6 +67,7 @@ namespace SocioSindicato.ViewsAdministrador
                         MessageBox.Show("Socio No Encontrado!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         grideliminar.DataSource = "";
                         txteliminar.Text = "";
+                        
 
 
                     }
@@ -88,6 +90,7 @@ namespace SocioSindicato.ViewsAdministrador
                     MessageBox.Show("Ingrese Rut Del Socio Para Eliminar!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     grideliminar.DataSource = "";
                     txteliminar.Text = "";
+                    pb.Image = null;
                 }
                 else
                 {
@@ -151,6 +154,7 @@ namespace SocioSindicato.ViewsAdministrador
                         MessageBox.Show("Socio Eliminado!");
                         grideliminar.DataSource = "";
                         txteliminar.Text = "";
+                        pb.Image = null;
 
                     }
                     catch (Exception)
@@ -160,6 +164,7 @@ namespace SocioSindicato.ViewsAdministrador
                         MessageBox.Show("Socio No Eliminado!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         grideliminar.DataSource = "";
                         txteliminar.Text = "";
+                        pb.Image = null;
                     }
                 }
             }

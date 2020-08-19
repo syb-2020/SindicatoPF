@@ -1628,15 +1628,11 @@ namespace SocioSindicato.ViewsAdministrador
 
                 }
 
-                else
-                {
-                    MessageBox.Show("Selecciones una planta para ordenar", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+            }
+            else
+            {
 
-
-
-
-
+                MessageBox.Show("Selecciones una planta para ordenar", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
         }

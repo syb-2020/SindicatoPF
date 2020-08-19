@@ -277,6 +277,16 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="Resources\logosindicato.png" />
+    <None Include="Resources\Minimize_Icon.png" />
+    <None Include="Resources\Close_Icon1.png" />
+    <None Include="Resources\icons8-close-window-50.png" />
+    <None Include="Resources\icons8-minimize-window-50.png" />
+    <None Include="Resources\minimizar.png" />
+    <None Include="Resources\maximizar.png" />
+    <None Include="Resources\cerrar.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Models\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
@@ -287,14 +297,6 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
-    <None Include="Resources\logosindicato.png" />
-    <None Include="Resources\Minimize_Icon.png" />
-    <None Include="Resources\Close_Icon1.png" />
-    <None Include="Resources\icons8-close-window-50.png" />
-    <None Include="Resources\icons8-minimize-window-50.png" />
-    <None Include="Resources\minimizar.png" />
-    <None Include="Resources\maximizar.png" />
-    <None Include="Resources\cerrar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

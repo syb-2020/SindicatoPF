@@ -209,7 +209,6 @@ namespace SocioSindicato.ViewsAdministrador
                 {
                     Socio nuevosocio = new Socio();
                     nuevosocio = context.Socio.Find(buscar_rut);
-                    nuevosocio.rut_socio = txtrutsocio.Text;
                     nuevosocio.imagen = file;
                     nuevosocio.nombre_socio = txtnombresocio.Text;
                     nuevosocio.fecha_ingreso = Convert.ToDateTime(dateingresoempresasocio.Text);

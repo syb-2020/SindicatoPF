@@ -134,6 +134,7 @@ namespace SocioSindicato.ViewsAdministrador
                 datenacimientohijosocio.Value = DateTime.Now;
                
                 gridpruebahijo.DataSource = mashijos.ToArray();
+
             }
 
             
@@ -201,11 +202,11 @@ namespace SocioSindicato.ViewsAdministrador
                     context.Conyuge.Add(con);
 
                     context.SaveChanges();
-
+                   
 
                     //BORRAR DATOS SOCIO
                     txtrutsocio.Text = "";
-                    file = null;
+                    fotosocio.Image = null;
                     txtnombresocio.Text = "";
                     dateingresoempresasocio.Value = DateTime.Now;
                     combocategoriasocio.SelectedIndex = 0;
