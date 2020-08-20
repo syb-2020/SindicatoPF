@@ -35,8 +35,14 @@
             this.lbeliminar = new System.Windows.Forms.Label();
             this.btnvolvereliminar = new System.Windows.Forms.Button();
             this.pb = new System.Windows.Forms.PictureBox();
+            this.gridsociosolo = new System.Windows.Forms.DataGridView();
+            this.gridsolocon = new System.Windows.Forms.DataGridView();
+            this.gridhijo = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.grideliminar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridsociosolo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridsolocon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridhijo)).BeginInit();
             this.SuspendLayout();
             // 
             // txteliminar
@@ -115,12 +121,45 @@
             this.pb.TabIndex = 6;
             this.pb.TabStop = false;
             // 
+            // gridsociosolo
+            // 
+            this.gridsociosolo.AllowUserToOrderColumns = true;
+            this.gridsociosolo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridsociosolo.Location = new System.Drawing.Point(320, 303);
+            this.gridsociosolo.Name = "gridsociosolo";
+            this.gridsociosolo.Size = new System.Drawing.Size(240, 12);
+            this.gridsociosolo.TabIndex = 7;
+            this.gridsociosolo.Visible = false;
+            // 
+            // gridsolocon
+            // 
+            this.gridsolocon.AllowUserToOrderColumns = true;
+            this.gridsolocon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridsolocon.Location = new System.Drawing.Point(320, 334);
+            this.gridsolocon.Name = "gridsolocon";
+            this.gridsolocon.Size = new System.Drawing.Size(240, 10);
+            this.gridsolocon.TabIndex = 8;
+            this.gridsolocon.Visible = false;
+            // 
+            // gridhijo
+            // 
+            this.gridhijo.AllowUserToOrderColumns = true;
+            this.gridhijo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridhijo.Location = new System.Drawing.Point(320, 360);
+            this.gridhijo.Name = "gridhijo";
+            this.gridhijo.Size = new System.Drawing.Size(240, 10);
+            this.gridhijo.TabIndex = 9;
+            this.gridhijo.Visible = false;
+            // 
             // EliminarSocio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(56)))), ((int)(((byte)(104)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.gridhijo);
+            this.Controls.Add(this.gridsolocon);
+            this.Controls.Add(this.gridsociosolo);
             this.Controls.Add(this.pb);
             this.Controls.Add(this.btnvolvereliminar);
             this.Controls.Add(this.lbeliminar);
@@ -132,6 +171,9 @@
             this.Text = "EliminarSocio";
             ((System.ComponentModel.ISupportInitialize)(this.grideliminar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridsociosolo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridsolocon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridhijo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,5 +188,8 @@
         private System.Windows.Forms.Label lbeliminar;
         private System.Windows.Forms.Button btnvolvereliminar;
         private System.Windows.Forms.PictureBox pb;
+        private System.Windows.Forms.DataGridView gridsociosolo;
+        private System.Windows.Forms.DataGridView gridsolocon;
+        private System.Windows.Forms.DataGridView gridhijo;
     }
 }

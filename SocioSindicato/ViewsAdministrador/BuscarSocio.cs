@@ -198,9 +198,9 @@ namespace SocioSindicato.ViewsAdministrador
                 {
 
 
-                    MessageBox.Show("Conyuge No Encontrado!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Socio no tiene Conyuge !", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     gridConyuge.DataSource = "";
-                    txtbuscar.Text = "";
+                   
 
 
                 }
@@ -237,9 +237,9 @@ namespace SocioSindicato.ViewsAdministrador
                 {
 
 
-                    MessageBox.Show("Hijo No Encontrado!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Socio no tiene hijo!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     gridHijo.DataSource = "";
-                    txtbuscar.Text = "";
+                    
 
 
                 }
@@ -282,6 +282,73 @@ namespace SocioSindicato.ViewsAdministrador
             using (SolidBrush b = new SolidBrush(gridHijo.RowHeadersDefaultCellStyle.ForeColor))
             {
                 e.Graphics.DrawString((e.RowIndex + 1).ToString(), e.InheritedRowStyle.Font, b, e.RowBounds.Location.X + 10, e.RowBounds.Location.Y + 4);
+            }
+        }
+
+        private void btnexcelsocioconyuge_Click(object sender, EventArgs e)
+        {
+            string buscar_rut = txtbuscar.Text;
+            sindicatoPFEntities context = new sindicatoPFEntities();
+            var Listadosocioconyuge = from c in context.Socio
+                              join conyu in context.Conyuge
+                              on c.rut_socio equals conyu.rut_socio
+                              where c.rut_socio.Equals(buscar_rut)                           
+                              select new
+                              {
+                                  RUT_SOCIO = c.rut_socio,
+                                  NOMBRE_SOCIO = c.nombre_socio,
+                                  CATEGORIA = c.id_categoria,
+                                  PLANTA = c.Planta.nombre,
+                                  FECHA_DE_INGRESO = c.fecha_ingreso,
+                                  RUT_CONYUGE = conyu.rut,
+                                  NOMBRE_CONYUGE = conyu.nombre,
+                                  NACIMIENTO_CONYUGE = conyu.nacimiento,
+                                  CONVIVIENTE = conyu.conviviente,                                
+                              };
+            gbtodo.DataSource = Listadosocioconyuge.ToList();
+
+            if (gbtodo.Rows.Count == 0)
+            {
+                MessageBox.Show("No hay datos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+
+                exportardatos(gbtodo);
+            }
+        }
+
+        private void btnexcelsociohijo_Click(object sender, EventArgs e)
+        {
+             string buscar_rut = txtbuscar.Text;
+            sindicatoPFEntities context = new sindicatoPFEntities();
+            var listadosociohijo = from c in context.Socio                            
+                              join hij in context.Hijo on c.rut_socio equals hij.rut_socio
+                              where c.rut_socio.Equals(buscar_rut)
+                              select new
+                              {
+                                  RUT_SOCIO = c.rut_socio,
+                                  NOMBRE_SOCIO = c.nombre_socio,
+                                  CATEGORIA = c.id_categoria,
+                                  PLANTA = c.Planta.nombre,
+                                  FECHA_DE_INGRESO = c.fecha_ingreso,                                 
+                                  RUT_HIJO = hij.rut_hijo,
+                                  NOMBRE_HIJO = hij.nombre,
+                                  NACIMIENTO_HIJO = hij.nacimiento,
+                                  SEXO = hij.sexo
+
+                              };
+
+            gbtodo.DataSource = listadosociohijo.ToList();
+
+            if (gbtodo.Rows.Count == 0)
+            {
+                MessageBox.Show("No hay datos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+
+                exportardatos(gbtodo);
             }
         }
     }

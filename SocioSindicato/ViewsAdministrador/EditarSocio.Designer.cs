@@ -96,9 +96,15 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
+            this.gridbuscarsolosocio = new System.Windows.Forms.DataGridView();
+            this.grideditarsocioconyu = new System.Windows.Forms.DataGridView();
+            this.grideditarsociohijo = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.fotosocio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridcapdatosedi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gbhijo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridbuscarsolosocio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grideditarsocioconyu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grideditarsociohijo)).BeginInit();
             this.SuspendLayout();
             // 
             // btnvolvereditar
@@ -410,7 +416,7 @@
             // 
             // txtedadconyugesocio
             // 
-            this.txtedadconyugesocio.Location = new System.Drawing.Point(508, 200);
+            this.txtedadconyugesocio.Location = new System.Drawing.Point(508, 162);
             this.txtedadconyugesocio.Name = "txtedadconyugesocio";
             this.txtedadconyugesocio.Size = new System.Drawing.Size(200, 20);
             this.txtedadconyugesocio.TabIndex = 80;
@@ -419,7 +425,7 @@
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(382, 197);
+            this.label27.Location = new System.Drawing.Point(382, 159);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(36, 13);
             this.label27.TabIndex = 79;
@@ -432,7 +438,7 @@
             "",
             "SI",
             "NO"});
-            this.comboconvivienteconyugesocio.Location = new System.Drawing.Point(508, 98);
+            this.comboconvivienteconyugesocio.Location = new System.Drawing.Point(508, 200);
             this.comboconvivienteconyugesocio.Name = "comboconvivienteconyugesocio";
             this.comboconvivienteconyugesocio.Size = new System.Drawing.Size(200, 21);
             this.comboconvivienteconyugesocio.TabIndex = 78;
@@ -441,7 +447,7 @@
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(380, 101);
+            this.label26.Location = new System.Drawing.Point(380, 203);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(74, 13);
             this.label26.TabIndex = 77;
@@ -449,7 +455,7 @@
             // 
             // datefechanacimientoconyugesocio
             // 
-            this.datefechanacimientoconyugesocio.Location = new System.Drawing.Point(508, 166);
+            this.datefechanacimientoconyugesocio.Location = new System.Drawing.Point(508, 128);
             this.datefechanacimientoconyugesocio.Name = "datefechanacimientoconyugesocio";
             this.datefechanacimientoconyugesocio.Size = new System.Drawing.Size(200, 20);
             this.datefechanacimientoconyugesocio.TabIndex = 76;
@@ -458,7 +464,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(380, 171);
+            this.label20.Location = new System.Drawing.Point(380, 133);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(127, 13);
             this.label20.TabIndex = 75;
@@ -468,7 +474,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(382, 135);
+            this.label19.Location = new System.Drawing.Point(382, 97);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(27, 13);
             this.label19.TabIndex = 74;
@@ -476,14 +482,14 @@
             // 
             // txtrutconyugesocio
             // 
-            this.txtrutconyugesocio.Location = new System.Drawing.Point(508, 132);
+            this.txtrutconyugesocio.Location = new System.Drawing.Point(508, 94);
             this.txtrutconyugesocio.Name = "txtrutconyugesocio";
             this.txtrutconyugesocio.Size = new System.Drawing.Size(200, 20);
             this.txtrutconyugesocio.TabIndex = 73;
             // 
             // txtconyugesocio
             // 
-            this.txtconyugesocio.Location = new System.Drawing.Point(508, 66);
+            this.txtconyugesocio.Location = new System.Drawing.Point(508, 61);
             this.txtconyugesocio.Name = "txtconyugesocio";
             this.txtconyugesocio.Size = new System.Drawing.Size(200, 20);
             this.txtconyugesocio.TabIndex = 72;
@@ -492,7 +498,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(380, 66);
+            this.label18.Location = new System.Drawing.Point(380, 61);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(50, 13);
             this.label18.TabIndex = 71;
@@ -636,7 +642,7 @@
             this.gridcapdatosedi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridcapdatosedi.Location = new System.Drawing.Point(786, 274);
             this.gridcapdatosedi.Name = "gridcapdatosedi";
-            this.gridcapdatosedi.Size = new System.Drawing.Size(240, 150);
+            this.gridcapdatosedi.Size = new System.Drawing.Size(240, 16);
             this.gridcapdatosedi.TabIndex = 95;
             this.gridcapdatosedi.Visible = false;
             this.gridcapdatosedi.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.gridcapdatosedi_RowPostPaint);
@@ -725,9 +731,9 @@
             // 
             this.gbhijo.AllowUserToOrderColumns = true;
             this.gbhijo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gbhijo.Location = new System.Drawing.Point(786, 473);
+            this.gbhijo.Location = new System.Drawing.Point(786, 347);
             this.gbhijo.Name = "gbhijo";
-            this.gbhijo.Size = new System.Drawing.Size(240, 62);
+            this.gbhijo.Size = new System.Drawing.Size(240, 13);
             this.gbhijo.TabIndex = 103;
             this.gbhijo.Visible = false;
             // 
@@ -761,12 +767,45 @@
             this.label17.TabIndex = 106;
             this.label17.Text = "Datos del socio";
             // 
+            // gridbuscarsolosocio
+            // 
+            this.gridbuscarsolosocio.AllowUserToOrderColumns = true;
+            this.gridbuscarsolosocio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridbuscarsolosocio.Location = new System.Drawing.Point(786, 313);
+            this.gridbuscarsolosocio.Name = "gridbuscarsolosocio";
+            this.gridbuscarsolosocio.Size = new System.Drawing.Size(240, 19);
+            this.gridbuscarsolosocio.TabIndex = 107;
+            this.gridbuscarsolosocio.Visible = false;
+            // 
+            // grideditarsocioconyu
+            // 
+            this.grideditarsocioconyu.AllowUserToOrderColumns = true;
+            this.grideditarsocioconyu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grideditarsocioconyu.Location = new System.Drawing.Point(788, 392);
+            this.grideditarsocioconyu.Name = "grideditarsocioconyu";
+            this.grideditarsocioconyu.Size = new System.Drawing.Size(240, 17);
+            this.grideditarsocioconyu.TabIndex = 108;
+            this.grideditarsocioconyu.Visible = false;
+            // 
+            // grideditarsociohijo
+            // 
+            this.grideditarsociohijo.AllowUserToOrderColumns = true;
+            this.grideditarsociohijo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grideditarsociohijo.Location = new System.Drawing.Point(786, 432);
+            this.grideditarsociohijo.Name = "grideditarsociohijo";
+            this.grideditarsociohijo.Size = new System.Drawing.Size(240, 27);
+            this.grideditarsociohijo.TabIndex = 109;
+            this.grideditarsociohijo.Visible = false;
+            // 
             // EditarSocio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(56)))), ((int)(((byte)(104)))));
             this.ClientSize = new System.Drawing.Size(1095, 778);
+            this.Controls.Add(this.grideditarsociohijo);
+            this.Controls.Add(this.grideditarsocioconyu);
+            this.Controls.Add(this.gridbuscarsolosocio);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label11);
@@ -839,6 +878,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.fotosocio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridcapdatosedi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gbhijo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridbuscarsolosocio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grideditarsocioconyu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grideditarsociohijo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -914,5 +956,8 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.DataGridView gridbuscarsolosocio;
+        private System.Windows.Forms.DataGridView grideditarsocioconyu;
+        private System.Windows.Forms.DataGridView grideditarsociohijo;
     }
 }

@@ -109,41 +109,65 @@ namespace SocioSindicato.ViewsAdministrador
 
         private void btnagregarotrohijo_Click(object sender, EventArgs e)
         {
+            
             using (sindicatoPFEntities context = new sindicatoPFEntities())
             {
-
-               
-
-               
-                Datos dato = new Datos()
+                if (txtrutsocio.Text =="") 
                 {
-                    rutsocio = txtrutsocio.Text,
-                    nombrehijo = txtnombrehijosocio.Text,
-                    ruthijo = txtruthijosocio.Text,
-                    sexohijo = cbSexo.Text,
-                    nacimientohijo = Convert.ToDateTime(datenacimientohijosocio.Text),
-                    
-                };
-                mashijos.Add(dato);
+                    MessageBox.Show("Debe ingresar el rut del socio", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                }
+                else if (txtnombrehijosocio.Text == "")
+                {
+
+                    MessageBox.Show("Debe ingresar el nombre del hijo", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (txtruthijosocio.Text == "")
+                {
+                    MessageBox.Show("Debe ingresar el rut del hijo", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (cbSexo.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Debe ingresar el sexo del hijo", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    Datos dato = new Datos()
+                    {
+                        rutsocio = txtrutsocio.Text,
+                        nombrehijo = txtnombrehijosocio.Text,
+                        ruthijo = txtruthijosocio.Text,
+                        sexohijo = cbSexo.Text,
+                        nacimientohijo = Convert.ToDateTime(datenacimientohijosocio.Text),
+
+                    };
+                   
+                   
+                     mashijos.Add(dato);
+                   
 
 
+                    MessageBox.Show("Hijo Agregado Correctamente!");
+                    gridpruebahijo.DataSource = mashijos.ToArray();
+                    gridpruebahijo.ForeColor = Color.Black;
 
                 txtnombrehijosocio.Text = "";
                 txtruthijosocio.Text = "";
                 cbSexo.SelectedIndex = 0;
                 datenacimientohijosocio.Value = DateTime.Now;
+
+                }
+                
+                
                
-                gridpruebahijo.DataSource = mashijos.ToArray();
+
+                //MessageBox.Show("Rellene campos del hijo", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
 
             
                 
         }
-
-
-
-
 
         private void btnagregarsocio_Click(object sender, EventArgs e)
         {
@@ -232,15 +256,9 @@ namespace SocioSindicato.ViewsAdministrador
                     txtruthijosocio.Text = "";
                     cbSexo.SelectedIndex = 0;
                     datenacimientohijosocio.Value = DateTime.Now;
-
-
-                    MessageBox.Show("Socio Agregado Correctamente!");
-
                     gridpruebahijo.DataSource = "";
 
-
-
-
+                    MessageBox.Show("Socio Agregado Correctamente!");
 
                 }
                 catch (Exception)
@@ -248,6 +266,37 @@ namespace SocioSindicato.ViewsAdministrador
 
                    
                     MessageBox.Show("Socio No Agregado", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    //BORRAR DATOS SOCIO
+                    txtrutsocio.Text = "";
+                    fotosocio.Image = null;
+                    txtnombresocio.Text = "";
+                    dateingresoempresasocio.Value = DateTime.Now;
+                    combocategoriasocio.SelectedIndex = 0;
+                    combocontratosocio.SelectedIndex = 0; ;
+                    comboplantasocio.SelectedIndex = 0; ;
+                    datefechanacimientosocio.Value = DateTime.Now;
+                    txtedadsocio.Text = "";
+                    txtdomiciliosocio.Text = "";
+                    comboestadocivilagregar.SelectedIndex = 0;
+                    txttelefonosocio.Text = "";
+                    txtnacionalidadsocio.Text = "";
+                    txtcorreosocio.Text = "";
+                    txtnombrepadre.Text = "";
+                    txtnombremadre.Text = "";
+                    //BORRAR DATOS CONYUGE
+                    txtconyugesocio.Text = "";
+                    comboconvivienteconyugesocio.SelectedIndex = 0; ;
+                    txtrutconyugesocio.Text = "";
+                    datefechanacimientoconyugesocio.Value = DateTime.Now;
+                    txtedadconyugesocio.Text = "";
+                    //BORRAR DATOS HIJOS
+                    txtnombrehijosocio.Text = "";
+                    txtruthijosocio.Text = "";
+                    cbSexo.SelectedIndex = 0;
+                    datenacimientohijosocio.Value = DateTime.Now;
+
+                    gridpruebahijo.DataSource = "";
                 }
             }
 
@@ -273,6 +322,344 @@ namespace SocioSindicato.ViewsAdministrador
             using (SolidBrush b = new SolidBrush(gridpruebahijo.RowHeadersDefaultCellStyle.ForeColor))
             {
                 e.Graphics.DrawString((e.RowIndex + 1).ToString(), e.InheritedRowStyle.Font, b, e.RowBounds.Location.X + 10, e.RowBounds.Location.Y + 4);
+            }
+        }
+
+        private void btnsocioagregarsolo_Click(object sender, EventArgs e)
+        {
+            using (sindicatoPFEntities context = new sindicatoPFEntities())
+            {
+
+                try
+                {
+                    Socio nuevosocio = new Socio
+                    {
+                        rut_socio = txtrutsocio.Text,
+                        imagen = file,
+                        nombre_socio = txtnombresocio.Text,
+                        fecha_ingreso = Convert.ToDateTime(dateingresoempresasocio.Text),
+                        id_categoria = Convert.ToInt32(combocategoriasocio.SelectedValue),
+                        tipo_contrato = combocontratosocio.Text,
+                        id_planta = Convert.ToInt32(comboplantasocio.SelectedValue),
+                        fecha_nacimiento = Convert.ToDateTime(datefechanacimientosocio.Text),
+                        edad = Convert.ToInt32(txtedadsocio.Text),
+                        domicilio = txtdomiciliosocio.Text,
+                        estado_civil = comboestadocivilagregar.Text,
+                        telefono = Convert.ToInt32(txttelefonosocio.Text),
+                        nacionalidad = txtnacionalidadsocio.Text,
+                        correo = txtcorreosocio.Text,
+                        datos_papa = txtnombrepadre.Text,
+                        datos_mama = txtnombremadre.Text,
+                    };
+                    context.Socio.Add(nuevosocio);
+                    context.SaveChanges();
+
+                    MessageBox.Show("Socio Agregado Correctamente!");
+
+                    //BORRAR DATOS SOCIO
+                    txtrutsocio.Text = "";
+                    fotosocio.Image = null;
+                    txtnombresocio.Text = "";
+                    dateingresoempresasocio.Value = DateTime.Now;
+                    combocategoriasocio.SelectedIndex = 0;
+                    combocontratosocio.SelectedIndex = 0; ;
+                    comboplantasocio.SelectedIndex = 0; ;
+                    datefechanacimientosocio.Value = DateTime.Now;
+                    txtedadsocio.Text = "";
+                    txtdomiciliosocio.Text = "";
+                    comboestadocivilagregar.SelectedIndex = 0;
+                    txttelefonosocio.Text = "";
+                    txtnacionalidadsocio.Text = "";
+                    txtcorreosocio.Text = "";
+                    txtnombrepadre.Text = "";
+                    txtnombremadre.Text = "";
+                    //BORRAR DATOS CONYUGE
+                    txtconyugesocio.Text = "";
+                    comboconvivienteconyugesocio.SelectedIndex = 0; ;
+                    txtrutconyugesocio.Text = "";
+                    datefechanacimientoconyugesocio.Value = DateTime.Now;
+                    txtedadconyugesocio.Text = "";
+                    //BORRAR DATOS HIJOS
+                    txtnombrehijosocio.Text = "";
+                    txtruthijosocio.Text = "";
+                    cbSexo.SelectedIndex = 0;
+                    datenacimientohijosocio.Value = DateTime.Now;
+
+                    gridpruebahijo.DataSource = "";
+
+                }
+                catch (Exception)
+                {
+
+                    MessageBox.Show("Socio No Agregado", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    //BORRAR DATOS SOCIO
+                    txtrutsocio.Text = "";
+                    fotosocio.Image = null;
+                    txtnombresocio.Text = "";
+                    dateingresoempresasocio.Value = DateTime.Now;
+                    combocategoriasocio.SelectedIndex = 0;
+                    combocontratosocio.SelectedIndex = 0; ;
+                    comboplantasocio.SelectedIndex = 0; ;
+                    datefechanacimientosocio.Value = DateTime.Now;
+                    txtedadsocio.Text = "";
+                    txtdomiciliosocio.Text = "";
+                    comboestadocivilagregar.SelectedIndex = 0;
+                    txttelefonosocio.Text = "";
+                    txtnacionalidadsocio.Text = "";
+                    txtcorreosocio.Text = "";
+                    txtnombrepadre.Text = "";
+                    txtnombremadre.Text = "";
+                    //BORRAR DATOS CONYUGE
+                    txtconyugesocio.Text = "";
+                    comboconvivienteconyugesocio.SelectedIndex = 0; ;
+                    txtrutconyugesocio.Text = "";
+                    datefechanacimientoconyugesocio.Value = DateTime.Now;
+                    txtedadconyugesocio.Text = "";
+                    //BORRAR DATOS HIJOS
+                    txtnombrehijosocio.Text = "";
+                    txtruthijosocio.Text = "";
+                    cbSexo.SelectedIndex = 0;
+                    datenacimientohijosocio.Value = DateTime.Now;
+
+                    gridpruebahijo.DataSource = "";
+                }
+            }
+            }
+
+        private void btnagregarsocioconyuge_Click(object sender, EventArgs e)
+        {
+            using (sindicatoPFEntities context = new sindicatoPFEntities())
+            {
+                try
+                {
+                    Socio nuevosocio = new Socio
+                    {
+                        rut_socio = txtrutsocio.Text,
+                        imagen = file,
+                        nombre_socio = txtnombresocio.Text,
+                        fecha_ingreso = Convert.ToDateTime(dateingresoempresasocio.Text),
+                        id_categoria = Convert.ToInt32(combocategoriasocio.SelectedValue),
+                        tipo_contrato = combocontratosocio.Text,
+                        id_planta = Convert.ToInt32(comboplantasocio.SelectedValue),
+                        fecha_nacimiento = Convert.ToDateTime(datefechanacimientosocio.Text),
+                        edad = Convert.ToInt32(txtedadsocio.Text),
+                        domicilio = txtdomiciliosocio.Text,
+                        estado_civil = comboestadocivilagregar.Text,
+                        telefono = Convert.ToInt32(txttelefonosocio.Text),
+                        nacionalidad = txtnacionalidadsocio.Text,
+                        correo = txtcorreosocio.Text,
+                        datos_papa = txtnombrepadre.Text,
+                        datos_mama = txtnombremadre.Text,
+                    };
+
+
+
+
+                    Conyuge con = new Conyuge
+                    {
+                        rut_socio = txtrutsocio.Text,
+                        nombre = txtconyugesocio.Text,
+                        conviviente = comboconvivienteconyugesocio.Text,
+                        rut = txtrutconyugesocio.Text,
+                        nacimiento = Convert.ToDateTime(datefechanacimientoconyugesocio.Text),
+                        edad = Convert.ToInt32(txtedadconyugesocio.Text)
+                    };
+
+                    context.Socio.Add(nuevosocio);
+                    context.Conyuge.Add(con);
+
+                    context.SaveChanges();
+
+
+                    //BORRAR DATOS SOCIO
+                    txtrutsocio.Text = "";
+                    fotosocio.Image = null;
+                    txtnombresocio.Text = "";
+                    dateingresoempresasocio.Value = DateTime.Now;
+                    combocategoriasocio.SelectedIndex = 0;
+                    combocontratosocio.SelectedIndex = 0; ;
+                    comboplantasocio.SelectedIndex = 0; ;
+                    datefechanacimientosocio.Value = DateTime.Now;
+                    txtedadsocio.Text = "";
+                    txtdomiciliosocio.Text = "";
+                    comboestadocivilagregar.SelectedIndex = 0;
+                    txttelefonosocio.Text = "";
+                    txtnacionalidadsocio.Text = "";
+                    txtcorreosocio.Text = "";
+                    txtnombrepadre.Text = "";
+                    txtnombremadre.Text = "";
+                    //BORRAR DATOS CONYUGE
+                    txtconyugesocio.Text = "";
+                    comboconvivienteconyugesocio.SelectedIndex = 0; ;
+                    txtrutconyugesocio.Text = "";
+                    datefechanacimientoconyugesocio.Value = DateTime.Now;
+                    txtedadconyugesocio.Text = "";
+                    //BORRAR DATOS HIJOS
+                    txtnombrehijosocio.Text = "";
+                    txtruthijosocio.Text = "";
+                    cbSexo.SelectedIndex = 0;
+                    datenacimientohijosocio.Value = DateTime.Now;
+                    gridpruebahijo.DataSource = "";
+
+                    MessageBox.Show("Socio Agregado Correctamente!");
+
+                    
+                }
+                catch (Exception)
+                {
+
+                    MessageBox.Show("Socio y Conyuge No Agregado", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    //BORRAR DATOS SOCIO
+                    txtrutsocio.Text = "";
+                    fotosocio.Image = null;
+                    txtnombresocio.Text = "";
+                    dateingresoempresasocio.Value = DateTime.Now;
+                    combocategoriasocio.SelectedIndex = 0;
+                    combocontratosocio.SelectedIndex = 0; ;
+                    comboplantasocio.SelectedIndex = 0; ;
+                    datefechanacimientosocio.Value = DateTime.Now;
+                    txtedadsocio.Text = "";
+                    txtdomiciliosocio.Text = "";
+                    comboestadocivilagregar.SelectedIndex = 0;
+                    txttelefonosocio.Text = "";
+                    txtnacionalidadsocio.Text = "";
+                    txtcorreosocio.Text = "";
+                    txtnombrepadre.Text = "";
+                    txtnombremadre.Text = "";
+                    //BORRAR DATOS CONYUGE
+                    txtconyugesocio.Text = "";
+                    comboconvivienteconyugesocio.SelectedIndex = 0; ;
+                    txtrutconyugesocio.Text = "";
+                    datefechanacimientoconyugesocio.Value = DateTime.Now;
+                    txtedadconyugesocio.Text = "";
+                    //BORRAR DATOS HIJOS
+                    txtnombrehijosocio.Text = "";
+                    txtruthijosocio.Text = "";
+                    cbSexo.SelectedIndex = 0;
+                    datenacimientohijosocio.Value = DateTime.Now;
+                    gridpruebahijo.DataSource = "";
+                }
+            }
+        }
+
+        private void btnagregarsociohijo_Click(object sender, EventArgs e)
+        {
+            using (sindicatoPFEntities context = new sindicatoPFEntities())
+            {
+
+                try
+                {
+                    Socio nuevosocio = new Socio
+                    {
+                        rut_socio = txtrutsocio.Text,
+                        imagen = file,
+                        nombre_socio = txtnombresocio.Text,
+                        fecha_ingreso = Convert.ToDateTime(dateingresoempresasocio.Text),
+                        id_categoria = Convert.ToInt32(combocategoriasocio.SelectedValue),
+                        tipo_contrato = combocontratosocio.Text,
+                        id_planta = Convert.ToInt32(comboplantasocio.SelectedValue),
+                        fecha_nacimiento = Convert.ToDateTime(datefechanacimientosocio.Text),
+                        edad = Convert.ToInt32(txtedadsocio.Text),
+                        domicilio = txtdomiciliosocio.Text,
+                        estado_civil = comboestadocivilagregar.Text,
+                        telefono = Convert.ToInt32(txttelefonosocio.Text),
+                        nacionalidad = txtnacionalidadsocio.Text,
+                        correo = txtcorreosocio.Text,
+                        datos_papa = txtnombrepadre.Text,
+                        datos_mama = txtnombremadre.Text,
+                    };
+
+                    foreach (var a in mashijos)
+                    {
+                        Hijo hs = new Hijo
+                        {
+                            rut_socio = a.rutsocio,
+                            nombre = a.nombrehijo,
+                            rut_hijo = a.ruthijo,
+                            sexo = a.sexohijo,
+                            nacimiento = a.nacimientohijo
+                        };
+                        context.Hijo.Add(hs);
+                    }
+
+                    context.Socio.Add(nuevosocio);
+                    context.SaveChanges();
+
+
+                    //BORRAR DATOS SOCIO
+                    txtrutsocio.Text = "";
+                    fotosocio.Image = null;
+                    txtnombresocio.Text = "";
+                    dateingresoempresasocio.Value = DateTime.Now;
+                    combocategoriasocio.SelectedIndex = 0;
+                    combocontratosocio.SelectedIndex = 0; ;
+                    comboplantasocio.SelectedIndex = 0; ;
+                    datefechanacimientosocio.Value = DateTime.Now;
+                    txtedadsocio.Text = "";
+                    txtdomiciliosocio.Text = "";
+                    comboestadocivilagregar.SelectedIndex = 0;
+                    txttelefonosocio.Text = "";
+                    txtnacionalidadsocio.Text = "";
+                    txtcorreosocio.Text = "";
+                    txtnombrepadre.Text = "";
+                    txtnombremadre.Text = "";
+                    //BORRAR DATOS CONYUGE
+                    txtconyugesocio.Text = "";
+                    comboconvivienteconyugesocio.SelectedIndex = 0; ;
+                    txtrutconyugesocio.Text = "";
+                    datefechanacimientoconyugesocio.Value = DateTime.Now;
+                    txtedadconyugesocio.Text = "";
+                    //BORRAR DATOS HIJOS
+                    txtnombrehijosocio.Text = "";
+                    txtruthijosocio.Text = "";
+                    cbSexo.SelectedIndex = 0;
+                    datenacimientohijosocio.Value = DateTime.Now;
+                    gridpruebahijo.DataSource = "";
+
+                    MessageBox.Show("Socio Agregado Con Hijo Correctamente!");
+
+                   
+
+
+                }
+                catch (Exception)
+                {
+
+                    MessageBox.Show("Socio Con Hijo No Agregado", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    //BORRAR DATOS SOCIO
+                    txtrutsocio.Text = "";
+                    fotosocio.Image = null;
+                    txtnombresocio.Text = "";
+                    dateingresoempresasocio.Value = DateTime.Now;
+                    combocategoriasocio.SelectedIndex = 0;
+                    combocontratosocio.SelectedIndex = 0; ;
+                    comboplantasocio.SelectedIndex = 0; ;
+                    datefechanacimientosocio.Value = DateTime.Now;
+                    txtedadsocio.Text = "";
+                    txtdomiciliosocio.Text = "";
+                    comboestadocivilagregar.SelectedIndex = 0;
+                    txttelefonosocio.Text = "";
+                    txtnacionalidadsocio.Text = "";
+                    txtcorreosocio.Text = "";
+                    txtnombrepadre.Text = "";
+                    txtnombremadre.Text = "";
+                    //BORRAR DATOS CONYUGE
+                    txtconyugesocio.Text = "";
+                    comboconvivienteconyugesocio.SelectedIndex = 0; ;
+                    txtrutconyugesocio.Text = "";
+                    datefechanacimientoconyugesocio.Value = DateTime.Now;
+                    txtedadconyugesocio.Text = "";
+                    //BORRAR DATOS HIJOS
+                    txtnombrehijosocio.Text = "";
+                    txtruthijosocio.Text = "";
+                    cbSexo.SelectedIndex = 0;
+                    datenacimientohijosocio.Value = DateTime.Now;
+
+                    gridpruebahijo.DataSource = "";
+                }
             }
         }
     }

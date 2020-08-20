@@ -41,6 +41,8 @@
             this.btconyuge = new System.Windows.Forms.Button();
             this.gbtodo = new System.Windows.Forms.DataGridView();
             this.btnexcelsocio = new System.Windows.Forms.Button();
+            this.btnexcelsocioconyuge = new System.Windows.Forms.Button();
+            this.btnexcelsociohijo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridbuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenbuscarsociomostrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridConyuge)).BeginInit();
@@ -54,7 +56,7 @@
             this.btnbuscar.FlatAppearance.BorderSize = 0;
             this.btnbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnbuscar.ForeColor = System.Drawing.Color.White;
-            this.btnbuscar.Location = new System.Drawing.Point(409, 63);
+            this.btnbuscar.Location = new System.Drawing.Point(359, 63);
             this.btnbuscar.Name = "btnbuscar";
             this.btnbuscar.Size = new System.Drawing.Size(107, 23);
             this.btnbuscar.TabIndex = 0;
@@ -81,7 +83,7 @@
             // 
             this.gridbuscar.AllowUserToOrderColumns = true;
             this.gridbuscar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridbuscar.Location = new System.Drawing.Point(44, 153);
+            this.gridbuscar.Location = new System.Drawing.Point(44, 193);
             this.gridbuscar.Name = "gridbuscar";
             this.gridbuscar.Size = new System.Drawing.Size(575, 175);
             this.gridbuscar.TabIndex = 3;
@@ -117,11 +119,11 @@
             this.btnddexcel.FlatAppearance.BorderSize = 0;
             this.btnddexcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnddexcel.ForeColor = System.Drawing.Color.White;
-            this.btnddexcel.Location = new System.Drawing.Point(44, 560);
+            this.btnddexcel.Location = new System.Drawing.Point(468, 560);
             this.btnddexcel.Name = "btnddexcel";
-            this.btnddexcel.Size = new System.Drawing.Size(164, 23);
+            this.btnddexcel.Size = new System.Drawing.Size(193, 23);
             this.btnddexcel.TabIndex = 6;
-            this.btnddexcel.Text = "Descargar Socios Con Cargas";
+            this.btnddexcel.Text = "Descargar Socios - Conyuge - Hijos";
             this.btnddexcel.UseVisualStyleBackColor = false;
             this.btnddexcel.Click += new System.EventHandler(this.btnddexcel_Click);
             // 
@@ -131,11 +133,11 @@
             this.btcargas.FlatAppearance.BorderSize = 0;
             this.btcargas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btcargas.ForeColor = System.Drawing.Color.White;
-            this.btcargas.Location = new System.Drawing.Point(444, 560);
+            this.btcargas.Location = new System.Drawing.Point(181, 120);
             this.btcargas.Name = "btcargas";
-            this.btcargas.Size = new System.Drawing.Size(75, 23);
+            this.btcargas.Size = new System.Drawing.Size(123, 23);
             this.btcargas.TabIndex = 7;
-            this.btcargas.Text = "Cargas";
+            this.btcargas.Text = "Buscar Hijos";
             this.btcargas.UseVisualStyleBackColor = false;
             this.btcargas.Click += new System.EventHandler(this.btcargas_Click);
             // 
@@ -143,7 +145,7 @@
             // 
             this.gridConyuge.AllowUserToOrderColumns = true;
             this.gridConyuge.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridConyuge.Location = new System.Drawing.Point(44, 334);
+            this.gridConyuge.Location = new System.Drawing.Point(44, 374);
             this.gridConyuge.Name = "gridConyuge";
             this.gridConyuge.Size = new System.Drawing.Size(575, 77);
             this.gridConyuge.TabIndex = 8;
@@ -152,7 +154,7 @@
             // gridHijo
             // 
             this.gridHijo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridHijo.Location = new System.Drawing.Point(44, 417);
+            this.gridHijo.Location = new System.Drawing.Point(44, 457);
             this.gridHijo.Name = "gridHijo";
             this.gridHijo.Size = new System.Drawing.Size(575, 81);
             this.gridHijo.TabIndex = 9;
@@ -164,11 +166,11 @@
             this.btconyuge.FlatAppearance.BorderSize = 0;
             this.btconyuge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btconyuge.ForeColor = System.Drawing.Color.White;
-            this.btconyuge.Location = new System.Drawing.Point(354, 560);
+            this.btconyuge.Location = new System.Drawing.Point(44, 120);
             this.btconyuge.Name = "btconyuge";
-            this.btconyuge.Size = new System.Drawing.Size(75, 23);
+            this.btconyuge.Size = new System.Drawing.Size(111, 23);
             this.btconyuge.TabIndex = 10;
-            this.btconyuge.Text = "Conyuge";
+            this.btconyuge.Text = "Buscar Conyuge";
             this.btconyuge.UseVisualStyleBackColor = false;
             this.btconyuge.Click += new System.EventHandler(this.btconyuge_Click);
             // 
@@ -176,7 +178,7 @@
             // 
             this.gbtodo.AllowUserToOrderColumns = true;
             this.gbtodo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gbtodo.Location = new System.Drawing.Point(44, 120);
+            this.gbtodo.Location = new System.Drawing.Point(44, 160);
             this.gbtodo.Name = "gbtodo";
             this.gbtodo.Size = new System.Drawing.Size(575, 27);
             this.gbtodo.TabIndex = 11;
@@ -188,7 +190,7 @@
             this.btnexcelsocio.FlatAppearance.BorderSize = 0;
             this.btnexcelsocio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnexcelsocio.ForeColor = System.Drawing.Color.White;
-            this.btnexcelsocio.Location = new System.Drawing.Point(224, 560);
+            this.btnexcelsocio.Location = new System.Drawing.Point(44, 560);
             this.btnexcelsocio.Name = "btnexcelsocio";
             this.btnexcelsocio.Size = new System.Drawing.Size(110, 23);
             this.btnexcelsocio.TabIndex = 12;
@@ -196,12 +198,42 @@
             this.btnexcelsocio.UseVisualStyleBackColor = false;
             this.btnexcelsocio.Click += new System.EventHandler(this.btnexcelsocio_Click);
             // 
+            // btnexcelsocioconyuge
+            // 
+            this.btnexcelsocioconyuge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnexcelsocioconyuge.FlatAppearance.BorderSize = 0;
+            this.btnexcelsocioconyuge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnexcelsocioconyuge.ForeColor = System.Drawing.Color.White;
+            this.btnexcelsocioconyuge.Location = new System.Drawing.Point(160, 560);
+            this.btnexcelsocioconyuge.Name = "btnexcelsocioconyuge";
+            this.btnexcelsocioconyuge.Size = new System.Drawing.Size(159, 23);
+            this.btnexcelsocioconyuge.TabIndex = 13;
+            this.btnexcelsocioconyuge.Text = "Descargar Socio - Conyuge";
+            this.btnexcelsocioconyuge.UseVisualStyleBackColor = false;
+            this.btnexcelsocioconyuge.Click += new System.EventHandler(this.btnexcelsocioconyuge_Click);
+            // 
+            // btnexcelsociohijo
+            // 
+            this.btnexcelsociohijo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnexcelsociohijo.FlatAppearance.BorderSize = 0;
+            this.btnexcelsociohijo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnexcelsociohijo.ForeColor = System.Drawing.Color.White;
+            this.btnexcelsociohijo.Location = new System.Drawing.Point(334, 560);
+            this.btnexcelsociohijo.Name = "btnexcelsociohijo";
+            this.btnexcelsociohijo.Size = new System.Drawing.Size(128, 23);
+            this.btnexcelsociohijo.TabIndex = 14;
+            this.btnexcelsociohijo.Text = "Descargar Socio - Hijo";
+            this.btnexcelsociohijo.UseVisualStyleBackColor = false;
+            this.btnexcelsociohijo.Click += new System.EventHandler(this.btnexcelsociohijo_Click);
+            // 
             // BuscarSocio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(56)))), ((int)(((byte)(104)))));
             this.ClientSize = new System.Drawing.Size(922, 618);
+            this.Controls.Add(this.btnexcelsociohijo);
+            this.Controls.Add(this.btnexcelsocioconyuge);
             this.Controls.Add(this.btnexcelsocio);
             this.Controls.Add(this.gbtodo);
             this.Controls.Add(this.btconyuge);
@@ -242,5 +274,7 @@
         private System.Windows.Forms.Button btconyuge;
         private System.Windows.Forms.DataGridView gbtodo;
         private System.Windows.Forms.Button btnexcelsocio;
+        private System.Windows.Forms.Button btnexcelsocioconyuge;
+        private System.Windows.Forms.Button btnexcelsociohijo;
     }
 }

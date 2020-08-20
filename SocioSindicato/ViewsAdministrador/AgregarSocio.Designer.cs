@@ -78,7 +78,6 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.comboestadocivilagregar = new System.Windows.Forms.ComboBox();
             this.btnagregarotrohijo = new System.Windows.Forms.Button();
-            this.gridpruebahijo = new System.Windows.Forms.DataGridView();
             this.cbSexo = new System.Windows.Forms.ComboBox();
             this.label28 = new System.Windows.Forms.Label();
             this.datenacimientohijosocio = new System.Windows.Forms.DateTimePicker();
@@ -89,6 +88,11 @@
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.btnagregarsocioconyuge = new System.Windows.Forms.Button();
+            this.btnsocioagregarsolo = new System.Windows.Forms.Button();
+            this.btnagregarsociohijo = new System.Windows.Forms.Button();
+            this.label29 = new System.Windows.Forms.Label();
+            this.gridpruebahijo = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.fotosocio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridpruebahijo)).BeginInit();
             this.SuspendLayout();
@@ -99,7 +103,7 @@
             this.btnvolveragregar.FlatAppearance.BorderSize = 0;
             this.btnvolveragregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnvolveragregar.ForeColor = System.Drawing.Color.White;
-            this.btnvolveragregar.Location = new System.Drawing.Point(912, 609);
+            this.btnvolveragregar.Location = new System.Drawing.Point(917, 622);
             this.btnvolveragregar.Name = "btnvolveragregar";
             this.btnvolveragregar.Size = new System.Drawing.Size(75, 23);
             this.btnvolveragregar.TabIndex = 0;
@@ -114,9 +118,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(17, 68);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 13);
+            this.label1.Size = new System.Drawing.Size(95, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Rut Del Socio";
+            this.label1.Text = "Rut Del Socio *";
             // 
             // txtrutsocio
             // 
@@ -435,11 +439,11 @@
             this.btnagregarsocio.FlatAppearance.BorderSize = 0;
             this.btnagregarsocio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnagregarsocio.ForeColor = System.Drawing.Color.White;
-            this.btnagregarsocio.Location = new System.Drawing.Point(768, 609);
+            this.btnagregarsocio.Location = new System.Drawing.Point(510, 603);
             this.btnagregarsocio.Name = "btnagregarsocio";
-            this.btnagregarsocio.Size = new System.Drawing.Size(118, 23);
+            this.btnagregarsocio.Size = new System.Drawing.Size(177, 23);
             this.btnagregarsocio.TabIndex = 47;
-            this.btnagregarsocio.Text = "Agregar Socio";
+            this.btnagregarsocio.Text = "Agregar Socio, Conyuge e Hijo";
             this.btnagregarsocio.UseVisualStyleBackColor = false;
             this.btnagregarsocio.Click += new System.EventHandler(this.btnagregarsocio_Click);
             // 
@@ -476,7 +480,7 @@
             // fotosocio
             // 
             this.fotosocio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.fotosocio.Location = new System.Drawing.Point(787, 58);
+            this.fotosocio.Location = new System.Drawing.Point(853, 61);
             this.fotosocio.Name = "fotosocio";
             this.fotosocio.Size = new System.Drawing.Size(186, 108);
             this.fotosocio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -495,7 +499,7 @@
             this.btnseleccionarimagen.FlatAppearance.BorderSize = 0;
             this.btnseleccionarimagen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnseleccionarimagen.ForeColor = System.Drawing.Color.White;
-            this.btnseleccionarimagen.Location = new System.Drawing.Point(817, 195);
+            this.btnseleccionarimagen.Location = new System.Drawing.Point(871, 187);
             this.btnseleccionarimagen.Name = "btnseleccionarimagen";
             this.btnseleccionarimagen.Size = new System.Drawing.Size(121, 23);
             this.btnseleccionarimagen.TabIndex = 52;
@@ -575,23 +579,13 @@
             this.btnagregarotrohijo.FlatAppearance.BorderSize = 0;
             this.btnagregarotrohijo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnagregarotrohijo.ForeColor = System.Drawing.Color.White;
-            this.btnagregarotrohijo.Location = new System.Drawing.Point(412, 543);
+            this.btnagregarotrohijo.Location = new System.Drawing.Point(412, 536);
             this.btnagregarotrohijo.Name = "btnagregarotrohijo";
             this.btnagregarotrohijo.Size = new System.Drawing.Size(107, 25);
             this.btnagregarotrohijo.TabIndex = 61;
             this.btnagregarotrohijo.Text = "Agregar Hijo";
             this.btnagregarotrohijo.UseVisualStyleBackColor = false;
             this.btnagregarotrohijo.Click += new System.EventHandler(this.btnagregarotrohijo_Click);
-            // 
-            // gridpruebahijo
-            // 
-            this.gridpruebahijo.AllowUserToOrderColumns = true;
-            this.gridpruebahijo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridpruebahijo.Location = new System.Drawing.Point(412, 404);
-            this.gridpruebahijo.Name = "gridpruebahijo";
-            this.gridpruebahijo.Size = new System.Drawing.Size(392, 115);
-            this.gridpruebahijo.TabIndex = 62;
-            this.gridpruebahijo.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.gridpruebahijo_RowPostPaint);
             // 
             // cbSexo
             // 
@@ -686,14 +680,76 @@
             this.label11.TabIndex = 63;
             this.label11.Text = "Datos del socio";
             // 
+            // btnagregarsocioconyuge
+            // 
+            this.btnagregarsocioconyuge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnagregarsocioconyuge.FlatAppearance.BorderSize = 0;
+            this.btnagregarsocioconyuge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnagregarsocioconyuge.Location = new System.Drawing.Point(321, 603);
+            this.btnagregarsocioconyuge.Name = "btnagregarsocioconyuge";
+            this.btnagregarsocioconyuge.Size = new System.Drawing.Size(157, 23);
+            this.btnagregarsocioconyuge.TabIndex = 64;
+            this.btnagregarsocioconyuge.Text = "Agregar Socio y Conyuge";
+            this.btnagregarsocioconyuge.UseVisualStyleBackColor = false;
+            this.btnagregarsocioconyuge.Click += new System.EventHandler(this.btnagregarsocioconyuge_Click);
+            // 
+            // btnsocioagregarsolo
+            // 
+            this.btnsocioagregarsolo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnsocioagregarsolo.FlatAppearance.BorderSize = 0;
+            this.btnsocioagregarsolo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnsocioagregarsolo.Location = new System.Drawing.Point(17, 603);
+            this.btnsocioagregarsolo.Name = "btnsocioagregarsolo";
+            this.btnsocioagregarsolo.Size = new System.Drawing.Size(109, 23);
+            this.btnsocioagregarsolo.TabIndex = 65;
+            this.btnsocioagregarsolo.Text = "Agregar Socio";
+            this.btnsocioagregarsolo.UseVisualStyleBackColor = false;
+            this.btnsocioagregarsolo.Click += new System.EventHandler(this.btnsocioagregarsolo_Click);
+            // 
+            // btnagregarsociohijo
+            // 
+            this.btnagregarsociohijo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnagregarsociohijo.FlatAppearance.BorderSize = 0;
+            this.btnagregarsociohijo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnagregarsociohijo.Location = new System.Drawing.Point(159, 603);
+            this.btnagregarsociohijo.Name = "btnagregarsociohijo";
+            this.btnagregarsociohijo.Size = new System.Drawing.Size(130, 23);
+            this.btnagregarsociohijo.TabIndex = 66;
+            this.btnagregarsociohijo.Text = "Agregar Socio e Hijo";
+            this.btnagregarsociohijo.UseVisualStyleBackColor = false;
+            this.btnagregarsociohijo.Click += new System.EventHandler(this.btnagregarsociohijo_Click);
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(756, 68);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(91, 16);
+            this.label29.TabIndex = 67;
+            this.label29.Text = "Obligatorio*";
+            // 
+            // gridpruebahijo
+            // 
+            this.gridpruebahijo.AllowUserToOrderColumns = true;
+            this.gridpruebahijo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridpruebahijo.Location = new System.Drawing.Point(412, 387);
+            this.gridpruebahijo.Name = "gridpruebahijo";
+            this.gridpruebahijo.Size = new System.Drawing.Size(447, 112);
+            this.gridpruebahijo.TabIndex = 68;
+            // 
             // AgregarSocio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(56)))), ((int)(((byte)(104)))));
             this.ClientSize = new System.Drawing.Size(1091, 673);
-            this.Controls.Add(this.label11);
             this.Controls.Add(this.gridpruebahijo);
+            this.Controls.Add(this.label29);
+            this.Controls.Add(this.btnagregarsociohijo);
+            this.Controls.Add(this.btnsocioagregarsolo);
+            this.Controls.Add(this.btnagregarsocioconyuge);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.btnagregarotrohijo);
             this.Controls.Add(this.cbSexo);
             this.Controls.Add(this.label28);
@@ -814,7 +870,6 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.ComboBox comboestadocivilagregar;
         private System.Windows.Forms.Button btnagregarotrohijo;
-        private System.Windows.Forms.DataGridView gridpruebahijo;
         private System.Windows.Forms.ComboBox cbSexo;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.DateTimePicker datenacimientohijosocio;
@@ -825,5 +880,10 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btnagregarsocioconyuge;
+        private System.Windows.Forms.Button btnsocioagregarsolo;
+        private System.Windows.Forms.Button btnagregarsociohijo;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.DataGridView gridpruebahijo;
     }
 }

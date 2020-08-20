@@ -58,7 +58,7 @@ namespace SocioSindicato.ViewsAdministrador
                                     join plansoc in context.Planta
                                     on socplan.id_planta equals plansoc.id_planta
                                     where plansoc.id_planta.Equals(idp1)
-                                    select new { NOMBRE = socplan.nombre_socio, RUT = socplan.rut_socio, PLANTA = plansoc.nombre, CATEGORIA = socplan.id_categoria };
+                                    select new { RUT = socplan.rut_socio, NOMBRE = socplan.nombre_socio, PLANTA = plansoc.nombre, CATEGORIA = socplan.id_categoria };
 
 
                 gridverplantas.DataSource = sociosplanta1.OrderBy(s => s.CATEGORIA).ToList();
@@ -98,7 +98,7 @@ namespace SocioSindicato.ViewsAdministrador
                                     join plansoc in context.Planta
                                     on socplan.id_planta equals plansoc.id_planta
                                     where plansoc.id_planta.Equals(idp2)
-                                    select new { NOMBRE = socplan.nombre_socio, RUT = socplan.rut_socio, PLANTA = plansoc.nombre, CATEGORIA = socplan.id_categoria };
+                                    select new { RUT = socplan.rut_socio, NOMBRE = socplan.nombre_socio, PLANTA = plansoc.nombre, CATEGORIA = socplan.id_categoria };
 
 
 
@@ -141,7 +141,7 @@ namespace SocioSindicato.ViewsAdministrador
                                     join plansoc in context.Planta
                                     on socplan.id_planta equals plansoc.id_planta
                                     where plansoc.id_planta.Equals(idp3)
-                                    select new { NOMBRE = socplan.nombre_socio, RUT = socplan.rut_socio, PLANTA = plansoc.nombre, CATEGORIA = socplan.id_categoria };
+                                    select new { RUT = socplan.rut_socio, NOMBRE = socplan.nombre_socio, PLANTA = plansoc.nombre, CATEGORIA = socplan.id_categoria };
 
                 gridverplantas.DataSource = sociosplanta3.OrderBy(s => s.CATEGORIA).ToList();
 
@@ -178,7 +178,7 @@ namespace SocioSindicato.ViewsAdministrador
                                     join plansoc in context.Planta
                                     on socplan.id_planta equals plansoc.id_planta
                                     where plansoc.id_planta.Equals(idp4)
-                                    select new { NOMBRE = socplan.nombre_socio, RUT = socplan.rut_socio, PLANTA = plansoc.nombre, CATEGORIA = socplan.id_categoria };
+                                    select new { RUT = socplan.rut_socio, NOMBRE = socplan.nombre_socio, PLANTA = plansoc.nombre, CATEGORIA = socplan.id_categoria };
 
 
 
@@ -217,7 +217,7 @@ namespace SocioSindicato.ViewsAdministrador
                                       join plansoc in context.Planta
                                       on socplan.id_planta equals plansoc.id_planta
                                       where plansoc.id_planta.Equals(idpcdt)
-                                      select new { NOMBRE = socplan.nombre_socio, RUT = socplan.rut_socio, PLANTA = plansoc.nombre, CATEGORIA = socplan.id_categoria };
+                                      select new { RUT = socplan.rut_socio, NOMBRE = socplan.nombre_socio, PLANTA = plansoc.nombre, CATEGORIA = socplan.id_categoria };
 
 
                 gridverplantas.DataSource = sociosplantacdt.OrderBy(s => s.CATEGORIA).ToList();
@@ -253,7 +253,7 @@ namespace SocioSindicato.ViewsAdministrador
                                         join plansoc in context.Planta
                                         on socplan.id_planta equals plansoc.id_planta
                                         where plansoc.id_planta.Equals(idpp)
-                                        select new { NOMBRE = socplan.nombre_socio, RUT = socplan.rut_socio, PLANTA = plansoc.nombre, CATEGORIA = socplan.id_categoria };
+                                        select new { RUT = socplan.rut_socio, NOMBRE = socplan.nombre_socio, PLANTA = plansoc.nombre, CATEGORIA = socplan.id_categoria };
 
 
                 gridverplantas.DataSource = sociosplantapizza.OrderBy(s => s.CATEGORIA).ToList();
@@ -292,7 +292,7 @@ namespace SocioSindicato.ViewsAdministrador
                                           join plansoc in context.Planta
                                           on socplan.id_planta equals plansoc.id_planta
                                           where plansoc.id_planta.Equals(idpcrn)
-                                          select new { NOMBRE = socplan.nombre_socio, RUT = socplan.rut_socio, PLANTA = plansoc.nombre, CATEGORIA = socplan.id_categoria };
+                                          select new { RUT = socplan.rut_socio, NOMBRE = socplan.nombre_socio, PLANTA = plansoc.nombre, CATEGORIA = socplan.id_categoria };
 
                 gridverplantas.DataSource = sociosplantacarnico.OrderBy(s => s.CATEGORIA).ToList();
 
@@ -330,7 +330,7 @@ namespace SocioSindicato.ViewsAdministrador
                                       join plansoc in context.Planta
                                       on socplan.id_planta equals plansoc.id_planta
                                       orderby plansoc.id_planta
-                                      select new { NOMBRE = socplan.nombre_socio, RUT = socplan.rut_socio, PLANTA = plansoc.nombre, CATEGORIA = socplan.id_categoria };
+                                      select new { RUT = socplan.rut_socio, NOMBRE = socplan.nombre_socio,  PLANTA = plansoc.nombre, CATEGORIA = socplan.id_categoria };
 
                 gridverplantas.DataSource = allsociosplanta.OrderBy(s => s.CATEGORIA).ToList();
 

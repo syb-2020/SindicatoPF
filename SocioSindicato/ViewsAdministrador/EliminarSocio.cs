@@ -34,8 +34,8 @@ namespace SocioSindicato.ViewsAdministrador
 
                 if (txteliminar.Text == "")
                 {
-                    
-                    
+
+
                     MessageBox.Show("Ingrese Rut del socio!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     grideliminar.DataSource = "";
                     txteliminar.Text = "";
@@ -45,7 +45,7 @@ namespace SocioSindicato.ViewsAdministrador
                 {
                     if (listRut.Count() != 0)
                     {
-                        
+
 
                         grideliminar.DataSource = listRut.ToList();
                         string rut = grideliminar.Rows[grideliminar.CurrentRow.Index].Cells[0].Value.ToString();
@@ -62,12 +62,12 @@ namespace SocioSindicato.ViewsAdministrador
                     }
                     else
                     {
-                    
-                       
+
+
                         MessageBox.Show("Socio No Encontrado!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         grideliminar.DataSource = "";
                         txteliminar.Text = "";
-                        
+
 
 
                     }
@@ -76,7 +76,8 @@ namespace SocioSindicato.ViewsAdministrador
             }
 
         }
-      
+
+
         private void btneliminar_Click(object sender, EventArgs e)
         {
 
@@ -86,7 +87,7 @@ namespace SocioSindicato.ViewsAdministrador
                 string eli = txteliminar.Text;
                 if (txteliminar.Text == "")
                 {
-                    
+
                     MessageBox.Show("Ingrese Rut Del Socio Para Eliminar!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     grideliminar.DataSource = "";
                     txteliminar.Text = "";
@@ -94,81 +95,293 @@ namespace SocioSindicato.ViewsAdministrador
                 }
                 else
                 {
-                    try
-                    {
+
+                   
+                        var result3 = from c in context.Socio
+                                      where c.rut_socio.Equals(eli)
+                                      select c;
+
+                        gridsociosolo.DataSource = result3.ToList();
+
                         var result1 = from c in context.Conyuge
                                       where c.rut_socio.Equals(eli)
                                       select new { id_con = c.id_conyuge };
-                        int rut_soc1 = result1.ToList()[0].id_con;
+                        gridsolocon.DataSource = result1.ToList();
+
 
                         var result2 = from c in context.Hijo
                                       where c.rut_socio.Equals(eli)
                                       select new { id_hij = c.id_hijo };
-                        int rut_soc2 = result2.ToList()[0].id_hij;
 
-                        var result3 = from c in context.Socio
-                                      where c.rut_socio.Equals(eli)
-                                      select c;
-                        string rut_soc3 = result3.ToList()[0].rut_socio;
-                      
-                        
+                        gridhijo.DataSource = result2.ToList();
 
-                        var rellenarSocioEliminado = from c in context.Socio
-                                                     join plansoc in context.Planta                                                  
-                                                     on c.id_planta equals plansoc.id_planta
-                                                     where c.rut_socio.Equals(eli)
-                                                     select new{ 
-                                                        c.rut_socio,
-                                                        c.nombre_socio,
-                                                        c.id_categoria,
-                                                        c.fecha_ingreso,
-                                                        plansoc.nombre                       
-                                                        };
-
-                        string rut2 = rellenarSocioEliminado.ToList()[0].rut_socio;
-                        string nombre2 = rellenarSocioEliminado.ToList()[0].nombre_socio;
-                        int categoria2 = rellenarSocioEliminado.ToList()[0].id_categoria;                    
-                        DateTime fecha2 = Convert.ToDateTime(rellenarSocioEliminado.ToList()[0].fecha_ingreso) ;
-                        string planta2 = rellenarSocioEliminado.ToList()[0].nombre;
-
-                        socioEliminado nuevoSocioEliminado = new socioEliminado { 
-                        
-                            rut = rut2,
-                            nombre = nombre2,
-                            categoria = categoria2,
-                            fechaIngreso = fecha2,
-                            planta = planta2,
-
-                        };
-
-                        context.socioEliminado.Add(nuevoSocioEliminado);
-                        context.SaveChanges();
+                        // ELIMINAR SOCIO CONYU HIJO
+                        if (result3.Count() != 0) //socio
+                        {
 
 
-                        context.Conyuge.Remove(context.Conyuge.Find(rut_soc1));
-                        context.Hijo.Remove(context.Hijo.Find(rut_soc2));
-                        context.Socio.Remove(context.Socio.Find(rut_soc3));
-                        context.SaveChanges();
+                            if (result1.Count() != 0) //conyuge
+                            {
 
-                      
-                        MessageBox.Show("Socio Eliminado!");
-                        grideliminar.DataSource = "";
-                        txteliminar.Text = "";
-                        pb.Image = null;
 
+                                if (result2.Count() != 0) //hijo
+                                {
+                                    string rut_soc3 = result3.ToList()[0].rut_socio;
+                                    int rut_soc1 = result1.ToList()[0].id_con;
+                                    int rut_soc2 = result2.ToList()[0].id_hij;
+
+                                    var rellenarSocioEliminado = from c in context.Socio
+                                                                 join plansoc in context.Planta
+                                                                 on c.id_planta equals plansoc.id_planta
+                                                                 where c.rut_socio.Equals(eli)
+                                                                 select new
+                                                                 {
+                                                                     c.rut_socio,
+                                                                     c.nombre_socio,
+                                                                     c.id_categoria,
+                                                                     c.fecha_ingreso,
+                                                                     plansoc.nombre
+                                                                 };
+
+                                    string rut2 = rellenarSocioEliminado.ToList()[0].rut_socio;
+                                    string nombre2 = rellenarSocioEliminado.ToList()[0].nombre_socio;
+                                    int categoria2 = rellenarSocioEliminado.ToList()[0].id_categoria;
+                                    DateTime fecha2 = Convert.ToDateTime(rellenarSocioEliminado.ToList()[0].fecha_ingreso);
+                                    string planta2 = rellenarSocioEliminado.ToList()[0].nombre;
+
+                                    socioEliminado nuevoSocioEliminado = new socioEliminado
+                                    {
+
+                                        rut = rut2,
+                                        nombre = nombre2,
+                                        categoria = categoria2,
+                                        fechaIngreso = fecha2,
+                                        planta = planta2,
+
+                                    };
+
+                                    context.socioEliminado.Add(nuevoSocioEliminado);
+                                    context.SaveChanges();
+
+                                    context.Conyuge.Remove(context.Conyuge.Find(rut_soc1));
+
+
+                                    for (int i = 0; i < gridhijo.RowCount; i++)
+                                    {
+                                        int ihe = int.Parse(gridhijo.Rows[i].Cells[0].Value.ToString());
+                                        context.Hijo.Remove(context.Hijo.Find(ihe));
+                                    }
+
+
+
+
+                                    context.Socio.Remove(context.Socio.Find(rut_soc3));
+
+                                    context.SaveChanges();
+
+
+                                    MessageBox.Show("Socio Eliminado!");
+                                    grideliminar.DataSource = "";
+                                    txteliminar.Text = "";
+                                    pb.Image = null;
+
+
+
+                            }
+                           
+
+                        }
                     }
-                    catch (Exception)
-                    {
-                        
+                   
 
-                        MessageBox.Show("Socio No Eliminado!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        grideliminar.DataSource = "";
-                        txteliminar.Text = "";
-                        pb.Image = null;
+
+                        //ELIMINAR SOCIO CONYUGE
+                        if (result3.Count() != 0)
+                        {
+                            if (result1.Count() != 0)
+                            {
+                                string rut_soc3 = result3.ToList()[0].rut_socio;
+                                int rut_soc1 = result1.ToList()[0].id_con;
+
+                                var rellenarSocioEliminado = from c in context.Socio
+                                                             join plansoc in context.Planta
+                                                             on c.id_planta equals plansoc.id_planta
+                                                             where c.rut_socio.Equals(eli)
+                                                             select new
+                                                             {
+                                                                 c.rut_socio,
+                                                                 c.nombre_socio,
+                                                                 c.id_categoria,
+                                                                 c.fecha_ingreso,
+                                                                 plansoc.nombre
+                                                             };
+
+                                string rut2 = rellenarSocioEliminado.ToList()[0].rut_socio;
+                                string nombre2 = rellenarSocioEliminado.ToList()[0].nombre_socio;
+                                int categoria2 = rellenarSocioEliminado.ToList()[0].id_categoria;
+                                DateTime fecha2 = Convert.ToDateTime(rellenarSocioEliminado.ToList()[0].fecha_ingreso);
+                                string planta2 = rellenarSocioEliminado.ToList()[0].nombre;
+
+                                socioEliminado nuevoSocioEliminado = new socioEliminado
+                                {
+
+                                    rut = rut2,
+                                    nombre = nombre2,
+                                    categoria = categoria2,
+                                    fechaIngreso = fecha2,
+                                    planta = planta2,
+
+                                };
+
+                                context.socioEliminado.Add(nuevoSocioEliminado);
+                                context.SaveChanges();
+
+                                context.Conyuge.Remove(context.Conyuge.Find(rut_soc1));
+
+                                context.Socio.Remove(context.Socio.Find(rut_soc3));
+
+                                context.SaveChanges();
+
+
+                                MessageBox.Show("Socio Eliminado!");
+                                grideliminar.DataSource = "";
+                                txteliminar.Text = "";
+                                pb.Image = null;
+
+
+
+                        }
+                        
                     }
+                   
+
+
+                        //ELIMINAR SOCIO HIJO
+                        if (result3.Count() != 0)
+                        {
+                            if (result2.Count() != 0)
+                            {
+                                string rut_soc3 = result3.ToList()[0].rut_socio;
+                                int rut_soc2 = result2.ToList()[0].id_hij;
+
+                                var rellenarSocioEliminado = from c in context.Socio
+                                                             join plansoc in context.Planta
+                                                             on c.id_planta equals plansoc.id_planta
+                                                             where c.rut_socio.Equals(eli)
+                                                             select new
+                                                             {
+                                                                 c.rut_socio,
+                                                                 c.nombre_socio,
+                                                                 c.id_categoria,
+                                                                 c.fecha_ingreso,
+                                                                 plansoc.nombre
+                                                             };
+
+                                string rut2 = rellenarSocioEliminado.ToList()[0].rut_socio;
+                                string nombre2 = rellenarSocioEliminado.ToList()[0].nombre_socio;
+                                int categoria2 = rellenarSocioEliminado.ToList()[0].id_categoria;
+                                DateTime fecha2 = Convert.ToDateTime(rellenarSocioEliminado.ToList()[0].fecha_ingreso);
+                                string planta2 = rellenarSocioEliminado.ToList()[0].nombre;
+
+                                socioEliminado nuevoSocioEliminado = new socioEliminado
+                                {
+
+                                    rut = rut2,
+                                    nombre = nombre2,
+                                    categoria = categoria2,
+                                    fechaIngreso = fecha2,
+                                    planta = planta2,
+
+                                };
+
+                                context.socioEliminado.Add(nuevoSocioEliminado);
+                                context.SaveChanges();
+
+
+
+                                for (int i = 0; i < gridhijo.RowCount; i++)
+                                {
+                                    int ihe = int.Parse(gridhijo.Rows[i].Cells[0].Value.ToString());
+                                    context.Hijo.Remove(context.Hijo.Find(ihe));
+                                }
+
+
+
+
+                                context.Socio.Remove(context.Socio.Find(rut_soc3));
+
+                                context.SaveChanges();
+
+
+                                MessageBox.Show("Socio Eliminado!");
+                                grideliminar.DataSource = "";
+                                txteliminar.Text = "";
+                                pb.Image = null;
+
+
+
+                        }
+                       
+                    }
+                  
+
+                        //ELIMINAR SOCIO SOLO
+                        if (result3.Count() != 0)
+                        {
+                            string rut_soc3 = result3.ToList()[0].rut_socio;
+                            var rellenarSocioEliminado = from c in context.Socio
+                                                         join plansoc in context.Planta
+                                                         on c.id_planta equals plansoc.id_planta
+                                                         where c.rut_socio.Equals(eli)
+                                                         select new
+                                                         {
+                                                             c.rut_socio,
+                                                             c.nombre_socio,
+                                                             c.id_categoria,
+                                                             c.fecha_ingreso,
+                                                             plansoc.nombre
+                                                         };
+
+                            string rut2 = rellenarSocioEliminado.ToList()[0].rut_socio;
+                            string nombre2 = rellenarSocioEliminado.ToList()[0].nombre_socio;
+                            int categoria2 = rellenarSocioEliminado.ToList()[0].id_categoria;
+                            DateTime fecha2 = Convert.ToDateTime(rellenarSocioEliminado.ToList()[0].fecha_ingreso);
+                            string planta2 = rellenarSocioEliminado.ToList()[0].nombre;
+
+                            socioEliminado nuevoSocioEliminado = new socioEliminado
+                            {
+
+                                rut = rut2,
+                                nombre = nombre2,
+                                categoria = categoria2,
+                                fechaIngreso = fecha2,
+                                planta = planta2,
+
+                            };
+
+                            context.socioEliminado.Add(nuevoSocioEliminado);
+
+
+                            context.Socio.Remove(context.Socio.Find(rut_soc3));
+                            context.SaveChanges();
+
+
+                            MessageBox.Show("Socio Eliminado!");
+                            grideliminar.DataSource = "";
+                            txteliminar.Text = "";
+                            pb.Image = null;
+                    }
+                  
+
+
+
+                    
+                   
+
+                   
+                   
                 }
             }
-
         }
 
         private void btnvolvereliminar_Click(object sender, EventArgs e)
