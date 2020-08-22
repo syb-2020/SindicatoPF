@@ -28,158 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnplantasvolver = new System.Windows.Forms.Button();
-            this.btnplanta1 = new System.Windows.Forms.Button();
-            this.btnplanta2 = new System.Windows.Forms.Button();
-            this.btnplanta3 = new System.Windows.Forms.Button();
-            this.btncdt = new System.Windows.Forms.Button();
-            this.btnplantapizza = new System.Windows.Forms.Button();
-            this.btnplantacarnicos = new System.Windows.Forms.Button();
-            this.btnplanta4 = new System.Windows.Forms.Button();
-            this.btntodos = new System.Windows.Forms.Button();
             this.gridverplantas = new System.Windows.Forms.DataGridView();
             this.lbsocioplantaencontrado = new System.Windows.Forms.Label();
-            this.btnddexcel = new System.Windows.Forms.Button();
             this.cbordenarcatplant = new System.Windows.Forms.ComboBox();
-            this.btnordenarplanta = new System.Windows.Forms.Button();
-            this.btnmujeresplanta = new System.Windows.Forms.Button();
+            this.btplanta1 = new FontAwesome.Sharp.IconButton();
+            this.btcdt = new FontAwesome.Sharp.IconButton();
+            this.btplanta2 = new FontAwesome.Sharp.IconButton();
+            this.btPlantapizza = new FontAwesome.Sharp.IconButton();
+            this.btplanta3 = new FontAwesome.Sharp.IconButton();
+            this.btPlantaCamicos = new FontAwesome.Sharp.IconButton();
+            this.btplanta4 = new FontAwesome.Sharp.IconButton();
+            this.btPlantaMujeres = new FontAwesome.Sharp.IconButton();
+            this.btTodos = new FontAwesome.Sharp.IconButton();
+            this.btVolver = new FontAwesome.Sharp.IconButton();
+            this.btDownload = new FontAwesome.Sharp.IconButton();
+            this.btOrdenarCategoria = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridverplantas)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnplantasvolver
-            // 
-            this.btnplantasvolver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.btnplantasvolver.FlatAppearance.BorderSize = 0;
-            this.btnplantasvolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnplantasvolver.ForeColor = System.Drawing.Color.White;
-            this.btnplantasvolver.Location = new System.Drawing.Point(677, 411);
-            this.btnplantasvolver.Name = "btnplantasvolver";
-            this.btnplantasvolver.Size = new System.Drawing.Size(75, 23);
-            this.btnplantasvolver.TabIndex = 0;
-            this.btnplantasvolver.Text = "Volver";
-            this.btnplantasvolver.UseVisualStyleBackColor = false;
-            this.btnplantasvolver.Click += new System.EventHandler(this.btnplantasvolver_Click);
-            // 
-            // btnplanta1
-            // 
-            this.btnplanta1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.btnplanta1.FlatAppearance.BorderSize = 0;
-            this.btnplanta1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnplanta1.ForeColor = System.Drawing.Color.White;
-            this.btnplanta1.Location = new System.Drawing.Point(115, 34);
-            this.btnplanta1.Name = "btnplanta1";
-            this.btnplanta1.Size = new System.Drawing.Size(75, 23);
-            this.btnplanta1.TabIndex = 1;
-            this.btnplanta1.Text = "Planta 1";
-            this.btnplanta1.UseVisualStyleBackColor = false;
-            this.btnplanta1.Click += new System.EventHandler(this.btnplanta1_Click);
-            // 
-            // btnplanta2
-            // 
-            this.btnplanta2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.btnplanta2.FlatAppearance.BorderSize = 0;
-            this.btnplanta2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnplanta2.ForeColor = System.Drawing.Color.White;
-            this.btnplanta2.Location = new System.Drawing.Point(264, 34);
-            this.btnplanta2.Name = "btnplanta2";
-            this.btnplanta2.Size = new System.Drawing.Size(75, 23);
-            this.btnplanta2.TabIndex = 2;
-            this.btnplanta2.Text = "Planta 2";
-            this.btnplanta2.UseVisualStyleBackColor = false;
-            this.btnplanta2.Click += new System.EventHandler(this.btnplanta2_Click);
-            // 
-            // btnplanta3
-            // 
-            this.btnplanta3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.btnplanta3.FlatAppearance.BorderSize = 0;
-            this.btnplanta3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnplanta3.ForeColor = System.Drawing.Color.White;
-            this.btnplanta3.Location = new System.Drawing.Point(397, 34);
-            this.btnplanta3.Name = "btnplanta3";
-            this.btnplanta3.Size = new System.Drawing.Size(75, 23);
-            this.btnplanta3.TabIndex = 3;
-            this.btnplanta3.Text = "Planta 3";
-            this.btnplanta3.UseVisualStyleBackColor = false;
-            this.btnplanta3.Click += new System.EventHandler(this.btnplanta3_Click);
-            // 
-            // btncdt
-            // 
-            this.btncdt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.btncdt.FlatAppearance.BorderSize = 0;
-            this.btncdt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btncdt.ForeColor = System.Drawing.Color.White;
-            this.btncdt.Location = new System.Drawing.Point(115, 83);
-            this.btncdt.Name = "btncdt";
-            this.btncdt.Size = new System.Drawing.Size(75, 23);
-            this.btncdt.TabIndex = 4;
-            this.btncdt.Text = "CDT";
-            this.btncdt.UseVisualStyleBackColor = false;
-            this.btncdt.Click += new System.EventHandler(this.btncdt_Click);
-            // 
-            // btnplantapizza
-            // 
-            this.btnplantapizza.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.btnplantapizza.FlatAppearance.BorderSize = 0;
-            this.btnplantapizza.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnplantapizza.ForeColor = System.Drawing.Color.White;
-            this.btnplantapizza.Location = new System.Drawing.Point(264, 83);
-            this.btnplantapizza.Name = "btnplantapizza";
-            this.btnplantapizza.Size = new System.Drawing.Size(75, 23);
-            this.btnplantapizza.TabIndex = 5;
-            this.btnplantapizza.Text = "Planta Pizza";
-            this.btnplantapizza.UseVisualStyleBackColor = false;
-            this.btnplantapizza.Click += new System.EventHandler(this.btnplantapizza_Click);
-            // 
-            // btnplantacarnicos
-            // 
-            this.btnplantacarnicos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.btnplantacarnicos.FlatAppearance.BorderSize = 0;
-            this.btnplantacarnicos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnplantacarnicos.ForeColor = System.Drawing.Color.White;
-            this.btnplantacarnicos.Location = new System.Drawing.Point(368, 83);
-            this.btnplantacarnicos.Name = "btnplantacarnicos";
-            this.btnplantacarnicos.Size = new System.Drawing.Size(125, 23);
-            this.btnplantacarnicos.TabIndex = 6;
-            this.btnplantacarnicos.Text = "Planta Carnicos";
-            this.btnplantacarnicos.UseVisualStyleBackColor = false;
-            this.btnplantacarnicos.Click += new System.EventHandler(this.btnplantacarnicos_Click);
-            // 
-            // btnplanta4
-            // 
-            this.btnplanta4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.btnplanta4.FlatAppearance.BorderSize = 0;
-            this.btnplanta4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnplanta4.ForeColor = System.Drawing.Color.White;
-            this.btnplanta4.Location = new System.Drawing.Point(548, 34);
-            this.btnplanta4.Name = "btnplanta4";
-            this.btnplanta4.Size = new System.Drawing.Size(75, 23);
-            this.btnplanta4.TabIndex = 7;
-            this.btnplanta4.Text = "Planta 4";
-            this.btnplanta4.UseVisualStyleBackColor = false;
-            this.btnplanta4.Click += new System.EventHandler(this.btnplanta4_Click);
-            // 
-            // btntodos
-            // 
-            this.btntodos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.btntodos.FlatAppearance.BorderSize = 0;
-            this.btntodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btntodos.ForeColor = System.Drawing.Color.White;
-            this.btntodos.Location = new System.Drawing.Point(677, 83);
-            this.btntodos.Name = "btntodos";
-            this.btntodos.Size = new System.Drawing.Size(75, 23);
-            this.btntodos.TabIndex = 8;
-            this.btntodos.Text = "Todos";
-            this.btntodos.UseVisualStyleBackColor = false;
-            this.btntodos.Click += new System.EventHandler(this.btntodos_Click);
-            // 
             // gridverplantas
             // 
+            this.gridverplantas.AllowUserToAddRows = false;
+            this.gridverplantas.AllowUserToDeleteRows = false;
             this.gridverplantas.AllowUserToOrderColumns = true;
+            this.gridverplantas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gridverplantas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridverplantas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(56)))), ((int)(((byte)(104)))));
+            this.gridverplantas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridverplantas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridverplantas.Location = new System.Drawing.Point(115, 149);
+            this.gridverplantas.Location = new System.Drawing.Point(76, 180);
             this.gridverplantas.Name = "gridverplantas";
-            this.gridverplantas.Size = new System.Drawing.Size(508, 155);
+            this.gridverplantas.ReadOnly = true;
+            this.gridverplantas.Size = new System.Drawing.Size(1002, 429);
             this.gridverplantas.TabIndex = 9;
             this.gridverplantas.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.gridverplantas_RowPostPaint);
             // 
@@ -191,22 +72,10 @@
             this.lbsocioplantaencontrado.Size = new System.Drawing.Size(0, 13);
             this.lbsocioplantaencontrado.TabIndex = 10;
             // 
-            // btnddexcel
-            // 
-            this.btnddexcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.btnddexcel.FlatAppearance.BorderSize = 0;
-            this.btnddexcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnddexcel.ForeColor = System.Drawing.Color.White;
-            this.btnddexcel.Location = new System.Drawing.Point(115, 328);
-            this.btnddexcel.Name = "btnddexcel";
-            this.btnddexcel.Size = new System.Drawing.Size(75, 23);
-            this.btnddexcel.TabIndex = 11;
-            this.btnddexcel.Text = "Descargar";
-            this.btnddexcel.UseVisualStyleBackColor = false;
-            this.btnddexcel.Click += new System.EventHandler(this.btnddexcel_Click);
-            // 
             // cbordenarcatplant
             // 
+            this.cbordenarcatplant.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.cbordenarcatplant.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbordenarcatplant.FormattingEnabled = true;
             this.cbordenarcatplant.Items.AddRange(new object[] {
             "1",
@@ -215,60 +84,301 @@
             "4",
             "5",
             "6"});
-            this.cbordenarcatplant.Location = new System.Drawing.Point(439, 328);
+            this.cbordenarcatplant.Location = new System.Drawing.Point(531, 639);
             this.cbordenarcatplant.Name = "cbordenarcatplant";
-            this.cbordenarcatplant.Size = new System.Drawing.Size(121, 21);
+            this.cbordenarcatplant.Size = new System.Drawing.Size(170, 29);
             this.cbordenarcatplant.TabIndex = 12;
             // 
-            // btnordenarplanta
+            // btplanta1
             // 
-            this.btnordenarplanta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.btnordenarplanta.FlatAppearance.BorderSize = 0;
-            this.btnordenarplanta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnordenarplanta.ForeColor = System.Drawing.Color.White;
-            this.btnordenarplanta.Location = new System.Drawing.Point(264, 328);
-            this.btnordenarplanta.Name = "btnordenarplanta";
-            this.btnordenarplanta.Size = new System.Drawing.Size(128, 23);
-            this.btnordenarplanta.TabIndex = 13;
-            this.btnordenarplanta.Text = "Ordenar Por Categoria";
-            this.btnordenarplanta.UseVisualStyleBackColor = false;
-            this.btnordenarplanta.Click += new System.EventHandler(this.btnordenarplanta_Click);
+            this.btplanta1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btplanta1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btplanta1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btplanta1.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btplanta1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btplanta1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btplanta1.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btplanta1.IconColor = System.Drawing.Color.White;
+            this.btplanta1.IconSize = 26;
+            this.btplanta1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btplanta1.Location = new System.Drawing.Point(76, 46);
+            this.btplanta1.Name = "btplanta1";
+            this.btplanta1.Rotation = 0D;
+            this.btplanta1.Size = new System.Drawing.Size(170, 38);
+            this.btplanta1.TabIndex = 15;
+            this.btplanta1.Text = "Planta 1";
+            this.btplanta1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btplanta1.UseVisualStyleBackColor = false;
+            this.btplanta1.Click += new System.EventHandler(this.btplanta1_Click);
             // 
-            // btnmujeresplanta
+            // btcdt
             // 
-            this.btnmujeresplanta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.btnmujeresplanta.FlatAppearance.BorderSize = 0;
-            this.btnmujeresplanta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnmujeresplanta.ForeColor = System.Drawing.Color.White;
-            this.btnmujeresplanta.Location = new System.Drawing.Point(528, 83);
-            this.btnmujeresplanta.Name = "btnmujeresplanta";
-            this.btnmujeresplanta.Size = new System.Drawing.Size(125, 23);
-            this.btnmujeresplanta.TabIndex = 14;
-            this.btnmujeresplanta.Text = "Planta Mujeres";
-            this.btnmujeresplanta.UseVisualStyleBackColor = false;
-            this.btnmujeresplanta.Click += new System.EventHandler(this.btnmujeresplanta_Click);
+            this.btcdt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btcdt.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btcdt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btcdt.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btcdt.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btcdt.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btcdt.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btcdt.IconColor = System.Drawing.Color.White;
+            this.btcdt.IconSize = 26;
+            this.btcdt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btcdt.Location = new System.Drawing.Point(76, 112);
+            this.btcdt.Name = "btcdt";
+            this.btcdt.Rotation = 0D;
+            this.btcdt.Size = new System.Drawing.Size(170, 38);
+            this.btcdt.TabIndex = 16;
+            this.btcdt.Text = "CDT";
+            this.btcdt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btcdt.UseVisualStyleBackColor = false;
+            this.btcdt.Click += new System.EventHandler(this.btcdt_Click);
+            // 
+            // btplanta2
+            // 
+            this.btplanta2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btplanta2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btplanta2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btplanta2.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btplanta2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btplanta2.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btplanta2.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btplanta2.IconColor = System.Drawing.Color.White;
+            this.btplanta2.IconSize = 26;
+            this.btplanta2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btplanta2.Location = new System.Drawing.Point(281, 46);
+            this.btplanta2.Name = "btplanta2";
+            this.btplanta2.Rotation = 0D;
+            this.btplanta2.Size = new System.Drawing.Size(170, 38);
+            this.btplanta2.TabIndex = 17;
+            this.btplanta2.Text = "Planta 2";
+            this.btplanta2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btplanta2.UseVisualStyleBackColor = false;
+            this.btplanta2.Click += new System.EventHandler(this.btplanta2_Click);
+            // 
+            // btPlantapizza
+            // 
+            this.btPlantapizza.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btPlantapizza.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btPlantapizza.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btPlantapizza.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btPlantapizza.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btPlantapizza.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btPlantapizza.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btPlantapizza.IconColor = System.Drawing.Color.White;
+            this.btPlantapizza.IconSize = 26;
+            this.btPlantapizza.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btPlantapizza.Location = new System.Drawing.Point(281, 112);
+            this.btPlantapizza.Name = "btPlantapizza";
+            this.btPlantapizza.Rotation = 0D;
+            this.btPlantapizza.Size = new System.Drawing.Size(170, 38);
+            this.btPlantapizza.TabIndex = 18;
+            this.btPlantapizza.Text = "Planta Pizza";
+            this.btPlantapizza.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btPlantapizza.UseVisualStyleBackColor = false;
+            this.btPlantapizza.Click += new System.EventHandler(this.btPlantapizza_Click);
+            // 
+            // btplanta3
+            // 
+            this.btplanta3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btplanta3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btplanta3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btplanta3.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btplanta3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btplanta3.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btplanta3.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btplanta3.IconColor = System.Drawing.Color.White;
+            this.btplanta3.IconSize = 26;
+            this.btplanta3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btplanta3.Location = new System.Drawing.Point(494, 46);
+            this.btplanta3.Name = "btplanta3";
+            this.btplanta3.Rotation = 0D;
+            this.btplanta3.Size = new System.Drawing.Size(170, 38);
+            this.btplanta3.TabIndex = 19;
+            this.btplanta3.Text = "Planta 3";
+            this.btplanta3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btplanta3.UseVisualStyleBackColor = false;
+            this.btplanta3.Click += new System.EventHandler(this.btplanta3_Click);
+            // 
+            // btPlantaCamicos
+            // 
+            this.btPlantaCamicos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btPlantaCamicos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btPlantaCamicos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btPlantaCamicos.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btPlantaCamicos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btPlantaCamicos.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btPlantaCamicos.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btPlantaCamicos.IconColor = System.Drawing.Color.White;
+            this.btPlantaCamicos.IconSize = 26;
+            this.btPlantaCamicos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btPlantaCamicos.Location = new System.Drawing.Point(494, 112);
+            this.btPlantaCamicos.Name = "btPlantaCamicos";
+            this.btPlantaCamicos.Rotation = 0D;
+            this.btPlantaCamicos.Size = new System.Drawing.Size(170, 38);
+            this.btPlantaCamicos.TabIndex = 20;
+            this.btPlantaCamicos.Text = "Planta Camicos";
+            this.btPlantaCamicos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btPlantaCamicos.UseVisualStyleBackColor = false;
+            this.btPlantaCamicos.Click += new System.EventHandler(this.btPlantaCamicos_Click);
+            // 
+            // btplanta4
+            // 
+            this.btplanta4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btplanta4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btplanta4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btplanta4.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btplanta4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btplanta4.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btplanta4.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btplanta4.IconColor = System.Drawing.Color.White;
+            this.btplanta4.IconSize = 26;
+            this.btplanta4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btplanta4.Location = new System.Drawing.Point(705, 46);
+            this.btplanta4.Name = "btplanta4";
+            this.btplanta4.Rotation = 0D;
+            this.btplanta4.Size = new System.Drawing.Size(170, 38);
+            this.btplanta4.TabIndex = 21;
+            this.btplanta4.Text = "Planta 4";
+            this.btplanta4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btplanta4.UseVisualStyleBackColor = false;
+            this.btplanta4.Click += new System.EventHandler(this.btplanta4_Click);
+            // 
+            // btPlantaMujeres
+            // 
+            this.btPlantaMujeres.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btPlantaMujeres.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btPlantaMujeres.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btPlantaMujeres.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btPlantaMujeres.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btPlantaMujeres.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btPlantaMujeres.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btPlantaMujeres.IconColor = System.Drawing.Color.White;
+            this.btPlantaMujeres.IconSize = 26;
+            this.btPlantaMujeres.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btPlantaMujeres.Location = new System.Drawing.Point(705, 112);
+            this.btPlantaMujeres.Name = "btPlantaMujeres";
+            this.btPlantaMujeres.Rotation = 0D;
+            this.btPlantaMujeres.Size = new System.Drawing.Size(170, 38);
+            this.btPlantaMujeres.TabIndex = 22;
+            this.btPlantaMujeres.Text = "Planta Mujeres";
+            this.btPlantaMujeres.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btPlantaMujeres.UseVisualStyleBackColor = false;
+            this.btPlantaMujeres.Click += new System.EventHandler(this.btPlantaMujeres_Click);
+            // 
+            // btTodos
+            // 
+            this.btTodos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btTodos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btTodos.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btTodos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btTodos.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btTodos.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btTodos.IconColor = System.Drawing.Color.White;
+            this.btTodos.IconSize = 26;
+            this.btTodos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btTodos.Location = new System.Drawing.Point(908, 112);
+            this.btTodos.Name = "btTodos";
+            this.btTodos.Rotation = 0D;
+            this.btTodos.Size = new System.Drawing.Size(170, 38);
+            this.btTodos.TabIndex = 23;
+            this.btTodos.Text = "Todos";
+            this.btTodos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btTodos.UseVisualStyleBackColor = false;
+            this.btTodos.Click += new System.EventHandler(this.btTodos_Click);
+            // 
+            // btVolver
+            // 
+            this.btVolver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btVolver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btVolver.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btVolver.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btVolver.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btVolver.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btVolver.IconChar = FontAwesome.Sharp.IconChar.ExchangeAlt;
+            this.btVolver.IconColor = System.Drawing.Color.Gainsboro;
+            this.btVolver.IconSize = 26;
+            this.btVolver.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btVolver.Location = new System.Drawing.Point(1145, 12);
+            this.btVolver.Name = "btVolver";
+            this.btVolver.Rotation = 0D;
+            this.btVolver.Size = new System.Drawing.Size(93, 38);
+            this.btVolver.TabIndex = 24;
+            this.btVolver.Text = "Volver";
+            this.btVolver.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btVolver.UseVisualStyleBackColor = false;
+            this.btVolver.Click += new System.EventHandler(this.btVolver_Click);
+            // 
+            // btDownload
+            // 
+            this.btDownload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btDownload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btDownload.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btDownload.FlatAppearance.BorderSize = 0;
+            this.btDownload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btDownload.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btDownload.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDownload.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btDownload.IconChar = FontAwesome.Sharp.IconChar.Download;
+            this.btDownload.IconColor = System.Drawing.Color.Gainsboro;
+            this.btDownload.IconSize = 26;
+            this.btDownload.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btDownload.Location = new System.Drawing.Point(76, 633);
+            this.btDownload.Name = "btDownload";
+            this.btDownload.Rotation = 0D;
+            this.btDownload.Size = new System.Drawing.Size(170, 38);
+            this.btDownload.TabIndex = 25;
+            this.btDownload.Text = "Descargar";
+            this.btDownload.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btDownload.UseVisualStyleBackColor = false;
+            this.btDownload.Click += new System.EventHandler(this.btDownload_Click);
+            // 
+            // btOrdenarCategoria
+            // 
+            this.btOrdenarCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btOrdenarCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btOrdenarCategoria.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btOrdenarCategoria.FlatAppearance.BorderSize = 0;
+            this.btOrdenarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btOrdenarCategoria.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btOrdenarCategoria.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btOrdenarCategoria.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btOrdenarCategoria.IconChar = FontAwesome.Sharp.IconChar.SortNumericUp;
+            this.btOrdenarCategoria.IconColor = System.Drawing.Color.Gainsboro;
+            this.btOrdenarCategoria.IconSize = 26;
+            this.btOrdenarCategoria.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btOrdenarCategoria.Location = new System.Drawing.Point(281, 633);
+            this.btOrdenarCategoria.Name = "btOrdenarCategoria";
+            this.btOrdenarCategoria.Rotation = 0D;
+            this.btOrdenarCategoria.Size = new System.Drawing.Size(230, 38);
+            this.btOrdenarCategoria.TabIndex = 26;
+            this.btOrdenarCategoria.Text = "Ordenar Por Categoria";
+            this.btOrdenarCategoria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btOrdenarCategoria.UseVisualStyleBackColor = false;
+            this.btOrdenarCategoria.Click += new System.EventHandler(this.btOrdenarCategoria_Click);
             // 
             // Plantas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(56)))), ((int)(((byte)(104)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnmujeresplanta);
-            this.Controls.Add(this.btnordenarplanta);
+            this.ClientSize = new System.Drawing.Size(1250, 747);
+            this.Controls.Add(this.btOrdenarCategoria);
+            this.Controls.Add(this.btDownload);
+            this.Controls.Add(this.btVolver);
+            this.Controls.Add(this.btTodos);
+            this.Controls.Add(this.btPlantaMujeres);
+            this.Controls.Add(this.btplanta4);
+            this.Controls.Add(this.btPlantaCamicos);
+            this.Controls.Add(this.btplanta3);
+            this.Controls.Add(this.btPlantapizza);
+            this.Controls.Add(this.btplanta2);
+            this.Controls.Add(this.btcdt);
+            this.Controls.Add(this.btplanta1);
             this.Controls.Add(this.cbordenarcatplant);
-            this.Controls.Add(this.btnddexcel);
             this.Controls.Add(this.lbsocioplantaencontrado);
             this.Controls.Add(this.gridverplantas);
-            this.Controls.Add(this.btntodos);
-            this.Controls.Add(this.btnplanta4);
-            this.Controls.Add(this.btnplantacarnicos);
-            this.Controls.Add(this.btnplantapizza);
-            this.Controls.Add(this.btncdt);
-            this.Controls.Add(this.btnplanta3);
-            this.Controls.Add(this.btnplanta2);
-            this.Controls.Add(this.btnplanta1);
-            this.Controls.Add(this.btnplantasvolver);
             this.Name = "Plantas";
             this.Text = "Plantas";
             ((System.ComponentModel.ISupportInitialize)(this.gridverplantas)).EndInit();
@@ -278,21 +388,20 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnplantasvolver;
-        private System.Windows.Forms.Button btnplanta1;
-        private System.Windows.Forms.Button btnplanta2;
-        private System.Windows.Forms.Button btnplanta3;
-        private System.Windows.Forms.Button btncdt;
-        private System.Windows.Forms.Button btnplantapizza;
-        private System.Windows.Forms.Button btnplantacarnicos;
-        private System.Windows.Forms.Button btnplanta4;
-        private System.Windows.Forms.Button btntodos;
         private System.Windows.Forms.DataGridView gridverplantas;
         private System.Windows.Forms.Label lbsocioplantaencontrado;
-        private System.Windows.Forms.Button btnddexcel;
         private System.Windows.Forms.ComboBox cbordenarcatplant;
-        private System.Windows.Forms.Button btnordenarplanta;
-        private System.Windows.Forms.Button btnmujeresplanta;
+        private FontAwesome.Sharp.IconButton btplanta1;
+        private FontAwesome.Sharp.IconButton btcdt;
+        private FontAwesome.Sharp.IconButton btplanta2;
+        private FontAwesome.Sharp.IconButton btPlantapizza;
+        private FontAwesome.Sharp.IconButton btplanta3;
+        private FontAwesome.Sharp.IconButton btPlantaCamicos;
+        private FontAwesome.Sharp.IconButton btplanta4;
+        private FontAwesome.Sharp.IconButton btPlantaMujeres;
+        private FontAwesome.Sharp.IconButton btTodos;
+        private FontAwesome.Sharp.IconButton btVolver;
+        private FontAwesome.Sharp.IconButton btDownload;
+        private FontAwesome.Sharp.IconButton btOrdenarCategoria;
     }
 }

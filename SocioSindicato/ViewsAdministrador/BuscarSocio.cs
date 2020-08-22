@@ -25,46 +25,48 @@ namespace SocioSindicato.ViewsAdministrador
             InitializeComponent();
         }
 
-        
 
-        private void btnbuscar_Click(object sender, EventArgs e)
+        //BOTON BUSCAR SOCIO
+        private void btBuscarUser_Click(object sender, EventArgs e)
         {
-            using (sindicatoPFEntities context = new sindicatoPFEntities()) {
+            using (sindicatoPFEntities context = new sindicatoPFEntities())
+            {
 
                 string buscar_rut = txtbuscar.Text;
-                
-                var listRut = from sociorut in context.Socio 
+
+                var listRut = from sociorut in context.Socio
                               where sociorut.rut_socio.Equals(buscar_rut)
-                              select new { Rut= sociorut.rut_socio,Nombre = sociorut.nombre_socio, Categoria = sociorut.id_categoria, Planta = sociorut.Planta.nombre, FechaDeIngreso= sociorut.fecha_ingreso };
-               
+                              select new { Rut = sociorut.rut_socio, Nombre = sociorut.nombre_socio, Categoria = sociorut.id_categoria, Planta = sociorut.Planta.nombre, FechaDeIngreso = sociorut.fecha_ingreso };
+
 
                 var listadoTodo = from c in context.Socio
-                                             join conyu in context.Conyuge
-                                             on c.rut_socio equals conyu.rut_socio
-                                             where c.rut_socio.Equals(buscar_rut)
-                                             join hij in context.Hijo on c.rut_socio equals hij.rut_socio where c.rut_socio.Equals(buscar_rut)
-                                             select new
-                                             {
-                                                 RUT_SOCIO = c.rut_socio,
-                                                 NOMBRE_SOCIO = c.nombre_socio,
-                                                 CATEGORIA = c.id_categoria,
-                                                 PLANTA = c.Planta.nombre,
-                                                 FECHA_DE_INGRESO = c.fecha_ingreso,
-                                                 RUT_CONYUGE = conyu.rut,
-                                                 NOMBRE_CONYUGE = conyu.nombre,
-                                                 NACIMIENTO_CONYUGE = conyu.nacimiento,
-                                                 CONVIVIENTE = conyu.conviviente,
-                                                 RUT_HIJO = hij.rut_hijo,
-                                                 NOMBRE_HIJO = hij.nombre,
-                                                 NACIMIENTO_HIJO = hij.nacimiento,
-                                                 SEXO = hij.sexo
+                                  join conyu in context.Conyuge
+                                  on c.rut_socio equals conyu.rut_socio
+                                  where c.rut_socio.Equals(buscar_rut)
+                                  join hij in context.Hijo on c.rut_socio equals hij.rut_socio
+                                  where c.rut_socio.Equals(buscar_rut)
+                                  select new
+                                  {
+                                      RUT_SOCIO = c.rut_socio,
+                                      NOMBRE_SOCIO = c.nombre_socio,
+                                      CATEGORIA = c.id_categoria,
+                                      PLANTA = c.Planta.nombre,
+                                      FECHA_DE_INGRESO = c.fecha_ingreso,
+                                      RUT_CONYUGE = conyu.rut,
+                                      NOMBRE_CONYUGE = conyu.nombre,
+                                      NACIMIENTO_CONYUGE = conyu.nacimiento,
+                                      CONVIVIENTE = conyu.conviviente,
+                                      RUT_HIJO = hij.rut_hijo,
+                                      NOMBRE_HIJO = hij.nombre,
+                                      NACIMIENTO_HIJO = hij.nacimiento,
+                                      SEXO = hij.sexo
 
-                                             };
+                                  };
 
-                if (txtbuscar.Text=="")
+                if (txtbuscar.Text == "")
                 {
-                    
-                    
+
+
                     MessageBox.Show("Ingrese Rut del socio!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     imagenbuscarsociomostrar.Image = null;
                     gridbuscar.DataSource = "";
@@ -74,13 +76,13 @@ namespace SocioSindicato.ViewsAdministrador
                 {
                     if (listRut.Count() != 0)
                     {
-                        
+
                         MessageBox.Show("Socio encontrado!");
                         gridbuscar.DataSource = listRut.ToList();
                         gridConyuge.DataSource = "";
                         gridHijo.DataSource = "";
                         gbtodo.DataSource = listadoTodo.ToList();
-                       
+
 
 
 
@@ -95,8 +97,8 @@ namespace SocioSindicato.ViewsAdministrador
                     }
                     else
                     {
-                        
-                      
+
+
                         MessageBox.Show("Socio No Encontrado!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         gridbuscar.DataSource = "";
                         txtbuscar.Text = "";
@@ -106,22 +108,20 @@ namespace SocioSindicato.ViewsAdministrador
                 }
 
             }
-         
         }
+        //FIN BUSCAR SOCIO        
 
-        private void btnvolverbuscar_Click(object sender, EventArgs e)
+        //BOTON VOLVER
+        private void btVolver_Click(object sender, EventArgs e)
         {
             Administrador bs = new Administrador();
             this.Hide();
-            bs.ShowDialog();
             this.Close();
         }
+        //FIN BOTON VOLVER
 
-        private void imagenbuscarsociomostrar_Click(object sender, EventArgs e)
-        {
-           
-        }
-       
+
+        
         public void exportardatos(DataGridView datalistado) {
 
             Microsoft.Office.Interop.Excel.Application exportarexcel = new Microsoft.Office.Interop.Excel.Application();
@@ -158,28 +158,19 @@ namespace SocioSindicato.ViewsAdministrador
     
             exportarexcel.Visible = true;
         }
-
-        private void btnddexcel_Click(object sender, EventArgs e)
+       
+        private void imagenbuscarsociomostrar_Click(object sender, EventArgs e)
         {
-            if (gbtodo.Rows.Count == 0)
-            {
-                MessageBox.Show("No hay datos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                
-                exportardatos(gbtodo);                
-            }
-
-            
-
+           
         }
+                   
 
-        private void btconyuge_Click(object sender, EventArgs e)
+        //BOTON BUSCAR CONYUGE
+        private void btBuscarConyuge_Click(object sender, EventArgs e)
         {
             sindicatoPFEntities context = new sindicatoPFEntities();
             string buscar_rut = txtbuscar.Text;
-            
+
             if (gridbuscar.Rows.Count == 0)
             {
 
@@ -199,7 +190,7 @@ namespace SocioSindicato.ViewsAdministrador
 
                     MessageBox.Show("Conyuge encontrado!");
 
-                    gridConyuge.DataSource = listConyu.ToList();                    
+                    gridConyuge.DataSource = listConyu.ToList();
                 }
                 else
                 {
@@ -207,18 +198,20 @@ namespace SocioSindicato.ViewsAdministrador
 
                     MessageBox.Show("Socio no tiene Conyuge !", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     gridConyuge.DataSource = "";
-                   
+
 
 
                 }
             }
-        }
+        }       
+        //FIN BUSCAR CONYUGE
 
-        private void btcargas_Click(object sender, EventArgs e)
+        //BOTON BUSCAR HIJO
+        private void btBuscarHijo_Click(object sender, EventArgs e)
         {
             sindicatoPFEntities context = new sindicatoPFEntities();
             string buscar_rut = txtbuscar.Text;
-            
+
             if (gridbuscar.Rows.Count == 0)
             {
 
@@ -246,14 +239,17 @@ namespace SocioSindicato.ViewsAdministrador
 
                     MessageBox.Show("Socio no tiene hijo!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     gridHijo.DataSource = "";
-                    
+
 
 
                 }
             }
         }
-
-        private void btnexcelsocio_Click(object sender, EventArgs e)
+        //BOTON BUSCAR HIJO       
+   
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////       
+        //BOTON DESCARGAR SOCIO
+        private void btDownload_Click(object sender, EventArgs e)
         {
             if (gridbuscar.Rows.Count == 0)
             {
@@ -264,8 +260,9 @@ namespace SocioSindicato.ViewsAdministrador
 
                 exportardatos(gridbuscar);
             }
-
         }
+        //FIN DESCARGAR SOCIO   
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         private void gridbuscar_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
         {
@@ -292,26 +289,29 @@ namespace SocioSindicato.ViewsAdministrador
             }
         }
 
-        private void btnexcelsocioconyuge_Click(object sender, EventArgs e)
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //BOTON DESCARGAR SOCIO CONYUGE
+        private void btDownloadSocioConyu_Click(object sender, EventArgs e)
         {
+
             string buscar_rut = txtbuscar.Text;
             sindicatoPFEntities context = new sindicatoPFEntities();
             var Listadosocioconyuge = from c in context.Socio
-                              join conyu in context.Conyuge
-                              on c.rut_socio equals conyu.rut_socio
-                              where c.rut_socio.Equals(buscar_rut)                           
-                              select new
-                              {
-                                  RUT_SOCIO = c.rut_socio,
-                                  NOMBRE_SOCIO = c.nombre_socio,
-                                  CATEGORIA = c.id_categoria,
-                                  PLANTA = c.Planta.nombre,
-                                  FECHA_DE_INGRESO = c.fecha_ingreso,
-                                  RUT_CONYUGE = conyu.rut,
-                                  NOMBRE_CONYUGE = conyu.nombre,
-                                  NACIMIENTO_CONYUGE = conyu.nacimiento,
-                                  CONVIVIENTE = conyu.conviviente,                                
-                              };
+                                      join conyu in context.Conyuge
+                                      on c.rut_socio equals conyu.rut_socio
+                                      where c.rut_socio.Equals(buscar_rut)
+                                      select new
+                                      {
+                                          RUT_SOCIO = c.rut_socio,
+                                          NOMBRE_SOCIO = c.nombre_socio,
+                                          CATEGORIA = c.id_categoria,
+                                          PLANTA = c.Planta.nombre,
+                                          FECHA_DE_INGRESO = c.fecha_ingreso,
+                                          RUT_CONYUGE = conyu.rut,
+                                          NOMBRE_CONYUGE = conyu.nombre,
+                                          NACIMIENTO_CONYUGE = conyu.nacimiento,
+                                          CONVIVIENTE = conyu.conviviente,
+                                      };
             gbtodo.DataSource = Listadosocioconyuge.ToList();
 
             if (gbtodo.Rows.Count == 0)
@@ -324,27 +324,30 @@ namespace SocioSindicato.ViewsAdministrador
                 exportardatos(gbtodo);
             }
         }
+        //FIN DESCARGAR SOCIO CONYUGE
 
-        private void btnexcelsociohijo_Click(object sender, EventArgs e)
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //BOTON DESCARGAR SOCIO HIJO
+        private void btDownloadSocioHijo_Click(object sender, EventArgs e)
         {
-             string buscar_rut = txtbuscar.Text;
+            string buscar_rut = txtbuscar.Text;
             sindicatoPFEntities context = new sindicatoPFEntities();
-            var listadosociohijo = from c in context.Socio                            
-                              join hij in context.Hijo on c.rut_socio equals hij.rut_socio
-                              where c.rut_socio.Equals(buscar_rut)
-                              select new
-                              {
-                                  RUT_SOCIO = c.rut_socio,
-                                  NOMBRE_SOCIO = c.nombre_socio,
-                                  CATEGORIA = c.id_categoria,
-                                  PLANTA = c.Planta.nombre,
-                                  FECHA_DE_INGRESO = c.fecha_ingreso,                                 
-                                  RUT_HIJO = hij.rut_hijo,
-                                  NOMBRE_HIJO = hij.nombre,
-                                  NACIMIENTO_HIJO = hij.nacimiento,
-                                  SEXO = hij.sexo
+            var listadosociohijo = from c in context.Socio
+                                   join hij in context.Hijo on c.rut_socio equals hij.rut_socio
+                                   where c.rut_socio.Equals(buscar_rut)
+                                   select new
+                                   {
+                                       RUT_SOCIO = c.rut_socio,
+                                       NOMBRE_SOCIO = c.nombre_socio,
+                                       CATEGORIA = c.id_categoria,
+                                       PLANTA = c.Planta.nombre,
+                                       FECHA_DE_INGRESO = c.fecha_ingreso,
+                                       RUT_HIJO = hij.rut_hijo,
+                                       NOMBRE_HIJO = hij.nombre,
+                                       NACIMIENTO_HIJO = hij.nacimiento,
+                                       SEXO = hij.sexo
 
-                              };
+                                   };
 
             gbtodo.DataSource = listadosociohijo.ToList();
 
@@ -358,5 +361,24 @@ namespace SocioSindicato.ViewsAdministrador
                 exportardatos(gbtodo);
             }
         }
+        //FIN DESCARGAR SOCIO HIJO        
+
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //BOTON DESCARGAR TODO
+        private void btDownloadTodos_Click(object sender, EventArgs e)
+        {
+            if (gbtodo.Rows.Count == 0)
+            {
+                MessageBox.Show("No hay datos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+
+                exportardatos(gbtodo);
+            }
+
+        }
+        //FIN DESCARGAR TODO
+
     }
 }

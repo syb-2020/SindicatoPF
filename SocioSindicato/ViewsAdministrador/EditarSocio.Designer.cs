@@ -808,7 +808,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(56)))), ((int)(((byte)(104)))));
-            this.ClientSize = new System.Drawing.Size(1095, 778);
+            this.ClientSize = new System.Drawing.Size(1250, 747);
             this.Controls.Add(this.grideditarsociohijo);
             this.Controls.Add(this.grideditarsocioconyu);
             this.Controls.Add(this.gridbuscarsolosocio);

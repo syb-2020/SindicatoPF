@@ -20,9 +20,11 @@ namespace SocioSindicato.ViewsAdministrador
             InitializeComponent();
         }
         public string rut_socio = "";
-        private void btnbuscarel_Click(object sender, EventArgs e)
-        {
 
+
+        //BOTON BUSCAR USUARIO        
+        private void btBuscarUser_Click(object sender, EventArgs e)
+        {
             using (sindicatoPFEntities context = new sindicatoPFEntities())
             {
 
@@ -74,14 +76,14 @@ namespace SocioSindicato.ViewsAdministrador
                 }
 
             }
-
         }
 
+        //FIN BUSCAR USUARIO
+
         bool estadoEliminado = false;
-
-        private void btneliminar_Click(object sender, EventArgs e)
+        //BOTON ELIMINAR USUARIO
+        private void btEliminar_Click(object sender, EventArgs e)
         {
-
             using (sindicatoPFEntities context = new sindicatoPFEntities())
             {
 
@@ -96,109 +98,40 @@ namespace SocioSindicato.ViewsAdministrador
                 }
                 else
                 {
-                    
-                   
-                        var result3 = from c in context.Socio
-                                      where c.rut_socio.Equals(eli)
-                                      select c;
-
-                        gridsociosolo.DataSource = result3.ToList();
-
-                        var result1 = from c in context.Conyuge
-                                      where c.rut_socio.Equals(eli)
-                                      select new { id_con = c.id_conyuge };
-                        gridsolocon.DataSource = result1.ToList();
 
 
-                        var result2 = from c in context.Hijo
-                                      where c.rut_socio.Equals(eli)
-                                      select new { id_hij = c.id_hijo };
+                    var result3 = from c in context.Socio
+                                  where c.rut_socio.Equals(eli)
+                                  select c;
 
-                        gridhijo.DataSource = result2.ToList();
+                    gridsociosolo.DataSource = result3.ToList();
 
-                        // ELIMINAR SOCIO CONYU HIJO
-                        if (result3.Count() != 0) //socio
+                    var result1 = from c in context.Conyuge
+                                  where c.rut_socio.Equals(eli)
+                                  select new { id_con = c.id_conyuge };
+                    gridsolocon.DataSource = result1.ToList();
+
+
+                    var result2 = from c in context.Hijo
+                                  where c.rut_socio.Equals(eli)
+                                  select new { id_hij = c.id_hijo };
+
+                    gridhijo.DataSource = result2.ToList();
+
+                    // ELIMINAR SOCIO CONYU HIJO
+                    if (result3.Count() != 0) //socio
+                    {
+
+
+                        if (result1.Count() != 0) //conyuge
                         {
 
 
-                            if (result1.Count() != 0) //conyuge
-                            {
-
-
-                                if (result2.Count() != 0) //hijo
-                                {
-                                    string rut_soc3 = result3.ToList()[0].rut_socio;
-                                    int rut_soc1 = result1.ToList()[0].id_con;
-                                    int rut_soc2 = result2.ToList()[0].id_hij;
-
-                                    var rellenarSocioEliminado = from c in context.Socio
-                                                                 join plansoc in context.Planta
-                                                                 on c.id_planta equals plansoc.id_planta
-                                                                 where c.rut_socio.Equals(eli)
-                                                                 select new
-                                                                 {
-                                                                     c.rut_socio,
-                                                                     c.nombre_socio,
-                                                                     c.id_categoria,
-                                                                     c.fecha_ingreso,
-                                                                     plansoc.nombre
-                                                                 };
-
-                                    string rut2 = rellenarSocioEliminado.ToList()[0].rut_socio;
-                                    string nombre2 = rellenarSocioEliminado.ToList()[0].nombre_socio;
-                                    int categoria2 = rellenarSocioEliminado.ToList()[0].id_categoria;
-                                    DateTime fecha2 = Convert.ToDateTime(rellenarSocioEliminado.ToList()[0].fecha_ingreso);
-                                    string planta2 = rellenarSocioEliminado.ToList()[0].nombre;
-
-                                    socioEliminado nuevoSocioEliminado = new socioEliminado
-                                    {
-
-                                        rut = rut2,
-                                        nombre = nombre2,
-                                        categoria = categoria2,
-                                        fechaIngreso = fecha2,
-                                        planta = planta2,
-
-                                    };
-
-                                    context.socioEliminado.Add(nuevoSocioEliminado);
-                                    context.SaveChanges();
-
-                                    context.Conyuge.Remove(context.Conyuge.Find(rut_soc1));
-
-
-                                    for (int i = 0; i < gridhijo.RowCount; i++)
-                                    {
-                                        int ihe = int.Parse(gridhijo.Rows[i].Cells[0].Value.ToString());
-                                        context.Hijo.Remove(context.Hijo.Find(ihe));
-                                    }
-
-
-
-
-                                    context.Socio.Remove(context.Socio.Find(rut_soc3));
-
-                                    context.SaveChanges();
-
-                                    estadoEliminado = true;
-                              
-
-
-                            }
-                           
-
-                        }
-                    }
-                   
-
-
-                        //ELIMINAR SOCIO CONYUGE
-                        if (result3.Count() != 0)
-                        {
-                            if (result1.Count() != 0)
+                            if (result2.Count() != 0) //hijo
                             {
                                 string rut_soc3 = result3.ToList()[0].rut_socio;
                                 int rut_soc1 = result1.ToList()[0].id_con;
+                                int rut_soc2 = result2.ToList()[0].id_hij;
 
                                 var rellenarSocioEliminado = from c in context.Socio
                                                              join plansoc in context.Planta
@@ -235,63 +168,6 @@ namespace SocioSindicato.ViewsAdministrador
 
                                 context.Conyuge.Remove(context.Conyuge.Find(rut_soc1));
 
-                                context.Socio.Remove(context.Socio.Find(rut_soc3));
-
-                                context.SaveChanges();
-                                estadoEliminado = true;
-
-
-
-
-
-                        }
-                        
-                    }
-                   
-
-
-                        //ELIMINAR SOCIO HIJO
-                        if (result3.Count() != 0)
-                        {
-                            if (result2.Count() != 0)
-                            {
-                                string rut_soc3 = result3.ToList()[0].rut_socio;
-                                int rut_soc2 = result2.ToList()[0].id_hij;
-
-                                var rellenarSocioEliminado = from c in context.Socio
-                                                             join plansoc in context.Planta
-                                                             on c.id_planta equals plansoc.id_planta
-                                                             where c.rut_socio.Equals(eli)
-                                                             select new
-                                                             {
-                                                                 c.rut_socio,
-                                                                 c.nombre_socio,
-                                                                 c.id_categoria,
-                                                                 c.fecha_ingreso,
-                                                                 plansoc.nombre
-                                                             };
-
-                                string rut2 = rellenarSocioEliminado.ToList()[0].rut_socio;
-                                string nombre2 = rellenarSocioEliminado.ToList()[0].nombre_socio;
-                                int categoria2 = rellenarSocioEliminado.ToList()[0].id_categoria;
-                                DateTime fecha2 = Convert.ToDateTime(rellenarSocioEliminado.ToList()[0].fecha_ingreso);
-                                string planta2 = rellenarSocioEliminado.ToList()[0].nombre;
-
-                                socioEliminado nuevoSocioEliminado = new socioEliminado
-                                {
-
-                                    rut = rut2,
-                                    nombre = nombre2,
-                                    categoria = categoria2,
-                                    fechaIngreso = fecha2,
-                                    planta = planta2,
-
-                                };
-
-                                context.socioEliminado.Add(nuevoSocioEliminado);
-                                context.SaveChanges();
-
-
 
                                 for (int i = 0; i < gridhijo.RowCount; i++)
                                 {
@@ -306,20 +182,26 @@ namespace SocioSindicato.ViewsAdministrador
 
                                 context.SaveChanges();
 
+                                estadoEliminado = true;
 
-                            estadoEliminado = true;
 
+
+                            }
 
 
                         }
-                       
                     }
-                  
 
-                        //ELIMINAR SOCIO SOLO
-                        if (result3.Count() != 0)
+
+
+                    //ELIMINAR SOCIO CONYUGE
+                    if (result3.Count() != 0)
+                    {
+                        if (result1.Count() != 0)
                         {
                             string rut_soc3 = result3.ToList()[0].rut_socio;
+                            int rut_soc1 = result1.ToList()[0].id_con;
+
                             var rellenarSocioEliminado = from c in context.Socio
                                                          join plansoc in context.Planta
                                                          on c.id_planta equals plansoc.id_planta
@@ -351,10 +233,130 @@ namespace SocioSindicato.ViewsAdministrador
                             };
 
                             context.socioEliminado.Add(nuevoSocioEliminado);
+                            context.SaveChanges();
+
+                            context.Conyuge.Remove(context.Conyuge.Find(rut_soc1));
+
+                            context.Socio.Remove(context.Socio.Find(rut_soc3));
+
+                            context.SaveChanges();
+                            estadoEliminado = true;
+
+
+
+
+
+                        }
+
+                    }
+
+
+
+                    //ELIMINAR SOCIO HIJO
+                    if (result3.Count() != 0)
+                    {
+                        if (result2.Count() != 0)
+                        {
+                            string rut_soc3 = result3.ToList()[0].rut_socio;
+                            int rut_soc2 = result2.ToList()[0].id_hij;
+
+                            var rellenarSocioEliminado = from c in context.Socio
+                                                         join plansoc in context.Planta
+                                                         on c.id_planta equals plansoc.id_planta
+                                                         where c.rut_socio.Equals(eli)
+                                                         select new
+                                                         {
+                                                             c.rut_socio,
+                                                             c.nombre_socio,
+                                                             c.id_categoria,
+                                                             c.fecha_ingreso,
+                                                             plansoc.nombre
+                                                         };
+
+                            string rut2 = rellenarSocioEliminado.ToList()[0].rut_socio;
+                            string nombre2 = rellenarSocioEliminado.ToList()[0].nombre_socio;
+                            int categoria2 = rellenarSocioEliminado.ToList()[0].id_categoria;
+                            DateTime fecha2 = Convert.ToDateTime(rellenarSocioEliminado.ToList()[0].fecha_ingreso);
+                            string planta2 = rellenarSocioEliminado.ToList()[0].nombre;
+
+                            socioEliminado nuevoSocioEliminado = new socioEliminado
+                            {
+
+                                rut = rut2,
+                                nombre = nombre2,
+                                categoria = categoria2,
+                                fechaIngreso = fecha2,
+                                planta = planta2,
+
+                            };
+
+                            context.socioEliminado.Add(nuevoSocioEliminado);
+                            context.SaveChanges();
+
+
+
+                            for (int i = 0; i < gridhijo.RowCount; i++)
+                            {
+                                int ihe = int.Parse(gridhijo.Rows[i].Cells[0].Value.ToString());
+                                context.Hijo.Remove(context.Hijo.Find(ihe));
+                            }
+
+
 
 
                             context.Socio.Remove(context.Socio.Find(rut_soc3));
+
                             context.SaveChanges();
+
+
+                            estadoEliminado = true;
+
+
+
+                        }
+
+                    }
+
+
+                    //ELIMINAR SOCIO SOLO
+                    if (result3.Count() != 0)
+                    {
+                        string rut_soc3 = result3.ToList()[0].rut_socio;
+                        var rellenarSocioEliminado = from c in context.Socio
+                                                     join plansoc in context.Planta
+                                                     on c.id_planta equals plansoc.id_planta
+                                                     where c.rut_socio.Equals(eli)
+                                                     select new
+                                                     {
+                                                         c.rut_socio,
+                                                         c.nombre_socio,
+                                                         c.id_categoria,
+                                                         c.fecha_ingreso,
+                                                         plansoc.nombre
+                                                     };
+
+                        string rut2 = rellenarSocioEliminado.ToList()[0].rut_socio;
+                        string nombre2 = rellenarSocioEliminado.ToList()[0].nombre_socio;
+                        int categoria2 = rellenarSocioEliminado.ToList()[0].id_categoria;
+                        DateTime fecha2 = Convert.ToDateTime(rellenarSocioEliminado.ToList()[0].fecha_ingreso);
+                        string planta2 = rellenarSocioEliminado.ToList()[0].nombre;
+
+                        socioEliminado nuevoSocioEliminado = new socioEliminado
+                        {
+
+                            rut = rut2,
+                            nombre = nombre2,
+                            categoria = categoria2,
+                            fechaIngreso = fecha2,
+                            planta = planta2,
+
+                        };
+
+                        context.socioEliminado.Add(nuevoSocioEliminado);
+
+
+                        context.Socio.Remove(context.Socio.Find(rut_soc3));
+                        context.SaveChanges();
 
 
                         estadoEliminado = true;
@@ -369,10 +371,10 @@ namespace SocioSindicato.ViewsAdministrador
                         txteliminar.Text = "";
                         pb.Image = null;
 
-                        
+
 
                     }
-                    else if (estadoEliminado==false)
+                    else if (estadoEliminado == false)
                     {
                         MessageBox.Show("Socio No Eliminado!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         grideliminar.DataSource = "";
@@ -388,12 +390,12 @@ namespace SocioSindicato.ViewsAdministrador
                 }
             }
         }
-
-        private void btnvolvereliminar_Click(object sender, EventArgs e)
+        //FIN ELIMINAR USUARIO
+        
+        private void btVolver_Click(object sender, EventArgs e)
         {
             Administrador bs = new Administrador();
             this.Hide();
-            bs.ShowDialog();
             this.Close();
         }
 
@@ -404,5 +406,7 @@ namespace SocioSindicato.ViewsAdministrador
                 e.Graphics.DrawString((e.RowIndex + 1).ToString(), e.InheritedRowStyle.Font, b, e.RowBounds.Location.X + 10, e.RowBounds.Location.Y + 4);
             }
         }
+
+        
     }
 }

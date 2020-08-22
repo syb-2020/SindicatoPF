@@ -524,7 +524,6 @@
             // 
             this.comboconvivienteconyugesocio.FormattingEnabled = true;
             this.comboconvivienteconyugesocio.Items.AddRange(new object[] {
-            "",
             "SI",
             "NO"});
             this.comboconvivienteconyugesocio.Location = new System.Drawing.Point(863, 98);
@@ -567,11 +566,11 @@
             // 
             this.comboestadocivilagregar.FormattingEnabled = true;
             this.comboestadocivilagregar.Items.AddRange(new object[] {
-            "",
             "Soltero",
             "Casado",
             "Divorciado",
-            "Viudo"});
+            "Viudo",
+            "Union Civil"});
             this.comboestadocivilagregar.Location = new System.Drawing.Point(143, 371);
             this.comboestadocivilagregar.Name = "comboestadocivilagregar";
             this.comboestadocivilagregar.Size = new System.Drawing.Size(200, 21);
@@ -596,7 +595,6 @@
             // 
             this.cbSexo.FormattingEnabled = true;
             this.cbSexo.Items.AddRange(new object[] {
-            "",
             "Hombre",
             "Mujer"});
             this.cbSexo.Location = new System.Drawing.Point(863, 327);
@@ -739,6 +737,8 @@
             // 
             this.gridpruebahijo.AllowUserToOrderColumns = true;
             this.gridpruebahijo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridpruebahijo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(56)))), ((int)(((byte)(104)))));
+            this.gridpruebahijo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridpruebahijo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridpruebahijo.Location = new System.Drawing.Point(743, 392);
             this.gridpruebahijo.Name = "gridpruebahijo";

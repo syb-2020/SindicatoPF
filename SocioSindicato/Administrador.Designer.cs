@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button6 = new System.Windows.Forms.Button();
             this.gridvereliminadosadm = new System.Windows.Forms.DataGridView();
             this.menupanel = new System.Windows.Forms.Panel();
             this.btEliminados = new FontAwesome.Sharp.IconButton();
@@ -41,6 +40,8 @@
             this.panel_icono = new System.Windows.Forms.Panel();
             this.btnInicio = new System.Windows.Forms.PictureBox();
             this.titulo_panel = new System.Windows.Forms.Panel();
+            this.sing_out = new FontAwesome.Sharp.IconButton();
+            this.maximizar = new FontAwesome.Sharp.IconPictureBox();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnClose = new System.Windows.Forms.PictureBox();
             this.lbtitulo = new System.Windows.Forms.Label();
@@ -48,26 +49,18 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel_shadow = new System.Windows.Forms.Panel();
             this.panel_desktop = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.gridvereliminadosadm)).BeginInit();
             this.menupanel.SuspendLayout();
             this.panel_icono.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnInicio)).BeginInit();
             this.titulo_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.maximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icono_actual)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(1108, 26);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(114, 23);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Cerrar Sesion";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // gridvereliminadosadm
             // 
@@ -267,10 +260,11 @@
             // titulo_panel
             // 
             this.titulo_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.titulo_panel.Controls.Add(this.sing_out);
+            this.titulo_panel.Controls.Add(this.maximizar);
             this.titulo_panel.Controls.Add(this.btnMinimizar);
             this.titulo_panel.Controls.Add(this.btnClose);
             this.titulo_panel.Controls.Add(this.lbtitulo);
-            this.titulo_panel.Controls.Add(this.button6);
             this.titulo_panel.Controls.Add(this.icono_actual);
             this.titulo_panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.titulo_panel.Location = new System.Drawing.Point(220, 0);
@@ -279,10 +273,47 @@
             this.titulo_panel.TabIndex = 11;
             this.titulo_panel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.titulo_panel_MouseMove);
             // 
+            // sing_out
+            // 
+            this.sing_out.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.sing_out.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.sing_out.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sing_out.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.sing_out.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sing_out.ForeColor = System.Drawing.Color.Gainsboro;
+            this.sing_out.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
+            this.sing_out.IconColor = System.Drawing.Color.WhiteSmoke;
+            this.sing_out.IconSize = 32;
+            this.sing_out.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.sing_out.Location = new System.Drawing.Point(972, 12);
+            this.sing_out.Name = "sing_out";
+            this.sing_out.Rotation = 0D;
+            this.sing_out.Size = new System.Drawing.Size(190, 52);
+            this.sing_out.TabIndex = 7;
+            this.sing_out.Text = "Cerrar Sesion";
+            this.sing_out.UseVisualStyleBackColor = true;
+            this.sing_out.Click += new System.EventHandler(this.sing_out_Click);
+            // 
+            // maximizar
+            // 
+            this.maximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.maximizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.maximizar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.maximizar.IconChar = FontAwesome.Sharp.IconChar.WindowMaximize;
+            this.maximizar.IconColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.maximizar.IconSize = 19;
+            this.maximizar.Location = new System.Drawing.Point(1234, 29);
+            this.maximizar.Name = "maximizar";
+            this.maximizar.Size = new System.Drawing.Size(21, 19);
+            this.maximizar.TabIndex = 6;
+            this.maximizar.TabStop = false;
+            this.maximizar.Click += new System.EventHandler(this.maximizar_Click);
+            // 
             // btnMinimizar
             // 
+            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMinimizar.Image = global::SocioSindicato.Properties.Resources.Minimize_Icon;
-            this.btnMinimizar.Location = new System.Drawing.Point(1244, 29);
+            this.btnMinimizar.Location = new System.Drawing.Point(1196, 29);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(16, 16);
             this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -292,6 +323,7 @@
             // 
             // btnClose
             // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.Image = global::SocioSindicato.Properties.Resources.Close_Icon1;
             this.btnClose.Location = new System.Drawing.Point(1277, 29);
             this.btnClose.Name = "btnClose";
@@ -304,11 +336,11 @@
             // lbtitulo
             // 
             this.lbtitulo.AutoSize = true;
-            this.lbtitulo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbtitulo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbtitulo.ForeColor = System.Drawing.Color.Gainsboro;
             this.lbtitulo.Location = new System.Drawing.Point(52, 29);
             this.lbtitulo.Name = "lbtitulo";
-            this.lbtitulo.Size = new System.Drawing.Size(49, 20);
+            this.lbtitulo.Size = new System.Drawing.Size(51, 21);
             this.lbtitulo.TabIndex = 1;
             this.lbtitulo.Text = "Inicio";
             // 
@@ -350,11 +382,21 @@
             this.panel_desktop.Size = new System.Drawing.Size(1315, 796);
             this.panel_desktop.TabIndex = 14;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(24)))), ((int)(((byte)(58)))));
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(220, 93);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(11, 796);
+            this.panel1.TabIndex = 15;
+            // 
             // Administrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1535, 889);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel_desktop);
             this.Controls.Add(this.panel_shadow);
             this.Controls.Add(this.pictureBox1);
@@ -369,6 +411,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnInicio)).EndInit();
             this.titulo_panel.ResumeLayout(false);
             this.titulo_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.maximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.icono_actual)).EndInit();
@@ -378,7 +421,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.DataGridView gridvereliminadosadm;
         private System.Windows.Forms.Panel menupanel;
         private FontAwesome.Sharp.IconButton btEliminados;
@@ -398,5 +440,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel_shadow;
         private System.Windows.Forms.Panel panel_desktop;
+        private FontAwesome.Sharp.IconPictureBox maximizar;
+        private FontAwesome.Sharp.IconButton sing_out;
+        private System.Windows.Forms.Panel panel1;
     }
 }

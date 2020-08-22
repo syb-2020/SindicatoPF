@@ -1,4 +1,5 @@
-﻿using SocioSindicato.Models;
+﻿using FontAwesome.Sharp;
+using SocioSindicato.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,15 +18,7 @@ namespace SocioSindicato.ViewsAdministrador
         {
             InitializeComponent();           
         }
-
-        private void btnplantasvolver_Click(object sender, EventArgs e)
-        {
-            Administrador bs = new Administrador();
-            this.Hide();
-            bs.ShowDialog();
-            this.Close();
-        }
-        
+               
        
         /// CREACION DE VARIABLES PARA CAPTURAR EL BOTON SELECCIONADO
         
@@ -41,7 +34,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
         //INICIO BOTONES
-        private void btnplanta1_Click(object sender, EventArgs e)
+        private void btplanta1_Click(object sender, EventArgs e)
         {
             btnplanta1seleccionado = true;
             btnplanta2seleccionado = false;
@@ -78,12 +71,9 @@ namespace SocioSindicato.ViewsAdministrador
 
 
             }
-
         }
-
-        private void btnplanta2_Click(object sender, EventArgs e)
+        private void btplanta2_Click(object sender, EventArgs e)
         {
-
             btnplanta1seleccionado = false;
             btnplanta2seleccionado = true;
             btnplanta3seleccionado = false;
@@ -126,8 +116,7 @@ namespace SocioSindicato.ViewsAdministrador
 
             }
         }
-
-        private void btnplanta3_Click(object sender, EventArgs e)
+        private void btplanta3_Click(object sender, EventArgs e)
         {
 
             btnplanta1seleccionado = false;
@@ -165,10 +154,8 @@ namespace SocioSindicato.ViewsAdministrador
 
             }
         }
-
-        private void btnplanta4_Click(object sender, EventArgs e)
+        private void btplanta4_Click(object sender, EventArgs e)
         {
-
             btnplanta1seleccionado = false;
             btnplanta2seleccionado = false;
             btnplanta3seleccionado = false;
@@ -207,9 +194,9 @@ namespace SocioSindicato.ViewsAdministrador
 
             }
         }
-        private void btncdt_Click(object sender, EventArgs e)
-        {
 
+        private void btcdt_Click(object sender, EventArgs e)
+        {
             btnplanta1seleccionado = false;
             btnplanta2seleccionado = false;
             btnplanta3seleccionado = false;
@@ -245,9 +232,8 @@ namespace SocioSindicato.ViewsAdministrador
             }
         }
 
-        private void btnplantapizza_Click(object sender, EventArgs e)
+        private void btPlantapizza_Click(object sender, EventArgs e)
         {
-
             btnplanta1seleccionado = false;
             btnplanta2seleccionado = false;
             btnplanta3seleccionado = false;
@@ -286,9 +272,8 @@ namespace SocioSindicato.ViewsAdministrador
             }
         }
 
-        private void btnplantacarnicos_Click(object sender, EventArgs e)
+        private void btPlantaCamicos_Click(object sender, EventArgs e)
         {
-
             btnplanta1seleccionado = false;
             btnplanta2seleccionado = false;
             btnplanta3seleccionado = false;
@@ -326,46 +311,7 @@ namespace SocioSindicato.ViewsAdministrador
             }
         }
 
-        private void btntodos_Click(object sender, EventArgs e)
-        {
-
-            btnplanta1seleccionado = false;
-            btnplanta2seleccionado = false;
-            btnplanta3seleccionado = false;
-            btnplanta4seleccionado = false;
-            btnplantacdtseleccionado = false;
-            btnplantapizzaseleccionado = false;
-            btnplantacarnicoseleccionado = false;
-            btnplantaallseleccionado = true;
-            btnplantamujeresseleccionado = false;
-
-            using (sindicatoPFEntities context = new sindicatoPFEntities())
-            {
-
-                var allsociosplanta = from socplan in context.Socio
-                                      join plansoc in context.Planta
-                                      on socplan.id_planta equals plansoc.id_planta
-                                      orderby plansoc.id_planta
-                                      select new { RUT = socplan.rut_socio, NOMBRE = socplan.nombre_socio,  PLANTA = plansoc.nombre, CATEGORIA = socplan.id_categoria };
-
-                gridverplantas.DataSource = allsociosplanta.OrderBy(s => s.CATEGORIA).ToList();
-
-                if (gridverplantas.Rows.Count == 0)
-                {
-                    MessageBox.Show("No Existen Socios En Ninguna Planta", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-                else
-                {
-                    MessageBox.Show("Todos Los Socios!");
-
-
-
-                }
-
-
-            }
-        }
-        private void btnmujeresplanta_Click(object sender, EventArgs e)
+        private void btPlantaMujeres_Click(object sender, EventArgs e)
         {
             btnplanta1seleccionado = false;
             btnplanta2seleccionado = false;
@@ -381,10 +327,10 @@ namespace SocioSindicato.ViewsAdministrador
             {
                 int idpcrn = 8;
                 var soicoplantamujeres = from socplan in context.Socio
-                                          join plansoc in context.Planta
-                                          on socplan.id_planta equals plansoc.id_planta
-                                          where plansoc.id_planta.Equals(idpcrn)
-                                          select new { RUT = socplan.rut_socio, NOMBRE = socplan.nombre_socio, PLANTA = plansoc.nombre, CATEGORIA = socplan.id_categoria };
+                                         join plansoc in context.Planta
+                                         on socplan.id_planta equals plansoc.id_planta
+                                         where plansoc.id_planta.Equals(idpcrn)
+                                         select new { RUT = socplan.rut_socio, NOMBRE = socplan.nombre_socio, PLANTA = plansoc.nombre, CATEGORIA = socplan.id_categoria };
 
                 gridverplantas.DataSource = soicoplantamujeres.OrderBy(s => s.CATEGORIA).ToList();
 
@@ -404,11 +350,50 @@ namespace SocioSindicato.ViewsAdministrador
 
             }
         }
-            //FIN BOTONES
+        private void btTodos_Click(object sender, EventArgs e)
+        {
+
+            btnplanta1seleccionado = false;
+            btnplanta2seleccionado = false;
+            btnplanta3seleccionado = false;
+            btnplanta4seleccionado = false;
+            btnplantacdtseleccionado = false;
+            btnplantapizzaseleccionado = false;
+            btnplantacarnicoseleccionado = false;
+            btnplantaallseleccionado = true;
+            btnplantamujeresseleccionado = false;
+
+            using (sindicatoPFEntities context = new sindicatoPFEntities())
+            {
+
+                var allsociosplanta = from socplan in context.Socio
+                                      join plansoc in context.Planta
+                                      on socplan.id_planta equals plansoc.id_planta
+                                      orderby plansoc.id_planta
+                                      select new { RUT = socplan.rut_socio, NOMBRE = socplan.nombre_socio, PLANTA = plansoc.nombre, CATEGORIA = socplan.id_categoria };
+
+                gridverplantas.DataSource = allsociosplanta.OrderBy(s => s.CATEGORIA).ToList();
+
+                if (gridverplantas.Rows.Count == 0)
+                {
+                    MessageBox.Show("No Existen Socios En Ninguna Planta", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    MessageBox.Show("Todos Los Socios!");
 
 
 
-            public void exportardatos(DataGridView datalistado)
+                }
+
+
+            }
+        }
+        //FIN BOTONES
+
+
+
+        public void exportardatos(DataGridView datalistado)
         {
 
             Microsoft.Office.Interop.Excel.Application exportarexcel = new Microsoft.Office.Interop.Excel.Application();
@@ -434,8 +419,8 @@ namespace SocioSindicato.ViewsAdministrador
             exportarexcel.Visible = true;
         }
 
-        private void btnddexcel_Click(object sender, EventArgs e)
-        {            
+        private void btDownload_Click(object sender, EventArgs e)
+        {
             if (gridverplantas.Rows.Count == 0)
             {
                 MessageBox.Show("No hay datos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -446,7 +431,6 @@ namespace SocioSindicato.ViewsAdministrador
                 exportardatos(gridverplantas);
             }
         }
-
         //public void mostrarAllplantas()
         //{
         //    using (sindicatoPFEntities context = new sindicatoPFEntities())
@@ -471,8 +455,9 @@ namespace SocioSindicato.ViewsAdministrador
                 e.Graphics.DrawString((e.RowIndex + 1).ToString(), e.InheritedRowStyle.Font, b, e.RowBounds.Location.X + 10, e.RowBounds.Location.Y + 4);
             }
         }
+      
 
-        private void btnordenarplanta_Click(object sender, EventArgs e)
+        private void btOrdenarCategoria_Click(object sender, EventArgs e)
         {
             if (cbordenarcatplant.SelectedIndex == -1)
             {
@@ -1684,160 +1669,168 @@ namespace SocioSindicato.ViewsAdministrador
             }
             else if (btnplantamujeresseleccionado == true)
             {
-                
-                    if (Convert.ToInt32(indice.ToString()) == 0)
+
+                if (Convert.ToInt32(indice.ToString()) == 0)
+                {
+                    if (btnplantamujeresseleccionado == true)
                     {
-                        if (btnplantamujeresseleccionado == true)
+
+                        using (sindicatoPFEntities context = new sindicatoPFEntities())
                         {
-
-                            using (sindicatoPFEntities context = new sindicatoPFEntities())
-                            {
-                                int idpcategoria = 1;
-                                string nombreplanta = "planta mujeres";
-                                var sociosplanta1 = from socplan in context.Socio
-                                                    join plansoc in context.Planta
-                                                    on socplan.id_planta equals plansoc.id_planta
-                                                    join cat in context.Categoria
-                                                    on socplan.id_categoria equals cat.id_categoria
-                                                    where cat.id_categoria.Equals(idpcategoria)
-                                                    where plansoc.nombre.Equals(nombreplanta)
-                                                    select new { NOMBRE = socplan.nombre_socio, RUT = socplan.rut_socio, PLANTA = plansoc.nombre, CATEGORIA = socplan.id_categoria };
-
-                                gridverplantas.DataSource = sociosplanta1.OrderBy(s => s.PLANTA).ToList();
-
-                            }
-
-                    }                         
-                    }
-                    else if (Convert.ToInt32(indice.ToString()) == 1)
-                    {
-                        if (btnplantamujeresseleccionado == true)
-                        {
-
-                            using (sindicatoPFEntities context = new sindicatoPFEntities())
-                            {
-                                int idpcategoria = 2;
+                            int idpcategoria = 1;
                             string nombreplanta = "planta mujeres";
                             var sociosplanta1 = from socplan in context.Socio
-                                                    join plansoc in context.Planta
-                                                    on socplan.id_planta equals plansoc.id_planta
-                                                    join cat in context.Categoria
-                                                    on socplan.id_categoria equals cat.id_categoria
-                                                    where cat.id_categoria.Equals(idpcategoria)
-                                                    where plansoc.nombre.Equals(nombreplanta)
-                                                    select new { NOMBRE = socplan.nombre_socio, RUT = socplan.rut_socio, PLANTA = plansoc.nombre, CATEGORIA = socplan.id_categoria };
+                                                join plansoc in context.Planta
+                                                on socplan.id_planta equals plansoc.id_planta
+                                                join cat in context.Categoria
+                                                on socplan.id_categoria equals cat.id_categoria
+                                                where cat.id_categoria.Equals(idpcategoria)
+                                                where plansoc.nombre.Equals(nombreplanta)
+                                                select new { NOMBRE = socplan.nombre_socio, RUT = socplan.rut_socio, PLANTA = plansoc.nombre, CATEGORIA = socplan.id_categoria };
 
-                                gridverplantas.DataSource = sociosplanta1.OrderBy(s => s.PLANTA).ToList();
-
-                            }
+                            gridverplantas.DataSource = sociosplanta1.OrderBy(s => s.PLANTA).ToList();
 
                         }
-                    }
-                    else if (Convert.ToInt32(indice.ToString()) == 2)
-                    {
-                        if (btnplantamujeresseleccionado == true)
-                        {
 
-                            using (sindicatoPFEntities context = new sindicatoPFEntities())
-                            {
-                                int idpcategoria = 3;
-                            string nombreplanta = "planta mujeres";
-                            var sociosplanta1 = from socplan in context.Socio
-                                                    join plansoc in context.Planta
-                                                    on socplan.id_planta equals plansoc.id_planta
-                                                    join cat in context.Categoria
-                                                    on socplan.id_categoria equals cat.id_categoria
-                                                    where cat.id_categoria.Equals(idpcategoria)
-                                                    where plansoc.nombre.Equals(nombreplanta)
-                                                    select new { NOMBRE = socplan.nombre_socio, RUT = socplan.rut_socio, PLANTA = plansoc.nombre, CATEGORIA = socplan.id_categoria };
-
-                                gridverplantas.DataSource = sociosplanta1.OrderBy(s => s.PLANTA).ToList();
-
-                            }
-
-                        }
-                    }
-                    else if (Convert.ToInt32(indice.ToString()) == 3)
-                    {
-                        if (btnplantamujeresseleccionado == true)
-                        {
-
-                            using (sindicatoPFEntities context = new sindicatoPFEntities())
-                            {
-                                int idpcategoria = 4;
-                            string nombreplanta = "planta mujeres";
-                            var sociosplanta1 = from socplan in context.Socio
-                                                    join plansoc in context.Planta
-                                                    on socplan.id_planta equals plansoc.id_planta
-                                                    join cat in context.Categoria
-                                                    on socplan.id_categoria equals cat.id_categoria
-                                                    where cat.id_categoria.Equals(idpcategoria)
-                                                    where plansoc.nombre.Equals(nombreplanta)
-                                                    select new { NOMBRE = socplan.nombre_socio, RUT = socplan.rut_socio, PLANTA = plansoc.nombre, CATEGORIA = socplan.id_categoria };
-
-                                gridverplantas.DataSource = sociosplanta1.OrderBy(s => s.PLANTA).ToList();
-
-                            }
-
-                        }
-                    }
-                    else if (Convert.ToInt32(indice.ToString()) == 4)
-                    {
-                        if (btnplantamujeresseleccionado == true)
-                        {
-
-                            using (sindicatoPFEntities context = new sindicatoPFEntities())
-                            {
-                                int idpcategoria = 5;
-                            string nombreplanta = "planta mujeres";
-                            var sociosplanta1 = from socplan in context.Socio
-                                                    join plansoc in context.Planta
-                                                    on socplan.id_planta equals plansoc.id_planta
-                                                    join cat in context.Categoria
-                                                    on socplan.id_categoria equals cat.id_categoria
-                                                    where cat.id_categoria.Equals(idpcategoria)
-                                                    where plansoc.nombre.Equals(nombreplanta)
-                                                    select new { NOMBRE = socplan.nombre_socio, RUT = socplan.rut_socio, PLANTA = plansoc.nombre, CATEGORIA = socplan.id_categoria };
-
-                                gridverplantas.DataSource = sociosplanta1.OrderBy(s => s.PLANTA).ToList();
-
-                            }
-
-                        }
-                    }
-                    else if (Convert.ToInt32(indice.ToString()) == 5)
-                    {
-                        if (btnplantamujeresseleccionado == true)
-                        {
-
-                            using (sindicatoPFEntities context = new sindicatoPFEntities())
-                            {
-                                int idpcategoria = 6;
-                            string nombreplanta = "planta mujeres";
-                            var sociosplanta1 = from socplan in context.Socio
-                                                    join plansoc in context.Planta
-                                                    on socplan.id_planta equals plansoc.id_planta
-                                                    join cat in context.Categoria
-                                                    on socplan.id_categoria equals cat.id_categoria
-                                                    where cat.id_categoria.Equals(idpcategoria)
-                                                    where plansoc.nombre.Equals(nombreplanta)
-                                                    select new { NOMBRE = socplan.nombre_socio, RUT = socplan.rut_socio, PLANTA = plansoc.nombre, CATEGORIA = socplan.id_categoria };
-
-                                gridverplantas.DataSource = sociosplanta1.OrderBy(s => s.PLANTA).ToList();
-
-                            }
-
-                        }
                     }
                 }
+                else if (Convert.ToInt32(indice.ToString()) == 1)
+                {
+                    if (btnplantamujeresseleccionado == true)
+                    {
+
+                        using (sindicatoPFEntities context = new sindicatoPFEntities())
+                        {
+                            int idpcategoria = 2;
+                            string nombreplanta = "planta mujeres";
+                            var sociosplanta1 = from socplan in context.Socio
+                                                join plansoc in context.Planta
+                                                on socplan.id_planta equals plansoc.id_planta
+                                                join cat in context.Categoria
+                                                on socplan.id_categoria equals cat.id_categoria
+                                                where cat.id_categoria.Equals(idpcategoria)
+                                                where plansoc.nombre.Equals(nombreplanta)
+                                                select new { NOMBRE = socplan.nombre_socio, RUT = socplan.rut_socio, PLANTA = plansoc.nombre, CATEGORIA = socplan.id_categoria };
+
+                            gridverplantas.DataSource = sociosplanta1.OrderBy(s => s.PLANTA).ToList();
+
+                        }
+
+                    }
+                }
+                else if (Convert.ToInt32(indice.ToString()) == 2)
+                {
+                    if (btnplantamujeresseleccionado == true)
+                    {
+
+                        using (sindicatoPFEntities context = new sindicatoPFEntities())
+                        {
+                            int idpcategoria = 3;
+                            string nombreplanta = "planta mujeres";
+                            var sociosplanta1 = from socplan in context.Socio
+                                                join plansoc in context.Planta
+                                                on socplan.id_planta equals plansoc.id_planta
+                                                join cat in context.Categoria
+                                                on socplan.id_categoria equals cat.id_categoria
+                                                where cat.id_categoria.Equals(idpcategoria)
+                                                where plansoc.nombre.Equals(nombreplanta)
+                                                select new { NOMBRE = socplan.nombre_socio, RUT = socplan.rut_socio, PLANTA = plansoc.nombre, CATEGORIA = socplan.id_categoria };
+
+                            gridverplantas.DataSource = sociosplanta1.OrderBy(s => s.PLANTA).ToList();
+
+                        }
+
+                    }
+                }
+                else if (Convert.ToInt32(indice.ToString()) == 3)
+                {
+                    if (btnplantamujeresseleccionado == true)
+                    {
+
+                        using (sindicatoPFEntities context = new sindicatoPFEntities())
+                        {
+                            int idpcategoria = 4;
+                            string nombreplanta = "planta mujeres";
+                            var sociosplanta1 = from socplan in context.Socio
+                                                join plansoc in context.Planta
+                                                on socplan.id_planta equals plansoc.id_planta
+                                                join cat in context.Categoria
+                                                on socplan.id_categoria equals cat.id_categoria
+                                                where cat.id_categoria.Equals(idpcategoria)
+                                                where plansoc.nombre.Equals(nombreplanta)
+                                                select new { NOMBRE = socplan.nombre_socio, RUT = socplan.rut_socio, PLANTA = plansoc.nombre, CATEGORIA = socplan.id_categoria };
+
+                            gridverplantas.DataSource = sociosplanta1.OrderBy(s => s.PLANTA).ToList();
+
+                        }
+
+                    }
+                }
+                else if (Convert.ToInt32(indice.ToString()) == 4)
+                {
+                    if (btnplantamujeresseleccionado == true)
+                    {
+
+                        using (sindicatoPFEntities context = new sindicatoPFEntities())
+                        {
+                            int idpcategoria = 5;
+                            string nombreplanta = "planta mujeres";
+                            var sociosplanta1 = from socplan in context.Socio
+                                                join plansoc in context.Planta
+                                                on socplan.id_planta equals plansoc.id_planta
+                                                join cat in context.Categoria
+                                                on socplan.id_categoria equals cat.id_categoria
+                                                where cat.id_categoria.Equals(idpcategoria)
+                                                where plansoc.nombre.Equals(nombreplanta)
+                                                select new { NOMBRE = socplan.nombre_socio, RUT = socplan.rut_socio, PLANTA = plansoc.nombre, CATEGORIA = socplan.id_categoria };
+
+                            gridverplantas.DataSource = sociosplanta1.OrderBy(s => s.PLANTA).ToList();
+
+                        }
+
+                    }
+                }
+                else if (Convert.ToInt32(indice.ToString()) == 5)
+                {
+                    if (btnplantamujeresseleccionado == true)
+                    {
+
+                        using (sindicatoPFEntities context = new sindicatoPFEntities())
+                        {
+                            int idpcategoria = 6;
+                            string nombreplanta = "planta mujeres";
+                            var sociosplanta1 = from socplan in context.Socio
+                                                join plansoc in context.Planta
+                                                on socplan.id_planta equals plansoc.id_planta
+                                                join cat in context.Categoria
+                                                on socplan.id_categoria equals cat.id_categoria
+                                                where cat.id_categoria.Equals(idpcategoria)
+                                                where plansoc.nombre.Equals(nombreplanta)
+                                                select new { NOMBRE = socplan.nombre_socio, RUT = socplan.rut_socio, PLANTA = plansoc.nombre, CATEGORIA = socplan.id_categoria };
+
+                            gridverplantas.DataSource = sociosplanta1.OrderBy(s => s.PLANTA).ToList();
+
+                        }
+
+                    }
+                }
+            }
             else
             {
-
                 MessageBox.Show("Selecciones una planta para ordenar", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
         }
-
+           
+         
        
+
+        private void btVolver_Click(object sender, EventArgs e)
+        {
+            Administrador bs = new Administrador();
+            this.Hide();
+            this.Close();
+
+        }       
     }
 }

@@ -125,21 +125,22 @@ namespace SocioSindicato
         ///
         /// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         ///LLAMAR A LAS VISTAS
-        private void Agrega_soc(Form childForm) 
+        public void Agrega_soc(Form childForm) 
         {
             if (newForm != null)
             {
                 newForm.Close();
             }
-            newForm = childForm;
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-            panel_desktop.Controls.Add(childForm);
-            panel_desktop.Tag = childForm;
-            childForm.BringToFront();
-            childForm.Show();
-            lbtitulo.Text = childForm.Text;
+                newForm = childForm;
+                childForm.TopLevel = false;
+                childForm.FormBorderStyle = FormBorderStyle.None;
+                childForm.Dock = DockStyle.Fill;
+                panel_desktop.Controls.Add(childForm);
+                panel_desktop.Tag = childForm;
+                childForm.BringToFront();
+                childForm.Show();
+                lbtitulo.Text = childForm.Text;         
+           
         }
 
 
@@ -251,7 +252,7 @@ namespace SocioSindicato
             }
         }
 
-        private void btnInicio_Click(object sender, EventArgs e)
+        public void btnInicio_Click(object sender, EventArgs e)
         {
             newForm.Close();           
             Reset();
@@ -259,7 +260,7 @@ namespace SocioSindicato
             lbtitulo.Text = "Inicio";
         }
 
-        private void Reset()
+        public void Reset()
         {
             disable_Button();
             leftBorderBtn.Visible = false;
@@ -286,6 +287,27 @@ namespace SocioSindicato
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void maximizar_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+            {
+                WindowState = FormWindowState.Maximized;
+            }
+            else if(WindowState == FormWindowState.Maximized)
+            {
+                WindowState = FormWindowState.Normal;
+            }
+        }
+
+        private void sing_out_Click(object sender, EventArgs e)
+        {
+            Form1 bs = new Form1();
+            this.Hide();
+            MessageBox.Show("Cuenta cerrada!");
+            bs.ShowDialog();
+            this.Close();
         }
     }
 }

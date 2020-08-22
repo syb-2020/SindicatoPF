@@ -22,15 +22,13 @@ namespace SocioSindicato.ViewsAdministrador
 
 
         }
-
-        private void btnvolvernavidad_Click(object sender, EventArgs e)
+        
+        private void btVolver_Click(object sender, EventArgs e)
         {
             Administrador bs = new Administrador();
             this.Hide();
-            bs.ShowDialog();
             this.Close();
         }
-        
 
         public void exportardatos(DataGridView datalistado)
         {
@@ -57,6 +55,21 @@ namespace SocioSindicato.ViewsAdministrador
             }
             exportarexcel.Visible = true;
         }
+
+        //BOTON DESCARGA LISTADO NIÑOS NAVIDAD
+        private void btDownload_Click(object sender, EventArgs e)
+        {
+            if (gridnavidadniños.Rows.Count == 0)
+            {
+                MessageBox.Show("No hay datos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+
+                exportardatos(gridnavidadniños);
+            }
+        }
+        //FIN BOTON LISTADO NIÑOZ NAVIDAD
         private void btndescargarexcel_Click(object sender, EventArgs e)
         {
             if (gridnavidadniños.Rows.Count == 0)
@@ -658,16 +671,19 @@ namespace SocioSindicato.ViewsAdministrador
                 
             }
         }
-        private void btnbuscarniñosnavidad_Click(object sender, EventArgs e)
+
+        /// BOTON BUSCAR NIÑOS NAVIDAD
+        /// 
+        private void btplanta1_Click(object sender, EventArgs e)
         {
-           if (comboniñosporedad.SelectedIndex==-1)
+            if (comboniñosporedad.SelectedIndex == -1)
             {
                 MessageBox.Show("Ingrese Campo Para Buscar", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
             int indice = comboniñosporedad.SelectedIndex;
 
-            if (Convert.ToInt32(indice.ToString() ) == 0)
+            if (Convert.ToInt32(indice.ToString()) == 0)
             {
                 //MENOS DE 1 AÑO NIÑOS
                 navidad.Clear();
@@ -678,8 +694,8 @@ namespace SocioSindicato.ViewsAdministrador
 
                     gridcargarn.DataSource = xxx.ToList();
 
-                    
-                    for (int i = 0; i < gridcargarn.RowCount ;i++)
+
+                    for (int i = 0; i < gridcargarn.RowCount; i++)
                     {
                         DateTime fechanacimiento = Convert.ToDateTime(gridcargarn.Rows[i].Cells[0].Value);
                         string name = Convert.ToString(gridcargarn.Rows[i].Cells[1].Value);
@@ -717,10 +733,10 @@ namespace SocioSindicato.ViewsAdministrador
                                         select new { Plan.nombre };
                         string nombreplan = listaPlan.ToList()[0].nombre;
 
-                                               
-                               
 
-                        if (dias >=0 && dias <= 211)
+
+
+                        if (dias >= 0 && dias <= 211)
                         {
                             if (sexo2.Equals("Hombre"))
                             {
@@ -738,13 +754,13 @@ namespace SocioSindicato.ViewsAdministrador
                                 navidad.Add(dato);
                                 dias = 0;
                             }
-                            
+
                         }
-                      
+
 
                     };
                     gridnavidadniños.DataSource = navidad.ToList();
-                   
+
                     if (gridnavidadniños.Rows.Count == 0)
                     {
 
@@ -806,13 +822,13 @@ namespace SocioSindicato.ViewsAdministrador
                         string nombreplan = listaPlan.ToList()[0].nombre;
 
 
-                       
+
 
                         if (dias >= 0 && dias <= 211)
                         {
                             if (sexo2.Equals("Mujer"))
                             {
-                               int edadniños = 0;
+                                int edadniños = 0;
                                 Datos dato = new Datos
                                 {
                                     nombrehijo = nombrehi,
@@ -826,19 +842,19 @@ namespace SocioSindicato.ViewsAdministrador
                                 navidad.Add(dato);
                                 dias = 0;
                             }
-                            
+
                         }
-                       
+
 
 
                     };
                     gridnavidadniños.DataSource = navidad.ToList();
                     if (gridnavidadniños.Rows.Count == 0)
                     {
-                        
-                            MessageBox.Show("No hay niñas menores a 1 año", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-                    }    
+                        MessageBox.Show("No hay niñas menores a 1 año", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    }
 
 
                 }
@@ -979,7 +995,7 @@ namespace SocioSindicato.ViewsAdministrador
                         string nombreplan = listaPlan.ToList()[0].nombre;
 
 
-                       
+
 
                         if (dias >= 212 && dias <= 576)
                         {
@@ -1147,7 +1163,7 @@ namespace SocioSindicato.ViewsAdministrador
                         string nombreplan = listaPlan.ToList()[0].nombre;
 
 
-                       
+
 
                         if (dias >= 577 && dias <= 941)
                         {
@@ -1315,7 +1331,7 @@ namespace SocioSindicato.ViewsAdministrador
                         string nombreplan = listaPlan.ToList()[0].nombre;
 
 
-                       
+
                         if (dias >= 942 && dias <= 1277)
                         {
                             if (sexo2.Equals("Mujer"))
@@ -1483,7 +1499,7 @@ namespace SocioSindicato.ViewsAdministrador
                         string nombreplan = listaPlan.ToList()[0].nombre;
 
 
-                       
+
 
                         if (dias >= 1278 && dias <= 1642)
                         {
@@ -1567,7 +1583,7 @@ namespace SocioSindicato.ViewsAdministrador
                         string nombreplan = listaPlan.ToList()[0].nombre;
 
 
-                       
+
                         if (dias >= 1643 && dias <= 2037)
                         {
                             if (sexo2.Equals("Hombre"))
@@ -1651,7 +1667,7 @@ namespace SocioSindicato.ViewsAdministrador
                         string nombreplan = listaPlan.ToList()[0].nombre;
 
 
-                      
+
 
                         if (dias >= 1643 && dias <= 2037)
                         {
@@ -1735,7 +1751,7 @@ namespace SocioSindicato.ViewsAdministrador
                         string nombreplan = listaPlan.ToList()[0].nombre;
 
 
-                       
+
 
                         if (dias >= 2038 && dias <= 2402)
                         {
@@ -1819,7 +1835,7 @@ namespace SocioSindicato.ViewsAdministrador
                         string nombreplan = listaPlan.ToList()[0].nombre;
 
 
-                       
+
 
                         if (dias >= 2038 && dias <= 2402)
                         {
@@ -1903,7 +1919,7 @@ namespace SocioSindicato.ViewsAdministrador
                         string nombreplan = listaPlan.ToList()[0].nombre;
 
 
-                       
+
 
                         if (dias >= 2403 && dias <= 2768)
                         {
@@ -1987,7 +2003,7 @@ namespace SocioSindicato.ViewsAdministrador
                         string nombreplan = listaPlan.ToList()[0].nombre;
 
 
-                       
+
                         if (dias >= 2403 && dias <= 2768)
                         {
                             if (sexo2.Equals("Mujer"))
@@ -2071,7 +2087,7 @@ namespace SocioSindicato.ViewsAdministrador
                         string nombreplan = listaPlan.ToList()[0].nombre;
 
 
-                      
+
 
                         if (dias >= 2769 && dias <= 3133)
                         {
@@ -2238,7 +2254,7 @@ namespace SocioSindicato.ViewsAdministrador
                         string nombreplan = listaPlan.ToList()[0].nombre;
 
 
-                      
+
 
                         if (dias >= 3134 && dias <= 3498)
                         {
@@ -2322,7 +2338,7 @@ namespace SocioSindicato.ViewsAdministrador
                         string nombreplan = listaPlan.ToList()[0].nombre;
 
 
-                       
+
 
                         if (dias >= 3134 && dias <= 3498)
                         {
@@ -2489,7 +2505,7 @@ namespace SocioSindicato.ViewsAdministrador
                         string nombreplan = listaPlan.ToList()[0].nombre;
 
 
-                        
+
 
                         if (dias >= 3499 && dias <= 3863)
                         {
@@ -2656,7 +2672,7 @@ namespace SocioSindicato.ViewsAdministrador
                         string nombreplan = listaPlan.ToList()[0].nombre;
 
 
-                       
+
 
                         if (dias >= 3864 && dias <= 4229)
                         {
@@ -2740,7 +2756,7 @@ namespace SocioSindicato.ViewsAdministrador
                         string nombreplan = listaPlan.ToList()[0].nombre;
 
 
-                       
+
 
                         if (dias >= 4230 && dias <= 4595)
                         {
@@ -2824,7 +2840,7 @@ namespace SocioSindicato.ViewsAdministrador
                         string nombreplan = listaPlan.ToList()[0].nombre;
 
 
-                      
+
 
                         if (dias >= 4230 && dias <= 4595)
                         {
@@ -2858,9 +2874,10 @@ namespace SocioSindicato.ViewsAdministrador
                 }
             }   //12 AÑO NIÑAS
 
-
         }
-       
+
+        // FIN BOTON BUSCAR NIÑOS NAVIDAD
+
         private void gridnavidadniños_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
         {
             using (SolidBrush b = new SolidBrush(gridnavidadniños.RowHeadersDefaultCellStyle.ForeColor))
@@ -2869,6 +2886,6 @@ namespace SocioSindicato.ViewsAdministrador
             }
         }
 
-       
+        
     }
 }

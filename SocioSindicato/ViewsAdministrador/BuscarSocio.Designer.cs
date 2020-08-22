@@ -28,256 +28,354 @@
         /// </summary>
         private void InitializeComponent()
         {
-			this.btnbuscar = new System.Windows.Forms.Button();
-			this.txtbuscar = new System.Windows.Forms.TextBox();
-			this.lbbuscarsocio = new System.Windows.Forms.Label();
-			this.gridbuscar = new System.Windows.Forms.DataGridView();
-			this.btnvolverbuscar = new System.Windows.Forms.Button();
-			this.imagenbuscarsociomostrar = new System.Windows.Forms.PictureBox();
-			this.btnddexcel = new System.Windows.Forms.Button();
-			this.btcargas = new System.Windows.Forms.Button();
-			this.gridConyuge = new System.Windows.Forms.DataGridView();
-			this.gridHijo = new System.Windows.Forms.DataGridView();
-			this.btconyuge = new System.Windows.Forms.Button();
-			this.gbtodo = new System.Windows.Forms.DataGridView();
-			this.btnexcelsocio = new System.Windows.Forms.Button();
-			this.btnexcelsocioconyuge = new System.Windows.Forms.Button();
-			this.btnexcelsociohijo = new System.Windows.Forms.Button();
-			((System.ComponentModel.ISupportInitialize)(this.gridbuscar)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.imagenbuscarsociomostrar)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.gridConyuge)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.gridHijo)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.gbtodo)).BeginInit();
-			this.SuspendLayout();
-			// 
-			// btnbuscar
-			// 
-			this.btnbuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-			this.btnbuscar.FlatAppearance.BorderSize = 0;
-			this.btnbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnbuscar.ForeColor = System.Drawing.Color.White;
-			this.btnbuscar.Location = new System.Drawing.Point(359, 63);
-			this.btnbuscar.Name = "btnbuscar";
-			this.btnbuscar.Size = new System.Drawing.Size(107, 23);
-			this.btnbuscar.TabIndex = 0;
-			this.btnbuscar.Text = "Buscar Socio";
-			this.btnbuscar.UseVisualStyleBackColor = false;
-			this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
-			// 
-			// txtbuscar
-			// 
-			this.txtbuscar.Location = new System.Drawing.Point(44, 63);
-			this.txtbuscar.Name = "txtbuscar";
-			this.txtbuscar.Size = new System.Drawing.Size(275, 20);
-			this.txtbuscar.TabIndex = 1;
-			// 
-			// lbbuscarsocio
-			// 
-			this.lbbuscarsocio.AutoSize = true;
-			this.lbbuscarsocio.Location = new System.Drawing.Point(601, 63);
-			this.lbbuscarsocio.Name = "lbbuscarsocio";
-			this.lbbuscarsocio.Size = new System.Drawing.Size(0, 13);
-			this.lbbuscarsocio.TabIndex = 2;
-			// 
-			// gridbuscar
-			// 
-			this.gridbuscar.AllowUserToOrderColumns = true;
-			this.gridbuscar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-			this.gridbuscar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.gridbuscar.Location = new System.Drawing.Point(44, 193);
-			this.gridbuscar.Name = "gridbuscar";
-			this.gridbuscar.Size = new System.Drawing.Size(575, 61);
-			this.gridbuscar.TabIndex = 3;
-			this.gridbuscar.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.gridbuscar_RowPostPaint);
-			// 
-			// btnvolverbuscar
-			// 
-			this.btnvolverbuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-			this.btnvolverbuscar.FlatAppearance.BorderSize = 0;
-			this.btnvolverbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnvolverbuscar.ForeColor = System.Drawing.Color.White;
-			this.btnvolverbuscar.Location = new System.Drawing.Point(821, 560);
-			this.btnvolverbuscar.Name = "btnvolverbuscar";
-			this.btnvolverbuscar.Size = new System.Drawing.Size(75, 23);
-			this.btnvolverbuscar.TabIndex = 4;
-			this.btnvolverbuscar.Text = "Volver";
-			this.btnvolverbuscar.UseVisualStyleBackColor = false;
-			this.btnvolverbuscar.Click += new System.EventHandler(this.btnvolverbuscar_Click);
-			// 
-			// imagenbuscarsociomostrar
-			// 
-			this.imagenbuscarsociomostrar.Location = new System.Drawing.Point(668, 120);
-			this.imagenbuscarsociomostrar.Name = "imagenbuscarsociomostrar";
-			this.imagenbuscarsociomostrar.Size = new System.Drawing.Size(173, 189);
-			this.imagenbuscarsociomostrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-			this.imagenbuscarsociomostrar.TabIndex = 5;
-			this.imagenbuscarsociomostrar.TabStop = false;
-			this.imagenbuscarsociomostrar.Click += new System.EventHandler(this.imagenbuscarsociomostrar_Click);
-			// 
-			// btnddexcel
-			// 
-			this.btnddexcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-			this.btnddexcel.FlatAppearance.BorderSize = 0;
-			this.btnddexcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnddexcel.ForeColor = System.Drawing.Color.White;
-			this.btnddexcel.Location = new System.Drawing.Point(468, 560);
-			this.btnddexcel.Name = "btnddexcel";
-			this.btnddexcel.Size = new System.Drawing.Size(193, 23);
-			this.btnddexcel.TabIndex = 6;
-			this.btnddexcel.Text = "Descargar Socios - Conyuge - Hijos";
-			this.btnddexcel.UseVisualStyleBackColor = false;
-			this.btnddexcel.Click += new System.EventHandler(this.btnddexcel_Click);
-			// 
-			// btcargas
-			// 
-			this.btcargas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-			this.btcargas.FlatAppearance.BorderSize = 0;
-			this.btcargas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btcargas.ForeColor = System.Drawing.Color.White;
-			this.btcargas.Location = new System.Drawing.Point(181, 120);
-			this.btcargas.Name = "btcargas";
-			this.btcargas.Size = new System.Drawing.Size(123, 23);
-			this.btcargas.TabIndex = 7;
-			this.btcargas.Text = "Buscar Hijos";
-			this.btcargas.UseVisualStyleBackColor = false;
-			this.btcargas.Click += new System.EventHandler(this.btcargas_Click);
-			// 
-			// gridConyuge
-			// 
-			this.gridConyuge.AllowUserToOrderColumns = true;
-			this.gridConyuge.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-			this.gridConyuge.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.gridConyuge.Location = new System.Drawing.Point(44, 269);
-			this.gridConyuge.Name = "gridConyuge";
-			this.gridConyuge.Size = new System.Drawing.Size(575, 56);
-			this.gridConyuge.TabIndex = 8;
-			this.gridConyuge.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.gridConyuge_RowPostPaint);
-			// 
-			// gridHijo
-			// 
-			this.gridHijo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-			this.gridHijo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.gridHijo.Location = new System.Drawing.Point(44, 345);
-			this.gridHijo.Name = "gridHijo";
-			this.gridHijo.Size = new System.Drawing.Size(575, 145);
-			this.gridHijo.TabIndex = 9;
-			this.gridHijo.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.gridHijo_RowPostPaint);
-			// 
-			// btconyuge
-			// 
-			this.btconyuge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-			this.btconyuge.FlatAppearance.BorderSize = 0;
-			this.btconyuge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btconyuge.ForeColor = System.Drawing.Color.White;
-			this.btconyuge.Location = new System.Drawing.Point(44, 120);
-			this.btconyuge.Name = "btconyuge";
-			this.btconyuge.Size = new System.Drawing.Size(111, 23);
-			this.btconyuge.TabIndex = 10;
-			this.btconyuge.Text = "Buscar Conyuge";
-			this.btconyuge.UseVisualStyleBackColor = false;
-			this.btconyuge.Click += new System.EventHandler(this.btconyuge_Click);
-			// 
-			// gbtodo
-			// 
-			this.gbtodo.AllowUserToOrderColumns = true;
-			this.gbtodo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.gbtodo.Location = new System.Drawing.Point(44, 160);
-			this.gbtodo.Name = "gbtodo";
-			this.gbtodo.Size = new System.Drawing.Size(575, 27);
-			this.gbtodo.TabIndex = 11;
-			this.gbtodo.Visible = false;
-			// 
-			// btnexcelsocio
-			// 
-			this.btnexcelsocio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-			this.btnexcelsocio.FlatAppearance.BorderSize = 0;
-			this.btnexcelsocio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnexcelsocio.ForeColor = System.Drawing.Color.White;
-			this.btnexcelsocio.Location = new System.Drawing.Point(44, 560);
-			this.btnexcelsocio.Name = "btnexcelsocio";
-			this.btnexcelsocio.Size = new System.Drawing.Size(110, 23);
-			this.btnexcelsocio.TabIndex = 12;
-			this.btnexcelsocio.Text = "Descargar Socio";
-			this.btnexcelsocio.UseVisualStyleBackColor = false;
-			this.btnexcelsocio.Click += new System.EventHandler(this.btnexcelsocio_Click);
-			// 
-			// btnexcelsocioconyuge
-			// 
-			this.btnexcelsocioconyuge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-			this.btnexcelsocioconyuge.FlatAppearance.BorderSize = 0;
-			this.btnexcelsocioconyuge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnexcelsocioconyuge.ForeColor = System.Drawing.Color.White;
-			this.btnexcelsocioconyuge.Location = new System.Drawing.Point(160, 560);
-			this.btnexcelsocioconyuge.Name = "btnexcelsocioconyuge";
-			this.btnexcelsocioconyuge.Size = new System.Drawing.Size(159, 23);
-			this.btnexcelsocioconyuge.TabIndex = 13;
-			this.btnexcelsocioconyuge.Text = "Descargar Socio - Conyuge";
-			this.btnexcelsocioconyuge.UseVisualStyleBackColor = false;
-			this.btnexcelsocioconyuge.Click += new System.EventHandler(this.btnexcelsocioconyuge_Click);
-			// 
-			// btnexcelsociohijo
-			// 
-			this.btnexcelsociohijo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-			this.btnexcelsociohijo.FlatAppearance.BorderSize = 0;
-			this.btnexcelsociohijo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnexcelsociohijo.ForeColor = System.Drawing.Color.White;
-			this.btnexcelsociohijo.Location = new System.Drawing.Point(334, 560);
-			this.btnexcelsociohijo.Name = "btnexcelsociohijo";
-			this.btnexcelsociohijo.Size = new System.Drawing.Size(128, 23);
-			this.btnexcelsociohijo.TabIndex = 14;
-			this.btnexcelsociohijo.Text = "Descargar Socio - Hijo";
-			this.btnexcelsociohijo.UseVisualStyleBackColor = false;
-			this.btnexcelsociohijo.Click += new System.EventHandler(this.btnexcelsociohijo_Click);
-			// 
-			// BuscarSocio
-			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(56)))), ((int)(((byte)(104)))));
-			this.ClientSize = new System.Drawing.Size(922, 618);
-			this.Controls.Add(this.btnexcelsociohijo);
-			this.Controls.Add(this.btnexcelsocioconyuge);
-			this.Controls.Add(this.btnexcelsocio);
-			this.Controls.Add(this.gbtodo);
-			this.Controls.Add(this.btconyuge);
-			this.Controls.Add(this.gridHijo);
-			this.Controls.Add(this.gridConyuge);
-			this.Controls.Add(this.btcargas);
-			this.Controls.Add(this.btnddexcel);
-			this.Controls.Add(this.imagenbuscarsociomostrar);
-			this.Controls.Add(this.btnvolverbuscar);
-			this.Controls.Add(this.gridbuscar);
-			this.Controls.Add(this.lbbuscarsocio);
-			this.Controls.Add(this.txtbuscar);
-			this.Controls.Add(this.btnbuscar);
-			this.Name = "BuscarSocio";
-			this.Text = "BuscarSocio";
-			((System.ComponentModel.ISupportInitialize)(this.gridbuscar)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.imagenbuscarsociomostrar)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.gridConyuge)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.gridHijo)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.gbtodo)).EndInit();
-			this.ResumeLayout(false);
-			this.PerformLayout();
+            this.txtbuscar = new System.Windows.Forms.TextBox();
+            this.lbbuscarsocio = new System.Windows.Forms.Label();
+            this.gridbuscar = new System.Windows.Forms.DataGridView();
+            this.imagenbuscarsociomostrar = new System.Windows.Forms.PictureBox();
+            this.btnddexcel = new System.Windows.Forms.Button();
+            this.gridConyuge = new System.Windows.Forms.DataGridView();
+            this.gridHijo = new System.Windows.Forms.DataGridView();
+            this.gbtodo = new System.Windows.Forms.DataGridView();
+            this.btDownload = new FontAwesome.Sharp.IconButton();
+            this.btDownloadSocioHijo = new FontAwesome.Sharp.IconButton();
+            this.btDownloadSocioConyu = new FontAwesome.Sharp.IconButton();
+            this.btDownloadTodos = new FontAwesome.Sharp.IconButton();
+            this.btVolver = new FontAwesome.Sharp.IconButton();
+            this.btBuscarUser = new FontAwesome.Sharp.IconButton();
+            this.btBuscarHijo = new FontAwesome.Sharp.IconButton();
+            this.btBuscarConyuge = new FontAwesome.Sharp.IconButton();
+            ((System.ComponentModel.ISupportInitialize)(this.gridbuscar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imagenbuscarsociomostrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridConyuge)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridHijo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gbtodo)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // txtbuscar
+            // 
+            this.txtbuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbuscar.Location = new System.Drawing.Point(107, 53);
+            this.txtbuscar.Name = "txtbuscar";
+            this.txtbuscar.Size = new System.Drawing.Size(790, 27);
+            this.txtbuscar.TabIndex = 1;
+            // 
+            // lbbuscarsocio
+            // 
+            this.lbbuscarsocio.AutoSize = true;
+            this.lbbuscarsocio.Location = new System.Drawing.Point(601, 63);
+            this.lbbuscarsocio.Name = "lbbuscarsocio";
+            this.lbbuscarsocio.Size = new System.Drawing.Size(0, 13);
+            this.lbbuscarsocio.TabIndex = 2;
+            // 
+            // gridbuscar
+            // 
+            this.gridbuscar.AllowUserToOrderColumns = true;
+            this.gridbuscar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridbuscar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(56)))), ((int)(((byte)(104)))));
+            this.gridbuscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridbuscar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridbuscar.Location = new System.Drawing.Point(108, 137);
+            this.gridbuscar.Name = "gridbuscar";
+            this.gridbuscar.Size = new System.Drawing.Size(686, 115);
+            this.gridbuscar.TabIndex = 3;
+            this.gridbuscar.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.gridbuscar_RowPostPaint);
+            // 
+            // imagenbuscarsociomostrar
+            // 
+            this.imagenbuscarsociomostrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.imagenbuscarsociomostrar.Location = new System.Drawing.Point(800, 137);
+            this.imagenbuscarsociomostrar.Name = "imagenbuscarsociomostrar";
+            this.imagenbuscarsociomostrar.Size = new System.Drawing.Size(301, 182);
+            this.imagenbuscarsociomostrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imagenbuscarsociomostrar.TabIndex = 5;
+            this.imagenbuscarsociomostrar.TabStop = false;
+            this.imagenbuscarsociomostrar.Click += new System.EventHandler(this.imagenbuscarsociomostrar_Click);
+            // 
+            // btnddexcel
+            // 
+            this.btnddexcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnddexcel.FlatAppearance.BorderSize = 0;
+            this.btnddexcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnddexcel.ForeColor = System.Drawing.Color.White;
+            this.btnddexcel.Location = new System.Drawing.Point(468, 560);
+            this.btnddexcel.Name = "btnddexcel";
+            this.btnddexcel.Size = new System.Drawing.Size(193, 23);
+            this.btnddexcel.TabIndex = 6;
+            this.btnddexcel.Text = "Descargar Socios - Conyuge - Hijos";
+            this.btnddexcel.UseVisualStyleBackColor = false;
+            // 
+            // gridConyuge
+            // 
+            this.gridConyuge.AllowUserToOrderColumns = true;
+            this.gridConyuge.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridConyuge.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(56)))), ((int)(((byte)(104)))));
+            this.gridConyuge.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridConyuge.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridConyuge.Location = new System.Drawing.Point(108, 269);
+            this.gridConyuge.Name = "gridConyuge";
+            this.gridConyuge.Size = new System.Drawing.Size(686, 109);
+            this.gridConyuge.TabIndex = 8;
+            this.gridConyuge.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.gridConyuge_RowPostPaint);
+            // 
+            // gridHijo
+            // 
+            this.gridHijo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridHijo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(56)))), ((int)(((byte)(104)))));
+            this.gridHijo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridHijo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridHijo.Location = new System.Drawing.Point(108, 384);
+            this.gridHijo.Name = "gridHijo";
+            this.gridHijo.Size = new System.Drawing.Size(686, 243);
+            this.gridHijo.TabIndex = 9;
+            this.gridHijo.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.gridHijo_RowPostPaint);
+            // 
+            // gbtodo
+            // 
+            this.gbtodo.AllowUserToOrderColumns = true;
+            this.gbtodo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gbtodo.Location = new System.Drawing.Point(108, 159);
+            this.gbtodo.Name = "gbtodo";
+            this.gbtodo.Size = new System.Drawing.Size(575, 27);
+            this.gbtodo.TabIndex = 11;
+            this.gbtodo.Visible = false;
+            // 
+            // btDownload
+            // 
+            this.btDownload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btDownload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btDownload.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btDownload.FlatAppearance.BorderSize = 0;
+            this.btDownload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btDownload.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btDownload.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDownload.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btDownload.IconChar = FontAwesome.Sharp.IconChar.Download;
+            this.btDownload.IconColor = System.Drawing.Color.Gainsboro;
+            this.btDownload.IconSize = 26;
+            this.btDownload.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btDownload.Location = new System.Drawing.Point(76, 633);
+            this.btDownload.Name = "btDownload";
+            this.btDownload.Rotation = 0D;
+            this.btDownload.Size = new System.Drawing.Size(170, 38);
+            this.btDownload.TabIndex = 27;
+            this.btDownload.Text = "Descargar Socio";
+            this.btDownload.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btDownload.UseVisualStyleBackColor = false;
+            this.btDownload.Click += new System.EventHandler(this.btDownload_Click);
+            // 
+            // btDownloadSocioHijo
+            // 
+            this.btDownloadSocioHijo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btDownloadSocioHijo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btDownloadSocioHijo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btDownloadSocioHijo.FlatAppearance.BorderSize = 0;
+            this.btDownloadSocioHijo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btDownloadSocioHijo.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btDownloadSocioHijo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDownloadSocioHijo.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btDownloadSocioHijo.IconChar = FontAwesome.Sharp.IconChar.Download;
+            this.btDownloadSocioHijo.IconColor = System.Drawing.Color.Gainsboro;
+            this.btDownloadSocioHijo.IconSize = 26;
+            this.btDownloadSocioHijo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btDownloadSocioHijo.Location = new System.Drawing.Point(580, 633);
+            this.btDownloadSocioHijo.Name = "btDownloadSocioHijo";
+            this.btDownloadSocioHijo.Rotation = 0D;
+            this.btDownloadSocioHijo.Size = new System.Drawing.Size(241, 38);
+            this.btDownloadSocioHijo.TabIndex = 28;
+            this.btDownloadSocioHijo.Text = "Descargar Socio y Hijo";
+            this.btDownloadSocioHijo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btDownloadSocioHijo.UseVisualStyleBackColor = false;
+            this.btDownloadSocioHijo.Click += new System.EventHandler(this.btDownloadSocioHijo_Click);
+            // 
+            // btDownloadSocioConyu
+            // 
+            this.btDownloadSocioConyu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btDownloadSocioConyu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btDownloadSocioConyu.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btDownloadSocioConyu.FlatAppearance.BorderSize = 0;
+            this.btDownloadSocioConyu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btDownloadSocioConyu.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btDownloadSocioConyu.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDownloadSocioConyu.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btDownloadSocioConyu.IconChar = FontAwesome.Sharp.IconChar.Download;
+            this.btDownloadSocioConyu.IconColor = System.Drawing.Color.Gainsboro;
+            this.btDownloadSocioConyu.IconSize = 26;
+            this.btDownloadSocioConyu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btDownloadSocioConyu.Location = new System.Drawing.Point(278, 633);
+            this.btDownloadSocioConyu.Name = "btDownloadSocioConyu";
+            this.btDownloadSocioConyu.Rotation = 0D;
+            this.btDownloadSocioConyu.Size = new System.Drawing.Size(273, 38);
+            this.btDownloadSocioConyu.TabIndex = 29;
+            this.btDownloadSocioConyu.Text = "Descargar Socio y Conyuge";
+            this.btDownloadSocioConyu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btDownloadSocioConyu.UseVisualStyleBackColor = false;
+            this.btDownloadSocioConyu.Click += new System.EventHandler(this.btDownloadSocioConyu_Click);
+            // 
+            // btDownloadTodos
+            // 
+            this.btDownloadTodos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btDownloadTodos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btDownloadTodos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btDownloadTodos.FlatAppearance.BorderSize = 0;
+            this.btDownloadTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btDownloadTodos.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btDownloadTodos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDownloadTodos.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btDownloadTodos.IconChar = FontAwesome.Sharp.IconChar.Download;
+            this.btDownloadTodos.IconColor = System.Drawing.Color.Gainsboro;
+            this.btDownloadTodos.IconSize = 26;
+            this.btDownloadTodos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btDownloadTodos.Location = new System.Drawing.Point(846, 633);
+            this.btDownloadTodos.Name = "btDownloadTodos";
+            this.btDownloadTodos.Rotation = 0D;
+            this.btDownloadTodos.Size = new System.Drawing.Size(255, 38);
+            this.btDownloadTodos.TabIndex = 30;
+            this.btDownloadTodos.Text = "Descargar Todos";
+            this.btDownloadTodos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btDownloadTodos.UseVisualStyleBackColor = false;
+            this.btDownloadTodos.Click += new System.EventHandler(this.btDownloadTodos_Click);
+            // 
+            // btVolver
+            // 
+            this.btVolver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btVolver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btVolver.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btVolver.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btVolver.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btVolver.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btVolver.IconChar = FontAwesome.Sharp.IconChar.ExchangeAlt;
+            this.btVolver.IconColor = System.Drawing.Color.Gainsboro;
+            this.btVolver.IconSize = 26;
+            this.btVolver.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btVolver.Location = new System.Drawing.Point(1145, 12);
+            this.btVolver.Name = "btVolver";
+            this.btVolver.Rotation = 0D;
+            this.btVolver.Size = new System.Drawing.Size(93, 38);
+            this.btVolver.TabIndex = 32;
+            this.btVolver.Text = "Volver";
+            this.btVolver.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btVolver.UseVisualStyleBackColor = false;
+            this.btVolver.Click += new System.EventHandler(this.btVolver_Click);
+            // 
+            // btBuscarUser
+            // 
+            this.btBuscarUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btBuscarUser.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btBuscarUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btBuscarUser.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btBuscarUser.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btBuscarUser.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btBuscarUser.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btBuscarUser.IconColor = System.Drawing.Color.White;
+            this.btBuscarUser.IconSize = 26;
+            this.btBuscarUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btBuscarUser.Location = new System.Drawing.Point(931, 47);
+            this.btBuscarUser.Name = "btBuscarUser";
+            this.btBuscarUser.Rotation = 0D;
+            this.btBuscarUser.Size = new System.Drawing.Size(170, 38);
+            this.btBuscarUser.TabIndex = 31;
+            this.btBuscarUser.Text = "Buscar Socio";
+            this.btBuscarUser.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btBuscarUser.UseVisualStyleBackColor = false;
+            this.btBuscarUser.Click += new System.EventHandler(this.btBuscarUser_Click);
+            // 
+            // btBuscarHijo
+            // 
+            this.btBuscarHijo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btBuscarHijo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btBuscarHijo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btBuscarHijo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btBuscarHijo.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btBuscarHijo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btBuscarHijo.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btBuscarHijo.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btBuscarHijo.IconColor = System.Drawing.Color.White;
+            this.btBuscarHijo.IconSize = 26;
+            this.btBuscarHijo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btBuscarHijo.Location = new System.Drawing.Point(800, 384);
+            this.btBuscarHijo.Name = "btBuscarHijo";
+            this.btBuscarHijo.Rotation = 0D;
+            this.btBuscarHijo.Size = new System.Drawing.Size(301, 38);
+            this.btBuscarHijo.TabIndex = 33;
+            this.btBuscarHijo.Text = "Buscar Hijo";
+            this.btBuscarHijo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btBuscarHijo.UseVisualStyleBackColor = false;
+            this.btBuscarHijo.Click += new System.EventHandler(this.btBuscarHijo_Click);
+            // 
+            // btBuscarConyuge
+            // 
+            this.btBuscarConyuge.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btBuscarConyuge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btBuscarConyuge.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btBuscarConyuge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btBuscarConyuge.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btBuscarConyuge.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btBuscarConyuge.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btBuscarConyuge.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btBuscarConyuge.IconColor = System.Drawing.Color.White;
+            this.btBuscarConyuge.IconSize = 26;
+            this.btBuscarConyuge.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btBuscarConyuge.Location = new System.Drawing.Point(800, 340);
+            this.btBuscarConyuge.Name = "btBuscarConyuge";
+            this.btBuscarConyuge.Rotation = 0D;
+            this.btBuscarConyuge.Size = new System.Drawing.Size(301, 38);
+            this.btBuscarConyuge.TabIndex = 34;
+            this.btBuscarConyuge.Text = "Buscar Conyuge";
+            this.btBuscarConyuge.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btBuscarConyuge.UseVisualStyleBackColor = false;
+            this.btBuscarConyuge.Click += new System.EventHandler(this.btBuscarConyuge_Click);
+            // 
+            // BuscarSocio
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(56)))), ((int)(((byte)(104)))));
+            this.ClientSize = new System.Drawing.Size(1250, 747);
+            this.Controls.Add(this.btBuscarConyuge);
+            this.Controls.Add(this.btBuscarHijo);
+            this.Controls.Add(this.btVolver);
+            this.Controls.Add(this.btBuscarUser);
+            this.Controls.Add(this.btDownloadTodos);
+            this.Controls.Add(this.btDownloadSocioConyu);
+            this.Controls.Add(this.btDownloadSocioHijo);
+            this.Controls.Add(this.btDownload);
+            this.Controls.Add(this.gbtodo);
+            this.Controls.Add(this.gridHijo);
+            this.Controls.Add(this.gridConyuge);
+            this.Controls.Add(this.btnddexcel);
+            this.Controls.Add(this.imagenbuscarsociomostrar);
+            this.Controls.Add(this.gridbuscar);
+            this.Controls.Add(this.lbbuscarsocio);
+            this.Controls.Add(this.txtbuscar);
+            this.Name = "BuscarSocio";
+            this.Text = "BuscarSocio";
+            ((System.ComponentModel.ISupportInitialize)(this.gridbuscar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imagenbuscarsociomostrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridConyuge)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridHijo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gbtodo)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnbuscar;
         private System.Windows.Forms.TextBox txtbuscar;
         private System.Windows.Forms.Label lbbuscarsocio;
         private System.Windows.Forms.DataGridView gridbuscar;
-        private System.Windows.Forms.Button btnvolverbuscar;
         private System.Windows.Forms.PictureBox imagenbuscarsociomostrar;
         private System.Windows.Forms.Button btnddexcel;
-        private System.Windows.Forms.Button btcargas;
         private System.Windows.Forms.DataGridView gridConyuge;
         private System.Windows.Forms.DataGridView gridHijo;
-        private System.Windows.Forms.Button btconyuge;
         private System.Windows.Forms.DataGridView gbtodo;
-        private System.Windows.Forms.Button btnexcelsocio;
-        private System.Windows.Forms.Button btnexcelsocioconyuge;
-        private System.Windows.Forms.Button btnexcelsociohijo;
+        private FontAwesome.Sharp.IconButton btDownload;
+        private FontAwesome.Sharp.IconButton btDownloadSocioHijo;
+        private FontAwesome.Sharp.IconButton btDownloadSocioConyu;
+        private FontAwesome.Sharp.IconButton btDownloadTodos;
+        private FontAwesome.Sharp.IconButton btVolver;
+        private FontAwesome.Sharp.IconButton btBuscarUser;
+        private FontAwesome.Sharp.IconButton btBuscarHijo;
+        private FontAwesome.Sharp.IconButton btBuscarConyuge;
     }
 }
