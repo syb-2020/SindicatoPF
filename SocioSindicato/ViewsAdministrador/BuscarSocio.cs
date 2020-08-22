@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
@@ -79,6 +80,7 @@ namespace SocioSindicato.ViewsAdministrador
                         gridConyuge.DataSource = "";
                         gridHijo.DataSource = "";
                         gbtodo.DataSource = listadoTodo.ToList();
+                       
 
 
 
@@ -124,7 +126,6 @@ namespace SocioSindicato.ViewsAdministrador
 
             Microsoft.Office.Interop.Excel.Application exportarexcel = new Microsoft.Office.Interop.Excel.Application();
             exportarexcel.Application.Workbooks.Add(true);
-           
             
 
             int indicecolum = 0;
@@ -132,8 +133,12 @@ namespace SocioSindicato.ViewsAdministrador
 
             foreach (DataGridViewColumn columna in datalistado.Columns)
             {
-                indicecolum++;
-                exportarexcel.Cells[1, indicecolum] = columna.Name;              
+               
+
+
+                    indicecolum++;
+                    exportarexcel.Cells[1, indicecolum] = columna.Name;
+                         
             }
            
             int indicefila = 0;
@@ -143,8 +148,10 @@ namespace SocioSindicato.ViewsAdministrador
                 indicecolum = 0;               
                 foreach (DataGridViewColumn columna in datalistado.Columns)
                 {
-                    indicecolum++;
-                    exportarexcel.Cells[indicefila + 1, indicecolum] = fila.Cells[columna.Name].Value;
+                  
+                        indicecolum++;
+                        exportarexcel.Cells[indicefila + 1, indicecolum] = fila.Cells[columna.Name].Value;
+       
                 }
                 
             }

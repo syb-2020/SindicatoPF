@@ -205,6 +205,7 @@
             this.combocategoriasocio.Name = "combocategoriasocio";
             this.combocategoriasocio.Size = new System.Drawing.Size(200, 21);
             this.combocategoriasocio.TabIndex = 16;
+            this.combocategoriasocio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.combocategoriasocio_KeyPress);
             // 
             // label6
             // 
@@ -227,6 +228,7 @@
             this.combocontratosocio.Name = "combocontratosocio";
             this.combocontratosocio.Size = new System.Drawing.Size(200, 21);
             this.combocontratosocio.TabIndex = 49;
+            this.combocontratosocio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.combocontratosocio_KeyPress);
             // 
             // label3
             // 
@@ -253,6 +255,7 @@
             this.comboplantasocio.Name = "comboplantasocio";
             this.comboplantasocio.Size = new System.Drawing.Size(200, 21);
             this.comboplantasocio.TabIndex = 51;
+            this.comboplantasocio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboplantasocio_KeyPress);
             // 
             // label7
             // 
@@ -328,6 +331,7 @@
             this.comboestadocivilagregar.Name = "comboestadocivilagregar";
             this.comboestadocivilagregar.Size = new System.Drawing.Size(200, 21);
             this.comboestadocivilagregar.TabIndex = 59;
+            this.comboestadocivilagregar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboestadocivilagregar_KeyPress);
             // 
             // label25
             // 
@@ -442,6 +446,7 @@
             this.comboconvivienteconyugesocio.Name = "comboconvivienteconyugesocio";
             this.comboconvivienteconyugesocio.Size = new System.Drawing.Size(200, 21);
             this.comboconvivienteconyugesocio.TabIndex = 78;
+            this.comboconvivienteconyugesocio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboconvivienteconyugesocio_KeyPress);
             // 
             // label26
             // 
@@ -515,6 +520,7 @@
             this.cbSexo.Name = "cbSexo";
             this.cbSexo.Size = new System.Drawing.Size(200, 21);
             this.cbSexo.TabIndex = 89;
+            this.cbSexo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbSexo_KeyPress);
             // 
             // label28
             // 

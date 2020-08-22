@@ -42,6 +42,7 @@
             this.btnddexcel = new System.Windows.Forms.Button();
             this.cbordenarcatplant = new System.Windows.Forms.ComboBox();
             this.btnordenarplanta = new System.Windows.Forms.Button();
+            this.btnmujeresplanta = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridverplantas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -163,7 +164,7 @@
             this.btntodos.FlatAppearance.BorderSize = 0;
             this.btntodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btntodos.ForeColor = System.Drawing.Color.White;
-            this.btntodos.Location = new System.Drawing.Point(548, 83);
+            this.btntodos.Location = new System.Drawing.Point(677, 83);
             this.btntodos.Name = "btntodos";
             this.btntodos.Size = new System.Drawing.Size(75, 23);
             this.btntodos.TabIndex = 8;
@@ -174,6 +175,7 @@
             // gridverplantas
             // 
             this.gridverplantas.AllowUserToOrderColumns = true;
+            this.gridverplantas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridverplantas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridverplantas.Location = new System.Drawing.Point(115, 149);
             this.gridverplantas.Name = "gridverplantas";
@@ -232,12 +234,27 @@
             this.btnordenarplanta.UseVisualStyleBackColor = false;
             this.btnordenarplanta.Click += new System.EventHandler(this.btnordenarplanta_Click);
             // 
+            // btnmujeresplanta
+            // 
+            this.btnmujeresplanta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnmujeresplanta.FlatAppearance.BorderSize = 0;
+            this.btnmujeresplanta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnmujeresplanta.ForeColor = System.Drawing.Color.White;
+            this.btnmujeresplanta.Location = new System.Drawing.Point(528, 83);
+            this.btnmujeresplanta.Name = "btnmujeresplanta";
+            this.btnmujeresplanta.Size = new System.Drawing.Size(125, 23);
+            this.btnmujeresplanta.TabIndex = 14;
+            this.btnmujeresplanta.Text = "Planta Mujeres";
+            this.btnmujeresplanta.UseVisualStyleBackColor = false;
+            this.btnmujeresplanta.Click += new System.EventHandler(this.btnmujeresplanta_Click);
+            // 
             // Plantas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(56)))), ((int)(((byte)(104)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnmujeresplanta);
             this.Controls.Add(this.btnordenarplanta);
             this.Controls.Add(this.cbordenarcatplant);
             this.Controls.Add(this.btnddexcel);
@@ -276,5 +293,6 @@
         private System.Windows.Forms.Button btnddexcel;
         private System.Windows.Forms.ComboBox cbordenarcatplant;
         private System.Windows.Forms.Button btnordenarplanta;
+        private System.Windows.Forms.Button btnmujeresplanta;
     }
 }

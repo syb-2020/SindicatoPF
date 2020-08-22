@@ -69,6 +69,7 @@
             // grideliminar
             // 
             this.grideliminar.AllowUserToOrderColumns = true;
+            this.grideliminar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grideliminar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grideliminar.Location = new System.Drawing.Point(87, 118);
             this.grideliminar.Name = "grideliminar";

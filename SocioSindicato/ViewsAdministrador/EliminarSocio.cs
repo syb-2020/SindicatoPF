@@ -77,6 +77,7 @@ namespace SocioSindicato.ViewsAdministrador
 
         }
 
+        bool estadoEliminado = false;
 
         private void btneliminar_Click(object sender, EventArgs e)
         {
@@ -95,7 +96,7 @@ namespace SocioSindicato.ViewsAdministrador
                 }
                 else
                 {
-
+                    
                    
                         var result3 = from c in context.Socio
                                       where c.rut_socio.Equals(eli)
@@ -179,12 +180,8 @@ namespace SocioSindicato.ViewsAdministrador
 
                                     context.SaveChanges();
 
-
-                                    MessageBox.Show("Socio Eliminado!");
-                                    grideliminar.DataSource = "";
-                                    txteliminar.Text = "";
-                                    pb.Image = null;
-
+                                    estadoEliminado = true;
+                              
 
 
                             }
@@ -241,12 +238,9 @@ namespace SocioSindicato.ViewsAdministrador
                                 context.Socio.Remove(context.Socio.Find(rut_soc3));
 
                                 context.SaveChanges();
+                                estadoEliminado = true;
 
 
-                                MessageBox.Show("Socio Eliminado!");
-                                grideliminar.DataSource = "";
-                                txteliminar.Text = "";
-                                pb.Image = null;
 
 
 
@@ -313,10 +307,7 @@ namespace SocioSindicato.ViewsAdministrador
                                 context.SaveChanges();
 
 
-                                MessageBox.Show("Socio Eliminado!");
-                                grideliminar.DataSource = "";
-                                txteliminar.Text = "";
-                                pb.Image = null;
+                            estadoEliminado = true;
 
 
 
@@ -366,20 +357,34 @@ namespace SocioSindicato.ViewsAdministrador
                             context.SaveChanges();
 
 
-                            MessageBox.Show("Socio Eliminado!");
-                            grideliminar.DataSource = "";
-                            txteliminar.Text = "";
-                            pb.Image = null;
+                        estadoEliminado = true;
                     }
-                  
 
 
 
-                    
-                   
+                    if (estadoEliminado == true)
+                    {
+                        MessageBox.Show("Socio Eliminado!");
+                        grideliminar.DataSource = "";
+                        txteliminar.Text = "";
+                        pb.Image = null;
 
-                   
-                   
+                        
+
+                    }
+                    else if (estadoEliminado==false)
+                    {
+                        MessageBox.Show("Socio No Eliminado!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        grideliminar.DataSource = "";
+                        txteliminar.Text = "";
+                        pb.Image = null;
+                    }
+
+                    estadoEliminado = false;
+
+
+
+
                 }
             }
         }

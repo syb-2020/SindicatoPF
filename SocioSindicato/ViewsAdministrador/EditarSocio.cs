@@ -566,7 +566,7 @@ namespace SocioSindicato.ViewsAdministrador
 
         private void btneliminarcon_Click(object sender, EventArgs e)
         {
-            if (buscar_rut == "")
+            if (txtrutsocio.Text == "")
             {
 
                 MessageBox.Show("Ingrese Rut Del Socio Para Eliminar!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -731,7 +731,7 @@ namespace SocioSindicato.ViewsAdministrador
 
         private void btneliminarhi_Click(object sender, EventArgs e)
         {
-            if (buscar_rut == "")
+            if (txtrutsocio.Text == "")
             {
 
                 MessageBox.Show("Ingrese Rut Del Socio Para Eliminar!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -739,20 +739,20 @@ namespace SocioSindicato.ViewsAdministrador
             }
             else
             {
+
                 try
                 {
+                    string ruteliminarhijo = txtnombrehijosocio.Text;
                     using (sindicatoPFEntities context = new sindicatoPFEntities())
                     {
                         var result2 = from c in context.Hijo
-                                      where c.rut_socio.Equals(buscar_rut)
+                                      where c.nombre.Equals(ruteliminarhijo)
                                       select new { id_hij = c.id_hijo };
 
-                        int rut_soc2 = result2.ToList()[1].id_hij;
+                        int rut_soc2 = result2.ToList()[0].id_hij;
 
 
                         //cbhijossocio
-
-
 
                         context.Hijo.Remove(context.Hijo.Find(rut_soc2));
 
@@ -839,7 +839,7 @@ namespace SocioSindicato.ViewsAdministrador
                     cbSexo.SelectedIndex = 0;
                     datenacimientohijosocio.Value = DateTime.Now;
 
-                    gridcapdatosedi.DataSource = mashijos.ToArray();
+                  
 
                     foreach (var a in mashijos)
                     {
@@ -857,6 +857,9 @@ namespace SocioSindicato.ViewsAdministrador
 
                     }
                     context.SaveChanges();
+                    mashijos.Clear();
+                    gridcapdatosedi.DataSource = mashijos.ToArray();
+
                     var bushij = from c in context.Socio
                                  join h in context.Hijo
                                  on c.rut_socio equals h.rut_socio
@@ -880,7 +883,7 @@ namespace SocioSindicato.ViewsAdministrador
 
         private void cbhijossocio_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+            e.Handled = true;
 
         }
 
@@ -903,44 +906,86 @@ namespace SocioSindicato.ViewsAdministrador
             using (sindicatoPFEntities context = new sindicatoPFEntities())
             {
                 
+                
 
-                int nombrexd = Convert.ToInt32(cbhijossocio.SelectedValue.ToString());
-               
-                var bushij = from c in context.Socio
-                             join h in context.Hijo
-                             on c.rut_socio equals h.rut_socio
-                             where h.id_hijo.Equals(nombrexd)
-                             select new { h.id_hijo, h.nombre, c.rut_socio };
+                if (txtbuscar.Text=="")
+				{
+                    MessageBox.Show("No se ha seleccionado ningun hijo", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-
-
-           
-                int cod = bushij.ToList()[0].id_hijo;
-                Hijo nuevohij = new Hijo();
-                nuevohij = context.Hijo.Find(cod);
-
-
-                txtnombrehijosocio.Text = nuevohij.nombre;
-                txtruthijosocio.Text = nuevohij.rut_hijo;
-                cbSexo.Text = nuevohij.sexo;
-                datenacimientohijosocio.Value = Convert.ToDateTime(nuevohij.nacimiento);
-
-                string rut3 = bushij.ToList()[0].rut_socio;
-                var bushij2 = from c in context.Socio
-                             join h in context.Hijo
-                             on c.rut_socio equals h.rut_socio
-                             where h.rut_socio.Equals(rut3)
-                             select new { h.id_hijo, h.nombre, c.rut_socio };
+				}
+				else
+				{
+                    int nombrexd = Convert.ToInt32(cbhijossocio.SelectedValue.ToString());
+                    var bushij = from c in context.Socio
+                                 join h in context.Hijo
+                                 on c.rut_socio equals h.rut_socio
+                                 where h.id_hijo.Equals(nombrexd)
+                                 select new { h.id_hijo, h.nombre, c.rut_socio };
 
 
-              
-                cbhijossocio.DataSource = bushij2.ToList();
-                cbhijossocio.DisplayMember = "nombre";
-                cbhijossocio.ValueMember = "id_hijo";
-                MessageBox.Show("Hijo Seleccionado!");
-               
+
+
+                    int cod = bushij.ToList()[0].id_hijo;
+                    Hijo nuevohij = new Hijo();
+                    nuevohij = context.Hijo.Find(cod);
+
+
+                    txtnombrehijosocio.Text = nuevohij.nombre;
+                    txtruthijosocio.Text = nuevohij.rut_hijo;
+                    cbSexo.Text = nuevohij.sexo;
+                    datenacimientohijosocio.Value = Convert.ToDateTime(nuevohij.nacimiento);
+
+                    string rut3 = bushij.ToList()[0].rut_socio;
+                    var bushij2 = from c in context.Socio
+                                  join h in context.Hijo
+                                  on c.rut_socio equals h.rut_socio
+                                  where h.rut_socio.Equals(rut3)
+                                  select new { h.id_hijo, h.nombre, c.rut_socio };
+
+
+
+                    cbhijossocio.DataSource = bushij2.ToList();
+                    cbhijossocio.DisplayMember = "nombre";
+                    cbhijossocio.ValueMember = "id_hijo";
+                    MessageBox.Show("Hijo Seleccionado!");
+
+                }
+
+
+
+
 
             }
+        }
+
+        private void combocategoriasocio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void combocontratosocio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void comboplantasocio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void comboestadocivilagregar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void comboconvivienteconyugesocio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void cbSexo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }

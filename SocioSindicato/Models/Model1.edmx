@@ -54,7 +54,7 @@
             <PropertyRef Name="rut_socio" />
           </Key>
           <Property Name="rut_socio" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="imagen" Type="image" Nullable="false" />
+          <Property Name="imagen" Type="image" />
           <Property Name="nombre_socio" Type="varchar" MaxLength="500" Nullable="false" />
           <Property Name="fecha_ingreso" Type="datetime" />
           <Property Name="id_categoria" Type="int" Nullable="false" />
@@ -238,7 +238,7 @@
             <PropertyRef Name="rut_socio" />
           </Key>
           <Property Name="rut_socio" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="imagen" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+          <Property Name="imagen" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="nombre_socio" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="fecha_ingreso" Type="DateTime" Precision="3" />
           <Property Name="id_categoria" Type="Int32" Nullable="false" />

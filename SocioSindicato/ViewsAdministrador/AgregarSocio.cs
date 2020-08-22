@@ -1,4 +1,5 @@
-﻿using SocioSindicato.Models;
+﻿using EO.WebEngine;
+using SocioSindicato.Models;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -65,9 +66,6 @@ namespace SocioSindicato.ViewsAdministrador
             bs.ShowDialog();
             this.Close();
         }
-
-
-       
 
         private void btnseleccionarimagen_Click(object sender, EventArgs e)
         {
@@ -257,7 +255,7 @@ namespace SocioSindicato.ViewsAdministrador
                     cbSexo.SelectedIndex = 0;
                     datenacimientohijosocio.Value = DateTime.Now;
                     gridpruebahijo.DataSource = "";
-
+                    mashijos.Clear();
                     MessageBox.Show("Socio Agregado Correctamente!");
 
                 }
@@ -295,7 +293,7 @@ namespace SocioSindicato.ViewsAdministrador
                     txtruthijosocio.Text = "";
                     cbSexo.SelectedIndex = 0;
                     datenacimientohijosocio.Value = DateTime.Now;
-
+                    mashijos.Clear();
                     gridpruebahijo.DataSource = "";
                 }
             }
@@ -384,8 +382,11 @@ namespace SocioSindicato.ViewsAdministrador
                     txtruthijosocio.Text = "";
                     cbSexo.SelectedIndex = 0;
                     datenacimientohijosocio.Value = DateTime.Now;
+                    mashijos.Clear();
 
                     gridpruebahijo.DataSource = "";
+
+
 
                 }
                 catch (Exception)
@@ -421,7 +422,7 @@ namespace SocioSindicato.ViewsAdministrador
                     txtruthijosocio.Text = "";
                     cbSexo.SelectedIndex = 0;
                     datenacimientohijosocio.Value = DateTime.Now;
-
+                    mashijos.Clear();
                     gridpruebahijo.DataSource = "";
                 }
             }
@@ -501,6 +502,7 @@ namespace SocioSindicato.ViewsAdministrador
                     cbSexo.SelectedIndex = 0;
                     datenacimientohijosocio.Value = DateTime.Now;
                     gridpruebahijo.DataSource = "";
+                    mashijos.Clear();
 
                     MessageBox.Show("Socio Agregado Correctamente!");
 
@@ -540,6 +542,7 @@ namespace SocioSindicato.ViewsAdministrador
                     cbSexo.SelectedIndex = 0;
                     datenacimientohijosocio.Value = DateTime.Now;
                     gridpruebahijo.DataSource = "";
+                    mashijos.Clear();
                 }
             }
         }
@@ -616,8 +619,12 @@ namespace SocioSindicato.ViewsAdministrador
                     txtruthijosocio.Text = "";
                     cbSexo.SelectedIndex = 0;
                     datenacimientohijosocio.Value = DateTime.Now;
-                    gridpruebahijo.DataSource = "";
+                    mashijos.Clear();
 
+                   
+                    
+
+                    gridpruebahijo.DataSource = "";
                     MessageBox.Show("Socio Agregado Con Hijo Correctamente!");
 
                    
@@ -659,8 +666,39 @@ namespace SocioSindicato.ViewsAdministrador
                     datenacimientohijosocio.Value = DateTime.Now;
 
                     gridpruebahijo.DataSource = "";
+                    mashijos.Clear();
                 }
             }
+        }
+
+        private void combocategoriasocio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void combocontratosocio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void comboplantasocio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void comboestadocivilagregar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void comboconvivienteconyugesocio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void cbSexo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }

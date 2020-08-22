@@ -91,6 +91,7 @@
             // gridnavidadniños
             // 
             this.gridnavidadniños.AllowUserToOrderColumns = true;
+            this.gridnavidadniños.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridnavidadniños.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridnavidadniños.Location = new System.Drawing.Point(107, 104);
             this.gridnavidadniños.Name = "gridnavidadniños";
