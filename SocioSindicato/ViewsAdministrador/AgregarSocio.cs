@@ -696,6 +696,9 @@ namespace SocioSindicato.ViewsAdministrador
             e.Handled = true;
         }
 
-        
+        private void txttelefonosocio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            solonumeros(e);
+        }
     }
 }

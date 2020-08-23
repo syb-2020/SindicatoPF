@@ -556,6 +556,7 @@
             this.txttelefonosocio.Name = "txttelefonosocio";
             this.txttelefonosocio.Size = new System.Drawing.Size(286, 20);
             this.txttelefonosocio.TabIndex = 50;
+            this.txttelefonosocio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttelefonosocio_KeyPress);
             // 
             // fotosocio
             // 

@@ -27,7 +27,34 @@ namespace SocioSindicato.ViewsAdministrador
             comboplantasocio.ValueMember = "id_planta";
 
         }
+        private void solonumeros(KeyPressEventArgs e)
+        {
 
+            try
+            {
+                if (char.IsNumber(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else if (char.IsControl(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else if (char.IsSeparator(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    e.Handled = true;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
         private void btVolver_Click(object sender, EventArgs e)
         {
             Administrador bs = new Administrador();
@@ -991,6 +1018,20 @@ namespace SocioSindicato.ViewsAdministrador
         {
             e.Handled = true;
         }
-       
+
+        private void txtedadsocio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            solonumeros(e);
+        }
+      
+        private void txtedadconyugesocio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            solonumeros(e);
+        }
+
+        private void txttelefonosocio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            solonumeros(e);
+        }
     }
 }

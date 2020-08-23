@@ -228,7 +228,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.combocontratosocio.FormattingEnabled = true;
             this.combocontratosocio.Items.AddRange(new object[] {
-            "",
             "SI",
             "NO"});
             this.combocontratosocio.Location = new System.Drawing.Point(222, 262);
@@ -318,6 +317,7 @@
             this.txtedadsocio.Name = "txtedadsocio";
             this.txtedadsocio.Size = new System.Drawing.Size(286, 20);
             this.txtedadsocio.TabIndex = 55;
+            this.txtedadsocio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtedadsocio_KeyPress);
             // 
             // label9
             // 
@@ -364,11 +364,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboestadocivilagregar.FormattingEnabled = true;
             this.comboestadocivilagregar.Items.AddRange(new object[] {
-            "",
             "Soltero",
             "Casado",
             "Divorciado",
-            "Viudo"});
+            "Viudo",
+            "Union Civil"});
             this.comboestadocivilagregar.Location = new System.Drawing.Point(222, 442);
             this.comboestadocivilagregar.Name = "comboestadocivilagregar";
             this.comboestadocivilagregar.Size = new System.Drawing.Size(286, 21);
@@ -398,6 +398,7 @@
             this.txttelefonosocio.Name = "txttelefonosocio";
             this.txttelefonosocio.Size = new System.Drawing.Size(286, 20);
             this.txttelefonosocio.TabIndex = 61;
+            this.txttelefonosocio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttelefonosocio_KeyPress);
             // 
             // label12
             // 
@@ -502,6 +503,7 @@
             this.txtedadconyugesocio.Name = "txtedadconyugesocio";
             this.txtedadconyugesocio.Size = new System.Drawing.Size(255, 20);
             this.txtedadconyugesocio.TabIndex = 80;
+            this.txtedadconyugesocio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtedadconyugesocio_KeyPress);
             // 
             // label27
             // 
@@ -520,7 +522,6 @@
             this.comboconvivienteconyugesocio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.comboconvivienteconyugesocio.FormattingEnabled = true;
             this.comboconvivienteconyugesocio.Items.AddRange(new object[] {
-            "",
             "SI",
             "NO"});
             this.comboconvivienteconyugesocio.Location = new System.Drawing.Point(712, 266);
@@ -606,7 +607,6 @@
             this.cbSexo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbSexo.FormattingEnabled = true;
             this.cbSexo.Items.AddRange(new object[] {
-            "",
             "Hombre",
             "Mujer"});
             this.cbSexo.Location = new System.Drawing.Point(712, 511);
