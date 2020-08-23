@@ -48,7 +48,7 @@
             // txteliminar
             // 
             this.txteliminar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txteliminar.Location = new System.Drawing.Point(107, 53);
+            this.txteliminar.Location = new System.Drawing.Point(76, 46);
             this.txteliminar.Name = "txteliminar";
             this.txteliminar.Size = new System.Drawing.Size(790, 27);
             this.txteliminar.TabIndex = 0;
@@ -63,9 +63,9 @@
             this.grideliminar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(56)))), ((int)(((byte)(104)))));
             this.grideliminar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grideliminar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grideliminar.Location = new System.Drawing.Point(107, 120);
+            this.grideliminar.Location = new System.Drawing.Point(76, 120);
             this.grideliminar.Name = "grideliminar";
-            this.grideliminar.Size = new System.Drawing.Size(640, 415);
+            this.grideliminar.Size = new System.Drawing.Size(671, 415);
             this.grideliminar.TabIndex = 2;
             this.grideliminar.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.grideliminar_RowPostPaint);
             // 
@@ -80,7 +80,7 @@
             // pb
             // 
             this.pb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pb.Location = new System.Drawing.Point(767, 146);
+            this.pb.Location = new System.Drawing.Point(767, 186);
             this.pb.Name = "pb";
             this.pb.Size = new System.Drawing.Size(334, 349);
             this.pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -142,6 +142,8 @@
             // 
             // btBuscarUser
             // 
+            this.btBuscarUser.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btBuscarUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.btBuscarUser.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.btBuscarUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -152,7 +154,7 @@
             this.btBuscarUser.IconColor = System.Drawing.Color.White;
             this.btBuscarUser.IconSize = 26;
             this.btBuscarUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btBuscarUser.Location = new System.Drawing.Point(931, 47);
+            this.btBuscarUser.Location = new System.Drawing.Point(931, 40);
             this.btBuscarUser.Name = "btBuscarUser";
             this.btBuscarUser.Rotation = 0D;
             this.btBuscarUser.Size = new System.Drawing.Size(170, 38);

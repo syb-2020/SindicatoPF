@@ -28,18 +28,17 @@ namespace SocioSindicato.ViewsAdministrador
 
         }
 
-        private void btnvolvereditar_Click(object sender, EventArgs e)
+        private void btVolver_Click(object sender, EventArgs e)
         {
             Administrador bs = new Administrador();
-            this.Hide();
-            bs.ShowDialog();
+            this.Hide();           
             this.Close();
         }
 
 
         public byte[] file = null;
 
-        private void btnseleccionarimagen_Click(object sender, EventArgs e)
+        private void btSubirIMG_Click(object sender, EventArgs e)
         {
             openFileDialog1.InitialDirectory = "C:/";
             openFileDialog1.Filter = "Images (.JPEG;.BMP;.JPG;.GIF;.PNG;.)|.JPEG;.BMP;.JPG;.GIF;*.PNG";
@@ -64,7 +63,11 @@ namespace SocioSindicato.ViewsAdministrador
         }
 
         string buscar_rut = "";
+        //     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+        MemoryStream ms2 = new MemoryStream();
+        public byte[] file2 = null;
+        
         private void btnbuscareditar_Click(object sender, EventArgs e)
         {
             using (sindicatoPFEntities context = new sindicatoPFEntities())
@@ -114,13 +117,13 @@ namespace SocioSindicato.ViewsAdministrador
                                                 CORREO = sociorut.correo,
                                                 NOMBREP = sociorut.datos_papa,
                                                 NOMBREM = sociorut.datos_mama,
-                                                contratosocio = sociorut.tipo_contrato,                                               
+                                                contratosocio = sociorut.tipo_contrato,
                                                 nombrecon = conyu.nombre,
                                                 convivientecon = conyu.conviviente,
                                                 rutcon = conyu.rut,
                                                 nacimientocon = conyu.nacimiento,
                                                 edadcon = conyu.edad,
-                                                
+
                                             };
                 grideditarsocioconyu.DataSource = buscarSocioconConyuge.ToList();
 
@@ -142,7 +145,7 @@ namespace SocioSindicato.ViewsAdministrador
                                              NACIONALIDAD = sociorut.nacionalidad,
                                              CORREO = sociorut.correo,
                                              NOMBREP = sociorut.datos_papa,
-                                             NOMBREM = sociorut.datos_mama,                                            
+                                             NOMBREM = sociorut.datos_mama,
                                              contratosocio = sociorut.tipo_contrato,
                                              nombrehij = hij.nombre,
                                              ruthij = hij.rut_hijo,
@@ -213,7 +216,7 @@ namespace SocioSindicato.ViewsAdministrador
                     txtnombremadre.Text = "";
                     //BORRAR DATOS CONYUGE
                     txtconyugesocio.Text = "";
-                    comboconvivienteconyugesocio.SelectedIndex = 0; 
+                    comboconvivienteconyugesocio.SelectedIndex = 0;
                     txtrutconyugesocio.Text = "";
                     datefechanacimientoconyugesocio.Value = DateTime.Now;
                     txtedadconyugesocio.Text = "";
@@ -273,20 +276,20 @@ namespace SocioSindicato.ViewsAdministrador
                                              join h in context.Hijo
                                              on c.rut_socio equals h.rut_socio
                                              where h.rut_socio.Equals(buscar_rut)
-                                             select new { h.id_hijo,h.nombre, c.rut_socio };
+                                             select new { h.id_hijo, h.nombre, c.rut_socio };
 
 
                                 cbhijossocio.DataSource = bushij.ToList();
                                 cbhijossocio.DisplayMember = "nombre";
                                 cbhijossocio.ValueMember = "id_hijo";
 
-                               
+
                                 using (sindicatoPFEntities db = new sindicatoPFEntities())
                                 {
                                     var oImage = db.Socio.Find(buscar_rut);
                                     MemoryStream ms = new MemoryStream(oImage.imagen);
                                     Bitmap bmp = new Bitmap(ms);
-                                    fotosocio.Image = bmp;
+                                    fotosocio.Image = bmp;                                  
                                 }
 
 
@@ -446,7 +449,7 @@ namespace SocioSindicato.ViewsAdministrador
                             datenacimientohijosocio.Value = DateTime.Now;
                         }
                         MessageBox.Show("Edite los campos que desee!");
-                    }                
+                    }
                     else
                     {
 
@@ -459,10 +462,9 @@ namespace SocioSindicato.ViewsAdministrador
             }
         }
 
-        MemoryStream ms2 = new MemoryStream();
-        public byte[] file2 = null;
-       
+     
 
+        //     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         private void btneditar_Click(object sender, EventArgs e)
         {
             using (sindicatoPFEntities context = new sindicatoPFEntities())
@@ -483,7 +485,7 @@ namespace SocioSindicato.ViewsAdministrador
                         MemoryStream ms = new MemoryStream(oImage.imagen);
                         Bitmap bmp = new Bitmap(ms);
                         fotosocio.Image = bmp;
-                        file2 = ms2.ToArray();
+                        file2 = ms.ToArray();
                     }
 
                     Socio nuevosocio = new Socio();
@@ -553,7 +555,7 @@ namespace SocioSindicato.ViewsAdministrador
                     cbhijossocio.ValueMember = "id_hijo";
 
                     MessageBox.Show("Socio Editado Correctamente!");
-                  
+
                 }
 
 
@@ -561,9 +563,9 @@ namespace SocioSindicato.ViewsAdministrador
 
 
             }
-
         }
 
+        //     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         private void btneliminarcon_Click(object sender, EventArgs e)
         {
             if (txtrutsocio.Text == "")
@@ -637,25 +639,27 @@ namespace SocioSindicato.ViewsAdministrador
             }
         }
 
+
+
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         private void btnagregarcon_Click(object sender, EventArgs e)
         {
-
             using (sindicatoPFEntities context = new sindicatoPFEntities())
             {
-                if (txtrutsocio.Text=="")
+                if (txtrutsocio.Text == "")
                 {
                     MessageBox.Show("Debe ingresar el rut del socio", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                else if (txtconyugesocio.Text=="")
+                else if (txtconyugesocio.Text == "")
                 {
                     MessageBox.Show("Debe ingresar el nombre del conyuge", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                
-                else if (txtrutconyugesocio.Text=="")
+
+                else if (txtrutconyugesocio.Text == "")
                 {
                     MessageBox.Show("Debe ingresar el rut del conyuge", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                else if (txtedadconyugesocio.Text=="")
+                else if (txtedadconyugesocio.Text == "")
                 {
                     MessageBox.Show("Debe ingresar la edad del conyuge", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
@@ -726,9 +730,10 @@ namespace SocioSindicato.ViewsAdministrador
 
 
             }
-
         }
 
+
+        //     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         private void btneliminarhi_Click(object sender, EventArgs e)
         {
             if (txtrutsocio.Text == "")
@@ -762,7 +767,7 @@ namespace SocioSindicato.ViewsAdministrador
                                      join h in context.Hijo
                                      on c.rut_socio equals h.rut_socio
                                      where h.rut_socio.Equals(buscar_rut)
-                                     select new { h.id_hijo,h.nombre, c.rut_socio };
+                                     select new { h.id_hijo, h.nombre, c.rut_socio };
 
 
                         cbhijossocio.DataSource = bushij.ToList();
@@ -785,6 +790,7 @@ namespace SocioSindicato.ViewsAdministrador
                 }
             }
         }
+
         public class Datos
         {
 
@@ -797,7 +803,7 @@ namespace SocioSindicato.ViewsAdministrador
         }
 
         List<Datos> mashijos = new List<Datos>();
-
+        //     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         private void btnagregarhij_Click(object sender, EventArgs e)
         {
             using (sindicatoPFEntities context = new sindicatoPFEntities())
@@ -839,7 +845,7 @@ namespace SocioSindicato.ViewsAdministrador
                     cbSexo.SelectedIndex = 0;
                     datenacimientohijosocio.Value = DateTime.Now;
 
-                  
+
 
                     foreach (var a in mashijos)
                     {
@@ -875,11 +881,9 @@ namespace SocioSindicato.ViewsAdministrador
                 }
 
             }
-
-
         }
 
-       
+
 
         private void cbhijossocio_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -905,16 +909,16 @@ namespace SocioSindicato.ViewsAdministrador
         {
             using (sindicatoPFEntities context = new sindicatoPFEntities())
             {
-                
-                
 
-                if (txtbuscar.Text=="")
-				{
+
+
+                if (txtbuscar.Text == "")
+                {
                     MessageBox.Show("No se ha seleccionado ningun hijo", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-				}
-				else
-				{
+                }
+                else
+                {
                     int nombrexd = Convert.ToInt32(cbhijossocio.SelectedValue.ToString());
                     var bushij = from c in context.Socio
                                  join h in context.Hijo
@@ -987,5 +991,6 @@ namespace SocioSindicato.ViewsAdministrador
         {
             e.Handled = true;
         }
+       
     }
 }

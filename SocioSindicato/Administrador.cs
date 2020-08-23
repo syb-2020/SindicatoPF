@@ -254,10 +254,20 @@ namespace SocioSindicato
 
         public void btnInicio_Click(object sender, EventArgs e)
         {
-            newForm.Close();           
-            Reset();
-            icono_actual.IconChar = IconChar.Home;
-            lbtitulo.Text = "Inicio";
+            if (newForm == null)
+            {
+                             
+                icono_actual.IconChar = IconChar.Home;
+                lbtitulo.Text = "Inicio";
+            }
+            else
+            {
+                newForm.Close();
+                Reset();
+                icono_actual.IconChar = IconChar.Home;
+                lbtitulo.Text = "Inicio";
+            }
+            
         }
 
         public void Reset()

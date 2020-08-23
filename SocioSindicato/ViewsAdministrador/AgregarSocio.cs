@@ -59,15 +59,14 @@ namespace SocioSindicato.ViewsAdministrador
 
         public byte[] file = null;
 
-        private void btnvolveragregar_Click(object sender, EventArgs e)
+        private void btVolver_Click(object sender, EventArgs e)
         {
             Administrador bs = new Administrador();
-            this.Hide();
-            bs.ShowDialog();
+            this.Hide();          
             this.Close();
         }
 
-        private void btnseleccionarimagen_Click(object sender, EventArgs e)
+        private void btSubirIMG_Click(object sender, EventArgs e)
         {
             openFileDialog1.InitialDirectory = "C:/";
             openFileDialog1.Filter = "Images (.JPEG;.BMP;.JPG;.GIF;.PNG;.)|.JPEG;.BMP;.JPG;.GIF;*.PNG";
@@ -89,7 +88,6 @@ namespace SocioSindicato.ViewsAdministrador
 
 
             }
-
         }
 
         public class Datos
@@ -105,12 +103,11 @@ namespace SocioSindicato.ViewsAdministrador
 
         List<Datos> mashijos = new List<Datos>();
 
-        private void btnagregarotrohijo_Click(object sender, EventArgs e)
+        private void btAgregarHijoAList_Click(object sender, EventArgs e)
         {
-            
             using (sindicatoPFEntities context = new sindicatoPFEntities())
             {
-                if (txtrutsocio.Text =="") 
+                if (txtrutsocio.Text == "")
                 {
                     MessageBox.Show("Debe ingresar el rut del socio", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
@@ -139,35 +136,32 @@ namespace SocioSindicato.ViewsAdministrador
                         nacimientohijo = Convert.ToDateTime(datenacimientohijosocio.Text),
 
                     };
-                   
-                   
-                     mashijos.Add(dato);
-                   
+
+
+                    mashijos.Add(dato);
+
 
 
                     MessageBox.Show("Hijo Agregado Correctamente!");
                     gridpruebahijo.DataSource = mashijos.ToArray();
                     gridpruebahijo.ForeColor = Color.Black;
 
-                txtnombrehijosocio.Text = "";
-                txtruthijosocio.Text = "";
-                cbSexo.SelectedIndex = 0;
-                datenacimientohijosocio.Value = DateTime.Now;
+                    txtnombrehijosocio.Text = "";
+                    txtruthijosocio.Text = "";
+                    cbSexo.SelectedIndex = 0;
+                    datenacimientohijosocio.Value = DateTime.Now;
 
                 }
-                
-                
-               
+
+
+
 
                 //MessageBox.Show("Rellene campos del hijo", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
-
-            
-                
         }
 
-        private void btnagregarsocio_Click(object sender, EventArgs e)
+        private void btAgregarlos3_Click(object sender, EventArgs e)
         {
             using (sindicatoPFEntities context = new sindicatoPFEntities())
             {
@@ -175,7 +169,8 @@ namespace SocioSindicato.ViewsAdministrador
 
                 try
                 {
-                    Socio nuevosocio = new Socio {
+                    Socio nuevosocio = new Socio
+                    {
                         rut_socio = txtrutsocio.Text,
                         imagen = file,
                         nombre_socio = txtnombresocio.Text,
@@ -191,9 +186,9 @@ namespace SocioSindicato.ViewsAdministrador
                         nacionalidad = txtnacionalidadsocio.Text,
                         correo = txtcorreosocio.Text,
                         datos_papa = txtnombrepadre.Text,
-                        datos_mama = txtnombremadre.Text,                        
+                        datos_mama = txtnombremadre.Text,
                     };
-                   
+
 
 
 
@@ -224,7 +219,7 @@ namespace SocioSindicato.ViewsAdministrador
                     context.Conyuge.Add(con);
 
                     context.SaveChanges();
-                   
+
 
                     //BORRAR DATOS SOCIO
                     txtrutsocio.Text = "";
@@ -262,7 +257,7 @@ namespace SocioSindicato.ViewsAdministrador
                 catch (Exception)
                 {
 
-                   
+
                     MessageBox.Show("Socio No Agregado", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                     //BORRAR DATOS SOCIO
@@ -297,8 +292,7 @@ namespace SocioSindicato.ViewsAdministrador
                     gridpruebahijo.DataSource = "";
                 }
             }
-
-            }
+        }
 
         private void txtedadsocio_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -323,7 +317,7 @@ namespace SocioSindicato.ViewsAdministrador
             }
         }
 
-        private void btnsocioagregarsolo_Click(object sender, EventArgs e)
+        private void btAgregarSocio_Click(object sender, EventArgs e)
         {
             using (sindicatoPFEntities context = new sindicatoPFEntities())
             {
@@ -426,9 +420,9 @@ namespace SocioSindicato.ViewsAdministrador
                     gridpruebahijo.DataSource = "";
                 }
             }
-            }
+        }
 
-        private void btnagregarsocioconyuge_Click(object sender, EventArgs e)
+        private void btAgregarSocioeConyuge_Click(object sender, EventArgs e)
         {
             using (sindicatoPFEntities context = new sindicatoPFEntities())
             {
@@ -506,7 +500,7 @@ namespace SocioSindicato.ViewsAdministrador
 
                     MessageBox.Show("Socio Agregado Correctamente!");
 
-                    
+
                 }
                 catch (Exception)
                 {
@@ -547,7 +541,7 @@ namespace SocioSindicato.ViewsAdministrador
             }
         }
 
-        private void btnagregarsociohijo_Click(object sender, EventArgs e)
+        private void btnAddSocioeHijo_Click(object sender, EventArgs e)
         {
             using (sindicatoPFEntities context = new sindicatoPFEntities())
             {
@@ -621,13 +615,13 @@ namespace SocioSindicato.ViewsAdministrador
                     datenacimientohijosocio.Value = DateTime.Now;
                     mashijos.Clear();
 
-                   
-                    
+
+
 
                     gridpruebahijo.DataSource = "";
                     MessageBox.Show("Socio Agregado Con Hijo Correctamente!");
 
-                   
+
 
 
                 }
@@ -671,6 +665,7 @@ namespace SocioSindicato.ViewsAdministrador
             }
         }
 
+
         private void combocategoriasocio_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
@@ -700,5 +695,7 @@ namespace SocioSindicato.ViewsAdministrador
         {
             e.Handled = true;
         }
+
+        
     }
 }

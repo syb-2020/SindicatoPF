@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnvolvereditar = new System.Windows.Forms.Button();
-            this.btneditar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtrutsocio = new System.Windows.Forms.TextBox();
@@ -80,18 +78,11 @@
             this.label22 = new System.Windows.Forms.Label();
             this.fotosocio = new System.Windows.Forms.PictureBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.btnseleccionarimagen = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.btnbuscareditar = new System.Windows.Forms.Button();
             this.txtbuscar = new System.Windows.Forms.TextBox();
             this.gridcapdatosedi = new System.Windows.Forms.DataGridView();
             this.cbhijossocio = new System.Windows.Forms.ComboBox();
-            this.btneliminarcon = new System.Windows.Forms.Button();
-            this.btnagregarcon = new System.Windows.Forms.Button();
-            this.btneliminarhi = new System.Windows.Forms.Button();
-            this.btnagregarhij = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.button1 = new System.Windows.Forms.Button();
             this.gbhijo = new System.Windows.Forms.DataGridView();
             this.label11 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
@@ -99,6 +90,15 @@
             this.gridbuscarsolosocio = new System.Windows.Forms.DataGridView();
             this.grideditarsocioconyu = new System.Windows.Forms.DataGridView();
             this.grideditarsociohijo = new System.Windows.Forms.DataGridView();
+            this.btVolver = new FontAwesome.Sharp.IconButton();
+            this.btSubirIMG = new FontAwesome.Sharp.IconButton();
+            this.button1 = new FontAwesome.Sharp.IconButton();
+            this.btnbuscareditar = new FontAwesome.Sharp.IconButton();
+            this.btnagregarhij = new FontAwesome.Sharp.IconButton();
+            this.btnagregarcon = new FontAwesome.Sharp.IconButton();
+            this.btneliminarhi = new FontAwesome.Sharp.IconButton();
+            this.btneliminarcon = new FontAwesome.Sharp.IconButton();
+            this.btneditar = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.fotosocio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridcapdatosedi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gbhijo)).BeginInit();
@@ -107,141 +107,155 @@
             ((System.ComponentModel.ISupportInitialize)(this.grideditarsociohijo)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnvolvereditar
-            // 
-            this.btnvolvereditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.btnvolvereditar.FlatAppearance.BorderSize = 0;
-            this.btnvolvereditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnvolvereditar.ForeColor = System.Drawing.Color.White;
-            this.btnvolvereditar.Location = new System.Drawing.Point(1008, 651);
-            this.btnvolvereditar.Name = "btnvolvereditar";
-            this.btnvolvereditar.Size = new System.Drawing.Size(75, 23);
-            this.btnvolvereditar.TabIndex = 0;
-            this.btnvolvereditar.Text = "Volver";
-            this.btnvolvereditar.UseVisualStyleBackColor = false;
-            this.btnvolvereditar.Click += new System.EventHandler(this.btnvolvereditar_Click);
-            // 
-            // btneditar
-            // 
-            this.btneditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.btneditar.FlatAppearance.BorderSize = 0;
-            this.btneditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btneditar.ForeColor = System.Drawing.Color.White;
-            this.btneditar.Location = new System.Drawing.Point(37, 729);
-            this.btneditar.Name = "btneditar";
-            this.btneditar.Size = new System.Drawing.Size(90, 23);
-            this.btneditar.TabIndex = 1;
-            this.btneditar.Text = "Editar Socio";
-            this.btneditar.UseVisualStyleBackColor = false;
-            this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
-            // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 94);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label1.Location = new System.Drawing.Point(77, 122);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 13);
+            this.label1.Size = new System.Drawing.Size(93, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "Rut Del Socio";
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 145);
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label5.Location = new System.Drawing.Point(77, 158);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(105, 13);
+            this.label5.Size = new System.Drawing.Size(123, 17);
             this.label5.TabIndex = 10;
             this.label5.Text = "Nombre del socio";
             // 
             // txtrutsocio
             // 
-            this.txtrutsocio.Location = new System.Drawing.Point(136, 94);
+            this.txtrutsocio.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtrutsocio.Location = new System.Drawing.Point(222, 118);
             this.txtrutsocio.Name = "txtrutsocio";
-            this.txtrutsocio.Size = new System.Drawing.Size(200, 20);
+            this.txtrutsocio.Size = new System.Drawing.Size(286, 20);
             this.txtrutsocio.TabIndex = 11;
             // 
             // txtnombresocio
             // 
-            this.txtnombresocio.Location = new System.Drawing.Point(136, 145);
+            this.txtnombresocio.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtnombresocio.Location = new System.Drawing.Point(222, 155);
             this.txtnombresocio.Name = "txtnombresocio";
-            this.txtnombresocio.Size = new System.Drawing.Size(200, 20);
+            this.txtnombresocio.Size = new System.Drawing.Size(286, 20);
             this.txtnombresocio.TabIndex = 12;
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(15, 188);
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label4.Location = new System.Drawing.Point(77, 194);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 13);
+            this.label4.Size = new System.Drawing.Size(113, 17);
             this.label4.TabIndex = 13;
             this.label4.Text = "Ingreso Empresa";
             // 
             // dateingresoempresasocio
             // 
-            this.dateingresoempresasocio.Location = new System.Drawing.Point(136, 188);
+            this.dateingresoempresasocio.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateingresoempresasocio.Location = new System.Drawing.Point(222, 191);
             this.dateingresoempresasocio.Name = "dateingresoempresasocio";
-            this.dateingresoempresasocio.Size = new System.Drawing.Size(200, 20);
+            this.dateingresoempresasocio.Size = new System.Drawing.Size(286, 20);
             this.dateingresoempresasocio.TabIndex = 14;
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(15, 232);
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label2.Location = new System.Drawing.Point(77, 230);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 13);
+            this.label2.Size = new System.Drawing.Size(75, 17);
             this.label2.TabIndex = 15;
             this.label2.Text = "Categoria";
             // 
             // combocategoriasocio
             // 
+            this.combocategoriasocio.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.combocategoriasocio.FormattingEnabled = true;
             this.combocategoriasocio.Items.AddRange(new object[] {
             ""});
-            this.combocategoriasocio.Location = new System.Drawing.Point(136, 229);
+            this.combocategoriasocio.Location = new System.Drawing.Point(222, 226);
             this.combocategoriasocio.Name = "combocategoriasocio";
-            this.combocategoriasocio.Size = new System.Drawing.Size(200, 21);
+            this.combocategoriasocio.Size = new System.Drawing.Size(286, 21);
             this.combocategoriasocio.TabIndex = 16;
             this.combocategoriasocio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.combocategoriasocio_KeyPress);
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(15, 277);
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label6.Location = new System.Drawing.Point(77, 266);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(115, 13);
+            this.label6.Size = new System.Drawing.Size(136, 17);
             this.label6.TabIndex = 17;
             this.label6.Text = "Contrato Indefinido";
             // 
             // combocontratosocio
             // 
+            this.combocontratosocio.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.combocontratosocio.FormattingEnabled = true;
             this.combocontratosocio.Items.AddRange(new object[] {
             "",
             "SI",
             "NO"});
-            this.combocontratosocio.Location = new System.Drawing.Point(136, 274);
+            this.combocontratosocio.Location = new System.Drawing.Point(222, 262);
             this.combocontratosocio.Name = "combocontratosocio";
-            this.combocontratosocio.Size = new System.Drawing.Size(200, 21);
+            this.combocontratosocio.Size = new System.Drawing.Size(286, 21);
             this.combocontratosocio.TabIndex = 49;
             this.combocontratosocio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.combocontratosocio_KeyPress);
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 319);
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label3.Location = new System.Drawing.Point(77, 302);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 13);
+            this.label3.Size = new System.Drawing.Size(50, 17);
             this.label3.TabIndex = 50;
             this.label3.Text = "Planta";
             // 
             // comboplantasocio
             // 
+            this.comboplantasocio.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.comboplantasocio.FormattingEnabled = true;
             this.comboplantasocio.Items.AddRange(new object[] {
             "Planta 1",
@@ -251,75 +265,103 @@
             "Planta Pizza",
             "CDT",
             "Planta Carnicos "});
-            this.comboplantasocio.Location = new System.Drawing.Point(136, 319);
+            this.comboplantasocio.Location = new System.Drawing.Point(222, 298);
             this.comboplantasocio.Name = "comboplantasocio";
-            this.comboplantasocio.Size = new System.Drawing.Size(200, 21);
+            this.comboplantasocio.Size = new System.Drawing.Size(286, 21);
             this.comboplantasocio.TabIndex = 51;
             this.comboplantasocio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboplantasocio_KeyPress);
             // 
             // label7
             // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(12, 363);
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label7.Location = new System.Drawing.Point(77, 338);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(109, 13);
+            this.label7.Size = new System.Drawing.Size(127, 17);
             this.label7.TabIndex = 52;
             this.label7.Text = "Fecha Nacimiento";
             // 
             // datefechanacimientosocio
             // 
-            this.datefechanacimientosocio.Location = new System.Drawing.Point(136, 363);
+            this.datefechanacimientosocio.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.datefechanacimientosocio.Location = new System.Drawing.Point(222, 334);
             this.datefechanacimientosocio.Name = "datefechanacimientosocio";
-            this.datefechanacimientosocio.Size = new System.Drawing.Size(200, 20);
+            this.datefechanacimientosocio.Size = new System.Drawing.Size(286, 20);
             this.datefechanacimientosocio.TabIndex = 53;
             // 
             // label8
             // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(12, 406);
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label8.Location = new System.Drawing.Point(77, 374);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(36, 13);
+            this.label8.Size = new System.Drawing.Size(42, 17);
             this.label8.TabIndex = 54;
             this.label8.Text = "Edad";
             // 
             // txtedadsocio
             // 
-            this.txtedadsocio.Location = new System.Drawing.Point(136, 403);
+            this.txtedadsocio.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtedadsocio.Location = new System.Drawing.Point(222, 370);
             this.txtedadsocio.Name = "txtedadsocio";
-            this.txtedadsocio.Size = new System.Drawing.Size(200, 20);
+            this.txtedadsocio.Size = new System.Drawing.Size(286, 20);
             this.txtedadsocio.TabIndex = 55;
             // 
             // label9
             // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(12, 446);
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label9.Location = new System.Drawing.Point(77, 410);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(58, 13);
+            this.label9.Size = new System.Drawing.Size(69, 17);
             this.label9.TabIndex = 56;
             this.label9.Text = "Domicilio";
             // 
             // txtdomiciliosocio
             // 
-            this.txtdomiciliosocio.Location = new System.Drawing.Point(136, 439);
+            this.txtdomiciliosocio.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtdomiciliosocio.Location = new System.Drawing.Point(222, 406);
             this.txtdomiciliosocio.Name = "txtdomiciliosocio";
-            this.txtdomiciliosocio.Size = new System.Drawing.Size(200, 20);
+            this.txtdomiciliosocio.Size = new System.Drawing.Size(286, 20);
             this.txtdomiciliosocio.TabIndex = 57;
             // 
             // label10
             // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(12, 487);
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label10.Location = new System.Drawing.Point(77, 446);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(74, 13);
+            this.label10.Size = new System.Drawing.Size(84, 17);
             this.label10.TabIndex = 58;
             this.label10.Text = "Estado Civil";
             // 
             // comboestadocivilagregar
             // 
+            this.comboestadocivilagregar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.comboestadocivilagregar.FormattingEnabled = true;
             this.comboestadocivilagregar.Items.AddRange(new object[] {
             "",
@@ -327,326 +369,365 @@
             "Casado",
             "Divorciado",
             "Viudo"});
-            this.comboestadocivilagregar.Location = new System.Drawing.Point(136, 487);
+            this.comboestadocivilagregar.Location = new System.Drawing.Point(222, 442);
             this.comboestadocivilagregar.Name = "comboestadocivilagregar";
-            this.comboestadocivilagregar.Size = new System.Drawing.Size(200, 21);
+            this.comboestadocivilagregar.Size = new System.Drawing.Size(286, 21);
             this.comboestadocivilagregar.TabIndex = 59;
             this.comboestadocivilagregar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboestadocivilagregar_KeyPress);
             // 
             // label25
             // 
+            this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(12, 531);
+            this.label25.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label25.Location = new System.Drawing.Point(77, 482);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(57, 13);
+            this.label25.Size = new System.Drawing.Size(62, 17);
             this.label25.TabIndex = 60;
             this.label25.Text = "Telefono";
             // 
             // txttelefonosocio
             // 
-            this.txttelefonosocio.Location = new System.Drawing.Point(136, 528);
+            this.txttelefonosocio.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txttelefonosocio.Location = new System.Drawing.Point(222, 478);
             this.txttelefonosocio.Name = "txttelefonosocio";
-            this.txttelefonosocio.Size = new System.Drawing.Size(200, 20);
+            this.txttelefonosocio.Size = new System.Drawing.Size(286, 20);
             this.txttelefonosocio.TabIndex = 61;
             // 
             // label12
             // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(12, 569);
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label12.Location = new System.Drawing.Point(77, 518);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(81, 13);
+            this.label12.Size = new System.Drawing.Size(97, 17);
             this.label12.TabIndex = 62;
             this.label12.Text = "Nacionalidad";
             // 
             // txtnacionalidadsocio
             // 
-            this.txtnacionalidadsocio.Location = new System.Drawing.Point(136, 569);
+            this.txtnacionalidadsocio.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtnacionalidadsocio.Location = new System.Drawing.Point(222, 514);
             this.txtnacionalidadsocio.Name = "txtnacionalidadsocio";
-            this.txtnacionalidadsocio.Size = new System.Drawing.Size(200, 20);
+            this.txtnacionalidadsocio.Size = new System.Drawing.Size(286, 20);
             this.txtnacionalidadsocio.TabIndex = 63;
             // 
             // label13
             // 
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(12, 613);
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label13.Location = new System.Drawing.Point(77, 554);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(112, 13);
+            this.label13.Size = new System.Drawing.Size(129, 17);
             this.label13.TabIndex = 64;
             this.label13.Text = "Correo Electronico";
             // 
             // txtcorreosocio
             // 
-            this.txtcorreosocio.Location = new System.Drawing.Point(136, 610);
+            this.txtcorreosocio.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtcorreosocio.Location = new System.Drawing.Point(222, 550);
             this.txtcorreosocio.Name = "txtcorreosocio";
-            this.txtcorreosocio.Size = new System.Drawing.Size(200, 20);
+            this.txtcorreosocio.Size = new System.Drawing.Size(286, 20);
             this.txtcorreosocio.TabIndex = 65;
             // 
             // label14
             // 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(12, 647);
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label14.Location = new System.Drawing.Point(77, 590);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(104, 13);
+            this.label14.Size = new System.Drawing.Size(125, 17);
             this.label14.TabIndex = 66;
             this.label14.Text = "Nombre de padre";
             // 
             // txtnombrepadre
             // 
-            this.txtnombrepadre.Location = new System.Drawing.Point(136, 647);
+            this.txtnombrepadre.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtnombrepadre.Location = new System.Drawing.Point(222, 586);
             this.txtnombrepadre.Name = "txtnombrepadre";
-            this.txtnombrepadre.Size = new System.Drawing.Size(200, 20);
+            this.txtnombrepadre.Size = new System.Drawing.Size(286, 20);
             this.txtnombrepadre.TabIndex = 67;
             // 
             // label15
             // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(12, 685);
+            this.label15.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label15.Location = new System.Drawing.Point(77, 626);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(106, 13);
+            this.label15.Size = new System.Drawing.Size(129, 17);
             this.label15.TabIndex = 68;
             this.label15.Text = "Nombre de madre";
             // 
             // txtnombremadre
             // 
-            this.txtnombremadre.Location = new System.Drawing.Point(136, 682);
+            this.txtnombremadre.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtnombremadre.Location = new System.Drawing.Point(222, 622);
             this.txtnombremadre.Name = "txtnombremadre";
-            this.txtnombremadre.Size = new System.Drawing.Size(200, 20);
+            this.txtnombremadre.Size = new System.Drawing.Size(286, 20);
             this.txtnombremadre.TabIndex = 69;
             // 
             // txtedadconyugesocio
             // 
-            this.txtedadconyugesocio.Location = new System.Drawing.Point(508, 162);
+            this.txtedadconyugesocio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtedadconyugesocio.Location = new System.Drawing.Point(712, 230);
             this.txtedadconyugesocio.Name = "txtedadconyugesocio";
-            this.txtedadconyugesocio.Size = new System.Drawing.Size(200, 20);
+            this.txtedadconyugesocio.Size = new System.Drawing.Size(255, 20);
             this.txtedadconyugesocio.TabIndex = 80;
             // 
             // label27
             // 
+            this.label27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(382, 159);
+            this.label27.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label27.Location = new System.Drawing.Point(560, 230);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(36, 13);
+            this.label27.Size = new System.Drawing.Size(42, 17);
             this.label27.TabIndex = 79;
             this.label27.Text = "Edad";
             // 
             // comboconvivienteconyugesocio
             // 
+            this.comboconvivienteconyugesocio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.comboconvivienteconyugesocio.FormattingEnabled = true;
             this.comboconvivienteconyugesocio.Items.AddRange(new object[] {
             "",
             "SI",
             "NO"});
-            this.comboconvivienteconyugesocio.Location = new System.Drawing.Point(508, 200);
+            this.comboconvivienteconyugesocio.Location = new System.Drawing.Point(712, 266);
             this.comboconvivienteconyugesocio.Name = "comboconvivienteconyugesocio";
-            this.comboconvivienteconyugesocio.Size = new System.Drawing.Size(200, 21);
+            this.comboconvivienteconyugesocio.Size = new System.Drawing.Size(255, 21);
             this.comboconvivienteconyugesocio.TabIndex = 78;
             this.comboconvivienteconyugesocio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboconvivienteconyugesocio_KeyPress);
             // 
             // label26
             // 
+            this.label26.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(380, 203);
+            this.label26.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label26.Location = new System.Drawing.Point(560, 266);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(74, 13);
+            this.label26.Size = new System.Drawing.Size(87, 17);
             this.label26.TabIndex = 77;
             this.label26.Text = "Conviviente";
             // 
             // datefechanacimientoconyugesocio
             // 
-            this.datefechanacimientoconyugesocio.Location = new System.Drawing.Point(508, 128);
+            this.datefechanacimientoconyugesocio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.datefechanacimientoconyugesocio.Location = new System.Drawing.Point(712, 194);
             this.datefechanacimientoconyugesocio.Name = "datefechanacimientoconyugesocio";
-            this.datefechanacimientoconyugesocio.Size = new System.Drawing.Size(200, 20);
+            this.datefechanacimientoconyugesocio.Size = new System.Drawing.Size(255, 20);
             this.datefechanacimientoconyugesocio.TabIndex = 76;
             // 
             // label20
             // 
+            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(380, 133);
+            this.label20.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label20.Location = new System.Drawing.Point(560, 194);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(127, 13);
+            this.label20.Size = new System.Drawing.Size(148, 17);
             this.label20.TabIndex = 75;
             this.label20.Text = "Fecha de Nacimiento";
             // 
             // label19
             // 
+            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(382, 97);
+            this.label19.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label19.Location = new System.Drawing.Point(560, 158);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(27, 13);
+            this.label19.Size = new System.Drawing.Size(29, 17);
             this.label19.TabIndex = 74;
             this.label19.Text = "Rut";
             // 
             // txtrutconyugesocio
             // 
-            this.txtrutconyugesocio.Location = new System.Drawing.Point(508, 94);
+            this.txtrutconyugesocio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtrutconyugesocio.Location = new System.Drawing.Point(712, 158);
             this.txtrutconyugesocio.Name = "txtrutconyugesocio";
-            this.txtrutconyugesocio.Size = new System.Drawing.Size(200, 20);
+            this.txtrutconyugesocio.Size = new System.Drawing.Size(255, 20);
             this.txtrutconyugesocio.TabIndex = 73;
             // 
             // txtconyugesocio
             // 
-            this.txtconyugesocio.Location = new System.Drawing.Point(508, 61);
+            this.txtconyugesocio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtconyugesocio.Location = new System.Drawing.Point(712, 122);
             this.txtconyugesocio.Name = "txtconyugesocio";
-            this.txtconyugesocio.Size = new System.Drawing.Size(200, 20);
+            this.txtconyugesocio.Size = new System.Drawing.Size(255, 20);
             this.txtconyugesocio.TabIndex = 72;
             // 
             // label18
             // 
+            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(380, 61);
+            this.label18.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label18.Location = new System.Drawing.Point(560, 122);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(50, 13);
+            this.label18.Size = new System.Drawing.Size(61, 17);
             this.label18.TabIndex = 71;
             this.label18.Text = "Nombre";
             // 
             // cbSexo
             // 
+            this.cbSexo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbSexo.FormattingEnabled = true;
             this.cbSexo.Items.AddRange(new object[] {
             "",
             "Hombre",
             "Mujer"});
-            this.cbSexo.Location = new System.Drawing.Point(508, 418);
+            this.cbSexo.Location = new System.Drawing.Point(712, 511);
             this.cbSexo.Name = "cbSexo";
-            this.cbSexo.Size = new System.Drawing.Size(200, 21);
+            this.cbSexo.Size = new System.Drawing.Size(255, 21);
             this.cbSexo.TabIndex = 89;
             this.cbSexo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbSexo_KeyPress);
             // 
             // label28
             // 
+            this.label28.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(385, 427);
+            this.label28.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label28.Location = new System.Drawing.Point(560, 515);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(35, 13);
+            this.label28.Size = new System.Drawing.Size(37, 17);
             this.label28.TabIndex = 88;
             this.label28.Text = "Sexo";
             // 
             // datenacimientohijosocio
             // 
-            this.datenacimientohijosocio.Location = new System.Drawing.Point(508, 454);
+            this.datenacimientohijosocio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.datenacimientohijosocio.Location = new System.Drawing.Point(712, 547);
             this.datenacimientohijosocio.Name = "datenacimientohijosocio";
-            this.datenacimientohijosocio.Size = new System.Drawing.Size(200, 20);
+            this.datenacimientohijosocio.Size = new System.Drawing.Size(255, 20);
             this.datenacimientohijosocio.TabIndex = 87;
             // 
             // txtruthijosocio
             // 
-            this.txtruthijosocio.Location = new System.Drawing.Point(508, 390);
+            this.txtruthijosocio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtruthijosocio.Location = new System.Drawing.Point(712, 476);
             this.txtruthijosocio.Name = "txtruthijosocio";
-            this.txtruthijosocio.Size = new System.Drawing.Size(200, 20);
+            this.txtruthijosocio.Size = new System.Drawing.Size(255, 20);
             this.txtruthijosocio.TabIndex = 86;
             // 
             // txtnombrehijosocio
             // 
-            this.txtnombrehijosocio.Location = new System.Drawing.Point(508, 359);
+            this.txtnombrehijosocio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtnombrehijosocio.Location = new System.Drawing.Point(712, 443);
             this.txtnombrehijosocio.Name = "txtnombrehijosocio";
-            this.txtnombrehijosocio.Size = new System.Drawing.Size(200, 20);
+            this.txtnombrehijosocio.Size = new System.Drawing.Size(255, 20);
             this.txtnombrehijosocio.TabIndex = 85;
             // 
             // label24
             // 
+            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(382, 457);
+            this.label24.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label24.Location = new System.Drawing.Point(560, 551);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(127, 13);
+            this.label24.Size = new System.Drawing.Size(148, 17);
             this.label24.TabIndex = 84;
             this.label24.Text = "Fecha de Nacimiento";
             // 
             // label23
             // 
+            this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(382, 396);
+            this.label23.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label23.Location = new System.Drawing.Point(560, 479);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(27, 13);
+            this.label23.Size = new System.Drawing.Size(29, 17);
             this.label23.TabIndex = 83;
             this.label23.Text = "Rut";
             // 
             // label22
             // 
+            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(380, 363);
+            this.label22.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label22.Location = new System.Drawing.Point(560, 443);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(50, 13);
+            this.label22.Size = new System.Drawing.Size(61, 17);
             this.label22.TabIndex = 82;
             this.label22.Text = "Nombre";
             // 
             // fotosocio
             // 
+            this.fotosocio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.fotosocio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.fotosocio.Location = new System.Drawing.Point(786, 78);
+            this.fotosocio.Location = new System.Drawing.Point(1023, 190);
             this.fotosocio.Name = "fotosocio";
-            this.fotosocio.Size = new System.Drawing.Size(186, 108);
+            this.fotosocio.Size = new System.Drawing.Size(198, 230);
             this.fotosocio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.fotosocio.TabIndex = 91;
             this.fotosocio.TabStop = false;
             // 
             // label16
             // 
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(828, 42);
+            this.label16.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label16.Location = new System.Drawing.Point(1035, 126);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(107, 13);
+            this.label16.Size = new System.Drawing.Size(173, 23);
             this.label16.TabIndex = 90;
             this.label16.Text = "Imagen Del Socio";
-            // 
-            // btnseleccionarimagen
-            // 
-            this.btnseleccionarimagen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.btnseleccionarimagen.FlatAppearance.BorderSize = 0;
-            this.btnseleccionarimagen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnseleccionarimagen.ForeColor = System.Drawing.Color.White;
-            this.btnseleccionarimagen.Location = new System.Drawing.Point(812, 221);
-            this.btnseleccionarimagen.Name = "btnseleccionarimagen";
-            this.btnseleccionarimagen.Size = new System.Drawing.Size(121, 23);
-            this.btnseleccionarimagen.TabIndex = 92;
-            this.btnseleccionarimagen.Text = "Seleccionar Imagen";
-            this.btnseleccionarimagen.UseVisualStyleBackColor = false;
-            this.btnseleccionarimagen.Click += new System.EventHandler(this.btnseleccionarimagen_Click);
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // btnbuscareditar
-            // 
-            this.btnbuscareditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.btnbuscareditar.FlatAppearance.BorderSize = 0;
-            this.btnbuscareditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnbuscareditar.ForeColor = System.Drawing.Color.White;
-            this.btnbuscareditar.Location = new System.Drawing.Point(371, 12);
-            this.btnbuscareditar.Name = "btnbuscareditar";
-            this.btnbuscareditar.Size = new System.Drawing.Size(75, 23);
-            this.btnbuscareditar.TabIndex = 93;
-            this.btnbuscareditar.Text = "Buscar";
-            this.btnbuscareditar.UseVisualStyleBackColor = false;
-            this.btnbuscareditar.Click += new System.EventHandler(this.btnbuscareditar_Click);
-            // 
             // txtbuscar
             // 
-            this.txtbuscar.Location = new System.Drawing.Point(61, 15);
+            this.txtbuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbuscar.Location = new System.Drawing.Point(76, 46);
             this.txtbuscar.Name = "txtbuscar";
-            this.txtbuscar.Size = new System.Drawing.Size(275, 20);
+            this.txtbuscar.Size = new System.Drawing.Size(790, 27);
             this.txtbuscar.TabIndex = 94;
             // 
             // gridcapdatosedi
             // 
             this.gridcapdatosedi.AllowUserToOrderColumns = true;
             this.gridcapdatosedi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridcapdatosedi.Location = new System.Drawing.Point(786, 274);
+            this.gridcapdatosedi.Location = new System.Drawing.Point(1223, 192);
             this.gridcapdatosedi.Name = "gridcapdatosedi";
             this.gridcapdatosedi.Size = new System.Drawing.Size(240, 16);
             this.gridcapdatosedi.TabIndex = 95;
@@ -655,89 +736,21 @@
             // 
             // cbhijossocio
             // 
+            this.cbhijossocio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbhijossocio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbhijossocio.FormattingEnabled = true;
-            this.cbhijossocio.Location = new System.Drawing.Point(508, 313);
+            this.cbhijossocio.Location = new System.Drawing.Point(764, 393);
             this.cbhijossocio.Name = "cbhijossocio";
-            this.cbhijossocio.Size = new System.Drawing.Size(200, 21);
+            this.cbhijossocio.Size = new System.Drawing.Size(203, 29);
             this.cbhijossocio.TabIndex = 97;
             this.cbhijossocio.TextChanged += new System.EventHandler(this.cbhijossocio_TextChanged);
             this.cbhijossocio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbhijossocio_KeyPress);
-            // 
-            // btneliminarcon
-            // 
-            this.btneliminarcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.btneliminarcon.FlatAppearance.BorderSize = 0;
-            this.btneliminarcon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btneliminarcon.ForeColor = System.Drawing.Color.White;
-            this.btneliminarcon.Location = new System.Drawing.Point(426, 239);
-            this.btneliminarcon.Name = "btneliminarcon";
-            this.btneliminarcon.Size = new System.Drawing.Size(112, 23);
-            this.btneliminarcon.TabIndex = 98;
-            this.btneliminarcon.Text = "Eliminar Conyuge";
-            this.btneliminarcon.UseVisualStyleBackColor = false;
-            this.btneliminarcon.Click += new System.EventHandler(this.btneliminarcon_Click);
-            // 
-            // btnagregarcon
-            // 
-            this.btnagregarcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.btnagregarcon.FlatAppearance.BorderSize = 0;
-            this.btnagregarcon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnagregarcon.ForeColor = System.Drawing.Color.White;
-            this.btnagregarcon.Location = new System.Drawing.Point(586, 239);
-            this.btnagregarcon.Name = "btnagregarcon";
-            this.btnagregarcon.Size = new System.Drawing.Size(113, 23);
-            this.btnagregarcon.TabIndex = 99;
-            this.btnagregarcon.Text = "Agregar Conyuge";
-            this.btnagregarcon.UseVisualStyleBackColor = false;
-            this.btnagregarcon.Click += new System.EventHandler(this.btnagregarcon_Click);
-            // 
-            // btneliminarhi
-            // 
-            this.btneliminarhi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.btneliminarhi.FlatAppearance.BorderSize = 0;
-            this.btneliminarhi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btneliminarhi.ForeColor = System.Drawing.Color.White;
-            this.btneliminarhi.Location = new System.Drawing.Point(426, 531);
-            this.btneliminarhi.Name = "btneliminarhi";
-            this.btneliminarhi.Size = new System.Drawing.Size(112, 23);
-            this.btneliminarhi.TabIndex = 100;
-            this.btneliminarhi.Text = "Eliminar Hijo";
-            this.btneliminarhi.UseVisualStyleBackColor = false;
-            this.btneliminarhi.Click += new System.EventHandler(this.btneliminarhi_Click);
-            // 
-            // btnagregarhij
-            // 
-            this.btnagregarhij.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.btnagregarhij.FlatAppearance.BorderSize = 0;
-            this.btnagregarhij.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnagregarhij.ForeColor = System.Drawing.Color.White;
-            this.btnagregarhij.Location = new System.Drawing.Point(586, 531);
-            this.btnagregarhij.Name = "btnagregarhij";
-            this.btnagregarhij.Size = new System.Drawing.Size(113, 23);
-            this.btnagregarhij.TabIndex = 101;
-            this.btnagregarhij.Text = "Agregar Hijo";
-            this.btnagregarhij.UseVisualStyleBackColor = false;
-            this.btnagregarhij.Click += new System.EventHandler(this.btnagregarhij_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(383, 313);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 21);
-            this.button1.TabIndex = 102;
-            this.button1.Text = "Seleccionar Hijo";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // gbhijo
             // 
             this.gbhijo.AllowUserToOrderColumns = true;
             this.gbhijo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gbhijo.Location = new System.Drawing.Point(786, 347);
+            this.gbhijo.Location = new System.Drawing.Point(1223, 265);
             this.gbhijo.Name = "gbhijo";
             this.gbhijo.Size = new System.Drawing.Size(240, 13);
             this.gbhijo.TabIndex = 103;
@@ -745,31 +758,36 @@
             // 
             // label11
             // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(513, 15);
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label11.Location = new System.Drawing.Point(658, 78);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(176, 20);
+            this.label11.Size = new System.Drawing.Size(205, 23);
             this.label11.TabIndex = 104;
             this.label11.Text = "Datos de la Conyuge";
             // 
             // label21
             // 
+            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(492, 274);
+            this.label21.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label21.Location = new System.Drawing.Point(658, 348);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(231, 20);
+            this.label21.Size = new System.Drawing.Size(259, 23);
             this.label21.TabIndex = 105;
             this.label21.Text = "Datos de los Hijos del socio";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(110, 59);
+            this.label17.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label17.Location = new System.Drawing.Point(166, 78);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(133, 20);
+            this.label17.Size = new System.Drawing.Size(151, 23);
             this.label17.TabIndex = 106;
             this.label17.Text = "Datos del socio";
             // 
@@ -777,7 +795,7 @@
             // 
             this.gridbuscarsolosocio.AllowUserToOrderColumns = true;
             this.gridbuscarsolosocio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridbuscarsolosocio.Location = new System.Drawing.Point(786, 313);
+            this.gridbuscarsolosocio.Location = new System.Drawing.Point(1223, 231);
             this.gridbuscarsolosocio.Name = "gridbuscarsolosocio";
             this.gridbuscarsolosocio.Size = new System.Drawing.Size(240, 19);
             this.gridbuscarsolosocio.TabIndex = 107;
@@ -787,7 +805,7 @@
             // 
             this.grideditarsocioconyu.AllowUserToOrderColumns = true;
             this.grideditarsocioconyu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grideditarsocioconyu.Location = new System.Drawing.Point(788, 392);
+            this.grideditarsocioconyu.Location = new System.Drawing.Point(1225, 310);
             this.grideditarsocioconyu.Name = "grideditarsocioconyu";
             this.grideditarsocioconyu.Size = new System.Drawing.Size(240, 17);
             this.grideditarsocioconyu.TabIndex = 108;
@@ -797,11 +815,222 @@
             // 
             this.grideditarsociohijo.AllowUserToOrderColumns = true;
             this.grideditarsociohijo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grideditarsociohijo.Location = new System.Drawing.Point(786, 432);
+            this.grideditarsociohijo.Location = new System.Drawing.Point(1223, 350);
             this.grideditarsociohijo.Name = "grideditarsociohijo";
             this.grideditarsociohijo.Size = new System.Drawing.Size(240, 27);
             this.grideditarsociohijo.TabIndex = 109;
             this.grideditarsociohijo.Visible = false;
+            // 
+            // btVolver
+            // 
+            this.btVolver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btVolver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btVolver.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btVolver.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btVolver.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btVolver.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btVolver.IconChar = FontAwesome.Sharp.IconChar.ExchangeAlt;
+            this.btVolver.IconColor = System.Drawing.Color.Gainsboro;
+            this.btVolver.IconSize = 26;
+            this.btVolver.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btVolver.Location = new System.Drawing.Point(1145, 12);
+            this.btVolver.Name = "btVolver";
+            this.btVolver.Rotation = 0D;
+            this.btVolver.Size = new System.Drawing.Size(93, 38);
+            this.btVolver.TabIndex = 110;
+            this.btVolver.Text = "Volver";
+            this.btVolver.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btVolver.UseVisualStyleBackColor = false;
+            this.btVolver.Click += new System.EventHandler(this.btVolver_Click);
+            // 
+            // btSubirIMG
+            // 
+            this.btSubirIMG.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btSubirIMG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btSubirIMG.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btSubirIMG.FlatAppearance.BorderSize = 0;
+            this.btSubirIMG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btSubirIMG.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btSubirIMG.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSubirIMG.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btSubirIMG.IconChar = FontAwesome.Sharp.IconChar.FileUpload;
+            this.btSubirIMG.IconColor = System.Drawing.Color.Gainsboro;
+            this.btSubirIMG.IconSize = 26;
+            this.btSubirIMG.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btSubirIMG.Location = new System.Drawing.Point(1036, 436);
+            this.btSubirIMG.Name = "btSubirIMG";
+            this.btSubirIMG.Rotation = 0D;
+            this.btSubirIMG.Size = new System.Drawing.Size(170, 38);
+            this.btSubirIMG.TabIndex = 111;
+            this.btSubirIMG.Text = "Subir Imagen";
+            this.btSubirIMG.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btSubirIMG.UseVisualStyleBackColor = false;
+            this.btSubirIMG.Click += new System.EventHandler(this.btSubirIMG_Click);
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button1.IconChar = FontAwesome.Sharp.IconChar.HandPointer;
+            this.button1.IconColor = System.Drawing.Color.Gainsboro;
+            this.button1.IconSize = 26;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(563, 389);
+            this.button1.Name = "button1";
+            this.button1.Rotation = 0D;
+            this.button1.Size = new System.Drawing.Size(195, 38);
+            this.button1.TabIndex = 112;
+            this.button1.Text = "Seleccionar Hijo";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnbuscareditar
+            // 
+            this.btnbuscareditar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnbuscareditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnbuscareditar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnbuscareditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnbuscareditar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnbuscareditar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnbuscareditar.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnbuscareditar.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btnbuscareditar.IconColor = System.Drawing.Color.White;
+            this.btnbuscareditar.IconSize = 26;
+            this.btnbuscareditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnbuscareditar.Location = new System.Drawing.Point(931, 40);
+            this.btnbuscareditar.Name = "btnbuscareditar";
+            this.btnbuscareditar.Rotation = 0D;
+            this.btnbuscareditar.Size = new System.Drawing.Size(170, 38);
+            this.btnbuscareditar.TabIndex = 113;
+            this.btnbuscareditar.Text = "Buscar Socio";
+            this.btnbuscareditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnbuscareditar.UseVisualStyleBackColor = false;
+            this.btnbuscareditar.Click += new System.EventHandler(this.btnbuscareditar_Click);
+            // 
+            // btnagregarhij
+            // 
+            this.btnagregarhij.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnagregarhij.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnagregarhij.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnagregarhij.FlatAppearance.BorderSize = 0;
+            this.btnagregarhij.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnagregarhij.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnagregarhij.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnagregarhij.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnagregarhij.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
+            this.btnagregarhij.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnagregarhij.IconSize = 26;
+            this.btnagregarhij.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnagregarhij.Location = new System.Drawing.Point(764, 605);
+            this.btnagregarhij.Name = "btnagregarhij";
+            this.btnagregarhij.Rotation = 0D;
+            this.btnagregarhij.Size = new System.Drawing.Size(203, 38);
+            this.btnagregarhij.TabIndex = 114;
+            this.btnagregarhij.Text = "Agregar Hijo";
+            this.btnagregarhij.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnagregarhij.UseVisualStyleBackColor = false;
+            this.btnagregarhij.Click += new System.EventHandler(this.btnagregarhij_Click);
+            // 
+            // btnagregarcon
+            // 
+            this.btnagregarcon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnagregarcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnagregarcon.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnagregarcon.FlatAppearance.BorderSize = 0;
+            this.btnagregarcon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnagregarcon.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnagregarcon.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnagregarcon.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnagregarcon.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
+            this.btnagregarcon.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnagregarcon.IconSize = 26;
+            this.btnagregarcon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnagregarcon.Location = new System.Drawing.Point(764, 300);
+            this.btnagregarcon.Name = "btnagregarcon";
+            this.btnagregarcon.Rotation = 0D;
+            this.btnagregarcon.Size = new System.Drawing.Size(203, 38);
+            this.btnagregarcon.TabIndex = 115;
+            this.btnagregarcon.Text = "Agregar Conyuge";
+            this.btnagregarcon.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnagregarcon.UseVisualStyleBackColor = false;
+            this.btnagregarcon.Click += new System.EventHandler(this.btnagregarcon_Click);
+            // 
+            // btneliminarhi
+            // 
+            this.btneliminarhi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btneliminarhi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btneliminarhi.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btneliminarhi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btneliminarhi.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btneliminarhi.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btneliminarhi.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btneliminarhi.IconChar = FontAwesome.Sharp.IconChar.UserTimes;
+            this.btneliminarhi.IconColor = System.Drawing.Color.White;
+            this.btneliminarhi.IconSize = 26;
+            this.btneliminarhi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btneliminarhi.Location = new System.Drawing.Point(563, 605);
+            this.btneliminarhi.Name = "btneliminarhi";
+            this.btneliminarhi.Rotation = 0D;
+            this.btneliminarhi.Size = new System.Drawing.Size(195, 38);
+            this.btneliminarhi.TabIndex = 116;
+            this.btneliminarhi.Text = "Eliminar Hijo";
+            this.btneliminarhi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btneliminarhi.UseVisualStyleBackColor = false;
+            this.btneliminarhi.Click += new System.EventHandler(this.btneliminarhi_Click);
+            // 
+            // btneliminarcon
+            // 
+            this.btneliminarcon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btneliminarcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btneliminarcon.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btneliminarcon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btneliminarcon.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btneliminarcon.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btneliminarcon.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btneliminarcon.IconChar = FontAwesome.Sharp.IconChar.UserTimes;
+            this.btneliminarcon.IconColor = System.Drawing.Color.White;
+            this.btneliminarcon.IconSize = 26;
+            this.btneliminarcon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btneliminarcon.Location = new System.Drawing.Point(563, 300);
+            this.btneliminarcon.Name = "btneliminarcon";
+            this.btneliminarcon.Rotation = 0D;
+            this.btneliminarcon.Size = new System.Drawing.Size(195, 38);
+            this.btneliminarcon.TabIndex = 117;
+            this.btneliminarcon.Text = "Eliminar Conyuge";
+            this.btneliminarcon.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btneliminarcon.UseVisualStyleBackColor = false;
+            this.btneliminarcon.Click += new System.EventHandler(this.btneliminarcon_Click);
+            // 
+            // btneditar
+            // 
+            this.btneditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btneditar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btneditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btneditar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btneditar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btneditar.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btneditar.IconChar = FontAwesome.Sharp.IconChar.UserEdit;
+            this.btneditar.IconColor = System.Drawing.Color.White;
+            this.btneditar.IconSize = 26;
+            this.btneditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btneditar.Location = new System.Drawing.Point(80, 650);
+            this.btneditar.Name = "btneditar";
+            this.btneditar.Rotation = 0D;
+            this.btneditar.Size = new System.Drawing.Size(183, 38);
+            this.btneditar.TabIndex = 118;
+            this.btneditar.Text = "Editar Socio";
+            this.btneditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btneditar.UseVisualStyleBackColor = false;
+            this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
             // 
             // EditarSocio
             // 
@@ -809,6 +1038,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(56)))), ((int)(((byte)(104)))));
             this.ClientSize = new System.Drawing.Size(1250, 747);
+            this.Controls.Add(this.btneditar);
+            this.Controls.Add(this.btneliminarcon);
+            this.Controls.Add(this.btneliminarhi);
+            this.Controls.Add(this.btnagregarcon);
+            this.Controls.Add(this.btnagregarhij);
+            this.Controls.Add(this.btnbuscareditar);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btSubirIMG);
+            this.Controls.Add(this.btVolver);
             this.Controls.Add(this.grideditarsociohijo);
             this.Controls.Add(this.grideditarsocioconyu);
             this.Controls.Add(this.gridbuscarsolosocio);
@@ -816,16 +1054,9 @@
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.gbhijo);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnagregarhij);
-            this.Controls.Add(this.btneliminarhi);
-            this.Controls.Add(this.btnagregarcon);
-            this.Controls.Add(this.btneliminarcon);
             this.Controls.Add(this.cbhijossocio);
             this.Controls.Add(this.gridcapdatosedi);
             this.Controls.Add(this.txtbuscar);
-            this.Controls.Add(this.btnbuscareditar);
-            this.Controls.Add(this.btnseleccionarimagen);
             this.Controls.Add(this.fotosocio);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.cbSexo);
@@ -876,9 +1107,7 @@
             this.Controls.Add(this.txtrutsocio);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btneditar);
-            this.Controls.Add(this.btnvolvereditar);
-            this.ForeColor = System.Drawing.Color.White;
+            this.ForeColor = System.Drawing.Color.Gainsboro;
             this.Name = "EditarSocio";
             this.Text = "EditarSocio";
             ((System.ComponentModel.ISupportInitialize)(this.fotosocio)).EndInit();
@@ -893,9 +1122,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnvolvereditar;
-        private System.Windows.Forms.Button btneditar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtrutsocio;
@@ -946,18 +1172,11 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.PictureBox fotosocio;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Button btnseleccionarimagen;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Button btnbuscareditar;
         private System.Windows.Forms.TextBox txtbuscar;
         private System.Windows.Forms.DataGridView gridcapdatosedi;
         private System.Windows.Forms.ComboBox cbhijossocio;
-        private System.Windows.Forms.Button btneliminarcon;
-        private System.Windows.Forms.Button btnagregarcon;
-        private System.Windows.Forms.Button btneliminarhi;
-        private System.Windows.Forms.Button btnagregarhij;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView gbhijo;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label21;
@@ -965,5 +1184,14 @@
         private System.Windows.Forms.DataGridView gridbuscarsolosocio;
         private System.Windows.Forms.DataGridView grideditarsocioconyu;
         private System.Windows.Forms.DataGridView grideditarsociohijo;
+        private FontAwesome.Sharp.IconButton btVolver;
+        private FontAwesome.Sharp.IconButton btSubirIMG;
+        private FontAwesome.Sharp.IconButton button1;
+        private FontAwesome.Sharp.IconButton btnbuscareditar;
+        private FontAwesome.Sharp.IconButton btnagregarhij;
+        private FontAwesome.Sharp.IconButton btnagregarcon;
+        private FontAwesome.Sharp.IconButton btneliminarhi;
+        private FontAwesome.Sharp.IconButton btneliminarcon;
+        private FontAwesome.Sharp.IconButton btneditar;
     }
 }

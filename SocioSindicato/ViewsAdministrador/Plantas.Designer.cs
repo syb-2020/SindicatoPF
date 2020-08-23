@@ -60,7 +60,7 @@
             this.gridverplantas.Location = new System.Drawing.Point(76, 180);
             this.gridverplantas.Name = "gridverplantas";
             this.gridverplantas.ReadOnly = true;
-            this.gridverplantas.Size = new System.Drawing.Size(1002, 429);
+            this.gridverplantas.Size = new System.Drawing.Size(1006, 429);
             this.gridverplantas.TabIndex = 9;
             this.gridverplantas.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.gridverplantas_RowPostPaint);
             // 
@@ -101,7 +101,7 @@
             this.btplanta1.IconColor = System.Drawing.Color.White;
             this.btplanta1.IconSize = 26;
             this.btplanta1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btplanta1.Location = new System.Drawing.Point(76, 46);
+            this.btplanta1.Location = new System.Drawing.Point(76, 40);
             this.btplanta1.Name = "btplanta1";
             this.btplanta1.Rotation = 0D;
             this.btplanta1.Size = new System.Drawing.Size(170, 38);
@@ -145,7 +145,7 @@
             this.btplanta2.IconColor = System.Drawing.Color.White;
             this.btplanta2.IconSize = 26;
             this.btplanta2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btplanta2.Location = new System.Drawing.Point(281, 46);
+            this.btplanta2.Location = new System.Drawing.Point(281, 40);
             this.btplanta2.Name = "btplanta2";
             this.btplanta2.Rotation = 0D;
             this.btplanta2.Size = new System.Drawing.Size(170, 38);
@@ -189,7 +189,7 @@
             this.btplanta3.IconColor = System.Drawing.Color.White;
             this.btplanta3.IconSize = 26;
             this.btplanta3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btplanta3.Location = new System.Drawing.Point(494, 46);
+            this.btplanta3.Location = new System.Drawing.Point(494, 40);
             this.btplanta3.Name = "btplanta3";
             this.btplanta3.Rotation = 0D;
             this.btplanta3.Size = new System.Drawing.Size(170, 38);
@@ -233,7 +233,7 @@
             this.btplanta4.IconColor = System.Drawing.Color.White;
             this.btplanta4.IconSize = 26;
             this.btplanta4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btplanta4.Location = new System.Drawing.Point(705, 46);
+            this.btplanta4.Location = new System.Drawing.Point(705, 40);
             this.btplanta4.Name = "btplanta4";
             this.btplanta4.Rotation = 0D;
             this.btplanta4.Size = new System.Drawing.Size(170, 38);
@@ -277,7 +277,7 @@
             this.btTodos.IconColor = System.Drawing.Color.White;
             this.btTodos.IconSize = 26;
             this.btTodos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btTodos.Location = new System.Drawing.Point(908, 112);
+            this.btTodos.Location = new System.Drawing.Point(912, 112);
             this.btTodos.Name = "btTodos";
             this.btTodos.Rotation = 0D;
             this.btTodos.Size = new System.Drawing.Size(170, 38);

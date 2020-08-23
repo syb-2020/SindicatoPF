@@ -44,6 +44,10 @@
             this.btBuscarUser = new FontAwesome.Sharp.IconButton();
             this.btBuscarHijo = new FontAwesome.Sharp.IconButton();
             this.btBuscarConyuge = new FontAwesome.Sharp.IconButton();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gridbuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenbuscarsociomostrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridConyuge)).BeginInit();
@@ -54,13 +58,16 @@
             // txtbuscar
             // 
             this.txtbuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbuscar.Location = new System.Drawing.Point(107, 53);
+            this.txtbuscar.Location = new System.Drawing.Point(76, 46);
             this.txtbuscar.Name = "txtbuscar";
-            this.txtbuscar.Size = new System.Drawing.Size(790, 27);
+            this.txtbuscar.Size = new System.Drawing.Size(821, 27);
             this.txtbuscar.TabIndex = 1;
             // 
             // lbbuscarsocio
             // 
+            this.lbbuscarsocio.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbbuscarsocio.AutoSize = true;
             this.lbbuscarsocio.Location = new System.Drawing.Point(601, 63);
             this.lbbuscarsocio.Name = "lbbuscarsocio";
@@ -70,19 +77,23 @@
             // gridbuscar
             // 
             this.gridbuscar.AllowUserToOrderColumns = true;
+            this.gridbuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gridbuscar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridbuscar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(56)))), ((int)(((byte)(104)))));
             this.gridbuscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridbuscar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridbuscar.Location = new System.Drawing.Point(108, 137);
+            this.gridbuscar.Location = new System.Drawing.Point(76, 137);
             this.gridbuscar.Name = "gridbuscar";
-            this.gridbuscar.Size = new System.Drawing.Size(686, 115);
+            this.gridbuscar.Size = new System.Drawing.Size(718, 115);
             this.gridbuscar.TabIndex = 3;
             this.gridbuscar.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.gridbuscar_RowPostPaint);
             // 
             // imagenbuscarsociomostrar
             // 
-            this.imagenbuscarsociomostrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.imagenbuscarsociomostrar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.imagenbuscarsociomostrar.Location = new System.Drawing.Point(800, 137);
             this.imagenbuscarsociomostrar.Name = "imagenbuscarsociomostrar";
             this.imagenbuscarsociomostrar.Size = new System.Drawing.Size(301, 182);
@@ -93,6 +104,9 @@
             // 
             // btnddexcel
             // 
+            this.btnddexcel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnddexcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.btnddexcel.FlatAppearance.BorderSize = 0;
             this.btnddexcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -107,31 +121,40 @@
             // gridConyuge
             // 
             this.gridConyuge.AllowUserToOrderColumns = true;
+            this.gridConyuge.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gridConyuge.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridConyuge.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(56)))), ((int)(((byte)(104)))));
             this.gridConyuge.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridConyuge.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridConyuge.Location = new System.Drawing.Point(108, 269);
+            this.gridConyuge.Location = new System.Drawing.Point(76, 290);
             this.gridConyuge.Name = "gridConyuge";
-            this.gridConyuge.Size = new System.Drawing.Size(686, 109);
+            this.gridConyuge.Size = new System.Drawing.Size(718, 109);
             this.gridConyuge.TabIndex = 8;
             this.gridConyuge.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.gridConyuge_RowPostPaint);
             // 
             // gridHijo
             // 
+            this.gridHijo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gridHijo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridHijo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(56)))), ((int)(((byte)(104)))));
             this.gridHijo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridHijo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridHijo.Location = new System.Drawing.Point(108, 384);
+            this.gridHijo.Location = new System.Drawing.Point(76, 433);
             this.gridHijo.Name = "gridHijo";
-            this.gridHijo.Size = new System.Drawing.Size(686, 243);
+            this.gridHijo.Size = new System.Drawing.Size(718, 194);
             this.gridHijo.TabIndex = 9;
             this.gridHijo.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.gridHijo_RowPostPaint);
             // 
             // gbtodo
             // 
             this.gbtodo.AllowUserToOrderColumns = true;
+            this.gbtodo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gbtodo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gbtodo.Location = new System.Drawing.Point(108, 159);
             this.gbtodo.Name = "gbtodo";
@@ -260,6 +283,8 @@
             // 
             // btBuscarUser
             // 
+            this.btBuscarUser.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btBuscarUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.btBuscarUser.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.btBuscarUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -270,7 +295,7 @@
             this.btBuscarUser.IconColor = System.Drawing.Color.White;
             this.btBuscarUser.IconSize = 26;
             this.btBuscarUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btBuscarUser.Location = new System.Drawing.Point(931, 47);
+            this.btBuscarUser.Location = new System.Drawing.Point(931, 40);
             this.btBuscarUser.Name = "btBuscarUser";
             this.btBuscarUser.Rotation = 0D;
             this.btBuscarUser.Size = new System.Drawing.Size(170, 38);
@@ -282,7 +307,7 @@
             // 
             // btBuscarHijo
             // 
-            this.btBuscarHijo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btBuscarHijo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btBuscarHijo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.btBuscarHijo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.btBuscarHijo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -293,7 +318,7 @@
             this.btBuscarHijo.IconColor = System.Drawing.Color.White;
             this.btBuscarHijo.IconSize = 26;
             this.btBuscarHijo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btBuscarHijo.Location = new System.Drawing.Point(800, 384);
+            this.btBuscarHijo.Location = new System.Drawing.Point(800, 386);
             this.btBuscarHijo.Name = "btBuscarHijo";
             this.btBuscarHijo.Rotation = 0D;
             this.btBuscarHijo.Size = new System.Drawing.Size(301, 38);
@@ -305,7 +330,7 @@
             // 
             // btBuscarConyuge
             // 
-            this.btBuscarConyuge.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btBuscarConyuge.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btBuscarConyuge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.btBuscarConyuge.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.btBuscarConyuge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -326,12 +351,61 @@
             this.btBuscarConyuge.UseVisualStyleBackColor = false;
             this.btBuscarConyuge.Click += new System.EventHandler(this.btBuscarConyuge_Click);
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label11.Location = new System.Drawing.Point(72, 111);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(153, 23);
+            this.label11.TabIndex = 64;
+            this.label11.Text = "Datos Del Socio";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label17.Location = new System.Drawing.Point(72, 264);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(205, 23);
+            this.label17.TabIndex = 65;
+            this.label17.Text = "Datos de la Conyuge";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label1.Location = new System.Drawing.Point(72, 407);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(190, 23);
+            this.label1.TabIndex = 66;
+            this.label1.Text = "Datos del o los hijos";
+            // 
+            // label16
+            // 
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label16.Location = new System.Drawing.Point(868, 104);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(173, 23);
+            this.label16.TabIndex = 91;
+            this.label16.Text = "Imagen Del Socio";
+            // 
             // BuscarSocio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(56)))), ((int)(((byte)(104)))));
             this.ClientSize = new System.Drawing.Size(1250, 747);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.btBuscarConyuge);
             this.Controls.Add(this.btBuscarHijo);
             this.Controls.Add(this.btVolver);
@@ -377,5 +451,9 @@
         private FontAwesome.Sharp.IconButton btBuscarUser;
         private FontAwesome.Sharp.IconButton btBuscarHijo;
         private FontAwesome.Sharp.IconButton btBuscarConyuge;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label16;
     }
 }

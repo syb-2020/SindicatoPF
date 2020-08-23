@@ -70,9 +70,9 @@
             "Niñas De 11 Años",
             "Niños De 12 Años",
             "Niñas De 12 Años"});
-            this.comboniñosporedad.Location = new System.Drawing.Point(107, 53);
+            this.comboniñosporedad.Location = new System.Drawing.Point(76, 46);
             this.comboniñosporedad.Name = "comboniñosporedad";
-            this.comboniñosporedad.Size = new System.Drawing.Size(790, 29);
+            this.comboniñosporedad.Size = new System.Drawing.Size(821, 29);
             this.comboniñosporedad.TabIndex = 1;
             // 
             // gridnavidadniños
@@ -84,9 +84,9 @@
             this.gridnavidadniños.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(56)))), ((int)(((byte)(104)))));
             this.gridnavidadniños.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridnavidadniños.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridnavidadniños.Location = new System.Drawing.Point(107, 104);
+            this.gridnavidadniños.Location = new System.Drawing.Point(76, 104);
             this.gridnavidadniños.Name = "gridnavidadniños";
-            this.gridnavidadniños.Size = new System.Drawing.Size(994, 497);
+            this.gridnavidadniños.Size = new System.Drawing.Size(1025, 497);
             this.gridnavidadniños.TabIndex = 2;
             this.gridnavidadniños.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.gridnavidadniños_RowPostPaint);
             // 
@@ -110,6 +110,8 @@
             // 
             // btplanta1
             // 
+            this.btplanta1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btplanta1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.btplanta1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.btplanta1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -120,7 +122,7 @@
             this.btplanta1.IconColor = System.Drawing.Color.White;
             this.btplanta1.IconSize = 26;
             this.btplanta1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btplanta1.Location = new System.Drawing.Point(931, 47);
+            this.btplanta1.Location = new System.Drawing.Point(931, 40);
             this.btplanta1.Name = "btplanta1";
             this.btplanta1.Rotation = 0D;
             this.btplanta1.Size = new System.Drawing.Size(170, 38);
