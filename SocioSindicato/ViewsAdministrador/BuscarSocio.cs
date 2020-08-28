@@ -87,14 +87,14 @@ namespace SocioSindicato.ViewsAdministrador
 
 
                         string rut = gridbuscar.Rows[gridbuscar.CurrentRow.Index].Cells[0].Value.ToString();
-                        using (sindicatoPFEntities db = new sindicatoPFEntities())
-                        {
-                            var oImage = db.Socio.Find(rut);
-                            MemoryStream ms = new MemoryStream(oImage.imagen);
-                            Bitmap bmp = new Bitmap(ms);
-                            imagenbuscarsociomostrar.Image = bmp;
-                        }
-                    }
+						using (sindicatoPFEntities db = new sindicatoPFEntities())
+						{
+							var oImage = db.Socio.Find(rut);
+							MemoryStream ms = new MemoryStream(oImage.imagen);
+							Bitmap bmp = new Bitmap(ms);
+							imagenbuscarsociomostrar.Image = bmp;
+						}
+					}
                     else
                     {
 
@@ -132,10 +132,7 @@ namespace SocioSindicato.ViewsAdministrador
         
 
             foreach (DataGridViewColumn columna in datalistado.Columns)
-            {
-               
-
-
+            {              
                     indicecolum++;
                     exportarexcel.Cells[1, indicecolum] = columna.Name;
                          
@@ -346,7 +343,6 @@ namespace SocioSindicato.ViewsAdministrador
                                        NOMBRE_HIJO = hij.nombre,
                                        NACIMIENTO_HIJO = hij.nacimiento,
                                        SEXO = hij.sexo
-
                                    };
 
             gbtodo.DataSource = listadosociohijo.ToList();

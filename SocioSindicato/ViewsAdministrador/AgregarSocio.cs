@@ -258,7 +258,7 @@ namespace SocioSindicato.ViewsAdministrador
                 {
 
 
-                    MessageBox.Show("Socio No Agregado", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Ingrese Datos Para Agregar", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                     //BORRAR DATOS SOCIO
                     txtrutsocio.Text = "";
@@ -386,7 +386,7 @@ namespace SocioSindicato.ViewsAdministrador
                 catch (Exception)
                 {
 
-                    MessageBox.Show("Socio No Agregado", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Ingrese Datos Para Agregar", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                     //BORRAR DATOS SOCIO
                     txtrutsocio.Text = "";
@@ -505,7 +505,7 @@ namespace SocioSindicato.ViewsAdministrador
                 catch (Exception)
                 {
 
-                    MessageBox.Show("Socio y Conyuge No Agregado", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Ingrese Datos Para Agregar", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                     //BORRAR DATOS SOCIO
                     txtrutsocio.Text = "";
@@ -628,7 +628,7 @@ namespace SocioSindicato.ViewsAdministrador
                 catch (Exception)
                 {
 
-                    MessageBox.Show("Socio Con Hijo No Agregado", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Ingrese Datos Para Agregar", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                     //BORRAR DATOS SOCIO
                     txtrutsocio.Text = "";

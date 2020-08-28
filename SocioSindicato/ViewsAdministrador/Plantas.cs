@@ -16,7 +16,8 @@ namespace SocioSindicato.ViewsAdministrador
     {
         public Plantas()
         {
-            InitializeComponent();           
+            InitializeComponent();
+            cbordenarcatplant.SelectedIndex = 0;
         }
                
        
@@ -64,9 +65,10 @@ namespace SocioSindicato.ViewsAdministrador
                 }
                 else
                 {
+                    cbordenarcatplant.SelectedIndex = 0;
                     MessageBox.Show("Socio Planta 1 Encontrados!");
 
-
+                  
                 }
 
 
@@ -105,8 +107,9 @@ namespace SocioSindicato.ViewsAdministrador
                 }
                 else
                 {
+                    cbordenarcatplant.SelectedIndex = 0;
                     MessageBox.Show("Socio Planta 2 Encontrados!");
-
+                   
 
                 }
 
@@ -146,6 +149,7 @@ namespace SocioSindicato.ViewsAdministrador
                 }
                 else
                 {
+                    cbordenarcatplant.SelectedIndex = 0;
                     MessageBox.Show("Socio Planta 3 Encontrados!");
 
 
@@ -185,6 +189,7 @@ namespace SocioSindicato.ViewsAdministrador
                 }
                 else
                 {
+                    cbordenarcatplant.SelectedIndex = 0;
                     MessageBox.Show("Socio Planta 4 Encontrados!");
 
 
@@ -225,6 +230,7 @@ namespace SocioSindicato.ViewsAdministrador
                 }
                 else
                 {
+                    cbordenarcatplant.SelectedIndex = 0;
                     MessageBox.Show("Socio Planta CDT Encontrados!");
 
                 }
@@ -263,6 +269,7 @@ namespace SocioSindicato.ViewsAdministrador
                 }
                 else
                 {
+                    cbordenarcatplant.SelectedIndex = 0;
                     MessageBox.Show("Socio Planta Pizza Encontrados!");
 
 
@@ -301,6 +308,7 @@ namespace SocioSindicato.ViewsAdministrador
                 }
                 else
                 {
+                    cbordenarcatplant.SelectedIndex = 0;
                     MessageBox.Show("Socio Planta Carnicos Encontrados!");
 
 
@@ -340,6 +348,7 @@ namespace SocioSindicato.ViewsAdministrador
                 }
                 else
                 {
+                    cbordenarcatplant.SelectedIndex = 0;
                     MessageBox.Show("Socio Planta Mujeres Encontrados!");
 
 
@@ -369,10 +378,9 @@ namespace SocioSindicato.ViewsAdministrador
                 var allsociosplanta = from socplan in context.Socio
                                       join plansoc in context.Planta
                                       on socplan.id_planta equals plansoc.id_planta
-                                      orderby plansoc.id_planta
                                       select new { RUT = socplan.rut_socio, NOMBRE = socplan.nombre_socio, PLANTA = plansoc.nombre, CATEGORIA = socplan.id_categoria };
 
-                gridverplantas.DataSource = allsociosplanta.OrderBy(s => s.CATEGORIA).ToList();
+                gridverplantas.DataSource = allsociosplanta.OrderBy(s => s.PLANTA).ToList();
 
                 if (gridverplantas.Rows.Count == 0)
                 {
@@ -380,6 +388,7 @@ namespace SocioSindicato.ViewsAdministrador
                 }
                 else
                 {
+                    cbordenarcatplant.SelectedIndex = 0;
                     MessageBox.Show("Todos Los Socios!");
 
 
@@ -1831,6 +1840,11 @@ namespace SocioSindicato.ViewsAdministrador
             this.Hide();
             this.Close();
 
-        }       
-    }
+        }
+
+		private void cbordenarcatplant_KeyPress(object sender, KeyPressEventArgs e)
+		{
+            e.Handled = true;
+        }
+	}
 }

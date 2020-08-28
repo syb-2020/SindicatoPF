@@ -451,13 +451,13 @@ namespace SocioSindicato.ViewsAdministrador
                                 txtnombremadre.Text = Convert.ToString(row.Cells[13].Value);
                                 combocontratosocio.Text = Convert.ToString(row.Cells[14].Value);
 
-                                using (sindicatoPFEntities db = new sindicatoPFEntities())
-                                {
-                                    var oImage = db.Socio.Find(buscar_rut);
-                                    MemoryStream ms = new MemoryStream(oImage.imagen);
-                                    Bitmap bmp = new Bitmap(ms);
-                                    fotosocio.Image = bmp;
-                                }
+                                //using (sindicatoPFEntities db = new sindicatoPFEntities())
+                                //{
+                                //    var oImage = db.Socio.Find(buscar_rut);
+                                //    MemoryStream ms = new MemoryStream(oImage.imagen);
+                                //    Bitmap bmp = new Bitmap(ms);
+                                //    fotosocio.Image = bmp;
+                                //}
 
 
                             }
