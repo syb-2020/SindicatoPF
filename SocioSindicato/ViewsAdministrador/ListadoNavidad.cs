@@ -85,12 +85,12 @@ namespace SocioSindicato.ViewsAdministrador
         }
         public class Datos
         {
-            public string nombrehijo { get; set; }
-            public int edadhijo { get; set; }
-            public DateTime nacimientohijo { get; set; }
-            public string sexohijo { get; set; }
-            public string nombrepadre { get; set; }
-            public string plantapadre { get; set; }
+            public string NOMBRES { get; set; }
+            public int EDAD { get; set; }
+            public DateTime FECHA_DE_NACIMIENTO { get; set; }
+            public string SEXO { get; set; }
+            public string PADRE { get; set; }
+            public string PLANTA { get; set; }
 
         }
         List<Datos> navidad = new List<Datos>();
@@ -155,12 +155,12 @@ namespace SocioSindicato.ViewsAdministrador
                             int edadmenorhombre = 0;
                             Datos dato = new Datos
                             {
-                                nombrehijo = nombrehi,
-                                edadhijo = edadmenorhombre,
-                                nacimientohijo = fechanacimiento,
-                                sexohijo = sexo2,
-                                nombrepadre = nombreSoc,
-                                plantapadre = nombreplan
+                                NOMBRES = nombrehi,
+                                EDAD = edadmenorhombre,
+                                FECHA_DE_NACIMIENTO = fechanacimiento,
+                                SEXO = sexo2,
+                                PADRE = nombreSoc,
+                                PLANTA = nombreplan
 
                             };
                             navidad.Add(dato);
@@ -175,12 +175,12 @@ namespace SocioSindicato.ViewsAdministrador
                             int edadniños = 0;
                             Datos dato = new Datos
                             {
-                                nombrehijo = nombrehi,
-                                edadhijo = edadniños,
-                                nacimientohijo = fechanacimiento,
-                                sexohijo = sexo2,
-                                nombrepadre = nombreSoc,
-                                plantapadre = nombreplan
+                                NOMBRES = nombrehi,
+                                EDAD = edadniños,
+                                FECHA_DE_NACIMIENTO = fechanacimiento,
+                                SEXO = sexo2,
+                                PADRE = nombreSoc,
+                                PLANTA = nombreplan
 
                             };
                             navidad.Add(dato);
@@ -196,12 +196,12 @@ namespace SocioSindicato.ViewsAdministrador
                             int edadniños = 1;
                             Datos dato = new Datos
                             {
-                                nombrehijo = nombrehi,
-                                edadhijo = edadniños,
-                                nacimientohijo = fechanacimiento,
-                                sexohijo = sexo2,
-                                nombrepadre = nombreSoc,
-                                plantapadre = nombreplan
+                                NOMBRES = nombrehi,
+                                EDAD = edadniños,
+                                FECHA_DE_NACIMIENTO = fechanacimiento,
+                                SEXO = sexo2,
+                                PADRE = nombreSoc,
+                                PLANTA = nombreplan
 
                             };
 
@@ -216,12 +216,12 @@ namespace SocioSindicato.ViewsAdministrador
                             int edadniños = 1;
                             Datos dato = new Datos
                             {
-                                nombrehijo = nombrehi,
-                                edadhijo = edadniños,
-                                nacimientohijo = fechanacimiento,
-                                sexohijo = sexo2,
-                                nombrepadre = nombreSoc,
-                                plantapadre = nombreplan
+                                NOMBRES = nombrehi,
+                                EDAD = edadniños,
+                                FECHA_DE_NACIMIENTO = fechanacimiento,
+                                SEXO = sexo2,
+                                PADRE = nombreSoc,
+                                PLANTA = nombreplan
 
                             };
                             navidad.Add(dato);
@@ -236,12 +236,12 @@ namespace SocioSindicato.ViewsAdministrador
 
                             Datos dato = new Datos
                             {
-                                nombrehijo = nombrehi,
-                                edadhijo = edadniños,
-                                nacimientohijo = fechanacimiento,
-                                sexohijo = sexo2,
-                                nombrepadre = nombreSoc,
-                                plantapadre = nombreplan
+                                NOMBRES = nombrehi,
+                                EDAD = edadniños,
+                                FECHA_DE_NACIMIENTO = fechanacimiento,
+                                SEXO = sexo2,
+                                PADRE = nombreSoc,
+                                PLANTA = nombreplan
 
                             };
 
@@ -256,12 +256,12 @@ namespace SocioSindicato.ViewsAdministrador
                             int edadniños = 2;
                             Datos dato = new Datos
                             {
-                                nombrehijo = nombrehi,
-                                edadhijo = edadniños,
-                                nacimientohijo = fechanacimiento,
-                                sexohijo = sexo2,
-                                nombrepadre = nombreSoc,
-                                plantapadre = nombreplan
+                                NOMBRES = nombrehi,
+                                EDAD = edadniños,
+                                FECHA_DE_NACIMIENTO = fechanacimiento,
+                                SEXO = sexo2,
+                                PADRE = nombreSoc,
+                                PLANTA = nombreplan
 
                             };
                             navidad.Add(dato);
@@ -276,12 +276,12 @@ namespace SocioSindicato.ViewsAdministrador
 
                             Datos dato = new Datos
                             {
-                                nombrehijo = nombrehi,
-                                edadhijo = edadniños,
-                                nacimientohijo = fechanacimiento,
-                                sexohijo = sexo2,
-                                nombrepadre = nombreSoc,
-                                plantapadre = nombreplan
+                                NOMBRES = nombrehi,
+                                EDAD = edadniños,
+                                FECHA_DE_NACIMIENTO = fechanacimiento,
+                                SEXO = sexo2,
+                                PADRE = nombreSoc,
+                                PLANTA = nombreplan
 
                             };
 
@@ -296,12 +296,12 @@ namespace SocioSindicato.ViewsAdministrador
                             int edadniños = 3;
                             Datos dato = new Datos
                             {
-                                nombrehijo = nombrehi,
-                                edadhijo = edadniños,
-                                nacimientohijo = fechanacimiento,
-                                sexohijo = sexo2,
-                                nombrepadre = nombreSoc,
-                                plantapadre = nombreplan
+                                NOMBRES = nombrehi,
+                                EDAD = edadniños,
+                                FECHA_DE_NACIMIENTO = fechanacimiento,
+                                SEXO = sexo2,
+                                PADRE = nombreSoc,
+                                PLANTA = nombreplan
 
                             };
 
@@ -317,12 +317,12 @@ namespace SocioSindicato.ViewsAdministrador
 
                             Datos dato = new Datos
                             {
-                                nombrehijo = nombrehi,
-                                edadhijo = edadniños,
-                                nacimientohijo = fechanacimiento,
-                                sexohijo = sexo2,
-                                nombrepadre = nombreSoc,
-                                plantapadre = nombreplan
+                                NOMBRES = nombrehi,
+                                EDAD = edadniños,
+                                FECHA_DE_NACIMIENTO = fechanacimiento,
+                                SEXO = sexo2,
+                                PADRE = nombreSoc,
+                                PLANTA = nombreplan
 
                             };
                             navidad.Add(dato);
@@ -336,12 +336,12 @@ namespace SocioSindicato.ViewsAdministrador
                             int edadniños = 4;
                             Datos dato = new Datos
                             {
-                                nombrehijo = nombrehi,
-                                edadhijo = edadniños,
-                                nacimientohijo = fechanacimiento,
-                                sexohijo = sexo2,
-                                nombrepadre = nombreSoc,
-                                plantapadre = nombreplan
+                                NOMBRES = nombrehi,
+                                EDAD = edadniños,
+                                FECHA_DE_NACIMIENTO = fechanacimiento,
+                                SEXO = sexo2,
+                                PADRE = nombreSoc,
+                                PLANTA = nombreplan
 
                             };
                             navidad.Add(dato);
@@ -355,12 +355,12 @@ namespace SocioSindicato.ViewsAdministrador
                             int edadniños = 5;
                             Datos dato = new Datos
                             {
-                                nombrehijo = nombrehi,
-                                edadhijo = edadniños,
-                                nacimientohijo = fechanacimiento,
-                                sexohijo = sexo2,
-                                nombrepadre = nombreSoc,
-                                plantapadre = nombreplan
+                                NOMBRES = nombrehi,
+                                EDAD = edadniños,
+                                FECHA_DE_NACIMIENTO = fechanacimiento,
+                                SEXO = sexo2,
+                                PADRE = nombreSoc,
+                                PLANTA = nombreplan
 
                             };
 
@@ -375,12 +375,12 @@ namespace SocioSindicato.ViewsAdministrador
                             int edadniños = 5;
                             Datos dato = new Datos
                             {
-                                nombrehijo = nombrehi,
-                                edadhijo = edadniños,
-                                nacimientohijo = fechanacimiento,
-                                sexohijo = sexo2,
-                                nombrepadre = nombreSoc,
-                                plantapadre = nombreplan
+                                NOMBRES = nombrehi,
+                                EDAD = edadniños,
+                                FECHA_DE_NACIMIENTO = fechanacimiento,
+                                SEXO = sexo2,
+                                PADRE = nombreSoc,
+                                PLANTA = nombreplan
 
                             };
                             navidad.Add(dato);
@@ -394,12 +394,12 @@ namespace SocioSindicato.ViewsAdministrador
                             int edadniños = 6;
                             Datos dato = new Datos
                             {
-                                nombrehijo = nombrehi,
-                                edadhijo = edadniños,
-                                nacimientohijo = fechanacimiento,
-                                sexohijo = sexo2,
-                                nombrepadre = nombreSoc,
-                                plantapadre = nombreplan
+                                NOMBRES = nombrehi,
+                                EDAD = edadniños,
+                                FECHA_DE_NACIMIENTO = fechanacimiento,
+                                SEXO = sexo2,
+                                PADRE = nombreSoc,
+                                PLANTA = nombreplan
 
                             };
                             navidad.Add(dato);
@@ -413,12 +413,12 @@ namespace SocioSindicato.ViewsAdministrador
                             int edadniños = 6;
                             Datos dato = new Datos
                             {
-                                nombrehijo = nombrehi,
-                                edadhijo = edadniños,
-                                nacimientohijo = fechanacimiento,
-                                sexohijo = sexo2,
-                                nombrepadre = nombreSoc,
-                                plantapadre = nombreplan
+                                NOMBRES = nombrehi,
+                                EDAD = edadniños,
+                                FECHA_DE_NACIMIENTO = fechanacimiento,
+                                SEXO = sexo2,
+                                PADRE = nombreSoc,
+                                PLANTA = nombreplan
 
                             };
                             navidad.Add(dato);
@@ -432,12 +432,12 @@ namespace SocioSindicato.ViewsAdministrador
                             int edadniños = 7;
                             Datos dato = new Datos
                             {
-                                nombrehijo = nombrehi,
-                                edadhijo = edadniños,
-                                nacimientohijo = fechanacimiento,
-                                sexohijo = sexo2,
-                                nombrepadre = nombreSoc,
-                                plantapadre = nombreplan
+                                NOMBRES = nombrehi,
+                                EDAD = edadniños,
+                                FECHA_DE_NACIMIENTO = fechanacimiento,
+                                SEXO = sexo2,
+                                PADRE = nombreSoc,
+                                PLANTA = nombreplan
 
                             };
                             navidad.Add(dato);
@@ -451,12 +451,12 @@ namespace SocioSindicato.ViewsAdministrador
                             int edadniños = 7;
                             Datos dato = new Datos
                             {
-                                nombrehijo = nombrehi,
-                                edadhijo = edadniños,
-                                nacimientohijo = fechanacimiento,
-                                sexohijo = sexo2,
-                                nombrepadre = nombreSoc,
-                                plantapadre = nombreplan
+                                NOMBRES = nombrehi,
+                                EDAD = edadniños,
+                                FECHA_DE_NACIMIENTO = fechanacimiento,
+                                SEXO = sexo2,
+                                PADRE = nombreSoc,
+                                PLANTA = nombreplan
 
                             };
 
@@ -471,13 +471,12 @@ namespace SocioSindicato.ViewsAdministrador
                             int edadniños = 8;
                             Datos dato = new Datos
                             {
-                                nombrehijo = nombrehi,
-                                edadhijo = edadniños,
-                                nacimientohijo = fechanacimiento,
-                                sexohijo = sexo2,
-                                nombrepadre = nombreSoc,
-                                plantapadre = nombreplan
-
+                                NOMBRES = nombrehi,
+                                EDAD = edadniños,
+                                FECHA_DE_NACIMIENTO = fechanacimiento,
+                                SEXO = sexo2,
+                                PADRE = nombreSoc,
+                                PLANTA = nombreplan
                             };
                             navidad.Add(dato);
                             dias = 0;
@@ -490,12 +489,12 @@ namespace SocioSindicato.ViewsAdministrador
                             int edadniños = 8;
                             Datos dato = new Datos
                             {
-                                nombrehijo = nombrehi,
-                                edadhijo = edadniños,
-                                nacimientohijo = fechanacimiento,
-                                sexohijo = sexo2,
-                                nombrepadre = nombreSoc,
-                                plantapadre = nombreplan
+                                NOMBRES = nombrehi,
+                                EDAD = edadniños,
+                                FECHA_DE_NACIMIENTO = fechanacimiento,
+                                SEXO = sexo2,
+                                PADRE = nombreSoc,
+                                PLANTA = nombreplan
 
                             };
                             navidad.Add(dato);
@@ -509,12 +508,12 @@ namespace SocioSindicato.ViewsAdministrador
                             int edadniños = 9;
                             Datos dato = new Datos
                             {
-                                nombrehijo = nombrehi,
-                                edadhijo = edadniños,
-                                nacimientohijo = fechanacimiento,
-                                sexohijo = sexo2,
-                                nombrepadre = nombreSoc,
-                                plantapadre = nombreplan
+                                NOMBRES = nombrehi,
+                                EDAD = edadniños,
+                                FECHA_DE_NACIMIENTO = fechanacimiento,
+                                SEXO = sexo2,
+                                PADRE = nombreSoc,
+                                PLANTA = nombreplan
 
                             };
                             navidad.Add(dato);
@@ -528,12 +527,12 @@ namespace SocioSindicato.ViewsAdministrador
                             int edadniños = 9;
                             Datos dato = new Datos
                             {
-                                nombrehijo = nombrehi,
-                                edadhijo = edadniños,
-                                nacimientohijo = fechanacimiento,
-                                sexohijo = sexo2,
-                                nombrepadre = nombreSoc,
-                                plantapadre = nombreplan
+                                NOMBRES = nombrehi,
+                                EDAD = edadniños,
+                                FECHA_DE_NACIMIENTO = fechanacimiento,
+                                SEXO = sexo2,
+                                PADRE = nombreSoc,
+                                PLANTA = nombreplan
 
                             };
                             navidad.Add(dato);
@@ -547,12 +546,12 @@ namespace SocioSindicato.ViewsAdministrador
                             int edadniños = 10;
                             Datos dato = new Datos
                             {
-                                nombrehijo = nombrehi,
-                                edadhijo = edadniños,
-                                nacimientohijo = fechanacimiento,
-                                sexohijo = sexo2,
-                                nombrepadre = nombreSoc,
-                                plantapadre = nombreplan
+                                NOMBRES = nombrehi,
+                                EDAD = edadniños,
+                                FECHA_DE_NACIMIENTO = fechanacimiento,
+                                SEXO = sexo2,
+                                PADRE = nombreSoc,
+                                PLANTA = nombreplan
 
                             };
                             navidad.Add(dato);
@@ -567,12 +566,12 @@ namespace SocioSindicato.ViewsAdministrador
                             int edadniños = 10;
                             Datos dato = new Datos
                             {
-                                nombrehijo = nombrehi,
-                                edadhijo = edadniños,
-                                nacimientohijo = fechanacimiento,
-                                sexohijo = sexo2,
-                                nombrepadre = nombreSoc,
-                                plantapadre = nombreplan
+                                NOMBRES = nombrehi,
+                                EDAD = edadniños,
+                                FECHA_DE_NACIMIENTO = fechanacimiento,
+                                SEXO = sexo2,
+                                PADRE = nombreSoc,
+                                PLANTA = nombreplan
 
                             };
                             navidad.Add(dato);
@@ -586,12 +585,12 @@ namespace SocioSindicato.ViewsAdministrador
                             int edadniños = 11;
                             Datos dato = new Datos
                             {
-                                nombrehijo = nombrehi,
-                                edadhijo = edadniños,
-                                nacimientohijo = fechanacimiento,
-                                sexohijo = sexo2,
-                                nombrepadre = nombreSoc,
-                                plantapadre = nombreplan
+                                NOMBRES = nombrehi,
+                                EDAD = edadniños,
+                                FECHA_DE_NACIMIENTO = fechanacimiento,
+                                SEXO = sexo2,
+                                PADRE = nombreSoc,
+                                PLANTA = nombreplan
 
                             };
                             navidad.Add(dato);
@@ -605,12 +604,12 @@ namespace SocioSindicato.ViewsAdministrador
                             int edadniños = 11;
                             Datos dato = new Datos
                             {
-                                nombrehijo = nombrehi,
-                                edadhijo = edadniños,
-                                nacimientohijo = fechanacimiento,
-                                sexohijo = sexo2,
-                                nombrepadre = nombreSoc,
-                                plantapadre = nombreplan
+                                NOMBRES = nombrehi,
+                                EDAD = edadniños,
+                                FECHA_DE_NACIMIENTO = fechanacimiento,
+                                SEXO = sexo2,
+                                PADRE = nombreSoc,
+                                PLANTA = nombreplan
 
                             };
                             navidad.Add(dato);
@@ -624,12 +623,12 @@ namespace SocioSindicato.ViewsAdministrador
                             int edadniños = 12;
                             Datos dato = new Datos
                             {
-                                nombrehijo = nombrehi,
-                                edadhijo = edadniños,
-                                nacimientohijo = fechanacimiento,
-                                sexohijo = sexo2,
-                                nombrepadre = nombreSoc,
-                                plantapadre = nombreplan
+                                NOMBRES = nombrehi,
+                                EDAD = edadniños,
+                                FECHA_DE_NACIMIENTO = fechanacimiento,
+                                SEXO = sexo2,
+                                PADRE = nombreSoc,
+                                PLANTA = nombreplan
 
                             };
                             navidad.Add(dato);
@@ -643,12 +642,12 @@ namespace SocioSindicato.ViewsAdministrador
                             int edadniños = 12;
                             Datos dato = new Datos
                             {
-                                nombrehijo = nombrehi,
-                                edadhijo = edadniños,
-                                nacimientohijo = fechanacimiento,
-                                sexohijo = sexo2,
-                                nombrepadre = nombreSoc,
-                                plantapadre = nombreplan
+                                NOMBRES = nombrehi,
+                                EDAD = edadniños,
+                                FECHA_DE_NACIMIENTO = fechanacimiento,
+                                SEXO = sexo2,
+                                PADRE = nombreSoc,
+                                PLANTA = nombreplan
 
                             };
                             navidad.Add(dato);
@@ -656,19 +655,20 @@ namespace SocioSindicato.ViewsAdministrador
                         }
                     } //niñas de 12 año
 
-                    gridnavidadniños.DataSource = navidad.OrderBy(s => s.edadhijo).ToList();
+                    gridnavidadniños.DataSource = navidad.OrderBy(s => s.EDAD).ToList();
 
 
-                    if (gridnavidadniños.Rows.Count == 0)
-                    {
-
-                        MessageBox.Show("No hay niños ingresados", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-                    }
-
+                    
                 };
-                
-                
+                if (gridnavidadniños.Rows.Count == 0)
+                {
+
+                    MessageBox.Show("No hay niños ingresados", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                }
+
+
+
             }
         }
 
@@ -743,12 +743,12 @@ namespace SocioSindicato.ViewsAdministrador
                                 int edadmenorhombre = 0;
                                 Datos dato = new Datos
                                 {
-                                    nombrehijo = nombrehi,
-                                    edadhijo = edadmenorhombre,
-                                    nacimientohijo = fechanacimiento,
-                                    sexohijo = sexo2,
-                                    nombrepadre = nombreSoc,
-                                    plantapadre = nombreplan
+                                    NOMBRES = nombrehi,
+                                    EDAD = edadmenorhombre,
+                                    FECHA_DE_NACIMIENTO = fechanacimiento,
+                                    SEXO = sexo2,
+                                    PADRE = nombreSoc,
+                                    PLANTA = nombreplan
 
                                 };
                                 navidad.Add(dato);
@@ -831,12 +831,12 @@ namespace SocioSindicato.ViewsAdministrador
                                 int edadniños = 0;
                                 Datos dato = new Datos
                                 {
-                                    nombrehijo = nombrehi,
-                                    edadhijo = edadniños,
-                                    nacimientohijo = fechanacimiento,
-                                    sexohijo = sexo2,
-                                    nombrepadre = nombreSoc,
-                                    plantapadre = nombreplan
+                                    NOMBRES = nombrehi,
+                                    EDAD = edadniños,
+                                    FECHA_DE_NACIMIENTO = fechanacimiento,
+                                    SEXO = sexo2,
+                                    PADRE = nombreSoc,
+                                    PLANTA = nombreplan
 
                                 };
                                 navidad.Add(dato);
@@ -919,12 +919,12 @@ namespace SocioSindicato.ViewsAdministrador
                                 int edadniños = 1;
                                 Datos dato = new Datos
                                 {
-                                    nombrehijo = nombrehi,
-                                    edadhijo = edadniños,
-                                    nacimientohijo = fechanacimiento,
-                                    sexohijo = sexo2,
-                                    nombrepadre = nombreSoc,
-                                    plantapadre = nombreplan
+                                    NOMBRES = nombrehi,
+                                    EDAD = edadniños,
+                                    FECHA_DE_NACIMIENTO = fechanacimiento,
+                                    SEXO = sexo2,
+                                    PADRE = nombreSoc,
+                                    PLANTA = nombreplan
 
                                 };
 
@@ -1004,12 +1004,12 @@ namespace SocioSindicato.ViewsAdministrador
                                 int edadniños = 1;
                                 Datos dato = new Datos
                                 {
-                                    nombrehijo = nombrehi,
-                                    edadhijo = edadniños,
-                                    nacimientohijo = fechanacimiento,
-                                    sexohijo = sexo2,
-                                    nombrepadre = nombreSoc,
-                                    plantapadre = nombreplan
+                                    NOMBRES = nombrehi,
+                                    EDAD = edadniños,
+                                    FECHA_DE_NACIMIENTO = fechanacimiento,
+                                    SEXO = sexo2,
+                                    PADRE = nombreSoc,
+                                    PLANTA = nombreplan
 
                                 };
                                 navidad.Add(dato);
@@ -1087,12 +1087,12 @@ namespace SocioSindicato.ViewsAdministrador
 
                                 Datos dato = new Datos
                                 {
-                                    nombrehijo = nombrehi,
-                                    edadhijo = edadniños,
-                                    nacimientohijo = fechanacimiento,
-                                    sexohijo = sexo2,
-                                    nombrepadre = nombreSoc,
-                                    plantapadre = nombreplan
+                                    NOMBRES = nombrehi,
+                                    EDAD = edadniños,
+                                    FECHA_DE_NACIMIENTO = fechanacimiento,
+                                    SEXO = sexo2,
+                                    PADRE = nombreSoc,
+                                    PLANTA = nombreplan
 
                                 };
 
@@ -1172,12 +1172,12 @@ namespace SocioSindicato.ViewsAdministrador
                                 int edadniños = 2;
                                 Datos dato = new Datos
                                 {
-                                    nombrehijo = nombrehi,
-                                    edadhijo = edadniños,
-                                    nacimientohijo = fechanacimiento,
-                                    sexohijo = sexo2,
-                                    nombrepadre = nombreSoc,
-                                    plantapadre = nombreplan
+                                    NOMBRES = nombrehi,
+                                    EDAD = edadniños,
+                                    FECHA_DE_NACIMIENTO = fechanacimiento,
+                                    SEXO = sexo2,
+                                    PADRE = nombreSoc,
+                                    PLANTA = nombreplan
 
                                 };
                                 navidad.Add(dato);
@@ -1255,12 +1255,12 @@ namespace SocioSindicato.ViewsAdministrador
 
                                 Datos dato = new Datos
                                 {
-                                    nombrehijo = nombrehi,
-                                    edadhijo = edadniños,
-                                    nacimientohijo = fechanacimiento,
-                                    sexohijo = sexo2,
-                                    nombrepadre = nombreSoc,
-                                    plantapadre = nombreplan
+                                    NOMBRES = nombrehi,
+                                    EDAD = edadniños,
+                                    FECHA_DE_NACIMIENTO = fechanacimiento,
+                                    SEXO = sexo2,
+                                    PADRE = nombreSoc,
+                                    PLANTA = nombreplan
 
                                 };
 
@@ -1339,12 +1339,12 @@ namespace SocioSindicato.ViewsAdministrador
                                 int edadniños = 3;
                                 Datos dato = new Datos
                                 {
-                                    nombrehijo = nombrehi,
-                                    edadhijo = edadniños,
-                                    nacimientohijo = fechanacimiento,
-                                    sexohijo = sexo2,
-                                    nombrepadre = nombreSoc,
-                                    plantapadre = nombreplan
+                                    NOMBRES = nombrehi,
+                                    EDAD = edadniños,
+                                    FECHA_DE_NACIMIENTO = fechanacimiento,
+                                    SEXO = sexo2,
+                                    PADRE = nombreSoc,
+                                    PLANTA = nombreplan
 
                                 };
 
@@ -1424,12 +1424,12 @@ namespace SocioSindicato.ViewsAdministrador
 
                                 Datos dato = new Datos
                                 {
-                                    nombrehijo = nombrehi,
-                                    edadhijo = edadniños,
-                                    nacimientohijo = fechanacimiento,
-                                    sexohijo = sexo2,
-                                    nombrepadre = nombreSoc,
-                                    plantapadre = nombreplan
+                                    NOMBRES = nombrehi,
+                                    EDAD = edadniños,
+                                    FECHA_DE_NACIMIENTO = fechanacimiento,
+                                    SEXO = sexo2,
+                                    PADRE = nombreSoc,
+                                    PLANTA = nombreplan
 
                                 };
                                 navidad.Add(dato);
@@ -1508,12 +1508,12 @@ namespace SocioSindicato.ViewsAdministrador
                                 int edadniños = 4;
                                 Datos dato = new Datos
                                 {
-                                    nombrehijo = nombrehi,
-                                    edadhijo = edadniños,
-                                    nacimientohijo = fechanacimiento,
-                                    sexohijo = sexo2,
-                                    nombrepadre = nombreSoc,
-                                    plantapadre = nombreplan
+                                    NOMBRES = nombrehi,
+                                    EDAD = edadniños,
+                                    FECHA_DE_NACIMIENTO = fechanacimiento,
+                                    SEXO = sexo2,
+                                    PADRE = nombreSoc,
+                                    PLANTA = nombreplan
 
                                 };
                                 navidad.Add(dato);
@@ -1591,12 +1591,12 @@ namespace SocioSindicato.ViewsAdministrador
                                 int edadniños = 5;
                                 Datos dato = new Datos
                                 {
-                                    nombrehijo = nombrehi,
-                                    edadhijo = edadniños,
-                                    nacimientohijo = fechanacimiento,
-                                    sexohijo = sexo2,
-                                    nombrepadre = nombreSoc,
-                                    plantapadre = nombreplan
+                                    NOMBRES = nombrehi,
+                                    EDAD = edadniños,
+                                    FECHA_DE_NACIMIENTO = fechanacimiento,
+                                    SEXO = sexo2,
+                                    PADRE = nombreSoc,
+                                    PLANTA = nombreplan
 
                                 };
 
@@ -1676,12 +1676,12 @@ namespace SocioSindicato.ViewsAdministrador
                                 int edadniños = 5;
                                 Datos dato = new Datos
                                 {
-                                    nombrehijo = nombrehi,
-                                    edadhijo = edadniños,
-                                    nacimientohijo = fechanacimiento,
-                                    sexohijo = sexo2,
-                                    nombrepadre = nombreSoc,
-                                    plantapadre = nombreplan
+                                    NOMBRES = nombrehi,
+                                    EDAD = edadniños,
+                                    FECHA_DE_NACIMIENTO = fechanacimiento,
+                                    SEXO = sexo2,
+                                    PADRE = nombreSoc,
+                                    PLANTA = nombreplan
 
                                 };
                                 navidad.Add(dato);
@@ -1760,12 +1760,12 @@ namespace SocioSindicato.ViewsAdministrador
                                 int edadniños = 6;
                                 Datos dato = new Datos
                                 {
-                                    nombrehijo = nombrehi,
-                                    edadhijo = edadniños,
-                                    nacimientohijo = fechanacimiento,
-                                    sexohijo = sexo2,
-                                    nombrepadre = nombreSoc,
-                                    plantapadre = nombreplan
+                                    NOMBRES = nombrehi,
+                                    EDAD = edadniños,
+                                    FECHA_DE_NACIMIENTO = fechanacimiento,
+                                    SEXO = sexo2,
+                                    PADRE = nombreSoc,
+                                    PLANTA = nombreplan
 
                                 };
                                 navidad.Add(dato);
@@ -1844,12 +1844,12 @@ namespace SocioSindicato.ViewsAdministrador
                                 int edadniños = 6;
                                 Datos dato = new Datos
                                 {
-                                    nombrehijo = nombrehi,
-                                    edadhijo = edadniños,
-                                    nacimientohijo = fechanacimiento,
-                                    sexohijo = sexo2,
-                                    nombrepadre = nombreSoc,
-                                    plantapadre = nombreplan
+                                    NOMBRES = nombrehi,
+                                    EDAD = edadniños,
+                                    FECHA_DE_NACIMIENTO = fechanacimiento,
+                                    SEXO = sexo2,
+                                    PADRE = nombreSoc,
+                                    PLANTA = nombreplan
 
                                 };
                                 navidad.Add(dato);
@@ -1928,12 +1928,12 @@ namespace SocioSindicato.ViewsAdministrador
                                 int edadniños = 7;
                                 Datos dato = new Datos
                                 {
-                                    nombrehijo = nombrehi,
-                                    edadhijo = edadniños,
-                                    nacimientohijo = fechanacimiento,
-                                    sexohijo = sexo2,
-                                    nombrepadre = nombreSoc,
-                                    plantapadre = nombreplan
+                                    NOMBRES = nombrehi,
+                                    EDAD = edadniños,
+                                    FECHA_DE_NACIMIENTO = fechanacimiento,
+                                    SEXO = sexo2,
+                                    PADRE = nombreSoc,
+                                    PLANTA = nombreplan
 
                                 };
                                 navidad.Add(dato);
@@ -2011,12 +2011,12 @@ namespace SocioSindicato.ViewsAdministrador
                                 int edadniños = 7;
                                 Datos dato = new Datos
                                 {
-                                    nombrehijo = nombrehi,
-                                    edadhijo = edadniños,
-                                    nacimientohijo = fechanacimiento,
-                                    sexohijo = sexo2,
-                                    nombrepadre = nombreSoc,
-                                    plantapadre = nombreplan
+                                    NOMBRES = nombrehi,
+                                    EDAD = edadniños,
+                                    FECHA_DE_NACIMIENTO = fechanacimiento,
+                                    SEXO = sexo2,
+                                    PADRE = nombreSoc,
+                                    PLANTA = nombreplan
 
                                 };
 
@@ -2096,12 +2096,12 @@ namespace SocioSindicato.ViewsAdministrador
                                 int edadniños = 8;
                                 Datos dato = new Datos
                                 {
-                                    nombrehijo = nombrehi,
-                                    edadhijo = edadniños,
-                                    nacimientohijo = fechanacimiento,
-                                    sexohijo = sexo2,
-                                    nombrepadre = nombreSoc,
-                                    plantapadre = nombreplan
+                                    NOMBRES = nombrehi,
+                                    EDAD = edadniños,
+                                    FECHA_DE_NACIMIENTO = fechanacimiento,
+                                    SEXO = sexo2,
+                                    PADRE = nombreSoc,
+                                    PLANTA = nombreplan
 
                                 };
                                 navidad.Add(dato);
@@ -2179,12 +2179,12 @@ namespace SocioSindicato.ViewsAdministrador
                                 int edadniños = 8;
                                 Datos dato = new Datos
                                 {
-                                    nombrehijo = nombrehi,
-                                    edadhijo = edadniños,
-                                    nacimientohijo = fechanacimiento,
-                                    sexohijo = sexo2,
-                                    nombrepadre = nombreSoc,
-                                    plantapadre = nombreplan
+                                    NOMBRES = nombrehi,
+                                    EDAD = edadniños,
+                                    FECHA_DE_NACIMIENTO = fechanacimiento,
+                                    SEXO = sexo2,
+                                    PADRE = nombreSoc,
+                                    PLANTA = nombreplan
 
                                 };
                                 navidad.Add(dato);
@@ -2263,12 +2263,12 @@ namespace SocioSindicato.ViewsAdministrador
                                 int edadniños = 9;
                                 Datos dato = new Datos
                                 {
-                                    nombrehijo = nombrehi,
-                                    edadhijo = edadniños,
-                                    nacimientohijo = fechanacimiento,
-                                    sexohijo = sexo2,
-                                    nombrepadre = nombreSoc,
-                                    plantapadre = nombreplan
+                                    NOMBRES = nombrehi,
+                                    EDAD = edadniños,
+                                    FECHA_DE_NACIMIENTO = fechanacimiento,
+                                    SEXO = sexo2,
+                                    PADRE = nombreSoc,
+                                    PLANTA = nombreplan
 
                                 };
                                 navidad.Add(dato);
@@ -2347,12 +2347,12 @@ namespace SocioSindicato.ViewsAdministrador
                                 int edadniños = 9;
                                 Datos dato = new Datos
                                 {
-                                    nombrehijo = nombrehi,
-                                    edadhijo = edadniños,
-                                    nacimientohijo = fechanacimiento,
-                                    sexohijo = sexo2,
-                                    nombrepadre = nombreSoc,
-                                    plantapadre = nombreplan
+                                    NOMBRES = nombrehi,
+                                    EDAD = edadniños,
+                                    FECHA_DE_NACIMIENTO = fechanacimiento,
+                                    SEXO = sexo2,
+                                    PADRE = nombreSoc,
+                                    PLANTA = nombreplan
 
                                 };
                                 navidad.Add(dato);
@@ -2430,12 +2430,12 @@ namespace SocioSindicato.ViewsAdministrador
                                 int edadniños = 10;
                                 Datos dato = new Datos
                                 {
-                                    nombrehijo = nombrehi,
-                                    edadhijo = edadniños,
-                                    nacimientohijo = fechanacimiento,
-                                    sexohijo = sexo2,
-                                    nombrepadre = nombreSoc,
-                                    plantapadre = nombreplan
+                                    NOMBRES = nombrehi,
+                                    EDAD = edadniños,
+                                    FECHA_DE_NACIMIENTO = fechanacimiento,
+                                    SEXO = sexo2,
+                                    PADRE = nombreSoc,
+                                    PLANTA = nombreplan
 
                                 };
                                 navidad.Add(dato);
@@ -2515,12 +2515,12 @@ namespace SocioSindicato.ViewsAdministrador
                                 int edadniños = 10;
                                 Datos dato = new Datos
                                 {
-                                    nombrehijo = nombrehi,
-                                    edadhijo = edadniños,
-                                    nacimientohijo = fechanacimiento,
-                                    sexohijo = sexo2,
-                                    nombrepadre = nombreSoc,
-                                    plantapadre = nombreplan
+                                    NOMBRES = nombrehi,
+                                    EDAD = edadniños,
+                                    FECHA_DE_NACIMIENTO = fechanacimiento,
+                                    SEXO = sexo2,
+                                    PADRE = nombreSoc,
+                                    PLANTA = nombreplan
 
                                 };
                                 navidad.Add(dato);
@@ -2597,12 +2597,12 @@ namespace SocioSindicato.ViewsAdministrador
                                 int edadniños = 11;
                                 Datos dato = new Datos
                                 {
-                                    nombrehijo = nombrehi,
-                                    edadhijo = edadniños,
-                                    nacimientohijo = fechanacimiento,
-                                    sexohijo = sexo2,
-                                    nombrepadre = nombreSoc,
-                                    plantapadre = nombreplan
+                                    NOMBRES = nombrehi,
+                                    EDAD = edadniños,
+                                    FECHA_DE_NACIMIENTO = fechanacimiento,
+                                    SEXO = sexo2,
+                                    PADRE = nombreSoc,
+                                    PLANTA = nombreplan
 
                                 };
                                 navidad.Add(dato);
@@ -2681,12 +2681,12 @@ namespace SocioSindicato.ViewsAdministrador
                                 int edadniños = 11;
                                 Datos dato = new Datos
                                 {
-                                    nombrehijo = nombrehi,
-                                    edadhijo = edadniños,
-                                    nacimientohijo = fechanacimiento,
-                                    sexohijo = sexo2,
-                                    nombrepadre = nombreSoc,
-                                    plantapadre = nombreplan
+                                    NOMBRES = nombrehi,
+                                    EDAD = edadniños,
+                                    FECHA_DE_NACIMIENTO = fechanacimiento,
+                                    SEXO = sexo2,
+                                    PADRE = nombreSoc,
+                                    PLANTA = nombreplan
 
                                 };
                                 navidad.Add(dato);
@@ -2765,12 +2765,12 @@ namespace SocioSindicato.ViewsAdministrador
                                 int edadniños = 12;
                                 Datos dato = new Datos
                                 {
-                                    nombrehijo = nombrehi,
-                                    edadhijo = edadniños,
-                                    nacimientohijo = fechanacimiento,
-                                    sexohijo = sexo2,
-                                    nombrepadre = nombreSoc,
-                                    plantapadre = nombreplan
+                                    NOMBRES = nombrehi,
+                                    EDAD = edadniños,
+                                    FECHA_DE_NACIMIENTO = fechanacimiento,
+                                    SEXO = sexo2,
+                                    PADRE = nombreSoc,
+                                    PLANTA = nombreplan
 
                                 };
                                 navidad.Add(dato);
@@ -2849,12 +2849,12 @@ namespace SocioSindicato.ViewsAdministrador
                                 int edadniños = 12;
                                 Datos dato = new Datos
                                 {
-                                    nombrehijo = nombrehi,
-                                    edadhijo = edadniños,
-                                    nacimientohijo = fechanacimiento,
-                                    sexohijo = sexo2,
-                                    nombrepadre = nombreSoc,
-                                    plantapadre = nombreplan
+                                    NOMBRES = nombrehi,
+                                    EDAD = edadniños,
+                                    FECHA_DE_NACIMIENTO = fechanacimiento,
+                                    SEXO = sexo2,
+                                    PADRE = nombreSoc,
+                                    PLANTA = nombreplan
 
                                 };
                                 navidad.Add(dato);

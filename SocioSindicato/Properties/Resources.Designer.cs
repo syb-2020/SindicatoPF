@@ -113,6 +113,16 @@ namespace SocioSindicato.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fondo_inicio_sindicato {
+            get {
+                object obj = ResourceManager.GetObject("fondo inicio sindicato", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap FondoSindicato {
             get {
                 object obj = ResourceManager.GetObject("FondoSindicato", resourceCulture);

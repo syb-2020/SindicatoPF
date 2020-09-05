@@ -196,16 +196,16 @@ namespace SocioSindicato
                                          PLANTA = soceli.planta,
                                      };
 
-                gridvereliminadosadm.DataSource = listEliminados.ToList();
+                gridvereliminadosvisitor.DataSource = listEliminados.ToList();
 
-                if (gridvereliminadosadm.Rows.Count == 0)
+                if (gridvereliminadosvisitor.Rows.Count == 0)
                 {
                     MessageBox.Show("No hay Socios Eliminados", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
 
-                    exportardatos(gridvereliminadosadm);
+                    exportardatos(gridvereliminadosvisitor);
                 }
 
 

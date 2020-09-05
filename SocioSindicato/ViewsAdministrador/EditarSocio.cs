@@ -109,7 +109,7 @@ namespace SocioSindicato.ViewsAdministrador
                                           FechaDeIngreso = solosocio.fecha_ingreso,
                                           Categoria = solosocio.id_categoria,
                                           Planta = solosocio.Planta.nombre,
-                                          fechanacimiento = solosocio.fecha_ingreso,
+                                          fechanacimiento = solosocio.fecha_nacimiento,
                                           EDAD = solosocio.edad,
                                           DOMICILIO = solosocio.domicilio,
                                           CIVIL = solosocio.estado_civil,
@@ -135,7 +135,7 @@ namespace SocioSindicato.ViewsAdministrador
                                                 FechaDeIngreso = sociorut.fecha_ingreso,
                                                 Categoria = sociorut.id_categoria,
                                                 Planta = sociorut.Planta.nombre,
-                                                fechanacimiento = sociorut.fecha_ingreso,
+                                                fechanacimiento = sociorut.fecha_nacimiento,
                                                 EDAD = sociorut.edad,
                                                 DOMICILIO = sociorut.domicilio,
                                                 CIVIL = sociorut.estado_civil,
@@ -164,7 +164,7 @@ namespace SocioSindicato.ViewsAdministrador
                                              FechaDeIngreso = sociorut.fecha_ingreso,
                                              Categoria = sociorut.id_categoria,
                                              Planta = sociorut.Planta.nombre,
-                                             fechanacimiento = sociorut.fecha_ingreso,
+                                             fechanacimiento = sociorut.fecha_nacimiento,
                                              EDAD = sociorut.edad,
                                              DOMICILIO = sociorut.domicilio,
                                              CIVIL = sociorut.estado_civil,
@@ -194,7 +194,7 @@ namespace SocioSindicato.ViewsAdministrador
                                   FechaDeIngreso = sociorut.fecha_ingreso,
                                   Categoria = sociorut.id_categoria,
                                   Planta = sociorut.Planta.nombre,
-                                  fechanacimiento = sociorut.fecha_ingreso,
+                                  fechanacimiento = sociorut.fecha_nacimiento,
                                   EDAD = sociorut.edad,
                                   DOMICILIO = sociorut.domicilio,
                                   CIVIL = sociorut.estado_civil,
@@ -218,6 +218,18 @@ namespace SocioSindicato.ViewsAdministrador
                 gridcapdatosedi.DataSource = listRut.ToList();
 
 
+                //BORAR COMBO HIJO
+                cbhijossocio.SelectedItem = null;
+                var s = from c in context.Socio
+                             join h in context.Hijo
+                             on c.rut_socio equals h.rut_socio
+                             where h.rut_socio.Equals(buscar_rut)
+                             select new { h.id_hijo, h.nombre, c.rut_socio };
+
+
+                cbhijossocio.DataSource = s.ToList();
+                cbhijossocio.DisplayMember = "nombre";
+                cbhijossocio.ValueMember = "id_hijo";
 
 
                 if (txtbuscar.Text == "")
@@ -311,13 +323,13 @@ namespace SocioSindicato.ViewsAdministrador
                                 cbhijossocio.ValueMember = "id_hijo";
 
 
-                                using (sindicatoPFEntities db = new sindicatoPFEntities())
-                                {
-                                    var oImage = db.Socio.Find(buscar_rut);
-                                    MemoryStream ms = new MemoryStream(oImage.imagen);
-                                    Bitmap bmp = new Bitmap(ms);
-                                    fotosocio.Image = bmp;                                  
-                                }
+                                //using (sindicatoPFEntities db = new sindicatoPFEntities())
+                                //{
+                                //    var oImage = db.Socio.Find(buscar_rut);
+                                //    MemoryStream ms = new MemoryStream(oImage.imagen);
+                                //    Bitmap bmp = new Bitmap(ms);
+                                //    fotosocio.Image = bmp;                                  
+                                //}
 
 
                             }
@@ -355,13 +367,13 @@ namespace SocioSindicato.ViewsAdministrador
                                 datefechanacimientoconyugesocio.Value = Convert.ToDateTime(row.Cells[18].Value);
                                 txtedadconyugesocio.Text = Convert.ToString(row.Cells[19].Value);
 
-                                using (sindicatoPFEntities db = new sindicatoPFEntities())
-                                {
-                                    var oImage = db.Socio.Find(buscar_rut);
-                                    MemoryStream ms = new MemoryStream(oImage.imagen);
-                                    Bitmap bmp = new Bitmap(ms);
-                                    fotosocio.Image = bmp;
-                                }
+                                //using (sindicatoPFEntities db = new sindicatoPFEntities())
+                                //{
+                                //    var oImage = db.Socio.Find(buscar_rut);
+                                //    MemoryStream ms = new MemoryStream(oImage.imagen);
+                                //    Bitmap bmp = new Bitmap(ms);
+                                //    fotosocio.Image = bmp;
+                                //}
 
                             }
                         }
@@ -407,13 +419,13 @@ namespace SocioSindicato.ViewsAdministrador
                                 cbhijossocio.DisplayMember = "nombre";
                                 cbhijossocio.ValueMember = "id_hijo";
 
-                                using (sindicatoPFEntities db = new sindicatoPFEntities())
-                                {
-                                    var oImage = db.Socio.Find(buscar_rut);
-                                    MemoryStream ms = new MemoryStream(oImage.imagen);
-                                    Bitmap bmp = new Bitmap(ms);
-                                    fotosocio.Image = bmp;
-                                }
+                                //using (sindicatoPFEntities db = new sindicatoPFEntities())
+                                //{
+                                //    var oImage = db.Socio.Find(buscar_rut);
+                                //    MemoryStream ms = new MemoryStream(oImage.imagen);
+                                //    Bitmap bmp = new Bitmap(ms);
+                                //    fotosocio.Image = bmp;
+                                //}
                             }
 
                         }
@@ -506,18 +518,18 @@ namespace SocioSindicato.ViewsAdministrador
                 }
                 else
                 {
-                    using (sindicatoPFEntities db = new sindicatoPFEntities())
-                    {
-                        var oImage = db.Socio.Find(buscar_rut);
-                        MemoryStream ms = new MemoryStream(oImage.imagen);
-                        Bitmap bmp = new Bitmap(ms);
-                        fotosocio.Image = bmp;
-                        file2 = ms.ToArray();
-                    }
+                    //using (sindicatoPFEntities db = new sindicatoPFEntities())
+                    //{
+                    //    var oImage = db.Socio.Find(buscar_rut);
+                    //    MemoryStream ms = new MemoryStream(oImage.imagen);
+                    //    Bitmap bmp = new Bitmap(ms);
+                    //    fotosocio.Image = bmp;
+                    //    file2 = ms.ToArray();
+                    //}
 
                     Socio nuevosocio = new Socio();
                     nuevosocio = context.Socio.Find(buscar_rut);
-                    nuevosocio.imagen = file2;
+                    nuevosocio.imagen = file;
                     nuevosocio.nombre_socio = txtnombresocio.Text;
                     nuevosocio.fecha_ingreso = Convert.ToDateTime(dateingresoempresasocio.Text);
                     nuevosocio.id_categoria = Convert.ToInt32(combocategoriasocio.SelectedValue);
@@ -581,6 +593,11 @@ namespace SocioSindicato.ViewsAdministrador
                     cbhijossocio.DisplayMember = "nombre";
                     cbhijossocio.ValueMember = "id_hijo";
 
+                    txtnombrehijosocio.Text = "";
+                    txtruthijosocio.Text = "";
+                    cbSexo.SelectedIndex = 0;
+                    datenacimientohijosocio.Value = DateTime.Now;
+
                     MessageBox.Show("Socio Editado Correctamente!");
 
                 }
@@ -617,45 +634,45 @@ namespace SocioSindicato.ViewsAdministrador
                         context.SaveChanges();
 
                         MessageBox.Show("Conyuge Eliminada!");
-                        //BORRAR BUSCADOR
-                        txtbuscar.Text = "";
+                        ////BORRAR BUSCADOR
+                        //txtbuscar.Text = "";
 
-                        //BORRAR DATOS SOCIO
-                        txtrutsocio.Text = "";
-                        fotosocio.Image = null;
-                        txtnombresocio.Text = "";
-                        dateingresoempresasocio.Value = DateTime.Now;
-                        combocategoriasocio.SelectedIndex = 0;
-                        combocontratosocio.SelectedIndex = 0; ;
-                        comboplantasocio.SelectedIndex = 0; ;
-                        datefechanacimientosocio.Value = DateTime.Now;
-                        txtedadsocio.Text = "";
-                        txtdomiciliosocio.Text = "";
-                        comboestadocivilagregar.SelectedIndex = 0;
-                        txttelefonosocio.Text = "";
-                        txtnacionalidadsocio.Text = "";
-                        txtcorreosocio.Text = "";
-                        txtnombrepadre.Text = "";
-                        txtnombremadre.Text = "";
-                        //BORRAR DATOS CONYUGE
-                        txtconyugesocio.Text = "";
-                        comboconvivienteconyugesocio.SelectedIndex = 0;
-                        txtrutconyugesocio.Text = "";
-                        datefechanacimientoconyugesocio.Value = DateTime.Now;
-                        txtedadconyugesocio.Text = "";
+                        ////BORRAR DATOS SOCIO
+                        //txtrutsocio.Text = "";
+                        //fotosocio.Image = null;
+                        //txtnombresocio.Text = "";
+                        //dateingresoempresasocio.Value = DateTime.Now;
+                        //combocategoriasocio.SelectedIndex = 0;
+                        //combocontratosocio.SelectedIndex = 0; ;
+                        //comboplantasocio.SelectedIndex = 0; ;
+                        //datefechanacimientosocio.Value = DateTime.Now;
+                        //txtedadsocio.Text = "";
+                        //txtdomiciliosocio.Text = "";
+                        //comboestadocivilagregar.SelectedIndex = 0;
+                        //txttelefonosocio.Text = "";
+                        //txtnacionalidadsocio.Text = "";
+                        //txtcorreosocio.Text = "";
+                        //txtnombrepadre.Text = "";
+                        //txtnombremadre.Text = "";
+                        ////BORRAR DATOS CONYUGE
+                        //txtconyugesocio.Text = "";
+                        //comboconvivienteconyugesocio.SelectedIndex = 0;
+                        //txtrutconyugesocio.Text = "";
+                        //datefechanacimientoconyugesocio.Value = DateTime.Now;
+                        //txtedadconyugesocio.Text = "";
 
-                        //BORAR COMBO HIJO
-                        cbhijossocio.SelectedItem = null;
-                        var bushij = from c in context.Socio
-                                     join h in context.Hijo
-                                     on c.rut_socio equals h.rut_socio
-                                     where h.rut_socio.Equals(buscar_rut)
-                                     select new { h.id_hijo, h.nombre, c.rut_socio };
+                        ////BORAR COMBO HIJO
+                        //cbhijossocio.SelectedItem = null;
+                        //var bushij = from c in context.Socio
+                        //             join h in context.Hijo
+                        //             on c.rut_socio equals h.rut_socio
+                        //             where h.rut_socio.Equals(buscar_rut)
+                        //             select new { h.id_hijo, h.nombre, c.rut_socio };
 
 
-                        cbhijossocio.DataSource = bushij.ToList();
-                        cbhijossocio.DisplayMember = "nombre";
-                        cbhijossocio.ValueMember = "id_hijo";
+                        //cbhijossocio.DataSource = bushij.ToList();
+                        //cbhijossocio.DisplayMember = "nombre";
+                        //cbhijossocio.ValueMember = "id_hijo";
 
                     }
                 }
@@ -697,66 +714,67 @@ namespace SocioSindicato.ViewsAdministrador
                 }
                 else
                 {
-                    Conyuge con = new Conyuge
-                    {
-                        rut_socio = txtrutsocio.Text,
-                        nombre = txtconyugesocio.Text,
-                        conviviente = comboconvivienteconyugesocio.Text,
-                        rut = txtrutconyugesocio.Text,
-                        nacimiento = Convert.ToDateTime(datefechanacimientoconyugesocio.Text),
-                        edad = Convert.ToInt32(txtedadconyugesocio.Text)
-                    };
+                    string rutcon = txtrutconyugesocio.Text;
+                    string rutsoci = txtrutsocio.Text;
 
-                    context.Conyuge.Add(con);
-                    context.SaveChanges();
-                    MessageBox.Show("Conyuge Agregada!");
+                            Conyuge con = new Conyuge
+                            {
+                                rut_socio = txtrutsocio.Text,
+                                nombre = txtconyugesocio.Text,
+                                conviviente = comboconvivienteconyugesocio.Text,
+                                rut = txtrutconyugesocio.Text,
+                                nacimiento = Convert.ToDateTime(datefechanacimientoconyugesocio.Text),
+                                edad = Convert.ToInt32(txtedadconyugesocio.Text)
+                            };
 
-                    //BORRAR BUSCADOR
-                    txtbuscar.Text = "";
+                            context.Conyuge.Add(con);
+                            context.SaveChanges();
 
-                    //BORRAR DATOS SOCIO
-                    txtrutsocio.Text = "";
-                    fotosocio.Image = null;
-                    txtnombresocio.Text = "";
-                    dateingresoempresasocio.Value = DateTime.Now;
-                    combocategoriasocio.SelectedIndex = 0;
-                    combocontratosocio.SelectedIndex = 0; ;
-                    comboplantasocio.SelectedIndex = 0; ;
-                    datefechanacimientosocio.Value = DateTime.Now;
-                    txtedadsocio.Text = "";
-                    txtdomiciliosocio.Text = "";
-                    comboestadocivilagregar.SelectedIndex = 0;
-                    txttelefonosocio.Text = "";
-                    txtnacionalidadsocio.Text = "";
-                    txtcorreosocio.Text = "";
-                    txtnombrepadre.Text = "";
-                    txtnombremadre.Text = "";
-                    //BORRAR DATOS CONYUGE
-                    txtconyugesocio.Text = "";
-                    comboconvivienteconyugesocio.SelectedIndex = 0;
-                    txtrutconyugesocio.Text = "";
-                    datefechanacimientoconyugesocio.Value = DateTime.Now;
-                    txtedadconyugesocio.Text = "";
+                            MessageBox.Show("Conyuge Agregada!");
 
-                    //BORAR COMBO HIJO
-                    cbhijossocio.SelectedItem = null;
-                    var bushij = from c in context.Socio
-                                 join h in context.Hijo
-                                 on c.rut_socio equals h.rut_socio
-                                 where h.rut_socio.Equals(buscar_rut)
-                                 select new { h.id_hijo, h.nombre, c.rut_socio };
+                            ////BORRAR BUSCADOR
+                            //txtbuscar.Text = "";
+
+                            ////BORRAR DATOS SOCIO
+                            //txtrutsocio.Text = "";
+                            //fotosocio.Image = null;
+                            //txtnombresocio.Text = "";
+                            //dateingresoempresasocio.Value = DateTime.Now;
+                            //combocategoriasocio.SelectedIndex = 0;
+                            //combocontratosocio.SelectedIndex = 0; ;
+                            //comboplantasocio.SelectedIndex = 0; ;
+                            //datefechanacimientosocio.Value = DateTime.Now;
+                            //txtedadsocio.Text = "";
+                            //txtdomiciliosocio.Text = "";
+                            //comboestadocivilagregar.SelectedIndex = 0;
+                            //txttelefonosocio.Text = "";
+                            //txtnacionalidadsocio.Text = "";
+                            //txtcorreosocio.Text = "";
+                            //txtnombrepadre.Text = "";
+                            //txtnombremadre.Text = "";
+                            ////BORRAR DATOS CONYUGE
+                            //txtconyugesocio.Text = "";
+                            //comboconvivienteconyugesocio.SelectedIndex = 0;
+                            //txtrutconyugesocio.Text = "";
+                            //datefechanacimientoconyugesocio.Value = DateTime.Now;
+                            //txtedadconyugesocio.Text = "";
+
+                            ////BORAR COMBO HIJO
+                            //cbhijossocio.SelectedItem = null;
+                            //var bushij = from c in context.Socio
+                            //             join h in context.Hijo
+                            //             on c.rut_socio equals h.rut_socio
+                            //             where h.rut_socio.Equals(buscar_rut)
+                            //             select new { h.id_hijo, h.nombre, c.rut_socio };
 
 
-                    cbhijossocio.DataSource = bushij.ToList();
-                    cbhijossocio.DisplayMember = "nombre";
-                    cbhijossocio.ValueMember = "id_hijo";
-
+                            //cbhijossocio.DataSource = bushij.ToList();
+                            //cbhijossocio.DisplayMember = "nombre";
+                            //cbhijossocio.ValueMember = "id_hijo";
+                        }
+										
                 }
-
-
-
-
-            }
+      
         }
 
 

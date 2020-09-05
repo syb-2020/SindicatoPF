@@ -39,7 +39,7 @@
 			this.menupanel = new System.Windows.Forms.Panel();
 			this.btEliminados = new FontAwesome.Sharp.IconButton();
 			this.btListadoNavi = new FontAwesome.Sharp.IconButton();
-			this.gridvereliminadosadm = new System.Windows.Forms.DataGridView();
+			this.gridvereliminadosvisitor = new System.Windows.Forms.DataGridView();
 			this.btPlantas = new FontAwesome.Sharp.IconButton();
 			this.btBuscarSoc = new FontAwesome.Sharp.IconButton();
 			this.panel_icono = new System.Windows.Forms.Panel();
@@ -51,7 +51,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.icono_actual)).BeginInit();
 			this.menupanel.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.gridvereliminadosadm)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.gridvereliminadosvisitor)).BeginInit();
 			this.panel_icono.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.btnInicio)).BeginInit();
 			this.SuspendLayout();
@@ -171,7 +171,7 @@
 			this.menupanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
 			this.menupanel.Controls.Add(this.btEliminados);
 			this.menupanel.Controls.Add(this.btListadoNavi);
-			this.menupanel.Controls.Add(this.gridvereliminadosadm);
+			this.menupanel.Controls.Add(this.gridvereliminadosvisitor);
 			this.menupanel.Controls.Add(this.btPlantas);
 			this.menupanel.Controls.Add(this.btBuscarSoc);
 			this.menupanel.Controls.Add(this.panel_icono);
@@ -223,15 +223,15 @@
 			this.btListadoNavi.UseVisualStyleBackColor = true;
 			this.btListadoNavi.Click += new System.EventHandler(this.btListadoNavi_Click);
 			// 
-			// gridvereliminadosadm
+			// gridvereliminadosvisitor
 			// 
-			this.gridvereliminadosadm.AllowUserToOrderColumns = true;
-			this.gridvereliminadosadm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.gridvereliminadosadm.Location = new System.Drawing.Point(0, 825);
-			this.gridvereliminadosadm.Name = "gridvereliminadosadm";
-			this.gridvereliminadosadm.Size = new System.Drawing.Size(220, 61);
-			this.gridvereliminadosadm.TabIndex = 8;
-			this.gridvereliminadosadm.Visible = false;
+			this.gridvereliminadosvisitor.AllowUserToOrderColumns = true;
+			this.gridvereliminadosvisitor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.gridvereliminadosvisitor.Location = new System.Drawing.Point(0, 825);
+			this.gridvereliminadosvisitor.Name = "gridvereliminadosvisitor";
+			this.gridvereliminadosvisitor.Size = new System.Drawing.Size(220, 61);
+			this.gridvereliminadosvisitor.TabIndex = 8;
+			this.gridvereliminadosvisitor.Visible = false;
 			// 
 			// btPlantas
 			// 
@@ -312,7 +312,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.icono_actual)).EndInit();
 			this.menupanel.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.gridvereliminadosadm)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.gridvereliminadosvisitor)).EndInit();
 			this.panel_icono.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.btnInicio)).EndInit();
 			this.ResumeLayout(false);
@@ -325,7 +325,7 @@
 		private System.Windows.Forms.Panel menupanel;
 		private FontAwesome.Sharp.IconButton btEliminados;
 		private FontAwesome.Sharp.IconButton btListadoNavi;
-		private System.Windows.Forms.DataGridView gridvereliminadosadm;
+		private System.Windows.Forms.DataGridView gridvereliminadosvisitor;
 		private FontAwesome.Sharp.IconButton btPlantas;
 		private FontAwesome.Sharp.IconButton btBuscarSoc;
 		private System.Windows.Forms.Panel panel_icono;
