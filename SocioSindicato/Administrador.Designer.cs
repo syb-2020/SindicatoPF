@@ -30,19 +30,6 @@
         {
 			this.gridvereliminadosadm = new System.Windows.Forms.DataGridView();
 			this.menupanel = new System.Windows.Forms.Panel();
-			this.panel_icono = new System.Windows.Forms.Panel();
-			this.titulo_panel = new System.Windows.Forms.Panel();
-			this.lbtitulo = new System.Windows.Forms.Label();
-			this.panel_shadow = new System.Windows.Forms.Panel();
-			this.panel_desktop = new System.Windows.Forms.Panel();
-			this.panel1 = new System.Windows.Forms.Panel();
-			this.fondosindicatoindex = new System.Windows.Forms.PictureBox();
-			this.pictureBox1 = new System.Windows.Forms.PictureBox();
-			this.sing_out = new FontAwesome.Sharp.IconButton();
-			this.maximizar = new FontAwesome.Sharp.IconPictureBox();
-			this.btnMinimizar = new System.Windows.Forms.PictureBox();
-			this.btnClose = new System.Windows.Forms.PictureBox();
-			this.icono_actual = new FontAwesome.Sharp.IconPictureBox();
 			this.btEliminados = new FontAwesome.Sharp.IconButton();
 			this.btListadoNavi = new FontAwesome.Sharp.IconButton();
 			this.btPlantas = new FontAwesome.Sharp.IconButton();
@@ -50,19 +37,32 @@
 			this.btEditarSoc = new FontAwesome.Sharp.IconButton();
 			this.btBuscarSoc = new FontAwesome.Sharp.IconButton();
 			this.btAgregarSoc = new FontAwesome.Sharp.IconButton();
+			this.panel_icono = new System.Windows.Forms.Panel();
 			this.btnInicio = new System.Windows.Forms.PictureBox();
+			this.titulo_panel = new System.Windows.Forms.Panel();
+			this.sing_out = new FontAwesome.Sharp.IconButton();
+			this.maximizar = new FontAwesome.Sharp.IconPictureBox();
+			this.btnMinimizar = new System.Windows.Forms.PictureBox();
+			this.btnClose = new System.Windows.Forms.PictureBox();
+			this.lbtitulo = new System.Windows.Forms.Label();
+			this.icono_actual = new FontAwesome.Sharp.IconPictureBox();
+			this.panel_shadow = new System.Windows.Forms.Panel();
+			this.panel_desktop = new System.Windows.Forms.Panel();
+			this.fondosindicatoindex = new System.Windows.Forms.PictureBox();
+			this.panel1 = new System.Windows.Forms.Panel();
+			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			((System.ComponentModel.ISupportInitialize)(this.gridvereliminadosadm)).BeginInit();
 			this.menupanel.SuspendLayout();
 			this.panel_icono.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.btnInicio)).BeginInit();
 			this.titulo_panel.SuspendLayout();
-			this.panel_desktop.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.fondosindicatoindex)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.maximizar)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.icono_actual)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.btnInicio)).BeginInit();
+			this.panel_desktop.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.fondosindicatoindex)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// gridvereliminadosadm
@@ -92,162 +92,6 @@
 			this.menupanel.Name = "menupanel";
 			this.menupanel.Size = new System.Drawing.Size(220, 889);
 			this.menupanel.TabIndex = 10;
-			// 
-			// panel_icono
-			// 
-			this.panel_icono.Controls.Add(this.btnInicio);
-			this.panel_icono.Dock = System.Windows.Forms.DockStyle.Top;
-			this.panel_icono.Location = new System.Drawing.Point(0, 0);
-			this.panel_icono.Name = "panel_icono";
-			this.panel_icono.Size = new System.Drawing.Size(220, 188);
-			this.panel_icono.TabIndex = 0;
-			// 
-			// titulo_panel
-			// 
-			this.titulo_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-			this.titulo_panel.Controls.Add(this.sing_out);
-			this.titulo_panel.Controls.Add(this.maximizar);
-			this.titulo_panel.Controls.Add(this.btnMinimizar);
-			this.titulo_panel.Controls.Add(this.btnClose);
-			this.titulo_panel.Controls.Add(this.lbtitulo);
-			this.titulo_panel.Controls.Add(this.icono_actual);
-			this.titulo_panel.Dock = System.Windows.Forms.DockStyle.Top;
-			this.titulo_panel.Location = new System.Drawing.Point(220, 0);
-			this.titulo_panel.Name = "titulo_panel";
-			this.titulo_panel.Size = new System.Drawing.Size(1315, 84);
-			this.titulo_panel.TabIndex = 11;
-			this.titulo_panel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.titulo_panel_MouseMove);
-			// 
-			// lbtitulo
-			// 
-			this.lbtitulo.AutoSize = true;
-			this.lbtitulo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lbtitulo.ForeColor = System.Drawing.Color.Gainsboro;
-			this.lbtitulo.Location = new System.Drawing.Point(52, 29);
-			this.lbtitulo.Name = "lbtitulo";
-			this.lbtitulo.Size = new System.Drawing.Size(51, 21);
-			this.lbtitulo.TabIndex = 1;
-			this.lbtitulo.Text = "Inicio";
-			// 
-			// panel_shadow
-			// 
-			this.panel_shadow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(24)))), ((int)(((byte)(58)))));
-			this.panel_shadow.Dock = System.Windows.Forms.DockStyle.Top;
-			this.panel_shadow.Location = new System.Drawing.Point(220, 84);
-			this.panel_shadow.Name = "panel_shadow";
-			this.panel_shadow.Size = new System.Drawing.Size(1315, 9);
-			this.panel_shadow.TabIndex = 13;
-			// 
-			// panel_desktop
-			// 
-			this.panel_desktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(56)))), ((int)(((byte)(104)))));
-			this.panel_desktop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-			this.panel_desktop.Controls.Add(this.fondosindicatoindex);
-			this.panel_desktop.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.panel_desktop.Location = new System.Drawing.Point(220, 93);
-			this.panel_desktop.Name = "panel_desktop";
-			this.panel_desktop.Size = new System.Drawing.Size(1315, 796);
-			this.panel_desktop.TabIndex = 14;
-			// 
-			// panel1
-			// 
-			this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(24)))), ((int)(((byte)(58)))));
-			this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-			this.panel1.Location = new System.Drawing.Point(220, 93);
-			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(11, 796);
-			this.panel1.TabIndex = 15;
-			// 
-			// fondosindicatoindex
-			// 
-			this.fondosindicatoindex.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.fondosindicatoindex.Image = global::SocioSindicato.Properties.Resources.fondo_inicio_sindicato;
-			this.fondosindicatoindex.Location = new System.Drawing.Point(0, 0);
-			this.fondosindicatoindex.Name = "fondosindicatoindex";
-			this.fondosindicatoindex.Size = new System.Drawing.Size(1315, 796);
-			this.fondosindicatoindex.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-			this.fondosindicatoindex.TabIndex = 0;
-			this.fondosindicatoindex.TabStop = false;
-			// 
-			// pictureBox1
-			// 
-			this.pictureBox1.Location = new System.Drawing.Point(-23, -46);
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-			this.pictureBox1.TabIndex = 12;
-			this.pictureBox1.TabStop = false;
-			// 
-			// sing_out
-			// 
-			this.sing_out.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.sing_out.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-			this.sing_out.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.sing_out.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-			this.sing_out.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.sing_out.ForeColor = System.Drawing.Color.Gainsboro;
-			this.sing_out.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
-			this.sing_out.IconColor = System.Drawing.Color.WhiteSmoke;
-			this.sing_out.IconSize = 32;
-			this.sing_out.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.sing_out.Location = new System.Drawing.Point(972, 12);
-			this.sing_out.Name = "sing_out";
-			this.sing_out.Rotation = 0D;
-			this.sing_out.Size = new System.Drawing.Size(190, 52);
-			this.sing_out.TabIndex = 7;
-			this.sing_out.Text = "Cerrar Sesion";
-			this.sing_out.UseVisualStyleBackColor = true;
-			this.sing_out.Click += new System.EventHandler(this.sing_out_Click);
-			// 
-			// maximizar
-			// 
-			this.maximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.maximizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-			this.maximizar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.maximizar.IconChar = FontAwesome.Sharp.IconChar.WindowMaximize;
-			this.maximizar.IconColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.maximizar.IconSize = 19;
-			this.maximizar.Location = new System.Drawing.Point(1234, 29);
-			this.maximizar.Name = "maximizar";
-			this.maximizar.Size = new System.Drawing.Size(21, 19);
-			this.maximizar.TabIndex = 6;
-			this.maximizar.TabStop = false;
-			this.maximizar.Click += new System.EventHandler(this.maximizar_Click);
-			// 
-			// btnMinimizar
-			// 
-			this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.btnMinimizar.Image = global::SocioSindicato.Properties.Resources.Minimize_Icon;
-			this.btnMinimizar.Location = new System.Drawing.Point(1196, 29);
-			this.btnMinimizar.Name = "btnMinimizar";
-			this.btnMinimizar.Size = new System.Drawing.Size(16, 16);
-			this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-			this.btnMinimizar.TabIndex = 3;
-			this.btnMinimizar.TabStop = false;
-			this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
-			// 
-			// btnClose
-			// 
-			this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.btnClose.Image = global::SocioSindicato.Properties.Resources.Close_Icon1;
-			this.btnClose.Location = new System.Drawing.Point(1277, 29);
-			this.btnClose.Name = "btnClose";
-			this.btnClose.Size = new System.Drawing.Size(16, 16);
-			this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-			this.btnClose.TabIndex = 2;
-			this.btnClose.TabStop = false;
-			this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-			// 
-			// icono_actual
-			// 
-			this.icono_actual.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-			this.icono_actual.ForeColor = System.Drawing.Color.MediumPurple;
-			this.icono_actual.IconChar = FontAwesome.Sharp.IconChar.Home;
-			this.icono_actual.IconColor = System.Drawing.Color.MediumPurple;
-			this.icono_actual.Location = new System.Drawing.Point(14, 23);
-			this.icono_actual.Name = "icono_actual";
-			this.icono_actual.Size = new System.Drawing.Size(32, 32);
-			this.icono_actual.TabIndex = 0;
-			this.icono_actual.TabStop = false;
 			// 
 			// btEliminados
 			// 
@@ -396,6 +240,15 @@
 			this.btAgregarSoc.UseVisualStyleBackColor = true;
 			this.btAgregarSoc.Click += new System.EventHandler(this.btAgregarSoc_Click);
 			// 
+			// panel_icono
+			// 
+			this.panel_icono.Controls.Add(this.btnInicio);
+			this.panel_icono.Dock = System.Windows.Forms.DockStyle.Top;
+			this.panel_icono.Location = new System.Drawing.Point(0, 0);
+			this.panel_icono.Name = "panel_icono";
+			this.panel_icono.Size = new System.Drawing.Size(220, 188);
+			this.panel_icono.TabIndex = 0;
+			// 
 			// btnInicio
 			// 
 			this.btnInicio.Image = global::SocioSindicato.Properties.Resources._56726595_608012969610677_8790191896057085952_n;
@@ -406,6 +259,153 @@
 			this.btnInicio.TabIndex = 0;
 			this.btnInicio.TabStop = false;
 			this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
+			// 
+			// titulo_panel
+			// 
+			this.titulo_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+			this.titulo_panel.Controls.Add(this.sing_out);
+			this.titulo_panel.Controls.Add(this.maximizar);
+			this.titulo_panel.Controls.Add(this.btnMinimizar);
+			this.titulo_panel.Controls.Add(this.btnClose);
+			this.titulo_panel.Controls.Add(this.lbtitulo);
+			this.titulo_panel.Controls.Add(this.icono_actual);
+			this.titulo_panel.Dock = System.Windows.Forms.DockStyle.Top;
+			this.titulo_panel.Location = new System.Drawing.Point(220, 0);
+			this.titulo_panel.Name = "titulo_panel";
+			this.titulo_panel.Size = new System.Drawing.Size(1315, 84);
+			this.titulo_panel.TabIndex = 11;
+			this.titulo_panel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.titulo_panel_MouseMove);
+			// 
+			// sing_out
+			// 
+			this.sing_out.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.sing_out.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+			this.sing_out.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.sing_out.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+			this.sing_out.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.sing_out.ForeColor = System.Drawing.Color.Gainsboro;
+			this.sing_out.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
+			this.sing_out.IconColor = System.Drawing.Color.WhiteSmoke;
+			this.sing_out.IconSize = 32;
+			this.sing_out.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.sing_out.Location = new System.Drawing.Point(972, 12);
+			this.sing_out.Name = "sing_out";
+			this.sing_out.Rotation = 0D;
+			this.sing_out.Size = new System.Drawing.Size(190, 52);
+			this.sing_out.TabIndex = 7;
+			this.sing_out.Text = "Cerrar Sesion";
+			this.sing_out.UseVisualStyleBackColor = true;
+			this.sing_out.Click += new System.EventHandler(this.sing_out_Click);
+			// 
+			// maximizar
+			// 
+			this.maximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.maximizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+			this.maximizar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.maximizar.IconChar = FontAwesome.Sharp.IconChar.WindowMaximize;
+			this.maximizar.IconColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.maximizar.IconSize = 19;
+			this.maximizar.Location = new System.Drawing.Point(1234, 29);
+			this.maximizar.Name = "maximizar";
+			this.maximizar.Size = new System.Drawing.Size(21, 19);
+			this.maximizar.TabIndex = 6;
+			this.maximizar.TabStop = false;
+			this.maximizar.Click += new System.EventHandler(this.maximizar_Click);
+			// 
+			// btnMinimizar
+			// 
+			this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnMinimizar.Image = global::SocioSindicato.Properties.Resources.Minimize_Icon;
+			this.btnMinimizar.Location = new System.Drawing.Point(1196, 29);
+			this.btnMinimizar.Name = "btnMinimizar";
+			this.btnMinimizar.Size = new System.Drawing.Size(16, 16);
+			this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+			this.btnMinimizar.TabIndex = 3;
+			this.btnMinimizar.TabStop = false;
+			this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+			// 
+			// btnClose
+			// 
+			this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnClose.Image = global::SocioSindicato.Properties.Resources.Close_Icon1;
+			this.btnClose.Location = new System.Drawing.Point(1277, 29);
+			this.btnClose.Name = "btnClose";
+			this.btnClose.Size = new System.Drawing.Size(16, 16);
+			this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+			this.btnClose.TabIndex = 2;
+			this.btnClose.TabStop = false;
+			this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+			// 
+			// lbtitulo
+			// 
+			this.lbtitulo.AutoSize = true;
+			this.lbtitulo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lbtitulo.ForeColor = System.Drawing.Color.Gainsboro;
+			this.lbtitulo.Location = new System.Drawing.Point(52, 29);
+			this.lbtitulo.Name = "lbtitulo";
+			this.lbtitulo.Size = new System.Drawing.Size(51, 21);
+			this.lbtitulo.TabIndex = 1;
+			this.lbtitulo.Text = "Inicio";
+			// 
+			// icono_actual
+			// 
+			this.icono_actual.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+			this.icono_actual.ForeColor = System.Drawing.Color.MediumPurple;
+			this.icono_actual.IconChar = FontAwesome.Sharp.IconChar.Home;
+			this.icono_actual.IconColor = System.Drawing.Color.MediumPurple;
+			this.icono_actual.Location = new System.Drawing.Point(14, 23);
+			this.icono_actual.Name = "icono_actual";
+			this.icono_actual.Size = new System.Drawing.Size(32, 32);
+			this.icono_actual.TabIndex = 0;
+			this.icono_actual.TabStop = false;
+			// 
+			// panel_shadow
+			// 
+			this.panel_shadow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(24)))), ((int)(((byte)(58)))));
+			this.panel_shadow.Dock = System.Windows.Forms.DockStyle.Top;
+			this.panel_shadow.Location = new System.Drawing.Point(220, 84);
+			this.panel_shadow.Name = "panel_shadow";
+			this.panel_shadow.Size = new System.Drawing.Size(1315, 9);
+			this.panel_shadow.TabIndex = 13;
+			// 
+			// panel_desktop
+			// 
+			this.panel_desktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(56)))), ((int)(((byte)(104)))));
+			this.panel_desktop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.panel_desktop.Controls.Add(this.fondosindicatoindex);
+			this.panel_desktop.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.panel_desktop.Location = new System.Drawing.Point(220, 93);
+			this.panel_desktop.Name = "panel_desktop";
+			this.panel_desktop.Size = new System.Drawing.Size(1315, 796);
+			this.panel_desktop.TabIndex = 14;
+			// 
+			// fondosindicatoindex
+			// 
+			this.fondosindicatoindex.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.fondosindicatoindex.Image = global::SocioSindicato.Properties.Resources.logofinal;
+			this.fondosindicatoindex.Location = new System.Drawing.Point(0, 0);
+			this.fondosindicatoindex.Name = "fondosindicatoindex";
+			this.fondosindicatoindex.Size = new System.Drawing.Size(1315, 796);
+			this.fondosindicatoindex.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.fondosindicatoindex.TabIndex = 0;
+			this.fondosindicatoindex.TabStop = false;
+			// 
+			// panel1
+			// 
+			this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(24)))), ((int)(((byte)(58)))));
+			this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+			this.panel1.Location = new System.Drawing.Point(220, 93);
+			this.panel1.Name = "panel1";
+			this.panel1.Size = new System.Drawing.Size(11, 796);
+			this.panel1.TabIndex = 15;
+			// 
+			// pictureBox1
+			// 
+			this.pictureBox1.Location = new System.Drawing.Point(-23, -46);
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+			this.pictureBox1.TabIndex = 12;
+			this.pictureBox1.TabStop = false;
 			// 
 			// Administrador
 			// 
@@ -424,16 +424,16 @@
 			((System.ComponentModel.ISupportInitialize)(this.gridvereliminadosadm)).EndInit();
 			this.menupanel.ResumeLayout(false);
 			this.panel_icono.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.btnInicio)).EndInit();
 			this.titulo_panel.ResumeLayout(false);
 			this.titulo_panel.PerformLayout();
-			this.panel_desktop.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.fondosindicatoindex)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.maximizar)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.icono_actual)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.btnInicio)).EndInit();
+			this.panel_desktop.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.fondosindicatoindex)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 
         }

@@ -40,7 +40,6 @@
 			this.btDownloadSocioHijo = new FontAwesome.Sharp.IconButton();
 			this.btDownloadSocioConyu = new FontAwesome.Sharp.IconButton();
 			this.btDownloadTodos = new FontAwesome.Sharp.IconButton();
-			this.btVolver = new FontAwesome.Sharp.IconButton();
 			this.btBuscarUser = new FontAwesome.Sharp.IconButton();
 			this.btBuscarHijo = new FontAwesome.Sharp.IconButton();
 			this.btBuscarConyuge = new FontAwesome.Sharp.IconButton();
@@ -258,29 +257,6 @@
 			this.btDownloadTodos.UseVisualStyleBackColor = false;
 			this.btDownloadTodos.Click += new System.EventHandler(this.btDownloadTodos_Click);
 			// 
-			// btVolver
-			// 
-			this.btVolver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.btVolver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-			this.btVolver.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-			this.btVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btVolver.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-			this.btVolver.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btVolver.ForeColor = System.Drawing.Color.Gainsboro;
-			this.btVolver.IconChar = FontAwesome.Sharp.IconChar.ExchangeAlt;
-			this.btVolver.IconColor = System.Drawing.Color.Gainsboro;
-			this.btVolver.IconSize = 26;
-			this.btVolver.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.btVolver.Location = new System.Drawing.Point(1145, 12);
-			this.btVolver.Name = "btVolver";
-			this.btVolver.Rotation = 0D;
-			this.btVolver.Size = new System.Drawing.Size(93, 38);
-			this.btVolver.TabIndex = 32;
-			this.btVolver.Text = "Volver";
-			this.btVolver.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btVolver.UseVisualStyleBackColor = false;
-			this.btVolver.Click += new System.EventHandler(this.btVolver_Click);
-			// 
 			// btBuscarUser
 			// 
 			this.btBuscarUser.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -408,7 +384,6 @@
 			this.Controls.Add(this.label11);
 			this.Controls.Add(this.btBuscarConyuge);
 			this.Controls.Add(this.btBuscarHijo);
-			this.Controls.Add(this.btVolver);
 			this.Controls.Add(this.btBuscarUser);
 			this.Controls.Add(this.btDownloadTodos);
 			this.Controls.Add(this.btDownloadSocioConyu);
@@ -447,7 +422,6 @@
         private FontAwesome.Sharp.IconButton btDownloadSocioHijo;
         private FontAwesome.Sharp.IconButton btDownloadSocioConyu;
         private FontAwesome.Sharp.IconButton btDownloadTodos;
-        private FontAwesome.Sharp.IconButton btVolver;
         private FontAwesome.Sharp.IconButton btBuscarUser;
         private FontAwesome.Sharp.IconButton btBuscarHijo;
         private FontAwesome.Sharp.IconButton btBuscarConyuge;

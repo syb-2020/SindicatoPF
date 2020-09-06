@@ -24,10 +24,16 @@ namespace SocioSindicato.ViewsAdministrador
             combocategoriasocio.DataSource = context.Categoria.ToList();
             combocategoriasocio.DisplayMember = "numero_categoria";
             combocategoriasocio.ValueMember = "id_categoria";
-
+            
             comboplantasocio.DataSource = context.Planta.ToList();
             comboplantasocio.DisplayMember = "nombre";
             comboplantasocio.ValueMember = "id_planta";
+
+            //CARGAR COMBOBOX AUTOMATICO 
+            combocontratosocio.SelectedIndex = 0;
+            comboestadocivilagregar.SelectedIndex = 0;
+            comboconvivienteconyugesocio.SelectedIndex = 0;
+            cbSexo.SelectedIndex = 0;
 
         }
 
@@ -258,38 +264,75 @@ namespace SocioSindicato.ViewsAdministrador
                 {
 
 
-                    MessageBox.Show("Ingrese Datos Para Agregar", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    if (fotosocio.Image == null)
+                    {
+                        MessageBox.Show("Debe Ingresar Imagen *Obligatoria* ", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        //BORRAR DATOS SOCIO
+                        txtrutsocio.Text = "";
+                        fotosocio.Image = null;
+                        txtnombresocio.Text = "";
+                        dateingresoempresasocio.Value = DateTime.Now;
+                        combocategoriasocio.SelectedIndex = 0;
+                        combocontratosocio.SelectedIndex = 0; ;
+                        comboplantasocio.SelectedIndex = 0; ;
+                        datefechanacimientosocio.Value = DateTime.Now;
+                        txtedadsocio.Text = "";
+                        txtdomiciliosocio.Text = "";
+                        comboestadocivilagregar.SelectedIndex = 0;
+                        txttelefonosocio.Text = "";
+                        txtnacionalidadsocio.Text = "";
+                        txtcorreosocio.Text = "";
+                        txtnombrepadre.Text = "";
+                        txtnombremadre.Text = "";
+                        //BORRAR DATOS CONYUGE
+                        txtconyugesocio.Text = "";
+                        comboconvivienteconyugesocio.SelectedIndex = 0; ;
+                        txtrutconyugesocio.Text = "";
+                        datefechanacimientoconyugesocio.Value = DateTime.Now;
+                        txtedadconyugesocio.Text = "";
+                        //BORRAR DATOS HIJOS
+                        txtnombrehijosocio.Text = "";
+                        txtruthijosocio.Text = "";
+                        cbSexo.SelectedIndex = 0;
+                        datenacimientohijosocio.Value = DateTime.Now;
+                        mashijos.Clear();
+                        gridpruebahijo.DataSource = "";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ingrese Datos Para Agregar", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-                    //BORRAR DATOS SOCIO
-                    txtrutsocio.Text = "";
-                    fotosocio.Image = null;
-                    txtnombresocio.Text = "";
-                    dateingresoempresasocio.Value = DateTime.Now;
-                    combocategoriasocio.SelectedIndex = 0;
-                    combocontratosocio.SelectedIndex = 0; ;
-                    comboplantasocio.SelectedIndex = 0; ;
-                    datefechanacimientosocio.Value = DateTime.Now;
-                    txtedadsocio.Text = "";
-                    txtdomiciliosocio.Text = "";
-                    comboestadocivilagregar.SelectedIndex = 0;
-                    txttelefonosocio.Text = "";
-                    txtnacionalidadsocio.Text = "";
-                    txtcorreosocio.Text = "";
-                    txtnombrepadre.Text = "";
-                    txtnombremadre.Text = "";
-                    //BORRAR DATOS CONYUGE
-                    txtconyugesocio.Text = "";
-                    comboconvivienteconyugesocio.SelectedIndex = 0; ;
-                    txtrutconyugesocio.Text = "";
-                    datefechanacimientoconyugesocio.Value = DateTime.Now;
-                    txtedadconyugesocio.Text = "";
-                    //BORRAR DATOS HIJOS
-                    txtnombrehijosocio.Text = "";
-                    txtruthijosocio.Text = "";
-                    cbSexo.SelectedIndex = 0;
-                    datenacimientohijosocio.Value = DateTime.Now;
-                    mashijos.Clear();
-                    gridpruebahijo.DataSource = "";
+                        //BORRAR DATOS SOCIO
+                        txtrutsocio.Text = "";
+                        fotosocio.Image = null;
+                        txtnombresocio.Text = "";
+                        dateingresoempresasocio.Value = DateTime.Now;
+                        combocategoriasocio.SelectedIndex = 0;
+                        combocontratosocio.SelectedIndex = 0; ;
+                        comboplantasocio.SelectedIndex = 0; ;
+                        datefechanacimientosocio.Value = DateTime.Now;
+                        txtedadsocio.Text = "";
+                        txtdomiciliosocio.Text = "";
+                        comboestadocivilagregar.SelectedIndex = 0;
+                        txttelefonosocio.Text = "";
+                        txtnacionalidadsocio.Text = "";
+                        txtcorreosocio.Text = "";
+                        txtnombrepadre.Text = "";
+                        txtnombremadre.Text = "";
+                        //BORRAR DATOS CONYUGE
+                        txtconyugesocio.Text = "";
+                        comboconvivienteconyugesocio.SelectedIndex = 0; ;
+                        txtrutconyugesocio.Text = "";
+                        datefechanacimientoconyugesocio.Value = DateTime.Now;
+                        txtedadconyugesocio.Text = "";
+                        //BORRAR DATOS HIJOS
+                        txtnombrehijosocio.Text = "";
+                        txtruthijosocio.Text = "";
+                        cbSexo.SelectedIndex = 0;
+                        datenacimientohijosocio.Value = DateTime.Now;
+                        mashijos.Clear();
+                        gridpruebahijo.DataSource = "";
+                    }
                 }
             }
         }
@@ -377,7 +420,6 @@ namespace SocioSindicato.ViewsAdministrador
                     cbSexo.SelectedIndex = 0;
                     datenacimientohijosocio.Value = DateTime.Now;
                     mashijos.Clear();
-
                     gridpruebahijo.DataSource = "";
 
 
@@ -385,39 +427,75 @@ namespace SocioSindicato.ViewsAdministrador
                 }
                 catch (Exception)
                 {
+                    if (fotosocio.Image == null)
+                    {
+                        MessageBox.Show("Debe Ingresar Imagen *Obligatoria* ", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        //BORRAR DATOS SOCIO
+                        txtrutsocio.Text = "";
+                        fotosocio.Image = null;
+                        txtnombresocio.Text = "";
+                        dateingresoempresasocio.Value = DateTime.Now;
+                        combocategoriasocio.SelectedIndex = 0;
+                        combocontratosocio.SelectedIndex = 0; ;
+                        comboplantasocio.SelectedIndex = 0; ;
+                        datefechanacimientosocio.Value = DateTime.Now;
+                        txtedadsocio.Text = "";
+                        txtdomiciliosocio.Text = "";
+                        comboestadocivilagregar.SelectedIndex = 0;
+                        txttelefonosocio.Text = "";
+                        txtnacionalidadsocio.Text = "";
+                        txtcorreosocio.Text = "";
+                        txtnombrepadre.Text = "";
+                        txtnombremadre.Text = "";
+                        //BORRAR DATOS CONYUGE
+                        txtconyugesocio.Text = "";
+                        comboconvivienteconyugesocio.SelectedIndex = 0; ;
+                        txtrutconyugesocio.Text = "";
+                        datefechanacimientoconyugesocio.Value = DateTime.Now;
+                        txtedadconyugesocio.Text = "";
+                        //BORRAR DATOS HIJOS
+                        txtnombrehijosocio.Text = "";
+                        txtruthijosocio.Text = "";
+                        cbSexo.SelectedIndex = 0;
+                        datenacimientohijosocio.Value = DateTime.Now;
+                        mashijos.Clear();
+                        gridpruebahijo.DataSource = "";
+                    }
+                    else {
+                        MessageBox.Show("Ingrese Datos Para Agregar", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-                    MessageBox.Show("Ingrese Datos Para Agregar", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-                    //BORRAR DATOS SOCIO
-                    txtrutsocio.Text = "";
-                    fotosocio.Image = null;
-                    txtnombresocio.Text = "";
-                    dateingresoempresasocio.Value = DateTime.Now;
-                    combocategoriasocio.SelectedIndex = 0;
-                    combocontratosocio.SelectedIndex = 0; ;
-                    comboplantasocio.SelectedIndex = 0; ;
-                    datefechanacimientosocio.Value = DateTime.Now;
-                    txtedadsocio.Text = "";
-                    txtdomiciliosocio.Text = "";
-                    comboestadocivilagregar.SelectedIndex = 0;
-                    txttelefonosocio.Text = "";
-                    txtnacionalidadsocio.Text = "";
-                    txtcorreosocio.Text = "";
-                    txtnombrepadre.Text = "";
-                    txtnombremadre.Text = "";
-                    //BORRAR DATOS CONYUGE
-                    txtconyugesocio.Text = "";
-                    comboconvivienteconyugesocio.SelectedIndex = 0; ;
-                    txtrutconyugesocio.Text = "";
-                    datefechanacimientoconyugesocio.Value = DateTime.Now;
-                    txtedadconyugesocio.Text = "";
-                    //BORRAR DATOS HIJOS
-                    txtnombrehijosocio.Text = "";
-                    txtruthijosocio.Text = "";
-                    cbSexo.SelectedIndex = 0;
-                    datenacimientohijosocio.Value = DateTime.Now;
-                    mashijos.Clear();
-                    gridpruebahijo.DataSource = "";
+                        //BORRAR DATOS SOCIO
+                        txtrutsocio.Text = "";
+                        fotosocio.Image = null;
+                        txtnombresocio.Text = "";
+                        dateingresoempresasocio.Value = DateTime.Now;
+                        combocategoriasocio.SelectedIndex = 0;
+                        combocontratosocio.SelectedIndex = 0; ;
+                        comboplantasocio.SelectedIndex = 0; ;
+                        datefechanacimientosocio.Value = DateTime.Now;
+                        txtedadsocio.Text = "";
+                        txtdomiciliosocio.Text = "";
+                        comboestadocivilagregar.SelectedIndex = 0;
+                        txttelefonosocio.Text = "";
+                        txtnacionalidadsocio.Text = "";
+                        txtcorreosocio.Text = "";
+                        txtnombrepadre.Text = "";
+                        txtnombremadre.Text = "";
+                        //BORRAR DATOS CONYUGE
+                        txtconyugesocio.Text = "";
+                        comboconvivienteconyugesocio.SelectedIndex = 0; ;
+                        txtrutconyugesocio.Text = "";
+                        datefechanacimientoconyugesocio.Value = DateTime.Now;
+                        txtedadconyugesocio.Text = "";
+                        //BORRAR DATOS HIJOS
+                        txtnombrehijosocio.Text = "";
+                        txtruthijosocio.Text = "";
+                        cbSexo.SelectedIndex = 0;
+                        datenacimientohijosocio.Value = DateTime.Now;
+                        mashijos.Clear();
+                        gridpruebahijo.DataSource = "";
+                    }
+                    
                 }
             }
         }
@@ -504,39 +582,75 @@ namespace SocioSindicato.ViewsAdministrador
                 }
                 catch (Exception)
                 {
+                    if (fotosocio.Image == null)
+                    {
+                        MessageBox.Show("Debe Ingresar Imagen *Obligatoria* ", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        //BORRAR DATOS SOCIO
+                        txtrutsocio.Text = "";
+                        fotosocio.Image = null;
+                        txtnombresocio.Text = "";
+                        dateingresoempresasocio.Value = DateTime.Now;
+                        combocategoriasocio.SelectedIndex = 0;
+                        combocontratosocio.SelectedIndex = 0; ;
+                        comboplantasocio.SelectedIndex = 0; ;
+                        datefechanacimientosocio.Value = DateTime.Now;
+                        txtedadsocio.Text = "";
+                        txtdomiciliosocio.Text = "";
+                        comboestadocivilagregar.SelectedIndex = 0;
+                        txttelefonosocio.Text = "";
+                        txtnacionalidadsocio.Text = "";
+                        txtcorreosocio.Text = "";
+                        txtnombrepadre.Text = "";
+                        txtnombremadre.Text = "";
+                        //BORRAR DATOS CONYUGE
+                        txtconyugesocio.Text = "";
+                        comboconvivienteconyugesocio.SelectedIndex = 0; ;
+                        txtrutconyugesocio.Text = "";
+                        datefechanacimientoconyugesocio.Value = DateTime.Now;
+                        txtedadconyugesocio.Text = "";
+                        //BORRAR DATOS HIJOS
+                        txtnombrehijosocio.Text = "";
+                        txtruthijosocio.Text = "";
+                        cbSexo.SelectedIndex = 0;
+                        datenacimientohijosocio.Value = DateTime.Now;
+                        mashijos.Clear();
+                        gridpruebahijo.DataSource = "";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ingrese Datos Para Agregar", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-                    MessageBox.Show("Ingrese Datos Para Agregar", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-                    //BORRAR DATOS SOCIO
-                    txtrutsocio.Text = "";
-                    fotosocio.Image = null;
-                    txtnombresocio.Text = "";
-                    dateingresoempresasocio.Value = DateTime.Now;
-                    combocategoriasocio.SelectedIndex = 0;
-                    combocontratosocio.SelectedIndex = 0; ;
-                    comboplantasocio.SelectedIndex = 0; ;
-                    datefechanacimientosocio.Value = DateTime.Now;
-                    txtedadsocio.Text = "";
-                    txtdomiciliosocio.Text = "";
-                    comboestadocivilagregar.SelectedIndex = 0;
-                    txttelefonosocio.Text = "";
-                    txtnacionalidadsocio.Text = "";
-                    txtcorreosocio.Text = "";
-                    txtnombrepadre.Text = "";
-                    txtnombremadre.Text = "";
-                    //BORRAR DATOS CONYUGE
-                    txtconyugesocio.Text = "";
-                    comboconvivienteconyugesocio.SelectedIndex = 0; ;
-                    txtrutconyugesocio.Text = "";
-                    datefechanacimientoconyugesocio.Value = DateTime.Now;
-                    txtedadconyugesocio.Text = "";
-                    //BORRAR DATOS HIJOS
-                    txtnombrehijosocio.Text = "";
-                    txtruthijosocio.Text = "";
-                    cbSexo.SelectedIndex = 0;
-                    datenacimientohijosocio.Value = DateTime.Now;
-                    gridpruebahijo.DataSource = "";
-                    mashijos.Clear();
+                        //BORRAR DATOS SOCIO
+                        txtrutsocio.Text = "";
+                        fotosocio.Image = null;
+                        txtnombresocio.Text = "";
+                        dateingresoempresasocio.Value = DateTime.Now;
+                        combocategoriasocio.SelectedIndex = 0;
+                        combocontratosocio.SelectedIndex = 0; ;
+                        comboplantasocio.SelectedIndex = 0; ;
+                        datefechanacimientosocio.Value = DateTime.Now;
+                        txtedadsocio.Text = "";
+                        txtdomiciliosocio.Text = "";
+                        comboestadocivilagregar.SelectedIndex = 0;
+                        txttelefonosocio.Text = "";
+                        txtnacionalidadsocio.Text = "";
+                        txtcorreosocio.Text = "";
+                        txtnombrepadre.Text = "";
+                        txtnombremadre.Text = "";
+                        //BORRAR DATOS CONYUGE
+                        txtconyugesocio.Text = "";
+                        comboconvivienteconyugesocio.SelectedIndex = 0; ;
+                        txtrutconyugesocio.Text = "";
+                        datefechanacimientoconyugesocio.Value = DateTime.Now;
+                        txtedadconyugesocio.Text = "";
+                        //BORRAR DATOS HIJOS
+                        txtnombrehijosocio.Text = "";
+                        txtruthijosocio.Text = "";
+                        cbSexo.SelectedIndex = 0;
+                        datenacimientohijosocio.Value = DateTime.Now;
+                        mashijos.Clear();
+                        gridpruebahijo.DataSource = "";
+                    }
                 }
             }
         }
@@ -628,39 +742,75 @@ namespace SocioSindicato.ViewsAdministrador
                 catch (Exception)
                 {
 
-                    MessageBox.Show("Ingrese Datos Para Agregar", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    if (fotosocio.Image == null)
+                    {
+                        MessageBox.Show("Debe Ingresar Imagen *Obligatoria* ", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        //BORRAR DATOS SOCIO
+                        txtrutsocio.Text = "";
+                        fotosocio.Image = null;
+                        txtnombresocio.Text = "";
+                        dateingresoempresasocio.Value = DateTime.Now;
+                        combocategoriasocio.SelectedIndex = 0;
+                        combocontratosocio.SelectedIndex = 0; ;
+                        comboplantasocio.SelectedIndex = 0; ;
+                        datefechanacimientosocio.Value = DateTime.Now;
+                        txtedadsocio.Text = "";
+                        txtdomiciliosocio.Text = "";
+                        comboestadocivilagregar.SelectedIndex = 0;
+                        txttelefonosocio.Text = "";
+                        txtnacionalidadsocio.Text = "";
+                        txtcorreosocio.Text = "";
+                        txtnombrepadre.Text = "";
+                        txtnombremadre.Text = "";
+                        //BORRAR DATOS CONYUGE
+                        txtconyugesocio.Text = "";
+                        comboconvivienteconyugesocio.SelectedIndex = 0; ;
+                        txtrutconyugesocio.Text = "";
+                        datefechanacimientoconyugesocio.Value = DateTime.Now;
+                        txtedadconyugesocio.Text = "";
+                        //BORRAR DATOS HIJOS
+                        txtnombrehijosocio.Text = "";
+                        txtruthijosocio.Text = "";
+                        cbSexo.SelectedIndex = 0;
+                        datenacimientohijosocio.Value = DateTime.Now;
+                        mashijos.Clear();
+                        gridpruebahijo.DataSource = "";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ingrese Datos Para Agregar", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-                    //BORRAR DATOS SOCIO
-                    txtrutsocio.Text = "";
-                    fotosocio.Image = null;
-                    txtnombresocio.Text = "";
-                    dateingresoempresasocio.Value = DateTime.Now;
-                    combocategoriasocio.SelectedIndex = 0;
-                    combocontratosocio.SelectedIndex = 0; ;
-                    comboplantasocio.SelectedIndex = 0; ;
-                    datefechanacimientosocio.Value = DateTime.Now;
-                    txtedadsocio.Text = "";
-                    txtdomiciliosocio.Text = "";
-                    comboestadocivilagregar.SelectedIndex = 0;
-                    txttelefonosocio.Text = "";
-                    txtnacionalidadsocio.Text = "";
-                    txtcorreosocio.Text = "";
-                    txtnombrepadre.Text = "";
-                    txtnombremadre.Text = "";
-                    //BORRAR DATOS CONYUGE
-                    txtconyugesocio.Text = "";
-                    comboconvivienteconyugesocio.SelectedIndex = 0; ;
-                    txtrutconyugesocio.Text = "";
-                    datefechanacimientoconyugesocio.Value = DateTime.Now;
-                    txtedadconyugesocio.Text = "";
-                    //BORRAR DATOS HIJOS
-                    txtnombrehijosocio.Text = "";
-                    txtruthijosocio.Text = "";
-                    cbSexo.SelectedIndex = 0;
-                    datenacimientohijosocio.Value = DateTime.Now;
-
-                    gridpruebahijo.DataSource = "";
-                    mashijos.Clear();
+                        //BORRAR DATOS SOCIO
+                        txtrutsocio.Text = "";
+                        fotosocio.Image = null;
+                        txtnombresocio.Text = "";
+                        dateingresoempresasocio.Value = DateTime.Now;
+                        combocategoriasocio.SelectedIndex = 0;
+                        combocontratosocio.SelectedIndex = 0; ;
+                        comboplantasocio.SelectedIndex = 0; ;
+                        datefechanacimientosocio.Value = DateTime.Now;
+                        txtedadsocio.Text = "";
+                        txtdomiciliosocio.Text = "";
+                        comboestadocivilagregar.SelectedIndex = 0;
+                        txttelefonosocio.Text = "";
+                        txtnacionalidadsocio.Text = "";
+                        txtcorreosocio.Text = "";
+                        txtnombrepadre.Text = "";
+                        txtnombremadre.Text = "";
+                        //BORRAR DATOS CONYUGE
+                        txtconyugesocio.Text = "";
+                        comboconvivienteconyugesocio.SelectedIndex = 0; ;
+                        txtrutconyugesocio.Text = "";
+                        datefechanacimientoconyugesocio.Value = DateTime.Now;
+                        txtedadconyugesocio.Text = "";
+                        //BORRAR DATOS HIJOS
+                        txtnombrehijosocio.Text = "";
+                        txtruthijosocio.Text = "";
+                        cbSexo.SelectedIndex = 0;
+                        datenacimientohijosocio.Value = DateTime.Now;
+                        mashijos.Clear();
+                        gridpruebahijo.DataSource = "";
+                    }
                 }
             }
         }

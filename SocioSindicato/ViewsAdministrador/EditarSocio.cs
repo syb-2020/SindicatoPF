@@ -760,30 +760,42 @@ namespace SocioSindicato.ViewsAdministrador
                 {
 
                     MessageBox.Show("Debe ingresar si es conviviente o no", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+               
                 }
                 else
                 {
 					string rutcon = txtrutconyugesocio.Text;
-					string rutsoci = txtrutsocio.Text;
 
-                   
-					Conyuge con = new Conyuge
-                            {
-                                rut_socio = txtrutsocio.Text,
-                                nombre = txtconyugesocio.Text,
-                                conviviente = comboconvivienteconyugesocio.Text,
-                                rut = txtrutconyugesocio.Text,
-                                nacimiento = Convert.ToDateTime(datefechanacimientoconyugesocio.Text),
-                                edad = Convert.ToInt32(txtedadconyugesocio.Text)
-                            };
+                    var buscarconyuexi = from bc in context.Conyuge
+                                         where bc.rut.Equals(rutcon)
+                                         select bc;
+                    if (buscarconyuexi.Count() == 0)
+                    {
 
-                            context.Conyuge.Add(con);
-                            context.SaveChanges();
+                        Conyuge con = new Conyuge
+                        {
+                            rut_socio = txtrutsocio.Text,
+                            nombre = txtconyugesocio.Text,
+                            conviviente = comboconvivienteconyugesocio.Text,
+                            rut = txtrutconyugesocio.Text,
+                            nacimiento = Convert.ToDateTime(datefechanacimientoconyugesocio.Text),
+                            edad = Convert.ToInt32(txtedadconyugesocio.Text)
+                        };
 
-                            MessageBox.Show("Conyuge Agregada!");
+                        context.Conyuge.Add(con);
+                        context.SaveChanges();
 
-					//BORRAR BUSCADOR
-					txtbuscar.Text = "";
+                        MessageBox.Show("Conyuge Agregada!");
+                    }
+                    else {
+
+                        MessageBox.Show("Conyuge Ya Existe!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    }
+
+
+                    //BORRAR BUSCADOR
+                    txtbuscar.Text = "";
 
 					//BORRAR DATOS SOCIO
 					txtrutsocio.Text = "";

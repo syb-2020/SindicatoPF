@@ -40,7 +40,6 @@
 			this.btplanta4 = new FontAwesome.Sharp.IconButton();
 			this.btPlantaMujeres = new FontAwesome.Sharp.IconButton();
 			this.btTodos = new FontAwesome.Sharp.IconButton();
-			this.btVolver = new FontAwesome.Sharp.IconButton();
 			this.btDownload = new FontAwesome.Sharp.IconButton();
 			this.btOrdenarCategoria = new FontAwesome.Sharp.IconButton();
 			((System.ComponentModel.ISupportInitialize)(this.gridverplantas)).BeginInit();
@@ -288,29 +287,6 @@
 			this.btTodos.UseVisualStyleBackColor = false;
 			this.btTodos.Click += new System.EventHandler(this.btTodos_Click);
 			// 
-			// btVolver
-			// 
-			this.btVolver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.btVolver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-			this.btVolver.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-			this.btVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btVolver.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-			this.btVolver.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btVolver.ForeColor = System.Drawing.Color.Gainsboro;
-			this.btVolver.IconChar = FontAwesome.Sharp.IconChar.ExchangeAlt;
-			this.btVolver.IconColor = System.Drawing.Color.Gainsboro;
-			this.btVolver.IconSize = 26;
-			this.btVolver.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.btVolver.Location = new System.Drawing.Point(1145, 12);
-			this.btVolver.Name = "btVolver";
-			this.btVolver.Rotation = 0D;
-			this.btVolver.Size = new System.Drawing.Size(93, 38);
-			this.btVolver.TabIndex = 24;
-			this.btVolver.Text = "Volver";
-			this.btVolver.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btVolver.UseVisualStyleBackColor = false;
-			this.btVolver.Click += new System.EventHandler(this.btVolver_Click);
-			// 
 			// btDownload
 			// 
 			this.btDownload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -367,7 +343,6 @@
 			this.ClientSize = new System.Drawing.Size(1250, 747);
 			this.Controls.Add(this.btOrdenarCategoria);
 			this.Controls.Add(this.btDownload);
-			this.Controls.Add(this.btVolver);
 			this.Controls.Add(this.btTodos);
 			this.Controls.Add(this.btPlantaMujeres);
 			this.Controls.Add(this.btplanta4);
@@ -401,7 +376,6 @@
         private FontAwesome.Sharp.IconButton btplanta4;
         private FontAwesome.Sharp.IconButton btPlantaMujeres;
         private FontAwesome.Sharp.IconButton btTodos;
-        private FontAwesome.Sharp.IconButton btVolver;
         private FontAwesome.Sharp.IconButton btDownload;
         private FontAwesome.Sharp.IconButton btOrdenarCategoria;
     }

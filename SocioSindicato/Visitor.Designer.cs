@@ -30,32 +30,32 @@
         {
 			this.panel_desktop = new System.Windows.Forms.Panel();
 			this.titulo_panel = new System.Windows.Forms.Panel();
+			this.lbtitulo = new System.Windows.Forms.Label();
+			this.menupanel = new System.Windows.Forms.Panel();
+			this.gridvereliminadosvisitor = new System.Windows.Forms.DataGridView();
+			this.panel_icono = new System.Windows.Forms.Panel();
+			this.fondosindicatoindex = new System.Windows.Forms.PictureBox();
 			this.sing_out = new FontAwesome.Sharp.IconButton();
 			this.maximizar = new FontAwesome.Sharp.IconPictureBox();
 			this.btnMinimizar = new System.Windows.Forms.PictureBox();
 			this.btnClose = new System.Windows.Forms.PictureBox();
-			this.lbtitulo = new System.Windows.Forms.Label();
 			this.icono_actual = new FontAwesome.Sharp.IconPictureBox();
-			this.menupanel = new System.Windows.Forms.Panel();
 			this.btEliminados = new FontAwesome.Sharp.IconButton();
 			this.btListadoNavi = new FontAwesome.Sharp.IconButton();
-			this.gridvereliminadosvisitor = new System.Windows.Forms.DataGridView();
 			this.btPlantas = new FontAwesome.Sharp.IconButton();
 			this.btBuscarSoc = new FontAwesome.Sharp.IconButton();
-			this.panel_icono = new System.Windows.Forms.Panel();
 			this.btnInicio = new System.Windows.Forms.PictureBox();
-			this.fondosindicatoindex = new System.Windows.Forms.PictureBox();
 			this.panel_desktop.SuspendLayout();
 			this.titulo_panel.SuspendLayout();
+			this.menupanel.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.gridvereliminadosvisitor)).BeginInit();
+			this.panel_icono.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.fondosindicatoindex)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.maximizar)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.icono_actual)).BeginInit();
-			this.menupanel.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.gridvereliminadosvisitor)).BeginInit();
-			this.panel_icono.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.btnInicio)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.fondosindicatoindex)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// panel_desktop
@@ -85,6 +85,62 @@
 			this.titulo_panel.Size = new System.Drawing.Size(1315, 84);
 			this.titulo_panel.TabIndex = 12;
 			this.titulo_panel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.titulo_panel_MouseMove);
+			// 
+			// lbtitulo
+			// 
+			this.lbtitulo.AutoSize = true;
+			this.lbtitulo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lbtitulo.ForeColor = System.Drawing.Color.Gainsboro;
+			this.lbtitulo.Location = new System.Drawing.Point(52, 29);
+			this.lbtitulo.Name = "lbtitulo";
+			this.lbtitulo.Size = new System.Drawing.Size(51, 21);
+			this.lbtitulo.TabIndex = 1;
+			this.lbtitulo.Text = "Inicio";
+			// 
+			// menupanel
+			// 
+			this.menupanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+			this.menupanel.Controls.Add(this.btEliminados);
+			this.menupanel.Controls.Add(this.btListadoNavi);
+			this.menupanel.Controls.Add(this.gridvereliminadosvisitor);
+			this.menupanel.Controls.Add(this.btPlantas);
+			this.menupanel.Controls.Add(this.btBuscarSoc);
+			this.menupanel.Controls.Add(this.panel_icono);
+			this.menupanel.Dock = System.Windows.Forms.DockStyle.Left;
+			this.menupanel.Location = new System.Drawing.Point(0, 0);
+			this.menupanel.Name = "menupanel";
+			this.menupanel.Size = new System.Drawing.Size(220, 889);
+			this.menupanel.TabIndex = 11;
+			// 
+			// gridvereliminadosvisitor
+			// 
+			this.gridvereliminadosvisitor.AllowUserToOrderColumns = true;
+			this.gridvereliminadosvisitor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.gridvereliminadosvisitor.Location = new System.Drawing.Point(0, 825);
+			this.gridvereliminadosvisitor.Name = "gridvereliminadosvisitor";
+			this.gridvereliminadosvisitor.Size = new System.Drawing.Size(220, 61);
+			this.gridvereliminadosvisitor.TabIndex = 8;
+			this.gridvereliminadosvisitor.Visible = false;
+			// 
+			// panel_icono
+			// 
+			this.panel_icono.Controls.Add(this.btnInicio);
+			this.panel_icono.Dock = System.Windows.Forms.DockStyle.Top;
+			this.panel_icono.Location = new System.Drawing.Point(0, 0);
+			this.panel_icono.Name = "panel_icono";
+			this.panel_icono.Size = new System.Drawing.Size(220, 188);
+			this.panel_icono.TabIndex = 0;
+			// 
+			// fondosindicatoindex
+			// 
+			this.fondosindicatoindex.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.fondosindicatoindex.Image = global::SocioSindicato.Properties.Resources.logofinal;
+			this.fondosindicatoindex.Location = new System.Drawing.Point(220, 84);
+			this.fondosindicatoindex.Name = "fondosindicatoindex";
+			this.fondosindicatoindex.Size = new System.Drawing.Size(1315, 805);
+			this.fondosindicatoindex.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.fondosindicatoindex.TabIndex = 13;
+			this.fondosindicatoindex.TabStop = false;
 			// 
 			// sing_out
 			// 
@@ -146,17 +202,6 @@
 			this.btnClose.TabStop = false;
 			this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
 			// 
-			// lbtitulo
-			// 
-			this.lbtitulo.AutoSize = true;
-			this.lbtitulo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lbtitulo.ForeColor = System.Drawing.Color.Gainsboro;
-			this.lbtitulo.Location = new System.Drawing.Point(52, 29);
-			this.lbtitulo.Name = "lbtitulo";
-			this.lbtitulo.Size = new System.Drawing.Size(51, 21);
-			this.lbtitulo.TabIndex = 1;
-			this.lbtitulo.Text = "Inicio";
-			// 
 			// icono_actual
 			// 
 			this.icono_actual.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
@@ -168,21 +213,6 @@
 			this.icono_actual.Size = new System.Drawing.Size(32, 32);
 			this.icono_actual.TabIndex = 0;
 			this.icono_actual.TabStop = false;
-			// 
-			// menupanel
-			// 
-			this.menupanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-			this.menupanel.Controls.Add(this.btEliminados);
-			this.menupanel.Controls.Add(this.btListadoNavi);
-			this.menupanel.Controls.Add(this.gridvereliminadosvisitor);
-			this.menupanel.Controls.Add(this.btPlantas);
-			this.menupanel.Controls.Add(this.btBuscarSoc);
-			this.menupanel.Controls.Add(this.panel_icono);
-			this.menupanel.Dock = System.Windows.Forms.DockStyle.Left;
-			this.menupanel.Location = new System.Drawing.Point(0, 0);
-			this.menupanel.Name = "menupanel";
-			this.menupanel.Size = new System.Drawing.Size(220, 889);
-			this.menupanel.TabIndex = 11;
 			// 
 			// btEliminados
 			// 
@@ -226,16 +256,6 @@
 			this.btListadoNavi.UseVisualStyleBackColor = true;
 			this.btListadoNavi.Click += new System.EventHandler(this.btListadoNavi_Click);
 			// 
-			// gridvereliminadosvisitor
-			// 
-			this.gridvereliminadosvisitor.AllowUserToOrderColumns = true;
-			this.gridvereliminadosvisitor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.gridvereliminadosvisitor.Location = new System.Drawing.Point(0, 825);
-			this.gridvereliminadosvisitor.Name = "gridvereliminadosvisitor";
-			this.gridvereliminadosvisitor.Size = new System.Drawing.Size(220, 61);
-			this.gridvereliminadosvisitor.TabIndex = 8;
-			this.gridvereliminadosvisitor.Visible = false;
-			// 
 			// btPlantas
 			// 
 			this.btPlantas.Dock = System.Windows.Forms.DockStyle.Top;
@@ -278,15 +298,6 @@
 			this.btBuscarSoc.UseVisualStyleBackColor = true;
 			this.btBuscarSoc.Click += new System.EventHandler(this.btBuscarSoc_Click_1);
 			// 
-			// panel_icono
-			// 
-			this.panel_icono.Controls.Add(this.btnInicio);
-			this.panel_icono.Dock = System.Windows.Forms.DockStyle.Top;
-			this.panel_icono.Location = new System.Drawing.Point(0, 0);
-			this.panel_icono.Name = "panel_icono";
-			this.panel_icono.Size = new System.Drawing.Size(220, 188);
-			this.panel_icono.TabIndex = 0;
-			// 
 			// btnInicio
 			// 
 			this.btnInicio.Image = global::SocioSindicato.Properties.Resources._56726595_608012969610677_8790191896057085952_n;
@@ -297,17 +308,6 @@
 			this.btnInicio.TabIndex = 0;
 			this.btnInicio.TabStop = false;
 			this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
-			// 
-			// fondosindicatoindex
-			// 
-			this.fondosindicatoindex.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.fondosindicatoindex.Image = global::SocioSindicato.Properties.Resources.fondo_inicio_sindicato;
-			this.fondosindicatoindex.Location = new System.Drawing.Point(220, 84);
-			this.fondosindicatoindex.Name = "fondosindicatoindex";
-			this.fondosindicatoindex.Size = new System.Drawing.Size(1315, 805);
-			this.fondosindicatoindex.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-			this.fondosindicatoindex.TabIndex = 13;
-			this.fondosindicatoindex.TabStop = false;
 			// 
 			// Visitor
 			// 
@@ -321,15 +321,15 @@
 			this.panel_desktop.ResumeLayout(false);
 			this.titulo_panel.ResumeLayout(false);
 			this.titulo_panel.PerformLayout();
+			this.menupanel.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.gridvereliminadosvisitor)).EndInit();
+			this.panel_icono.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.fondosindicatoindex)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.maximizar)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.icono_actual)).EndInit();
-			this.menupanel.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.gridvereliminadosvisitor)).EndInit();
-			this.panel_icono.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.btnInicio)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.fondosindicatoindex)).EndInit();
 			this.ResumeLayout(false);
 
         }

@@ -92,7 +92,6 @@
 			this.btAgregarHijoAList = new FontAwesome.Sharp.IconButton();
 			this.btSubirIMG = new FontAwesome.Sharp.IconButton();
 			this.btnAddSocioeHijo = new FontAwesome.Sharp.IconButton();
-			this.btVolver = new FontAwesome.Sharp.IconButton();
 			((System.ComponentModel.ISupportInitialize)(this.fotosocio)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridpruebahijo)).BeginInit();
 			this.SuspendLayout();
@@ -523,6 +522,7 @@
 			this.combocontratosocio.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+			this.combocontratosocio.BackColor = System.Drawing.SystemColors.InactiveBorder;
 			this.combocontratosocio.FormattingEnabled = true;
 			this.combocontratosocio.Items.AddRange(new object[] {
             "SI",
@@ -938,36 +938,12 @@
 			this.btnAddSocioeHijo.UseVisualStyleBackColor = false;
 			this.btnAddSocioeHijo.Click += new System.EventHandler(this.btnAddSocioeHijo_Click);
 			// 
-			// btVolver
-			// 
-			this.btVolver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.btVolver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-			this.btVolver.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-			this.btVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btVolver.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-			this.btVolver.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btVolver.ForeColor = System.Drawing.Color.Gainsboro;
-			this.btVolver.IconChar = FontAwesome.Sharp.IconChar.ExchangeAlt;
-			this.btVolver.IconColor = System.Drawing.Color.Gainsboro;
-			this.btVolver.IconSize = 26;
-			this.btVolver.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.btVolver.Location = new System.Drawing.Point(1145, 12);
-			this.btVolver.Name = "btVolver";
-			this.btVolver.Rotation = 0D;
-			this.btVolver.Size = new System.Drawing.Size(93, 38);
-			this.btVolver.TabIndex = 77;
-			this.btVolver.Text = "Volver";
-			this.btVolver.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btVolver.UseVisualStyleBackColor = false;
-			this.btVolver.Click += new System.EventHandler(this.btVolver_Click);
-			// 
 			// AgregarSocio
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(56)))), ((int)(((byte)(104)))));
 			this.ClientSize = new System.Drawing.Size(1250, 747);
-			this.Controls.Add(this.btVolver);
 			this.Controls.Add(this.btnAddSocioeHijo);
 			this.Controls.Add(this.btSubirIMG);
 			this.Controls.Add(this.btAgregarHijoAList);
@@ -1106,6 +1082,5 @@
         private FontAwesome.Sharp.IconButton btAgregarHijoAList;
         private FontAwesome.Sharp.IconButton btSubirIMG;
         private FontAwesome.Sharp.IconButton btnAddSocioeHijo;
-        private FontAwesome.Sharp.IconButton btVolver;
     }
 }
