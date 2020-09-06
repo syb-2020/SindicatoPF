@@ -44,6 +44,7 @@
 			this.btBuscarSoc = new FontAwesome.Sharp.IconButton();
 			this.panel_icono = new System.Windows.Forms.Panel();
 			this.btnInicio = new System.Windows.Forms.PictureBox();
+			this.fondosindicatoindex = new System.Windows.Forms.PictureBox();
 			this.panel_desktop.SuspendLayout();
 			this.titulo_panel.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.maximizar)).BeginInit();
@@ -54,11 +55,13 @@
 			((System.ComponentModel.ISupportInitialize)(this.gridvereliminadosvisitor)).BeginInit();
 			this.panel_icono.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.btnInicio)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.fondosindicatoindex)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// panel_desktop
 			// 
 			this.panel_desktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(56)))), ((int)(((byte)(104)))));
+			this.panel_desktop.Controls.Add(this.fondosindicatoindex);
 			this.panel_desktop.Controls.Add(this.titulo_panel);
 			this.panel_desktop.Controls.Add(this.menupanel);
 			this.panel_desktop.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -295,6 +298,17 @@
 			this.btnInicio.TabStop = false;
 			this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
 			// 
+			// fondosindicatoindex
+			// 
+			this.fondosindicatoindex.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.fondosindicatoindex.Image = global::SocioSindicato.Properties.Resources.fondo_inicio_sindicato;
+			this.fondosindicatoindex.Location = new System.Drawing.Point(220, 84);
+			this.fondosindicatoindex.Name = "fondosindicatoindex";
+			this.fondosindicatoindex.Size = new System.Drawing.Size(1315, 805);
+			this.fondosindicatoindex.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.fondosindicatoindex.TabIndex = 13;
+			this.fondosindicatoindex.TabStop = false;
+			// 
 			// Visitor
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -315,6 +329,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.gridvereliminadosvisitor)).EndInit();
 			this.panel_icono.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.btnInicio)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.fondosindicatoindex)).EndInit();
 			this.ResumeLayout(false);
 
         }
@@ -337,5 +352,6 @@
 		private System.Windows.Forms.PictureBox btnClose;
 		private System.Windows.Forms.Label lbtitulo;
 		private FontAwesome.Sharp.IconPictureBox icono_actual;
+		private System.Windows.Forms.PictureBox fondosindicatoindex;
 	}
 }

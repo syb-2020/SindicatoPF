@@ -101,6 +101,9 @@ namespace SocioSindicato.ViewsAdministrador
 
                         MessageBox.Show("Socio No Encontrado!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         gridbuscar.DataSource = "";
+                        gridConyuge.DataSource = "";
+                        gridHijo.DataSource = "";
+                        imagenbuscarsociomostrar.Image = null;
                         txtbuscar.Text = "";
 
 

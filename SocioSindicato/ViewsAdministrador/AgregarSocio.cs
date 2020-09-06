@@ -93,11 +93,11 @@ namespace SocioSindicato.ViewsAdministrador
         public class Datos
         {
 
-            public string rutsocio { get; set; }
-            public string nombrehijo { get; set; }
-            public string ruthijo { get; set; }
-            public string sexohijo { get; set; }
-            public DateTime nacimientohijo { get; set; }
+            public string RUT_SOCIO { get; set; }
+            public string NOMBRE_HIJO { get; set; }
+            public string RUT { get; set; }
+            public string SEXO { get; set; }
+            public DateTime NACIMIENTO { get; set; }
 
         }
 
@@ -129,11 +129,11 @@ namespace SocioSindicato.ViewsAdministrador
                 {
                     Datos dato = new Datos()
                     {
-                        rutsocio = txtrutsocio.Text,
-                        nombrehijo = txtnombrehijosocio.Text,
-                        ruthijo = txtruthijosocio.Text,
-                        sexohijo = cbSexo.Text,
-                        nacimientohijo = Convert.ToDateTime(datenacimientohijosocio.Text),
+                        RUT_SOCIO = txtrutsocio.Text,
+                        NOMBRE_HIJO = txtnombrehijosocio.Text,
+                        RUT = txtruthijosocio.Text,
+                        SEXO = cbSexo.Text,
+                        NACIMIENTO = Convert.ToDateTime(datenacimientohijosocio.Text),
 
                     };
 
@@ -206,11 +206,11 @@ namespace SocioSindicato.ViewsAdministrador
                     {
                         Hijo hs = new Hijo
                         {
-                            rut_socio = a.rutsocio,
-                            nombre = a.nombrehijo,
-                            rut_hijo = a.ruthijo,
-                            sexo = a.sexohijo,
-                            nacimiento = a.nacimientohijo
+                            rut_socio = a.RUT_SOCIO,
+                            nombre = a.NOMBRE_HIJO,
+                            rut_hijo = a.RUT,
+                            sexo = a.SEXO,
+                            nacimiento = a.NACIMIENTO
                         };
                         context.Hijo.Add(hs);
                     }
@@ -572,11 +572,11 @@ namespace SocioSindicato.ViewsAdministrador
                     {
                         Hijo hs = new Hijo
                         {
-                            rut_socio = a.rutsocio,
-                            nombre = a.nombrehijo,
-                            rut_hijo = a.ruthijo,
-                            sexo = a.sexohijo,
-                            nacimiento = a.nacimientohijo
+                            rut_socio = a.RUT_SOCIO,
+                            nombre = a.NOMBRE_HIJO,
+                            rut_hijo = a.RUT,
+                            sexo = a.SEXO,
+                            nacimiento = a.NACIMIENTO
                         };
                         context.Hijo.Add(hs);
                     }

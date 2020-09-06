@@ -434,7 +434,7 @@
 			this.label16.AutoSize = true;
 			this.label16.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label16.ForeColor = System.Drawing.Color.Gainsboro;
-			this.label16.Location = new System.Drawing.Point(1035, 126);
+			this.label16.Location = new System.Drawing.Point(1046, 82);
 			this.label16.Name = "label16";
 			this.label16.Size = new System.Drawing.Size(173, 23);
 			this.label16.TabIndex = 32;
@@ -563,7 +563,7 @@
 			this.fotosocio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.fotosocio.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.fotosocio.Location = new System.Drawing.Point(1023, 190);
+			this.fotosocio.Location = new System.Drawing.Point(1034, 146);
 			this.fotosocio.Name = "fotosocio";
 			this.fotosocio.Size = new System.Drawing.Size(198, 230);
 			this.fotosocio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -779,7 +779,7 @@
 			this.label29.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.label29.AutoSize = true;
 			this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label29.Location = new System.Drawing.Point(1073, 169);
+			this.label29.Location = new System.Drawing.Point(1084, 125);
 			this.label29.Name = "label29";
 			this.label29.Size = new System.Drawing.Size(91, 16);
 			this.label29.TabIndex = 67;
@@ -793,7 +793,7 @@
 			this.gridpruebahijo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(56)))), ((int)(((byte)(104)))));
 			this.gridpruebahijo.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.gridpruebahijo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.gridpruebahijo.Location = new System.Drawing.Point(590, 485);
+			this.gridpruebahijo.Location = new System.Drawing.Point(570, 483);
 			this.gridpruebahijo.Name = "gridpruebahijo";
 			this.gridpruebahijo.Size = new System.Drawing.Size(629, 112);
 			this.gridpruebahijo.TabIndex = 68;
@@ -811,7 +811,7 @@
 			this.btAgregarSocio.IconColor = System.Drawing.Color.Gainsboro;
 			this.btAgregarSocio.IconSize = 26;
 			this.btAgregarSocio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btAgregarSocio.Location = new System.Drawing.Point(76, 633);
+			this.btAgregarSocio.Location = new System.Drawing.Point(79, 683);
 			this.btAgregarSocio.Name = "btAgregarSocio";
 			this.btAgregarSocio.Rotation = 0D;
 			this.btAgregarSocio.Size = new System.Drawing.Size(170, 38);
@@ -834,7 +834,7 @@
 			this.btAgregarSocioeConyuge.IconColor = System.Drawing.Color.Gainsboro;
 			this.btAgregarSocioeConyuge.IconSize = 26;
 			this.btAgregarSocioeConyuge.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btAgregarSocioeConyuge.Location = new System.Drawing.Point(276, 633);
+			this.btAgregarSocioeConyuge.Location = new System.Drawing.Point(279, 683);
 			this.btAgregarSocioeConyuge.Name = "btAgregarSocioeConyuge";
 			this.btAgregarSocioeConyuge.Rotation = 0D;
 			this.btAgregarSocioeConyuge.Size = new System.Drawing.Size(246, 38);
@@ -857,7 +857,7 @@
 			this.btAgregarlos3.IconColor = System.Drawing.Color.Gainsboro;
 			this.btAgregarlos3.IconSize = 26;
 			this.btAgregarlos3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btAgregarlos3.Location = new System.Drawing.Point(796, 633);
+			this.btAgregarlos3.Location = new System.Drawing.Point(799, 683);
 			this.btAgregarlos3.Name = "btAgregarlos3";
 			this.btAgregarlos3.Rotation = 0D;
 			this.btAgregarlos3.Size = new System.Drawing.Size(301, 38);
@@ -881,7 +881,7 @@
 			this.btAgregarHijoAList.IconColor = System.Drawing.Color.Gainsboro;
 			this.btAgregarHijoAList.IconSize = 26;
 			this.btAgregarHijoAList.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btAgregarHijoAList.Location = new System.Drawing.Point(669, 436);
+			this.btAgregarHijoAList.Location = new System.Drawing.Point(570, 439);
 			this.btAgregarHijoAList.Name = "btAgregarHijoAList";
 			this.btAgregarHijoAList.Rotation = 0D;
 			this.btAgregarHijoAList.Size = new System.Drawing.Size(170, 38);
@@ -905,7 +905,7 @@
 			this.btSubirIMG.IconColor = System.Drawing.Color.Gainsboro;
 			this.btSubirIMG.IconSize = 26;
 			this.btSubirIMG.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btSubirIMG.Location = new System.Drawing.Point(1036, 436);
+			this.btSubirIMG.Location = new System.Drawing.Point(1047, 392);
 			this.btSubirIMG.Name = "btSubirIMG";
 			this.btSubirIMG.Rotation = 0D;
 			this.btSubirIMG.Size = new System.Drawing.Size(170, 38);
@@ -928,7 +928,7 @@
 			this.btnAddSocioeHijo.IconColor = System.Drawing.Color.Gainsboro;
 			this.btnAddSocioeHijo.IconSize = 26;
 			this.btnAddSocioeHijo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnAddSocioeHijo.Location = new System.Drawing.Point(557, 633);
+			this.btnAddSocioeHijo.Location = new System.Drawing.Point(560, 683);
 			this.btnAddSocioeHijo.Name = "btnAddSocioeHijo";
 			this.btnAddSocioeHijo.Rotation = 0D;
 			this.btnAddSocioeHijo.Size = new System.Drawing.Size(209, 38);
