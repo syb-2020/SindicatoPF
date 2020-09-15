@@ -42,7 +42,11 @@
 			this.btTodos = new FontAwesome.Sharp.IconButton();
 			this.btDownload = new FontAwesome.Sharp.IconButton();
 			this.btOrdenarCategoria = new FontAwesome.Sharp.IconButton();
+			this.Buscarsolterossinhijos = new FontAwesome.Sharp.IconButton();
+			this.casadomayode40 = new FontAwesome.Sharp.IconButton();
+			this.gridcasadohijo = new System.Windows.Forms.DataGridView();
 			((System.ComponentModel.ISupportInitialize)(this.gridverplantas)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.gridcasadohijo)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// gridverplantas
@@ -56,10 +60,10 @@
 			this.gridverplantas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(56)))), ((int)(((byte)(104)))));
 			this.gridverplantas.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.gridverplantas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.gridverplantas.Location = new System.Drawing.Point(76, 180);
+			this.gridverplantas.Location = new System.Drawing.Point(76, 248);
 			this.gridverplantas.Name = "gridverplantas";
 			this.gridverplantas.ReadOnly = true;
-			this.gridverplantas.Size = new System.Drawing.Size(1006, 429);
+			this.gridverplantas.Size = new System.Drawing.Size(1115, 429);
 			this.gridverplantas.TabIndex = 9;
 			this.gridverplantas.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.gridverplantas_RowPostPaint);
 			// 
@@ -83,7 +87,7 @@
             "4",
             "5",
             "6"});
-			this.cbordenarcatplant.Location = new System.Drawing.Point(531, 639);
+			this.cbordenarcatplant.Location = new System.Drawing.Point(531, 689);
 			this.cbordenarcatplant.Name = "cbordenarcatplant";
 			this.cbordenarcatplant.Size = new System.Drawing.Size(170, 29);
 			this.cbordenarcatplant.TabIndex = 12;
@@ -123,10 +127,10 @@
 			this.btcdt.IconColor = System.Drawing.Color.White;
 			this.btcdt.IconSize = 26;
 			this.btcdt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btcdt.Location = new System.Drawing.Point(76, 112);
+			this.btcdt.Location = new System.Drawing.Point(930, 40);
 			this.btcdt.Name = "btcdt";
 			this.btcdt.Rotation = 0D;
-			this.btcdt.Size = new System.Drawing.Size(170, 38);
+			this.btcdt.Size = new System.Drawing.Size(225, 38);
 			this.btcdt.TabIndex = 16;
 			this.btcdt.Text = "CDT";
 			this.btcdt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -167,7 +171,7 @@
 			this.btPlantapizza.IconColor = System.Drawing.Color.White;
 			this.btPlantapizza.IconSize = 26;
 			this.btPlantapizza.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btPlantapizza.Location = new System.Drawing.Point(281, 112);
+			this.btPlantapizza.Location = new System.Drawing.Point(76, 112);
 			this.btPlantapizza.Name = "btPlantapizza";
 			this.btPlantapizza.Rotation = 0D;
 			this.btPlantapizza.Size = new System.Drawing.Size(170, 38);
@@ -211,7 +215,7 @@
 			this.btPlantaCamicos.IconColor = System.Drawing.Color.White;
 			this.btPlantaCamicos.IconSize = 26;
 			this.btPlantaCamicos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btPlantaCamicos.Location = new System.Drawing.Point(494, 112);
+			this.btPlantaCamicos.Location = new System.Drawing.Point(281, 112);
 			this.btPlantaCamicos.Name = "btPlantaCamicos";
 			this.btPlantaCamicos.Rotation = 0D;
 			this.btPlantaCamicos.Size = new System.Drawing.Size(170, 38);
@@ -255,7 +259,7 @@
 			this.btPlantaMujeres.IconColor = System.Drawing.Color.White;
 			this.btPlantaMujeres.IconSize = 26;
 			this.btPlantaMujeres.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btPlantaMujeres.Location = new System.Drawing.Point(705, 112);
+			this.btPlantaMujeres.Location = new System.Drawing.Point(494, 112);
 			this.btPlantaMujeres.Name = "btPlantaMujeres";
 			this.btPlantaMujeres.Rotation = 0D;
 			this.btPlantaMujeres.Size = new System.Drawing.Size(170, 38);
@@ -277,10 +281,10 @@
 			this.btTodos.IconColor = System.Drawing.Color.White;
 			this.btTodos.IconSize = 26;
 			this.btTodos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btTodos.Location = new System.Drawing.Point(912, 112);
+			this.btTodos.Location = new System.Drawing.Point(930, 183);
 			this.btTodos.Name = "btTodos";
 			this.btTodos.Rotation = 0D;
-			this.btTodos.Size = new System.Drawing.Size(170, 38);
+			this.btTodos.Size = new System.Drawing.Size(225, 38);
 			this.btTodos.TabIndex = 23;
 			this.btTodos.Text = "Todos";
 			this.btTodos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -301,7 +305,7 @@
 			this.btDownload.IconColor = System.Drawing.Color.Gainsboro;
 			this.btDownload.IconSize = 26;
 			this.btDownload.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btDownload.Location = new System.Drawing.Point(76, 633);
+			this.btDownload.Location = new System.Drawing.Point(76, 683);
 			this.btDownload.Name = "btDownload";
 			this.btDownload.Rotation = 0D;
 			this.btDownload.Size = new System.Drawing.Size(170, 38);
@@ -325,7 +329,7 @@
 			this.btOrdenarCategoria.IconColor = System.Drawing.Color.Gainsboro;
 			this.btOrdenarCategoria.IconSize = 26;
 			this.btOrdenarCategoria.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.btOrdenarCategoria.Location = new System.Drawing.Point(281, 633);
+			this.btOrdenarCategoria.Location = new System.Drawing.Point(281, 683);
 			this.btOrdenarCategoria.Name = "btOrdenarCategoria";
 			this.btOrdenarCategoria.Rotation = 0D;
 			this.btOrdenarCategoria.Size = new System.Drawing.Size(230, 38);
@@ -335,12 +339,69 @@
 			this.btOrdenarCategoria.UseVisualStyleBackColor = false;
 			this.btOrdenarCategoria.Click += new System.EventHandler(this.btOrdenarCategoria_Click);
 			// 
+			// Buscarsolterossinhijos
+			// 
+			this.Buscarsolterossinhijos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+			this.Buscarsolterossinhijos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+			this.Buscarsolterossinhijos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.Buscarsolterossinhijos.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+			this.Buscarsolterossinhijos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Buscarsolterossinhijos.ForeColor = System.Drawing.Color.Gainsboro;
+			this.Buscarsolterossinhijos.IconChar = FontAwesome.Sharp.IconChar.Search;
+			this.Buscarsolterossinhijos.IconColor = System.Drawing.Color.White;
+			this.Buscarsolterossinhijos.IconSize = 26;
+			this.Buscarsolterossinhijos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.Buscarsolterossinhijos.Location = new System.Drawing.Point(705, 112);
+			this.Buscarsolterossinhijos.Name = "Buscarsolterossinhijos";
+			this.Buscarsolterossinhijos.Rotation = 0D;
+			this.Buscarsolterossinhijos.Size = new System.Drawing.Size(162, 38);
+			this.Buscarsolterossinhijos.TabIndex = 27;
+			this.Buscarsolterossinhijos.Text = "Socio Soltero";
+			this.Buscarsolterossinhijos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.Buscarsolterossinhijos.UseVisualStyleBackColor = false;
+			this.Buscarsolterossinhijos.Click += new System.EventHandler(this.iconButton1_Click);
+			// 
+			// casadomayode40
+			// 
+			this.casadomayode40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+			this.casadomayode40.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+			this.casadomayode40.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.casadomayode40.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+			this.casadomayode40.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.casadomayode40.ForeColor = System.Drawing.Color.Gainsboro;
+			this.casadomayode40.IconChar = FontAwesome.Sharp.IconChar.Search;
+			this.casadomayode40.IconColor = System.Drawing.Color.White;
+			this.casadomayode40.IconSize = 26;
+			this.casadomayode40.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.casadomayode40.Location = new System.Drawing.Point(930, 112);
+			this.casadomayode40.Name = "casadomayode40";
+			this.casadomayode40.Rotation = 0D;
+			this.casadomayode40.Size = new System.Drawing.Size(225, 38);
+			this.casadomayode40.TabIndex = 28;
+			this.casadomayode40.Text = "Casado Mayor De 40";
+			this.casadomayode40.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.casadomayode40.UseVisualStyleBackColor = false;
+			this.casadomayode40.Click += new System.EventHandler(this.casadomayode40_Click);
+			// 
+			// gridcasadohijo
+			// 
+			this.gridcasadohijo.AllowUserToOrderColumns = true;
+			this.gridcasadohijo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.gridcasadohijo.Location = new System.Drawing.Point(12, 12);
+			this.gridcasadohijo.Name = "gridcasadohijo";
+			this.gridcasadohijo.Size = new System.Drawing.Size(32, 14);
+			this.gridcasadohijo.TabIndex = 29;
+			this.gridcasadohijo.Visible = false;
+			// 
 			// Plantas
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(56)))), ((int)(((byte)(104)))));
 			this.ClientSize = new System.Drawing.Size(1250, 747);
+			this.Controls.Add(this.gridcasadohijo);
+			this.Controls.Add(this.casadomayode40);
+			this.Controls.Add(this.Buscarsolterossinhijos);
 			this.Controls.Add(this.btOrdenarCategoria);
 			this.Controls.Add(this.btDownload);
 			this.Controls.Add(this.btTodos);
@@ -358,6 +419,7 @@
 			this.Name = "Plantas";
 			this.Text = "Plantas";
 			((System.ComponentModel.ISupportInitialize)(this.gridverplantas)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.gridcasadohijo)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -378,5 +440,8 @@
         private FontAwesome.Sharp.IconButton btTodos;
         private FontAwesome.Sharp.IconButton btDownload;
         private FontAwesome.Sharp.IconButton btOrdenarCategoria;
-    }
+		private FontAwesome.Sharp.IconButton Buscarsolterossinhijos;
+		private FontAwesome.Sharp.IconButton casadomayode40;
+		private System.Windows.Forms.DataGridView gridcasadohijo;
+	}
 }

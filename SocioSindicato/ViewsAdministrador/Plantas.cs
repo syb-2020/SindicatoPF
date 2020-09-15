@@ -57,7 +57,7 @@ namespace SocioSindicato.ViewsAdministrador
                                     select new { RUT = socplan.rut_socio, NOMBRE = socplan.nombre_socio, PLANTA = plansoc.nombre, CATEGORIA = socplan.id_categoria };
 
 
-                gridverplantas.DataSource = sociosplanta1.OrderBy(s => s.CATEGORIA).ToList();
+                gridverplantas.DataSource = sociosplanta1.OrderBy(s => s.NOMBRE).ToList();
 
                 if (gridverplantas.Rows.Count == 0)
                 {
@@ -99,7 +99,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
 
-                gridverplantas.DataSource = sociosplanta2.OrderBy(s => s.CATEGORIA).ToList();
+                gridverplantas.DataSource = sociosplanta2.OrderBy(s => s.NOMBRE).ToList();
 
                 if (gridverplantas.Rows.Count == 0)
                 {
@@ -141,7 +141,7 @@ namespace SocioSindicato.ViewsAdministrador
                                     where plansoc.id_planta.Equals(idp3)
                                     select new { RUT = socplan.rut_socio, NOMBRE = socplan.nombre_socio, PLANTA = plansoc.nombre, CATEGORIA = socplan.id_categoria };
 
-                gridverplantas.DataSource = sociosplanta3.OrderBy(s => s.CATEGORIA).ToList();
+                gridverplantas.DataSource = sociosplanta3.OrderBy(s => s.NOMBRE).ToList();
 
                 if (gridverplantas.Rows.Count == 0)
                 {
@@ -181,7 +181,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
 
-                gridverplantas.DataSource = sociosplanta4.OrderBy(s => s.CATEGORIA).ToList();
+                gridverplantas.DataSource = sociosplanta4.OrderBy(s => s.NOMBRE).ToList();
 
                 if (gridverplantas.Rows.Count == 0)
                 {
@@ -222,7 +222,7 @@ namespace SocioSindicato.ViewsAdministrador
                                       select new { RUT = socplan.rut_socio, NOMBRE = socplan.nombre_socio, PLANTA = plansoc.nombre, CATEGORIA = socplan.id_categoria };
 
 
-                gridverplantas.DataSource = sociosplantacdt.OrderBy(s => s.CATEGORIA).ToList();
+                gridverplantas.DataSource = sociosplantacdt.OrderBy(s => s.NOMBRE).ToList();
 
                 if (gridverplantas.Rows.Count == 0)
                 {
@@ -260,7 +260,7 @@ namespace SocioSindicato.ViewsAdministrador
                                         select new { RUT = socplan.rut_socio, NOMBRE = socplan.nombre_socio, PLANTA = plansoc.nombre, CATEGORIA = socplan.id_categoria };
 
 
-                gridverplantas.DataSource = sociosplantapizza.OrderBy(s => s.CATEGORIA).ToList();
+                gridverplantas.DataSource = sociosplantapizza.OrderBy(s => s.NOMBRE).ToList();
 
 
                 if (gridverplantas.Rows.Count == 0)
@@ -300,7 +300,7 @@ namespace SocioSindicato.ViewsAdministrador
                                           where plansoc.id_planta.Equals(idpcrn)
                                           select new { RUT = socplan.rut_socio, NOMBRE = socplan.nombre_socio, PLANTA = plansoc.nombre, CATEGORIA = socplan.id_categoria };
 
-                gridverplantas.DataSource = sociosplantacarnico.OrderBy(s => s.CATEGORIA).ToList();
+                gridverplantas.DataSource = sociosplantacarnico.OrderBy(s => s.NOMBRE).ToList();
 
                 if (gridverplantas.Rows.Count == 0)
                 {
@@ -340,7 +340,7 @@ namespace SocioSindicato.ViewsAdministrador
                                          where plansoc.id_planta.Equals(idpcrn)
                                          select new { RUT = socplan.rut_socio, NOMBRE = socplan.nombre_socio, PLANTA = plansoc.nombre, CATEGORIA = socplan.id_categoria };
 
-                gridverplantas.DataSource = soicoplantamujeres.OrderBy(s => s.CATEGORIA).ToList();
+                gridverplantas.DataSource = soicoplantamujeres.OrderBy(s => s.NOMBRE).ToList();
 
                 if (gridverplantas.Rows.Count == 0)
                 {
@@ -380,7 +380,7 @@ namespace SocioSindicato.ViewsAdministrador
                                       on socplan.id_planta equals plansoc.id_planta
                                       select new { RUT = socplan.rut_socio, NOMBRE = socplan.nombre_socio, PLANTA = plansoc.nombre, CATEGORIA = socplan.id_categoria };
 
-                gridverplantas.DataSource = allsociosplanta.OrderBy(s => s.PLANTA).ToList();
+                gridverplantas.DataSource = allsociosplanta.OrderBy(s => s.NOMBRE).ToList();
 
                 if (gridverplantas.Rows.Count == 0)
                 {
@@ -1845,6 +1845,119 @@ namespace SocioSindicato.ViewsAdministrador
 		private void cbordenarcatplant_KeyPress(object sender, KeyPressEventArgs e)
 		{
             e.Handled = true;
+        }
+
+		private void iconButton1_Click(object sender, EventArgs e)
+		{
+            using (sindicatoPFEntities context = new sindicatoPFEntities())
+			{
+				
+
+				var sociosolterosinhijo = 
+
+                              (from s in context.Socio
+							  join h in context.Hijo
+							  on s.rut_socio equals h.rut_socio into temp
+							  from h in temp.DefaultIfEmpty()
+                              where h.rut_socio == null
+							  join p in context.Planta
+							  on s.id_planta equals p.id_planta
+							  where s.estado_civil.Equals("Soltero")
+							  select new
+							  {
+								  NOMBRE = s.nombre_socio,
+								  RUT = s.rut_socio,
+								  ESTADOCIVIL = s.estado_civil,
+								  PLANTA = p.nombre
+							  }).Distinct();
+                
+
+                if (sociosolterosinhijo.Count() != 0)
+				{
+					
+
+						MessageBox.Show("Socio encontrado!");
+						gridverplantas.DataSource = sociosolterosinhijo.OrderBy(s => s.NOMBRE).ToList();
+
+
+
+                }
+				else
+				{
+					MessageBox.Show("No Existen Socios Solteros", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+				}
+
+
+
+
+
+			}
+		}
+
+        
+        private void casadomayode40_Click(object sender, EventArgs e)
+		{
+            using (sindicatoPFEntities context = new sindicatoPFEntities())
+            {
+                var sociohijo = from s in context.Socio   
+                            join h in context.Hijo
+                            on s.rut_socio equals h.rut_socio
+                          select new 
+                          {
+                              s.rut_socio, 
+                              s.fecha_nacimiento,
+                              h.nacimiento,
+                          };
+
+                gridcasadohijo.DataSource = sociohijo.ToList();
+
+                string s1 = "";
+
+				foreach (var a in sociohijo.ToList())
+				{
+                    DateTime fechanacimientosocio = Convert.ToDateTime(a.fecha_nacimiento);
+                    DateTime fechanacimientohijo = Convert.ToDateTime(a.nacimiento);
+
+                    //CAPTURAR LOS AÑOS NIÑOS
+                    int AñoActual = DateTime.Now.Year;
+                    int AñoNacimiento = fechanacimientohijo.Year;
+                    // CALCULO DE LOS AÑOS NIÑOS
+                    int ResultadoAño = (AñoActual - AñoNacimiento) * 12 + 7;
+                    
+                    //CAPTURAR LOS AÑOS SOCIO
+                    int AñoActual2 = DateTime.Now.Year;
+                    int AñoNacimiento2 = fechanacimientosocio.Year;
+                    // CALCULO DE LOS AÑOS SOCIO
+                    int ResultadoAño2 = (AñoActual2 - AñoNacimiento2) * 12 + 7;
+
+                    if (ResultadoAño >= 187 && ResultadoAño2 >= 487)
+                    {
+						
+                        s1 +="-"+ a.rut_socio +"-";
+
+                    }
+                    
+
+                }
+                var sociocasadomayor40hijomayor15 = from s in context.Socio
+                          join p in context.Planta
+                          on s.id_planta equals p.id_planta
+                          where s.estado_civil.Equals("Casado")
+                           &&
+                          s1.Contains(s.rut_socio)
+                          select new
+                                {
+                                    NOMBRE = s.nombre_socio,
+                                    RUT = s.rut_socio,
+                                    ESTADOCIVIL = s.estado_civil,
+                                    PLANTA = p.nombre
+                                };
+
+
+                gridverplantas.DataSource = sociocasadomayor40hijomayor15.OrderBy(s => s.NOMBRE).ToList();
+
+            }      
         }
 	}
 }

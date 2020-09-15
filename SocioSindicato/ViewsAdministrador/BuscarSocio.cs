@@ -68,6 +68,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
                     MessageBox.Show("Ingrese Rut del socio!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    
                     imagenbuscarsociomostrar.Image = null;
                     gridbuscar.DataSource = "";
                     txtbuscar.Text = "";
@@ -226,6 +227,7 @@ namespace SocioSindicato.ViewsAdministrador
                 var listHijo = from hijobt in context.Hijo
                                where buscar_rut.Equals(hijobt.rut_socio)
                                select new { RUT = hijobt.rut_hijo, NOMBRE = hijobt.nombre, NACIMIENTO = hijobt.nacimiento, SEXO = hijobt.sexo };
+               
                 if (listHijo.Count() != 0)
                 {
 
@@ -254,6 +256,7 @@ namespace SocioSindicato.ViewsAdministrador
             if (gridbuscar.Rows.Count == 0)
             {
                 MessageBox.Show("No hay datos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
             }
             else
             {
@@ -369,6 +372,7 @@ namespace SocioSindicato.ViewsAdministrador
             if (gbtodo.Rows.Count == 0)
             {
                 MessageBox.Show("No hay datos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+              
             }
             else
             {

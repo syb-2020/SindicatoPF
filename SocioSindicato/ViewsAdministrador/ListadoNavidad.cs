@@ -94,7 +94,7 @@ namespace SocioSindicato.ViewsAdministrador
 
         }
         List<Datos> navidad = new List<Datos>();
-        int dias = 0;
+        
 
         public void mostrarAllHijos()
         {
@@ -110,6 +110,7 @@ namespace SocioSindicato.ViewsAdministrador
                 for (int i = 0; i < gridcargarn.RowCount; i++)
                 {
                     DateTime fechanacimiento = Convert.ToDateTime(gridcargarn.Rows[i].Cells[0].Value);
+                    
                     string name = Convert.ToString(gridcargarn.Rows[i].Cells[1].Value);
 
 
@@ -119,15 +120,27 @@ namespace SocioSindicato.ViewsAdministrador
                                     select new { fech.rut_socio, fech.nombre, fech.nacimiento, fech.sexo };
 
                     string rut_soc = listaHije.ToList()[0].rut_socio;
-                    string nombrehi = listaHije.ToList()[0].nombre;
-                    DateTime nacimientohi = Convert.ToDateTime(listaHije.ToList()[0].nacimiento);
+                    string nombrehi = listaHije.ToList()[0].nombre;                    
                     string sexo2 = listaHije.ToList()[0].sexo;
 
-                    DateTime fechaactual = DateTime.Now;
+                    //CAPTURAR LOS AÑOS
+                    int AñoActual = DateTime.Now.Year;
+                    int AñoNacimiento = fechanacimiento.Year;
 
-                    TimeSpan tSpan = fechaactual - fechanacimiento;
+                    // CAPTURAR LOS MESES
+                    int MesesAnual = 12;
+                    int MesesNacimiento = fechanacimiento.Month;
+                    
 
-                    dias = tSpan.Days;
+                    // CALCULO DE LOS AÑOS
+                    int ResultadoAño = AñoActual - AñoNacimiento;
+                    int ResultadoAñoFinal = ResultadoAño * 12;
+
+                    // CALCULO DE LOS MESES
+                    int MesesFinal = MesesAnual - MesesNacimiento;
+
+                    //CALCULO FINAL
+                    int ResultadoAñoDeLosHijos = ResultadoAñoFinal + MesesFinal;
 
 
                     var listaSoc = from Soc in context.Socio
@@ -148,7 +161,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
 
-                    if (dias >= 0 && dias <= 211) 
+                    if (ResultadoAñoDeLosHijos >= 0 && ResultadoAñoDeLosHijos <= 6) 
                     {
                         if (sexo2.Equals("Hombre"))
                         {
@@ -164,11 +177,11 @@ namespace SocioSindicato.ViewsAdministrador
 
                             };
                             navidad.Add(dato);
-                            dias = 0;
+                            
                         }
 
                     } //niños menores a 1 año
-                    if (dias >= 0 && dias <= 211)
+                    if (ResultadoAñoDeLosHijos >= 0 && ResultadoAñoDeLosHijos <= 6)
                     {
                         if (sexo2.Equals("Mujer"))
                         {
@@ -184,11 +197,11 @@ namespace SocioSindicato.ViewsAdministrador
 
                             };
                             navidad.Add(dato);
-                            dias = 0;
+                          
                         }
 
                     } //niñas menores a 1 año
-                    if (dias >= 212 && dias <= 576)
+                    if (ResultadoAñoDeLosHijos >= 7 && ResultadoAñoDeLosHijos <= 18)
                     {
                         if (sexo2.Equals("Hombre"))
                         {
@@ -206,10 +219,10 @@ namespace SocioSindicato.ViewsAdministrador
                             };
 
                             navidad.Add(dato);
-                            dias = 0;
+                            
                         }
                     } //niños de 1 año
-                    if (dias >= 212 && dias <= 576)
+                    if (ResultadoAñoDeLosHijos >= 7 && ResultadoAñoDeLosHijos <= 18)
                     {
                         if (sexo2.Equals("Mujer"))
                         {
@@ -225,10 +238,10 @@ namespace SocioSindicato.ViewsAdministrador
 
                             };
                             navidad.Add(dato);
-                            dias = 0;
+                            
                         }
                     } //niñas de 1 año
-                    if (dias >= 577 && dias <= 941)
+                    if (ResultadoAñoDeLosHijos >= 19 && ResultadoAñoDeLosHijos <= 30)
                     {
                         if (sexo2.Equals("Hombre"))
                         {
@@ -246,10 +259,10 @@ namespace SocioSindicato.ViewsAdministrador
                             };
 
                             navidad.Add(dato);
-                            dias = 0;
+                           
                         }
                     } //niños de 2 año
-                    if (dias >= 577 && dias <= 941)
+                    if (ResultadoAñoDeLosHijos >= 19 && ResultadoAñoDeLosHijos <= 30)
                     {
                         if (sexo2.Equals("Mujer"))
                         {
@@ -265,10 +278,10 @@ namespace SocioSindicato.ViewsAdministrador
 
                             };
                             navidad.Add(dato);
-                            dias = 0;
+                            
                         }
                     } //niños de 2 año
-                    if (dias >= 942 && dias <= 1277)
+                    if (ResultadoAñoDeLosHijos >= 31 && ResultadoAñoDeLosHijos <= 42)
                     {
                         if (sexo2.Equals("Hombre"))
                         {
@@ -286,10 +299,10 @@ namespace SocioSindicato.ViewsAdministrador
                             };
 
                             navidad.Add(dato);
-                            dias = 0;
+                         
                         }
                     } //niños de 3 año
-                    if (dias >= 942 && dias <= 1277)
+                    if (ResultadoAñoDeLosHijos >= 31 && ResultadoAñoDeLosHijos <= 42)
                     {
                         if (sexo2.Equals("Mujer"))
                         {
@@ -306,10 +319,10 @@ namespace SocioSindicato.ViewsAdministrador
                             };
 
                             navidad.Add(dato);
-                            dias = 0;
+                          
                         }
                     } //niñas de 3 año
-                    if (dias >= 1278 && dias <= 1642)
+                    if (ResultadoAñoDeLosHijos >= 43 && ResultadoAñoDeLosHijos <= 54)
                     {
                         if (sexo2.Equals("Hombre"))
                         {
@@ -326,10 +339,10 @@ namespace SocioSindicato.ViewsAdministrador
 
                             };
                             navidad.Add(dato);
-                            dias = 0;
+                          
                         }
                     } //niños de 4 año
-                    if (dias >= 1278 && dias <= 1642)
+                    if (ResultadoAñoDeLosHijos >= 43 && ResultadoAñoDeLosHijos <= 54)
                     {
                         if (sexo2.Equals("Mujer"))
                         {
@@ -345,10 +358,10 @@ namespace SocioSindicato.ViewsAdministrador
 
                             };
                             navidad.Add(dato);
-                            dias = 0;
+                            
                         }
                     } //niñas de 4 año
-                    if (dias >= 1643 && dias <= 2037)
+                    if (ResultadoAñoDeLosHijos >= 55 && ResultadoAñoDeLosHijos <= 66)
                     {
                         if (sexo2.Equals("Hombre"))
                         {
@@ -365,10 +378,10 @@ namespace SocioSindicato.ViewsAdministrador
                             };
 
                             navidad.Add(dato);
-                            dias = 0;
+                            
                         }
                     } //niños de 5 año
-                    if (dias >= 1643 && dias <= 2037)
+                    if (ResultadoAñoDeLosHijos >= 55 && ResultadoAñoDeLosHijos <= 66)
                     {
                         if (sexo2.Equals("Mujer"))
                         {
@@ -384,10 +397,10 @@ namespace SocioSindicato.ViewsAdministrador
 
                             };
                             navidad.Add(dato);
-                            dias = 0;
+                           
                         }
                     } //niñas de 5 año
-                    if (dias >= 2038 && dias <= 2402)
+                    if (ResultadoAñoDeLosHijos >= 67 && ResultadoAñoDeLosHijos <= 78)
                     {
                         if (sexo2.Equals("Hombre"))
                         {
@@ -403,10 +416,10 @@ namespace SocioSindicato.ViewsAdministrador
 
                             };
                             navidad.Add(dato);
-                            dias = 0;
+                            
                         }
                     } //niños de 6 año
-                    if (dias >= 2038 && dias <= 2402)
+                    if (ResultadoAñoDeLosHijos >= 67 && ResultadoAñoDeLosHijos <= 78)
                     {
                         if (sexo2.Equals("Mujer"))
                         {
@@ -422,10 +435,10 @@ namespace SocioSindicato.ViewsAdministrador
 
                             };
                             navidad.Add(dato);
-                            dias = 0;
+                           
                         }
                     } //niñas de 6 año
-                    if (dias >= 2403 && dias <= 2768)
+                    if (ResultadoAñoDeLosHijos >= 79 && ResultadoAñoDeLosHijos <= 90)
                     {
                         if (sexo2.Equals("Hombre"))
                         {
@@ -441,10 +454,10 @@ namespace SocioSindicato.ViewsAdministrador
 
                             };
                             navidad.Add(dato);
-                            dias = 0;
+                            
                         }
                     } //niños de 7 año
-                    if (dias >= 2403 && dias <= 2768)
+                    if (ResultadoAñoDeLosHijos >= 79 && ResultadoAñoDeLosHijos <= 90)
                     {
                         if (sexo2.Equals("Mujer"))
                         {
@@ -461,10 +474,10 @@ namespace SocioSindicato.ViewsAdministrador
                             };
 
                             navidad.Add(dato);
-                            dias = 0;
+                          
                         }
                     } //niñas de 7 año
-                    if (dias >= 2769 && dias <= 3133)
+                    if (ResultadoAñoDeLosHijos >= 91 && ResultadoAñoDeLosHijos <= 102)
                     {
                         if (sexo2.Equals("Hombre"))
                         {
@@ -479,10 +492,10 @@ namespace SocioSindicato.ViewsAdministrador
                                 PLANTA = nombreplan
                             };
                             navidad.Add(dato);
-                            dias = 0;
+                           
                         }
                     } //niños de 8 año
-                    if (dias >= 2769 && dias <= 3133)
+                    if (ResultadoAñoDeLosHijos >= 91 && ResultadoAñoDeLosHijos <= 102)
                     {
                         if (sexo2.Equals("Mujer"))
                         {
@@ -498,10 +511,10 @@ namespace SocioSindicato.ViewsAdministrador
 
                             };
                             navidad.Add(dato);
-                            dias = 0;
+                           
                         }
                     } //niñas de 8 año
-                    if (dias >= 3134 && dias <= 3498)
+                    if (ResultadoAñoDeLosHijos >= 103 && ResultadoAñoDeLosHijos <= 114)
                     {
                         if (sexo2.Equals("Hombre"))
                         {
@@ -517,10 +530,10 @@ namespace SocioSindicato.ViewsAdministrador
 
                             };
                             navidad.Add(dato);
-                            dias = 0;
+                            
                         }
                     } //niños de 9 año
-                    if (dias >= 3134 && dias <= 3498)
+                    if (ResultadoAñoDeLosHijos >= 103 && ResultadoAñoDeLosHijos <= 114)
                     {
                         if (sexo2.Equals("Mujer"))
                         {
@@ -536,10 +549,10 @@ namespace SocioSindicato.ViewsAdministrador
 
                             };
                             navidad.Add(dato);
-                            dias = 0;
+                           
                         }
                     } //niñas de 9 año
-                    if (dias >= 3499 && dias <= 3863)
+                    if (ResultadoAñoDeLosHijos >= 115 && ResultadoAñoDeLosHijos <= 126)
                     {
                         if (sexo2.Equals("Hombre"))
                         {
@@ -555,10 +568,10 @@ namespace SocioSindicato.ViewsAdministrador
 
                             };
                             navidad.Add(dato);
-                            dias = 0;
+                            
                         }
                     } //niños de 10 año
-                    if (dias >= 3499 && dias <= 3863)
+                    if (ResultadoAñoDeLosHijos >= 115 && ResultadoAñoDeLosHijos <= 126)
                     {
                         if (sexo2.Equals("Mujer"))
                         {
@@ -575,10 +588,10 @@ namespace SocioSindicato.ViewsAdministrador
 
                             };
                             navidad.Add(dato);
-                            dias = 0;
+                            
                         }
                     } //niñas de 10 año
-                    if (dias >= 3864 && dias <= 4229)
+                    if (ResultadoAñoDeLosHijos >= 127 && ResultadoAñoDeLosHijos <= 138)
                     {
                         if (sexo2.Equals("Hombre"))
                         {
@@ -594,10 +607,10 @@ namespace SocioSindicato.ViewsAdministrador
 
                             };
                             navidad.Add(dato);
-                            dias = 0;
+                           
                         }
                     } //niños de 11 año
-                    if (dias >= 3864 && dias <= 4229)
+                    if (ResultadoAñoDeLosHijos >= 127 && ResultadoAñoDeLosHijos <= 138)
                     {
                         if (sexo2.Equals("Mujer"))
                         {
@@ -613,10 +626,10 @@ namespace SocioSindicato.ViewsAdministrador
 
                             };
                             navidad.Add(dato);
-                            dias = 0;
+                            
                         }
                     } //niñas de 11 año
-                    if (dias >= 4230 && dias <= 4595)
+                    if (ResultadoAñoDeLosHijos >= 139 && ResultadoAñoDeLosHijos <= 150)
                     {
                         if (sexo2.Equals("Hombre"))
                         {
@@ -632,10 +645,10 @@ namespace SocioSindicato.ViewsAdministrador
 
                             };
                             navidad.Add(dato);
-                            dias = 0;
+                            
                         }
                     } //niños de 12 año
-                    if (dias >= 4230 && dias <= 4595)
+                    if (ResultadoAñoDeLosHijos >= 139 && ResultadoAñoDeLosHijos <= 150)
                     {
                         if (sexo2.Equals("Mujer"))
                         {
@@ -651,7 +664,7 @@ namespace SocioSindicato.ViewsAdministrador
 
                             };
                             navidad.Add(dato);
-                            dias = 0;
+                            
                         }
                     } //niñas de 12 año
 
@@ -707,15 +720,27 @@ namespace SocioSindicato.ViewsAdministrador
                                         select new { fech.rut_socio, fech.nombre, fech.nacimiento, fech.sexo };
 
                         string rut_soc = listaHije.ToList()[0].rut_socio;
-                        string nombrehi = listaHije.ToList()[0].nombre;
-                        DateTime nacimientohi = Convert.ToDateTime(listaHije.ToList()[0].nacimiento);
+                        string nombrehi = listaHije.ToList()[0].nombre;                      
                         string sexo2 = listaHije.ToList()[0].sexo;
 
-                        DateTime fechaactual = DateTime.Now;
+                        //CAPTURAR LOS AÑOS
+                        int AñoActual = DateTime.Now.Year;
+                        int AñoNacimiento = fechanacimiento.Year;
 
-                        TimeSpan tSpan = fechaactual - fechanacimiento;
+                        // CAPTURAR LOS MESES
+                        int MesesAnual = 12;
+                        int MesesNacimiento = fechanacimiento.Month;
 
-                        dias = tSpan.Days;
+
+                        // CALCULO DE LOS AÑOS
+                        int ResultadoAño = AñoActual - AñoNacimiento;
+                        int ResultadoAñoFinal = ResultadoAño * 12;
+
+                        // CALCULO DE LOS MESES
+                        int MesesFinal = MesesAnual - MesesNacimiento;
+
+                        //CALCULO FINAL
+                        int ResultadoAñoDeLosHijos = ResultadoAñoFinal + MesesFinal;
 
 
                         var listaSoc = from Soc in context.Socio
@@ -736,7 +761,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
 
-                        if (dias >= 0 && dias <= 211)
+                        if (ResultadoAñoDeLosHijos >= 0 && ResultadoAñoDeLosHijos <= 6)
                         {
                             if (sexo2.Equals("Hombre"))
                             {
@@ -752,7 +777,7 @@ namespace SocioSindicato.ViewsAdministrador
 
                                 };
                                 navidad.Add(dato);
-                                dias = 0;
+                                
                             }
 
                         }
@@ -796,14 +821,27 @@ namespace SocioSindicato.ViewsAdministrador
 
                         string rut_soc = listaHije.ToList()[0].rut_socio;
                         string nombrehi = listaHije.ToList()[0].nombre;
-                        DateTime nacimientohi = Convert.ToDateTime(listaHije.ToList()[0].nacimiento);
+                        
                         string sexo2 = listaHije.ToList()[0].sexo;
+                        //CAPTURAR LOS AÑOS
+                        int AñoActual = DateTime.Now.Year;
+                        int AñoNacimiento = fechanacimiento.Year;
 
-                        DateTime fechaactual = DateTime.Now;
+                        // CAPTURAR LOS MESES
+                        int MesesAnual = 12;
+                        int MesesNacimiento = fechanacimiento.Month;
 
-                        TimeSpan tSpan = fechaactual - fechanacimiento;
 
-                        dias = tSpan.Days;
+                        // CALCULO DE LOS AÑOS
+                        int ResultadoAño = AñoActual - AñoNacimiento;
+                        int ResultadoAñoFinal = ResultadoAño * 12;
+
+                        // CALCULO DE LOS MESES
+                        int MesesFinal = MesesAnual - MesesNacimiento;
+
+                        //CALCULO FINAL
+                        int ResultadoAñoDeLosHijos = ResultadoAñoFinal + MesesFinal;
+
 
 
                         var listaSoc = from Soc in context.Socio
@@ -824,7 +862,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
 
-                        if (dias >= 0 && dias <= 211)
+                        if (ResultadoAñoDeLosHijos >= 0 && ResultadoAñoDeLosHijos <= 6)
                         {
                             if (sexo2.Equals("Mujer"))
                             {
@@ -840,7 +878,7 @@ namespace SocioSindicato.ViewsAdministrador
 
                                 };
                                 navidad.Add(dato);
-                                dias = 0;
+                               
                             }
 
                         }
@@ -884,14 +922,28 @@ namespace SocioSindicato.ViewsAdministrador
 
                         string rut_soc = listaHije.ToList()[0].rut_socio;
                         string nombrehi = listaHije.ToList()[0].nombre;
-                        DateTime nacimientohi = Convert.ToDateTime(listaHije.ToList()[0].nacimiento);
+                        
                         string sexo2 = listaHije.ToList()[0].sexo;
 
-                        DateTime fechaactual = DateTime.Now;
+                        //CAPTURAR LOS AÑOS
+                        int AñoActual = DateTime.Now.Year;
+                        int AñoNacimiento = fechanacimiento.Year;
 
-                        TimeSpan tSpan = fechaactual - fechanacimiento;
+                        // CAPTURAR LOS MESES
+                        int MesesAnual = 12;
+                        int MesesNacimiento = fechanacimiento.Month;
 
-                        dias = tSpan.Days;
+
+                        // CALCULO DE LOS AÑOS
+                        int ResultadoAño = AñoActual - AñoNacimiento;
+                        int ResultadoAñoFinal = ResultadoAño * 12;
+
+                        // CALCULO DE LOS MESES
+                        int MesesFinal = MesesAnual - MesesNacimiento;
+
+                        //CALCULO FINAL
+                        int ResultadoAñoDeLosHijos = ResultadoAñoFinal + MesesFinal;
+
 
 
                         var listaSoc = from Soc in context.Socio
@@ -911,7 +963,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
 
-                        if (dias >= 212 && dias <= 576)
+                        if (ResultadoAñoDeLosHijos >= 7 && ResultadoAñoDeLosHijos <= 18)
                         {
                             if (sexo2.Equals("Hombre"))
                             {
@@ -929,7 +981,7 @@ namespace SocioSindicato.ViewsAdministrador
                                 };
 
                                 navidad.Add(dato);
-                                dias = 0;
+                                
                             }
                         }
 
@@ -969,14 +1021,27 @@ namespace SocioSindicato.ViewsAdministrador
 
                         string rut_soc = listaHije.ToList()[0].rut_socio;
                         string nombrehi = listaHije.ToList()[0].nombre;
-                        DateTime nacimientohi = Convert.ToDateTime(listaHije.ToList()[0].nacimiento);
+                       
                         string sexo2 = listaHije.ToList()[0].sexo;
 
-                        DateTime fechaactual = DateTime.Now;
+                        //CAPTURAR LOS AÑOS
+                        int AñoActual = DateTime.Now.Year;
+                        int AñoNacimiento = fechanacimiento.Year;
 
-                        TimeSpan tSpan = fechaactual - fechanacimiento;
+                        // CAPTURAR LOS MESES
+                        int MesesAnual = 12;
+                        int MesesNacimiento = fechanacimiento.Month;
 
-                        dias = tSpan.Days;
+
+                        // CALCULO DE LOS AÑOS
+                        int ResultadoAño = AñoActual - AñoNacimiento;
+                        int ResultadoAñoFinal = ResultadoAño * 12;
+
+                        // CALCULO DE LOS MESES
+                        int MesesFinal = MesesAnual - MesesNacimiento;
+
+                        //CALCULO FINAL
+                        int ResultadoAñoDeLosHijos = ResultadoAñoFinal + MesesFinal;
 
 
                         var listaSoc = from Soc in context.Socio
@@ -997,7 +1062,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
 
-                        if (dias >= 212 && dias <= 576)
+                        if (ResultadoAñoDeLosHijos >= 7 && ResultadoAñoDeLosHijos <= 18)
                         {
                             if (sexo2.Equals("Mujer"))
                             {
@@ -1013,7 +1078,7 @@ namespace SocioSindicato.ViewsAdministrador
 
                                 };
                                 navidad.Add(dato);
-                                dias = 0;
+                                
                             }
                         }
 
@@ -1053,14 +1118,28 @@ namespace SocioSindicato.ViewsAdministrador
 
                         string rut_soc = listaHije.ToList()[0].rut_socio;
                         string nombrehi = listaHije.ToList()[0].nombre;
-                        DateTime nacimientohi = Convert.ToDateTime(listaHije.ToList()[0].nacimiento);
+                       
                         string sexo2 = listaHije.ToList()[0].sexo;
 
-                        DateTime fechaactual = DateTime.Now;
+                        //CAPTURAR LOS AÑOS
+                        int AñoActual = DateTime.Now.Year;
+                        int AñoNacimiento = fechanacimiento.Year;
 
-                        TimeSpan tSpan = fechaactual - fechanacimiento;
+                        // CAPTURAR LOS MESES
+                        int MesesAnual = 12;
+                        int MesesNacimiento = fechanacimiento.Month;
 
-                        dias = tSpan.Days;
+
+                        // CALCULO DE LOS AÑOS
+                        int ResultadoAño = AñoActual - AñoNacimiento;
+                        int ResultadoAñoFinal = ResultadoAño * 12;
+
+                        // CALCULO DE LOS MESES
+                        int MesesFinal = MesesAnual - MesesNacimiento;
+
+                        //CALCULO FINAL
+                        int ResultadoAñoDeLosHijos = ResultadoAñoFinal + MesesFinal;
+
 
 
                         var listaSoc = from Soc in context.Socio
@@ -1079,7 +1158,7 @@ namespace SocioSindicato.ViewsAdministrador
                         string nombreplan = listaPlan.ToList()[0].nombre;
 
 
-                        if (dias >= 577 && dias <= 941)
+                        if (ResultadoAñoDeLosHijos >= 19 && ResultadoAñoDeLosHijos <= 30)
                         {
                             if (sexo2.Equals("Hombre"))
                             {
@@ -1097,7 +1176,7 @@ namespace SocioSindicato.ViewsAdministrador
                                 };
 
                                 navidad.Add(dato);
-                                dias = 0;
+                                
                             }
                         }
 
@@ -1137,14 +1216,27 @@ namespace SocioSindicato.ViewsAdministrador
 
                         string rut_soc = listaHije.ToList()[0].rut_socio;
                         string nombrehi = listaHije.ToList()[0].nombre;
-                        DateTime nacimientohi = Convert.ToDateTime(listaHije.ToList()[0].nacimiento);
+                       
                         string sexo2 = listaHije.ToList()[0].sexo;
 
-                        DateTime fechaactual = DateTime.Now;
+                        //CAPTURAR LOS AÑOS
+                        int AñoActual = DateTime.Now.Year;
+                        int AñoNacimiento = fechanacimiento.Year;
 
-                        TimeSpan tSpan = fechaactual - fechanacimiento;
+                        // CAPTURAR LOS MESES
+                        int MesesAnual = 12;
+                        int MesesNacimiento = fechanacimiento.Month;
 
-                        dias = tSpan.Days;
+
+                        // CALCULO DE LOS AÑOS
+                        int ResultadoAño = AñoActual - AñoNacimiento;
+                        int ResultadoAñoFinal = ResultadoAño * 12;
+
+                        // CALCULO DE LOS MESES
+                        int MesesFinal = MesesAnual - MesesNacimiento;
+
+                        //CALCULO FINAL
+                        int ResultadoAñoDeLosHijos = ResultadoAñoFinal + MesesFinal;
 
 
                         var listaSoc = from Soc in context.Socio
@@ -1165,7 +1257,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
 
-                        if (dias >= 577 && dias <= 941)
+                        if (ResultadoAñoDeLosHijos >= 19 && ResultadoAñoDeLosHijos <= 30)
                         {
                             if (sexo2.Equals("Mujer"))
                             {
@@ -1181,7 +1273,7 @@ namespace SocioSindicato.ViewsAdministrador
 
                                 };
                                 navidad.Add(dato);
-                                dias = 0;
+                               
                             }
                         }
 
@@ -1221,14 +1313,28 @@ namespace SocioSindicato.ViewsAdministrador
 
                         string rut_soc = listaHije.ToList()[0].rut_socio;
                         string nombrehi = listaHije.ToList()[0].nombre;
-                        DateTime nacimientohi = Convert.ToDateTime(listaHije.ToList()[0].nacimiento);
+                        
                         string sexo2 = listaHije.ToList()[0].sexo;
 
-                        DateTime fechaactual = DateTime.Now;
+                        //CAPTURAR LOS AÑOS
+                        int AñoActual = DateTime.Now.Year;
+                        int AñoNacimiento = fechanacimiento.Year;
 
-                        TimeSpan tSpan = fechaactual - fechanacimiento;
+                        // CAPTURAR LOS MESES
+                        int MesesAnual = 12;
+                        int MesesNacimiento = fechanacimiento.Month;
 
-                        dias = tSpan.Days;
+
+                        // CALCULO DE LOS AÑOS
+                        int ResultadoAño = AñoActual - AñoNacimiento;
+                        int ResultadoAñoFinal = ResultadoAño * 12;
+
+                        // CALCULO DE LOS MESES
+                        int MesesFinal = MesesAnual - MesesNacimiento;
+
+                        //CALCULO FINAL
+                        int ResultadoAñoDeLosHijos = ResultadoAñoFinal + MesesFinal;
+
 
 
                         var listaSoc = from Soc in context.Socio
@@ -1247,7 +1353,7 @@ namespace SocioSindicato.ViewsAdministrador
                         string nombreplan = listaPlan.ToList()[0].nombre;
 
 
-                        if (dias >= 942 && dias <= 1277)
+                        if (ResultadoAñoDeLosHijos >= 31 && ResultadoAñoDeLosHijos <= 42)
                         {
                             if (sexo2.Equals("Hombre"))
                             {
@@ -1265,7 +1371,7 @@ namespace SocioSindicato.ViewsAdministrador
                                 };
 
                                 navidad.Add(dato);
-                                dias = 0;
+                             
                             }
                         }
 
@@ -1305,14 +1411,28 @@ namespace SocioSindicato.ViewsAdministrador
 
                         string rut_soc = listaHije.ToList()[0].rut_socio;
                         string nombrehi = listaHije.ToList()[0].nombre;
-                        DateTime nacimientohi = Convert.ToDateTime(listaHije.ToList()[0].nacimiento);
+                       
                         string sexo2 = listaHije.ToList()[0].sexo;
 
-                        DateTime fechaactual = DateTime.Now;
+                        //CAPTURAR LOS AÑOS
+                        int AñoActual = DateTime.Now.Year;
+                        int AñoNacimiento = fechanacimiento.Year;
 
-                        TimeSpan tSpan = fechaactual - fechanacimiento;
+                        // CAPTURAR LOS MESES
+                        int MesesAnual = 12;
+                        int MesesNacimiento = fechanacimiento.Month;
 
-                        dias = tSpan.Days;
+
+                        // CALCULO DE LOS AÑOS
+                        int ResultadoAño = AñoActual - AñoNacimiento;
+                        int ResultadoAñoFinal = ResultadoAño * 12;
+
+                        // CALCULO DE LOS MESES
+                        int MesesFinal = MesesAnual - MesesNacimiento;
+
+                        //CALCULO FINAL
+                        int ResultadoAñoDeLosHijos = ResultadoAñoFinal + MesesFinal;
+
 
 
                         var listaSoc = from Soc in context.Socio
@@ -1332,7 +1452,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
 
-                        if (dias >= 942 && dias <= 1277)
+                        if (ResultadoAñoDeLosHijos >= 31 && ResultadoAñoDeLosHijos <= 42)
                         {
                             if (sexo2.Equals("Mujer"))
                             {
@@ -1349,7 +1469,7 @@ namespace SocioSindicato.ViewsAdministrador
                                 };
 
                                 navidad.Add(dato);
-                                dias = 0;
+                               
                             }
                         }
 
@@ -1389,14 +1509,28 @@ namespace SocioSindicato.ViewsAdministrador
 
                         string rut_soc = listaHije.ToList()[0].rut_socio;
                         string nombrehi = listaHije.ToList()[0].nombre;
-                        DateTime nacimientohi = Convert.ToDateTime(listaHije.ToList()[0].nacimiento);
+                       
                         string sexo2 = listaHije.ToList()[0].sexo;
 
-                        DateTime fechaactual = DateTime.Now;
+                        //CAPTURAR LOS AÑOS
+                        int AñoActual = DateTime.Now.Year;
+                        int AñoNacimiento = fechanacimiento.Year;
 
-                        TimeSpan tSpan = fechaactual - fechanacimiento;
+                        // CAPTURAR LOS MESES
+                        int MesesAnual = 12;
+                        int MesesNacimiento = fechanacimiento.Month;
 
-                        dias = tSpan.Days;
+
+                        // CALCULO DE LOS AÑOS
+                        int ResultadoAño = AñoActual - AñoNacimiento;
+                        int ResultadoAñoFinal = ResultadoAño * 12;
+
+                        // CALCULO DE LOS MESES
+                        int MesesFinal = MesesAnual - MesesNacimiento;
+
+                        //CALCULO FINAL
+                        int ResultadoAñoDeLosHijos = ResultadoAñoFinal + MesesFinal;
+
 
 
                         var listaSoc = from Soc in context.Socio
@@ -1416,7 +1550,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
 
-                        if (dias >= 1278 && dias <= 1642)
+                        if (ResultadoAñoDeLosHijos >= 43 && ResultadoAñoDeLosHijos <= 54)
                         {
                             if (sexo2.Equals("Hombre"))
                             {
@@ -1433,7 +1567,7 @@ namespace SocioSindicato.ViewsAdministrador
 
                                 };
                                 navidad.Add(dato);
-                                dias = 0;
+                                
                             }
                         }
 
@@ -1473,14 +1607,27 @@ namespace SocioSindicato.ViewsAdministrador
 
                         string rut_soc = listaHije.ToList()[0].rut_socio;
                         string nombrehi = listaHije.ToList()[0].nombre;
-                        DateTime nacimientohi = Convert.ToDateTime(listaHije.ToList()[0].nacimiento);
+                        
                         string sexo2 = listaHije.ToList()[0].sexo;
 
-                        DateTime fechaactual = DateTime.Now;
+                        //CAPTURAR LOS AÑOS
+                        int AñoActual = DateTime.Now.Year;
+                        int AñoNacimiento = fechanacimiento.Year;
 
-                        TimeSpan tSpan = fechaactual - fechanacimiento;
+                        // CAPTURAR LOS MESES
+                        int MesesAnual = 12;
+                        int MesesNacimiento = fechanacimiento.Month;
 
-                        dias = tSpan.Days;
+
+                        // CALCULO DE LOS AÑOS
+                        int ResultadoAño = AñoActual - AñoNacimiento;
+                        int ResultadoAñoFinal = ResultadoAño * 12;
+
+                        // CALCULO DE LOS MESES
+                        int MesesFinal = MesesAnual - MesesNacimiento;
+
+                        //CALCULO FINAL
+                        int ResultadoAñoDeLosHijos = ResultadoAñoFinal + MesesFinal;
 
 
                         var listaSoc = from Soc in context.Socio
@@ -1501,7 +1648,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
 
-                        if (dias >= 1278 && dias <= 1642)
+                        if (ResultadoAñoDeLosHijos >= 43 && ResultadoAñoDeLosHijos <= 54)
                         {
                             if (sexo2.Equals("Mujer"))
                             {
@@ -1517,7 +1664,7 @@ namespace SocioSindicato.ViewsAdministrador
 
                                 };
                                 navidad.Add(dato);
-                                dias = 0;
+                               
                             }
                         }
 
@@ -1557,14 +1704,28 @@ namespace SocioSindicato.ViewsAdministrador
 
                         string rut_soc = listaHije.ToList()[0].rut_socio;
                         string nombrehi = listaHije.ToList()[0].nombre;
-                        DateTime nacimientohi = Convert.ToDateTime(listaHije.ToList()[0].nacimiento);
+                       
                         string sexo2 = listaHije.ToList()[0].sexo;
 
-                        DateTime fechaactual = DateTime.Now;
+                        //CAPTURAR LOS AÑOS
+                        int AñoActual = DateTime.Now.Year;
+                        int AñoNacimiento = fechanacimiento.Year;
 
-                        TimeSpan tSpan = fechaactual - fechanacimiento;
+                        // CAPTURAR LOS MESES
+                        int MesesAnual = 12;
+                        int MesesNacimiento = fechanacimiento.Month;
 
-                        dias = tSpan.Days;
+
+                        // CALCULO DE LOS AÑOS
+                        int ResultadoAño = AñoActual - AñoNacimiento;
+                        int ResultadoAñoFinal = ResultadoAño * 12;
+
+                        // CALCULO DE LOS MESES
+                        int MesesFinal = MesesAnual - MesesNacimiento;
+
+                        //CALCULO FINAL
+                        int ResultadoAñoDeLosHijos = ResultadoAñoFinal + MesesFinal;
+
 
 
                         var listaSoc = from Soc in context.Socio
@@ -1584,7 +1745,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
 
-                        if (dias >= 1643 && dias <= 2037)
+                        if (ResultadoAñoDeLosHijos >= 55 && ResultadoAñoDeLosHijos <= 66)
                         {
                             if (sexo2.Equals("Hombre"))
                             {
@@ -1601,7 +1762,7 @@ namespace SocioSindicato.ViewsAdministrador
                                 };
 
                                 navidad.Add(dato);
-                                dias = 0;
+                               
                             }
                         }
 
@@ -1641,14 +1802,28 @@ namespace SocioSindicato.ViewsAdministrador
 
                         string rut_soc = listaHije.ToList()[0].rut_socio;
                         string nombrehi = listaHije.ToList()[0].nombre;
-                        DateTime nacimientohi = Convert.ToDateTime(listaHije.ToList()[0].nacimiento);
+                       
                         string sexo2 = listaHije.ToList()[0].sexo;
 
-                        DateTime fechaactual = DateTime.Now;
+                        //CAPTURAR LOS AÑOS
+                        int AñoActual = DateTime.Now.Year;
+                        int AñoNacimiento = fechanacimiento.Year;
 
-                        TimeSpan tSpan = fechaactual - fechanacimiento;
+                        // CAPTURAR LOS MESES
+                        int MesesAnual = 12;
+                        int MesesNacimiento = fechanacimiento.Month;
 
-                        dias = tSpan.Days;
+
+                        // CALCULO DE LOS AÑOS
+                        int ResultadoAño = AñoActual - AñoNacimiento;
+                        int ResultadoAñoFinal = ResultadoAño * 12;
+
+                        // CALCULO DE LOS MESES
+                        int MesesFinal = MesesAnual - MesesNacimiento;
+
+                        //CALCULO FINAL
+                        int ResultadoAñoDeLosHijos = ResultadoAñoFinal + MesesFinal;
+
 
 
                         var listaSoc = from Soc in context.Socio
@@ -1669,7 +1844,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
 
-                        if (dias >= 1643 && dias <= 2037)
+                        if (ResultadoAñoDeLosHijos >= 55 && ResultadoAñoDeLosHijos <= 66)
                         {
                             if (sexo2.Equals("Mujer"))
                             {
@@ -1685,7 +1860,7 @@ namespace SocioSindicato.ViewsAdministrador
 
                                 };
                                 navidad.Add(dato);
-                                dias = 0;
+                              
                             }
                         }
 
@@ -1725,14 +1900,28 @@ namespace SocioSindicato.ViewsAdministrador
 
                         string rut_soc = listaHije.ToList()[0].rut_socio;
                         string nombrehi = listaHije.ToList()[0].nombre;
-                        DateTime nacimientohi = Convert.ToDateTime(listaHije.ToList()[0].nacimiento);
+                       
                         string sexo2 = listaHije.ToList()[0].sexo;
 
-                        DateTime fechaactual = DateTime.Now;
+                        //CAPTURAR LOS AÑOS
+                        int AñoActual = DateTime.Now.Year;
+                        int AñoNacimiento = fechanacimiento.Year;
 
-                        TimeSpan tSpan = fechaactual - fechanacimiento;
+                        // CAPTURAR LOS MESES
+                        int MesesAnual = 12;
+                        int MesesNacimiento = fechanacimiento.Month;
 
-                        dias = tSpan.Days;
+
+                        // CALCULO DE LOS AÑOS
+                        int ResultadoAño = AñoActual - AñoNacimiento;
+                        int ResultadoAñoFinal = ResultadoAño * 12;
+
+                        // CALCULO DE LOS MESES
+                        int MesesFinal = MesesAnual - MesesNacimiento;
+
+                        //CALCULO FINAL
+                        int ResultadoAñoDeLosHijos = ResultadoAñoFinal + MesesFinal;
+
 
 
                         var listaSoc = from Soc in context.Socio
@@ -1753,7 +1942,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
 
-                        if (dias >= 2038 && dias <= 2402)
+                        if (ResultadoAñoDeLosHijos >= 67 && ResultadoAñoDeLosHijos <= 78)
                         {
                             if (sexo2.Equals("Hombre"))
                             {
@@ -1769,7 +1958,7 @@ namespace SocioSindicato.ViewsAdministrador
 
                                 };
                                 navidad.Add(dato);
-                                dias = 0;
+                              
                             }
                         }
 
@@ -1809,14 +1998,27 @@ namespace SocioSindicato.ViewsAdministrador
 
                         string rut_soc = listaHije.ToList()[0].rut_socio;
                         string nombrehi = listaHije.ToList()[0].nombre;
-                        DateTime nacimientohi = Convert.ToDateTime(listaHije.ToList()[0].nacimiento);
+                       
                         string sexo2 = listaHije.ToList()[0].sexo;
 
-                        DateTime fechaactual = DateTime.Now;
+                        //CAPTURAR LOS AÑOS
+                        int AñoActual = DateTime.Now.Year;
+                        int AñoNacimiento = fechanacimiento.Year;
 
-                        TimeSpan tSpan = fechaactual - fechanacimiento;
+                        // CAPTURAR LOS MESES
+                        int MesesAnual = 12;
+                        int MesesNacimiento = fechanacimiento.Month;
 
-                        dias = tSpan.Days;
+
+                        // CALCULO DE LOS AÑOS
+                        int ResultadoAño = AñoActual - AñoNacimiento;
+                        int ResultadoAñoFinal = ResultadoAño * 12;
+
+                        // CALCULO DE LOS MESES
+                        int MesesFinal = MesesAnual - MesesNacimiento;
+
+                        //CALCULO FINAL
+                        int ResultadoAñoDeLosHijos = ResultadoAñoFinal + MesesFinal;
 
 
                         var listaSoc = from Soc in context.Socio
@@ -1837,7 +2039,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
 
-                        if (dias >= 2038 && dias <= 2402)
+                        if (ResultadoAñoDeLosHijos >= 67 && ResultadoAñoDeLosHijos <= 78)
                         {
                             if (sexo2.Equals("Mujer"))
                             {
@@ -1853,7 +2055,7 @@ namespace SocioSindicato.ViewsAdministrador
 
                                 };
                                 navidad.Add(dato);
-                                dias = 0;
+                              
                             }
                         }
 
@@ -1893,14 +2095,27 @@ namespace SocioSindicato.ViewsAdministrador
 
                         string rut_soc = listaHije.ToList()[0].rut_socio;
                         string nombrehi = listaHije.ToList()[0].nombre;
-                        DateTime nacimientohi = Convert.ToDateTime(listaHije.ToList()[0].nacimiento);
+                        
                         string sexo2 = listaHije.ToList()[0].sexo;
 
-                        DateTime fechaactual = DateTime.Now;
+                        //CAPTURAR LOS AÑOS
+                        int AñoActual = DateTime.Now.Year;
+                        int AñoNacimiento = fechanacimiento.Year;
 
-                        TimeSpan tSpan = fechaactual - fechanacimiento;
+                        // CAPTURAR LOS MESES
+                        int MesesAnual = 12;
+                        int MesesNacimiento = fechanacimiento.Month;
 
-                        dias = tSpan.Days;
+
+                        // CALCULO DE LOS AÑOS
+                        int ResultadoAño = AñoActual - AñoNacimiento;
+                        int ResultadoAñoFinal = ResultadoAño * 12;
+
+                        // CALCULO DE LOS MESES
+                        int MesesFinal = MesesAnual - MesesNacimiento;
+
+                        //CALCULO FINAL
+                        int ResultadoAñoDeLosHijos = ResultadoAñoFinal + MesesFinal;
 
 
                         var listaSoc = from Soc in context.Socio
@@ -1921,7 +2136,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
 
-                        if (dias >= 2403 && dias <= 2768)
+                        if (ResultadoAñoDeLosHijos >= 79 && ResultadoAñoDeLosHijos <= 90)
                         {
                             if (sexo2.Equals("Hombre"))
                             {
@@ -1937,7 +2152,7 @@ namespace SocioSindicato.ViewsAdministrador
 
                                 };
                                 navidad.Add(dato);
-                                dias = 0;
+                               
                             }
                         }
 
@@ -1977,14 +2192,27 @@ namespace SocioSindicato.ViewsAdministrador
 
                         string rut_soc = listaHije.ToList()[0].rut_socio;
                         string nombrehi = listaHije.ToList()[0].nombre;
-                        DateTime nacimientohi = Convert.ToDateTime(listaHije.ToList()[0].nacimiento);
+                        
                         string sexo2 = listaHije.ToList()[0].sexo;
 
-                        DateTime fechaactual = DateTime.Now;
+                        //CAPTURAR LOS AÑOS
+                        int AñoActual = DateTime.Now.Year;
+                        int AñoNacimiento = fechanacimiento.Year;
 
-                        TimeSpan tSpan = fechaactual - fechanacimiento;
+                        // CAPTURAR LOS MESES
+                        int MesesAnual = 12;
+                        int MesesNacimiento = fechanacimiento.Month;
 
-                        dias = tSpan.Days;
+
+                        // CALCULO DE LOS AÑOS
+                        int ResultadoAño = AñoActual - AñoNacimiento;
+                        int ResultadoAñoFinal = ResultadoAño * 12;
+
+                        // CALCULO DE LOS MESES
+                        int MesesFinal = MesesAnual - MesesNacimiento;
+
+                        //CALCULO FINAL
+                        int ResultadoAñoDeLosHijos = ResultadoAñoFinal + MesesFinal;
 
 
                         var listaSoc = from Soc in context.Socio
@@ -2004,7 +2232,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
 
-                        if (dias >= 2403 && dias <= 2768)
+                        if (ResultadoAñoDeLosHijos >= 79 && ResultadoAñoDeLosHijos <= 90)
                         {
                             if (sexo2.Equals("Mujer"))
                             {
@@ -2021,7 +2249,7 @@ namespace SocioSindicato.ViewsAdministrador
                                 };
 
                                 navidad.Add(dato);
-                                dias = 0;
+                               
                             }
                         }
 
@@ -2061,14 +2289,28 @@ namespace SocioSindicato.ViewsAdministrador
 
                         string rut_soc = listaHije.ToList()[0].rut_socio;
                         string nombrehi = listaHije.ToList()[0].nombre;
-                        DateTime nacimientohi = Convert.ToDateTime(listaHije.ToList()[0].nacimiento);
+                        
                         string sexo2 = listaHije.ToList()[0].sexo;
 
-                        DateTime fechaactual = DateTime.Now;
+                        //CAPTURAR LOS AÑOS
+                        int AñoActual = DateTime.Now.Year;
+                        int AñoNacimiento = fechanacimiento.Year;
 
-                        TimeSpan tSpan = fechaactual - fechanacimiento;
+                        // CAPTURAR LOS MESES
+                        int MesesAnual = 12;
+                        int MesesNacimiento = fechanacimiento.Month;
 
-                        dias = tSpan.Days;
+
+                        // CALCULO DE LOS AÑOS
+                        int ResultadoAño = AñoActual - AñoNacimiento;
+                        int ResultadoAñoFinal = ResultadoAño * 12;
+
+                        // CALCULO DE LOS MESES
+                        int MesesFinal = MesesAnual - MesesNacimiento;
+
+                        //CALCULO FINAL
+                        int ResultadoAñoDeLosHijos = ResultadoAñoFinal + MesesFinal;
+
 
 
                         var listaSoc = from Soc in context.Socio
@@ -2089,7 +2331,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
 
-                        if (dias >= 2769 && dias <= 3133)
+                        if (ResultadoAñoDeLosHijos >= 91 && ResultadoAñoDeLosHijos <= 102)
                         {
                             if (sexo2.Equals("Hombre"))
                             {
@@ -2105,7 +2347,7 @@ namespace SocioSindicato.ViewsAdministrador
 
                                 };
                                 navidad.Add(dato);
-                                dias = 0;
+                               
                             }
                         }
 
@@ -2145,14 +2387,28 @@ namespace SocioSindicato.ViewsAdministrador
 
                         string rut_soc = listaHije.ToList()[0].rut_socio;
                         string nombrehi = listaHije.ToList()[0].nombre;
-                        DateTime nacimientohi = Convert.ToDateTime(listaHije.ToList()[0].nacimiento);
+                       
                         string sexo2 = listaHije.ToList()[0].sexo;
 
-                        DateTime fechaactual = DateTime.Now;
+                        //CAPTURAR LOS AÑOS
+                        int AñoActual = DateTime.Now.Year;
+                        int AñoNacimiento = fechanacimiento.Year;
 
-                        TimeSpan tSpan = fechaactual - fechanacimiento;
+                        // CAPTURAR LOS MESES
+                        int MesesAnual = 12;
+                        int MesesNacimiento = fechanacimiento.Month;
 
-                        dias = tSpan.Days;
+
+                        // CALCULO DE LOS AÑOS
+                        int ResultadoAño = AñoActual - AñoNacimiento;
+                        int ResultadoAñoFinal = ResultadoAño * 12;
+
+                        // CALCULO DE LOS MESES
+                        int MesesFinal = MesesAnual - MesesNacimiento;
+
+                        //CALCULO FINAL
+                        int ResultadoAñoDeLosHijos = ResultadoAñoFinal + MesesFinal;
+
 
 
                         var listaSoc = from Soc in context.Socio
@@ -2172,7 +2428,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
 
-                        if (dias >= 2769 && dias <= 3133)
+                        if (ResultadoAñoDeLosHijos >= 91 && ResultadoAñoDeLosHijos <= 102)
                         {
                             if (sexo2.Equals("Mujer"))
                             {
@@ -2188,7 +2444,7 @@ namespace SocioSindicato.ViewsAdministrador
 
                                 };
                                 navidad.Add(dato);
-                                dias = 0;
+                               
                             }
                         }
 
@@ -2228,14 +2484,28 @@ namespace SocioSindicato.ViewsAdministrador
 
                         string rut_soc = listaHije.ToList()[0].rut_socio;
                         string nombrehi = listaHije.ToList()[0].nombre;
-                        DateTime nacimientohi = Convert.ToDateTime(listaHije.ToList()[0].nacimiento);
+                        
                         string sexo2 = listaHije.ToList()[0].sexo;
 
-                        DateTime fechaactual = DateTime.Now;
+                        //CAPTURAR LOS AÑOS
+                        int AñoActual = DateTime.Now.Year;
+                        int AñoNacimiento = fechanacimiento.Year;
 
-                        TimeSpan tSpan = fechaactual - fechanacimiento;
+                        // CAPTURAR LOS MESES
+                        int MesesAnual = 12;
+                        int MesesNacimiento = fechanacimiento.Month;
 
-                        dias = tSpan.Days;
+
+                        // CALCULO DE LOS AÑOS
+                        int ResultadoAño = AñoActual - AñoNacimiento;
+                        int ResultadoAñoFinal = ResultadoAño * 12;
+
+                        // CALCULO DE LOS MESES
+                        int MesesFinal = MesesAnual - MesesNacimiento;
+
+                        //CALCULO FINAL
+                        int ResultadoAñoDeLosHijos = ResultadoAñoFinal + MesesFinal;
+
 
 
                         var listaSoc = from Soc in context.Socio
@@ -2256,7 +2526,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
 
-                        if (dias >= 3134 && dias <= 3498)
+                        if (ResultadoAñoDeLosHijos >= 103 && ResultadoAñoDeLosHijos <= 114)
                         {
                             if (sexo2.Equals("Hombre"))
                             {
@@ -2272,7 +2542,7 @@ namespace SocioSindicato.ViewsAdministrador
 
                                 };
                                 navidad.Add(dato);
-                                dias = 0;
+                               
                             }
                         }
 
@@ -2312,15 +2582,28 @@ namespace SocioSindicato.ViewsAdministrador
 
                         string rut_soc = listaHije.ToList()[0].rut_socio;
                         string nombrehi = listaHije.ToList()[0].nombre;
-                        DateTime nacimientohi = Convert.ToDateTime(listaHije.ToList()[0].nacimiento);
+                        
                         string sexo2 = listaHije.ToList()[0].sexo;
 
-                        DateTime fechaactual = DateTime.Now;
 
-                        TimeSpan tSpan = fechaactual - fechanacimiento;
+                        //CAPTURAR LOS AÑOS
+                        int AñoActual = DateTime.Now.Year;
+                        int AñoNacimiento = fechanacimiento.Year;
 
-                        dias = tSpan.Days;
+                        // CAPTURAR LOS MESES
+                        int MesesAnual = 12;
+                        int MesesNacimiento = fechanacimiento.Month;
 
+
+                        // CALCULO DE LOS AÑOS
+                        int ResultadoAño = AñoActual - AñoNacimiento;
+                        int ResultadoAñoFinal = ResultadoAño * 12;
+
+                        // CALCULO DE LOS MESES
+                        int MesesFinal = MesesAnual - MesesNacimiento;
+
+                        //CALCULO FINAL
+                        int ResultadoAñoDeLosHijos = ResultadoAñoFinal + MesesFinal;
 
                         var listaSoc = from Soc in context.Socio
                                        where Soc.rut_socio.Equals(rut_soc)
@@ -2340,7 +2623,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
 
-                        if (dias >= 3134 && dias <= 3498)
+                        if (ResultadoAñoDeLosHijos >= 103 && ResultadoAñoDeLosHijos <= 114)
                         {
                             if (sexo2.Equals("Mujer"))
                             {
@@ -2356,7 +2639,7 @@ namespace SocioSindicato.ViewsAdministrador
 
                                 };
                                 navidad.Add(dato);
-                                dias = 0;
+                               
                             }
                         }
 
@@ -2396,14 +2679,28 @@ namespace SocioSindicato.ViewsAdministrador
 
                         string rut_soc = listaHije.ToList()[0].rut_socio;
                         string nombrehi = listaHije.ToList()[0].nombre;
-                        DateTime nacimientohi = Convert.ToDateTime(listaHije.ToList()[0].nacimiento);
+                       
                         string sexo2 = listaHije.ToList()[0].sexo;
 
-                        DateTime fechaactual = DateTime.Now;
 
-                        TimeSpan tSpan = fechaactual - fechanacimiento;
+                        //CAPTURAR LOS AÑOS
+                        int AñoActual = DateTime.Now.Year;
+                        int AñoNacimiento = fechanacimiento.Year;
 
-                        dias = tSpan.Days;
+                        // CAPTURAR LOS MESES
+                        int MesesAnual = 12;
+                        int MesesNacimiento = fechanacimiento.Month;
+
+
+                        // CALCULO DE LOS AÑOS
+                        int ResultadoAño = AñoActual - AñoNacimiento;
+                        int ResultadoAñoFinal = ResultadoAño * 12;
+
+                        // CALCULO DE LOS MESES
+                        int MesesFinal = MesesAnual - MesesNacimiento;
+
+                        //CALCULO FINAL
+                        int ResultadoAñoDeLosHijos = ResultadoAñoFinal + MesesFinal;
 
 
                         var listaSoc = from Soc in context.Socio
@@ -2423,7 +2720,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
 
-                        if (dias >= 3499 && dias <= 3863)
+                        if (ResultadoAñoDeLosHijos >= 115 && ResultadoAñoDeLosHijos <= 126)
                         {
                             if (sexo2.Equals("Hombre"))
                             {
@@ -2439,7 +2736,7 @@ namespace SocioSindicato.ViewsAdministrador
 
                                 };
                                 navidad.Add(dato);
-                                dias = 0;
+                               
                             }
                         }
 
@@ -2479,15 +2776,28 @@ namespace SocioSindicato.ViewsAdministrador
 
                         string rut_soc = listaHije.ToList()[0].rut_socio;
                         string nombrehi = listaHije.ToList()[0].nombre;
-                        DateTime nacimientohi = Convert.ToDateTime(listaHije.ToList()[0].nacimiento);
+                     
                         string sexo2 = listaHije.ToList()[0].sexo;
 
-                        DateTime fechaactual = DateTime.Now;
 
-                        TimeSpan tSpan = fechaactual - fechanacimiento;
+                        //CAPTURAR LOS AÑOS
+                        int AñoActual = DateTime.Now.Year;
+                        int AñoNacimiento = fechanacimiento.Year;
 
-                        dias = tSpan.Days;
+                        // CAPTURAR LOS MESES
+                        int MesesAnual = 12;
+                        int MesesNacimiento = fechanacimiento.Month;
 
+
+                        // CALCULO DE LOS AÑOS
+                        int ResultadoAño = AñoActual - AñoNacimiento;
+                        int ResultadoAñoFinal = ResultadoAño * 12;
+
+                        // CALCULO DE LOS MESES
+                        int MesesFinal = MesesAnual - MesesNacimiento;
+
+                        //CALCULO FINAL
+                        int ResultadoAñoDeLosHijos = ResultadoAñoFinal + MesesFinal;
 
                         var listaSoc = from Soc in context.Socio
                                        where Soc.rut_socio.Equals(rut_soc)
@@ -2507,7 +2817,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
 
-                        if (dias >= 3499 && dias <= 3863)
+                        if (ResultadoAñoDeLosHijos >= 115 && ResultadoAñoDeLosHijos <= 126)
                         {
                             if (sexo2.Equals("Mujer"))
                             {
@@ -2524,7 +2834,7 @@ namespace SocioSindicato.ViewsAdministrador
 
                                 };
                                 navidad.Add(dato);
-                                dias = 0;
+                              
                             }
                         }
 
@@ -2563,15 +2873,28 @@ namespace SocioSindicato.ViewsAdministrador
 
                         string rut_soc = listaHije.ToList()[0].rut_socio;
                         string nombrehi = listaHije.ToList()[0].nombre;
-                        DateTime nacimientohi = Convert.ToDateTime(listaHije.ToList()[0].nacimiento);
+                       
                         string sexo2 = listaHije.ToList()[0].sexo;
 
-                        DateTime fechaactual = DateTime.Now;
 
-                        TimeSpan tSpan = fechaactual - fechanacimiento;
+                        //CAPTURAR LOS AÑOS
+                        int AñoActual = DateTime.Now.Year;
+                        int AñoNacimiento = fechanacimiento.Year;
 
-                        dias = tSpan.Days;
+                        // CAPTURAR LOS MESES
+                        int MesesAnual = 12;
+                        int MesesNacimiento = fechanacimiento.Month;
 
+
+                        // CALCULO DE LOS AÑOS
+                        int ResultadoAño = AñoActual - AñoNacimiento;
+                        int ResultadoAñoFinal = ResultadoAño * 12;
+
+                        // CALCULO DE LOS MESES
+                        int MesesFinal = MesesAnual - MesesNacimiento;
+
+                        //CALCULO FINAL
+                        int ResultadoAñoDeLosHijos = ResultadoAñoFinal + MesesFinal;
 
                         var listaSoc = from Soc in context.Socio
                                        where Soc.rut_socio.Equals(rut_soc)
@@ -2590,7 +2913,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
 
-                        if (dias >= 3864 && dias <= 4229)
+                        if (ResultadoAñoDeLosHijos >= 127 && ResultadoAñoDeLosHijos <= 138)
                         {
                             if (sexo2.Equals("Hombre"))
                             {
@@ -2606,7 +2929,7 @@ namespace SocioSindicato.ViewsAdministrador
 
                                 };
                                 navidad.Add(dato);
-                                dias = 0;
+                               
                             }
                         }
 
@@ -2646,14 +2969,28 @@ namespace SocioSindicato.ViewsAdministrador
 
                         string rut_soc = listaHije.ToList()[0].rut_socio;
                         string nombrehi = listaHije.ToList()[0].nombre;
-                        DateTime nacimientohi = Convert.ToDateTime(listaHije.ToList()[0].nacimiento);
+                        
                         string sexo2 = listaHije.ToList()[0].sexo;
 
-                        DateTime fechaactual = DateTime.Now;
 
-                        TimeSpan tSpan = fechaactual - fechanacimiento;
+                        //CAPTURAR LOS AÑOS
+                        int AñoActual = DateTime.Now.Year;
+                        int AñoNacimiento = fechanacimiento.Year;
 
-                        dias = tSpan.Days;
+                        // CAPTURAR LOS MESES
+                        int MesesAnual = 12;
+                        int MesesNacimiento = fechanacimiento.Month;
+
+
+                        // CALCULO DE LOS AÑOS
+                        int ResultadoAño = AñoActual - AñoNacimiento;
+                        int ResultadoAñoFinal = ResultadoAño * 12;
+
+                        // CALCULO DE LOS MESES
+                        int MesesFinal = MesesAnual - MesesNacimiento;
+
+                        //CALCULO FINAL
+                        int ResultadoAñoDeLosHijos = ResultadoAñoFinal + MesesFinal;
 
 
                         var listaSoc = from Soc in context.Socio
@@ -2674,7 +3011,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
 
-                        if (dias >= 3864 && dias <= 4229)
+                        if (ResultadoAñoDeLosHijos >= 127 && ResultadoAñoDeLosHijos <= 138)
                         {
                             if (sexo2.Equals("Mujer"))
                             {
@@ -2690,7 +3027,7 @@ namespace SocioSindicato.ViewsAdministrador
 
                                 };
                                 navidad.Add(dato);
-                                dias = 0;
+                               
                             }
                         }
 
@@ -2730,15 +3067,28 @@ namespace SocioSindicato.ViewsAdministrador
 
                         string rut_soc = listaHije.ToList()[0].rut_socio;
                         string nombrehi = listaHije.ToList()[0].nombre;
-                        DateTime nacimientohi = Convert.ToDateTime(listaHije.ToList()[0].nacimiento);
+                       
                         string sexo2 = listaHije.ToList()[0].sexo;
 
-                        DateTime fechaactual = DateTime.Now;
 
-                        TimeSpan tSpan = fechaactual - fechanacimiento;
+                        //CAPTURAR LOS AÑOS
+                        int AñoActual = DateTime.Now.Year;
+                        int AñoNacimiento = fechanacimiento.Year;
 
-                        dias = tSpan.Days;
+                        // CAPTURAR LOS MESES
+                        int MesesAnual = 12;
+                        int MesesNacimiento = fechanacimiento.Month;
 
+
+                        // CALCULO DE LOS AÑOS
+                        int ResultadoAño = AñoActual - AñoNacimiento;
+                        int ResultadoAñoFinal = ResultadoAño * 12;
+
+                        // CALCULO DE LOS MESES
+                        int MesesFinal = MesesAnual - MesesNacimiento;
+
+                        //CALCULO FINAL
+                        int ResultadoAñoDeLosHijos = ResultadoAñoFinal + MesesFinal;
 
                         var listaSoc = from Soc in context.Socio
                                        where Soc.rut_socio.Equals(rut_soc)
@@ -2758,7 +3108,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
 
-                        if (dias >= 4230 && dias <= 4595)
+                        if (ResultadoAñoDeLosHijos >= 139 && ResultadoAñoDeLosHijos <= 150)
                         {
                             if (sexo2.Equals("Hombre"))
                             {
@@ -2774,7 +3124,7 @@ namespace SocioSindicato.ViewsAdministrador
 
                                 };
                                 navidad.Add(dato);
-                                dias = 0;
+                               
                             }
                         }
 
@@ -2814,15 +3164,28 @@ namespace SocioSindicato.ViewsAdministrador
 
                         string rut_soc = listaHije.ToList()[0].rut_socio;
                         string nombrehi = listaHije.ToList()[0].nombre;
-                        DateTime nacimientohi = Convert.ToDateTime(listaHije.ToList()[0].nacimiento);
+                       
                         string sexo2 = listaHije.ToList()[0].sexo;
 
-                        DateTime fechaactual = DateTime.Now;
 
-                        TimeSpan tSpan = fechaactual - fechanacimiento;
+                        //CAPTURAR LOS AÑOS
+                        int AñoActual = DateTime.Now.Year;
+                        int AñoNacimiento = fechanacimiento.Year;
 
-                        dias = tSpan.Days;
+                        // CAPTURAR LOS MESES
+                        int MesesAnual = 12;
+                        int MesesNacimiento = fechanacimiento.Month;
 
+
+                        // CALCULO DE LOS AÑOS
+                        int ResultadoAño = AñoActual - AñoNacimiento;
+                        int ResultadoAñoFinal = ResultadoAño * 12;
+
+                        // CALCULO DE LOS MESES
+                        int MesesFinal = MesesAnual - MesesNacimiento;
+
+                        //CALCULO FINAL
+                        int ResultadoAñoDeLosHijos = ResultadoAñoFinal + MesesFinal;
 
                         var listaSoc = from Soc in context.Socio
                                        where Soc.rut_socio.Equals(rut_soc)
@@ -2842,7 +3205,7 @@ namespace SocioSindicato.ViewsAdministrador
 
 
 
-                        if (dias >= 4230 && dias <= 4595)
+                        if (ResultadoAñoDeLosHijos >= 139 && ResultadoAñoDeLosHijos <= 150)
                         {
                             if (sexo2.Equals("Mujer"))
                             {
@@ -2858,7 +3221,7 @@ namespace SocioSindicato.ViewsAdministrador
 
                                 };
                                 navidad.Add(dato);
-                                dias = 0;
+                               
                             }
                         }
 

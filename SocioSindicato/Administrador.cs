@@ -328,5 +328,7 @@ namespace SocioSindicato
             bs.ShowDialog();
             this.Close();
         }
-    }
+
+		
+	}
 }

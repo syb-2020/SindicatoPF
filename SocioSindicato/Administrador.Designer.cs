@@ -108,7 +108,7 @@
 			this.btEliminados.Location = new System.Drawing.Point(0, 500);
 			this.btEliminados.Name = "btEliminados";
 			this.btEliminados.Rotation = 0D;
-			this.btEliminados.Size = new System.Drawing.Size(220, 52);
+			this.btEliminados.Size = new System.Drawing.Size(220, 46);
 			this.btEliminados.TabIndex = 20;
 			this.btEliminados.Text = "Eliminados";
 			this.btEliminados.UseVisualStyleBackColor = true;
@@ -386,7 +386,7 @@
 			this.fondosindicatoindex.Location = new System.Drawing.Point(0, 0);
 			this.fondosindicatoindex.Name = "fondosindicatoindex";
 			this.fondosindicatoindex.Size = new System.Drawing.Size(1315, 796);
-			this.fondosindicatoindex.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.fondosindicatoindex.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
 			this.fondosindicatoindex.TabIndex = 0;
 			this.fondosindicatoindex.TabStop = false;
 			// 

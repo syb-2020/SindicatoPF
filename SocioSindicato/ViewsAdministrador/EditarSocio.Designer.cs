@@ -498,7 +498,7 @@
 			// txtedadconyugesocio
 			// 
 			this.txtedadconyugesocio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.txtedadconyugesocio.Location = new System.Drawing.Point(712, 230);
+			this.txtedadconyugesocio.Location = new System.Drawing.Point(712, 262);
 			this.txtedadconyugesocio.Name = "txtedadconyugesocio";
 			this.txtedadconyugesocio.Size = new System.Drawing.Size(255, 20);
 			this.txtedadconyugesocio.TabIndex = 80;
@@ -510,7 +510,7 @@
 			this.label27.AutoSize = true;
 			this.label27.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label27.ForeColor = System.Drawing.Color.Gainsboro;
-			this.label27.Location = new System.Drawing.Point(560, 230);
+			this.label27.Location = new System.Drawing.Point(560, 262);
 			this.label27.Name = "label27";
 			this.label27.Size = new System.Drawing.Size(42, 17);
 			this.label27.TabIndex = 79;
@@ -523,7 +523,7 @@
 			this.comboconvivienteconyugesocio.Items.AddRange(new object[] {
             "SI",
             "NO"});
-			this.comboconvivienteconyugesocio.Location = new System.Drawing.Point(712, 266);
+			this.comboconvivienteconyugesocio.Location = new System.Drawing.Point(712, 155);
 			this.comboconvivienteconyugesocio.Name = "comboconvivienteconyugesocio";
 			this.comboconvivienteconyugesocio.Size = new System.Drawing.Size(255, 21);
 			this.comboconvivienteconyugesocio.TabIndex = 78;
@@ -535,7 +535,7 @@
 			this.label26.AutoSize = true;
 			this.label26.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label26.ForeColor = System.Drawing.Color.Gainsboro;
-			this.label26.Location = new System.Drawing.Point(560, 266);
+			this.label26.Location = new System.Drawing.Point(560, 155);
 			this.label26.Name = "label26";
 			this.label26.Size = new System.Drawing.Size(87, 17);
 			this.label26.TabIndex = 77;
@@ -544,7 +544,7 @@
 			// datefechanacimientoconyugesocio
 			// 
 			this.datefechanacimientoconyugesocio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.datefechanacimientoconyugesocio.Location = new System.Drawing.Point(712, 194);
+			this.datefechanacimientoconyugesocio.Location = new System.Drawing.Point(712, 226);
 			this.datefechanacimientoconyugesocio.Name = "datefechanacimientoconyugesocio";
 			this.datefechanacimientoconyugesocio.Size = new System.Drawing.Size(255, 20);
 			this.datefechanacimientoconyugesocio.TabIndex = 76;
@@ -555,7 +555,7 @@
 			this.label20.AutoSize = true;
 			this.label20.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label20.ForeColor = System.Drawing.Color.Gainsboro;
-			this.label20.Location = new System.Drawing.Point(560, 194);
+			this.label20.Location = new System.Drawing.Point(560, 226);
 			this.label20.Name = "label20";
 			this.label20.Size = new System.Drawing.Size(148, 17);
 			this.label20.TabIndex = 75;
@@ -567,7 +567,7 @@
 			this.label19.AutoSize = true;
 			this.label19.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label19.ForeColor = System.Drawing.Color.Gainsboro;
-			this.label19.Location = new System.Drawing.Point(560, 158);
+			this.label19.Location = new System.Drawing.Point(560, 190);
 			this.label19.Name = "label19";
 			this.label19.Size = new System.Drawing.Size(29, 17);
 			this.label19.TabIndex = 74;
@@ -576,7 +576,7 @@
 			// txtrutconyugesocio
 			// 
 			this.txtrutconyugesocio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.txtrutconyugesocio.Location = new System.Drawing.Point(712, 158);
+			this.txtrutconyugesocio.Location = new System.Drawing.Point(712, 190);
 			this.txtrutconyugesocio.Name = "txtrutconyugesocio";
 			this.txtrutconyugesocio.Size = new System.Drawing.Size(255, 20);
 			this.txtrutconyugesocio.TabIndex = 73;
