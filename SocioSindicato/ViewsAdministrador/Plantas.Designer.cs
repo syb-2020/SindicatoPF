@@ -418,6 +418,7 @@
 			this.Controls.Add(this.gridverplantas);
 			this.Name = "Plantas";
 			this.Text = "Plantas";
+			this.Load += new System.EventHandler(this.Plantas_Load);
 			((System.ComponentModel.ISupportInitialize)(this.gridverplantas)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridcasadohijo)).EndInit();
 			this.ResumeLayout(false);

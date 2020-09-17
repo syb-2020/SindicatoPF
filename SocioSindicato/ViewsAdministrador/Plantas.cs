@@ -1955,9 +1955,28 @@ namespace SocioSindicato.ViewsAdministrador
                                 };
 
 
-                gridverplantas.DataSource = sociocasadomayor40hijomayor15.OrderBy(s => s.NOMBRE).ToList();
+                if (sociocasadomayor40hijomayor15.Count() != 0)
+                {
 
+
+                    MessageBox.Show("Socio encontrado!");
+                    gridverplantas.DataSource = sociocasadomayor40hijomayor15.OrderBy(s => s.NOMBRE).ToList();
+
+
+
+                }
+                else
+                {
+                    MessageBox.Show("No Existen Socios Solteros", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                }
+                
             }      
         }
+
+		private void Plantas_Load(object sender, EventArgs e)
+		{
+
+		}
 	}
 }
