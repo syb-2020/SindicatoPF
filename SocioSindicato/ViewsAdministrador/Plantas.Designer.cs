@@ -45,6 +45,7 @@
 			this.Buscarsolterossinhijos = new FontAwesome.Sharp.IconButton();
 			this.casadomayode40 = new FontAwesome.Sharp.IconButton();
 			this.gridcasadohijo = new System.Windows.Forms.DataGridView();
+			this.lbplantas = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.gridverplantas)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridcasadohijo)).BeginInit();
 			this.SuspendLayout();
@@ -393,12 +394,26 @@
 			this.gridcasadohijo.TabIndex = 29;
 			this.gridcasadohijo.Visible = false;
 			// 
+			// lbplantas
+			// 
+			this.lbplantas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.lbplantas.AutoSize = true;
+			this.lbplantas.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lbplantas.ForeColor = System.Drawing.Color.Gainsboro;
+			this.lbplantas.Location = new System.Drawing.Point(72, 190);
+			this.lbplantas.Name = "lbplantas";
+			this.lbplantas.Size = new System.Drawing.Size(0, 23);
+			this.lbplantas.TabIndex = 34;
+			this.lbplantas.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+			this.lbplantas.Visible = false;
+			// 
 			// Plantas
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(56)))), ((int)(((byte)(104)))));
 			this.ClientSize = new System.Drawing.Size(1250, 747);
+			this.Controls.Add(this.lbplantas);
 			this.Controls.Add(this.gridcasadohijo);
 			this.Controls.Add(this.casadomayode40);
 			this.Controls.Add(this.Buscarsolterossinhijos);
@@ -444,5 +459,6 @@
 		private FontAwesome.Sharp.IconButton Buscarsolterossinhijos;
 		private FontAwesome.Sharp.IconButton casadomayode40;
 		private System.Windows.Forms.DataGridView gridcasadohijo;
+		private System.Windows.Forms.Label lbplantas;
 	}
 }

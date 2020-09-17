@@ -66,7 +66,10 @@ namespace SocioSindicato.ViewsAdministrador
                 else
                 {
                     cbordenarcatplant.SelectedIndex = 0;
+                    lbplantas.Text = "Planta 1";
+                    lbplantas.Visible = true;
                     MessageBox.Show("Socio Planta 1 Encontrados!");
+                   
 
                   
                 }
@@ -108,6 +111,8 @@ namespace SocioSindicato.ViewsAdministrador
                 else
                 {
                     cbordenarcatplant.SelectedIndex = 0;
+                    lbplantas.Text = "Planta 2";
+                    lbplantas.Visible = true;
                     MessageBox.Show("Socio Planta 2 Encontrados!");
                    
 
@@ -150,6 +155,8 @@ namespace SocioSindicato.ViewsAdministrador
                 else
                 {
                     cbordenarcatplant.SelectedIndex = 0;
+                    lbplantas.Text = "Planta 3";
+                    lbplantas.Visible = true;
                     MessageBox.Show("Socio Planta 3 Encontrados!");
 
 
@@ -190,6 +197,8 @@ namespace SocioSindicato.ViewsAdministrador
                 else
                 {
                     cbordenarcatplant.SelectedIndex = 0;
+                    lbplantas.Text = "Planta 4";
+                    lbplantas.Visible = true;
                     MessageBox.Show("Socio Planta 4 Encontrados!");
 
 
@@ -231,6 +240,8 @@ namespace SocioSindicato.ViewsAdministrador
                 else
                 {
                     cbordenarcatplant.SelectedIndex = 0;
+                    lbplantas.Text = "Planta CDT";
+                    lbplantas.Visible = true;
                     MessageBox.Show("Socio Planta CDT Encontrados!");
 
                 }
@@ -270,6 +281,8 @@ namespace SocioSindicato.ViewsAdministrador
                 else
                 {
                     cbordenarcatplant.SelectedIndex = 0;
+                    lbplantas.Text = "Planta Pizza";
+                    lbplantas.Visible = true;
                     MessageBox.Show("Socio Planta Pizza Encontrados!");
 
 
@@ -309,6 +322,8 @@ namespace SocioSindicato.ViewsAdministrador
                 else
                 {
                     cbordenarcatplant.SelectedIndex = 0;
+                    lbplantas.Text = "Planta Carnicos";
+                    lbplantas.Visible = true;
                     MessageBox.Show("Socio Planta Carnicos Encontrados!");
 
 
@@ -349,6 +364,8 @@ namespace SocioSindicato.ViewsAdministrador
                 else
                 {
                     cbordenarcatplant.SelectedIndex = 0;
+                    lbplantas.Text = "Planta Mujeres";
+                    lbplantas.Visible = true;
                     MessageBox.Show("Socio Planta Mujeres Encontrados!");
 
 
@@ -1796,7 +1813,7 @@ namespace SocioSindicato.ViewsAdministrador
                             gridverplantas.DataSource = sociosplanta1.OrderBy(s => s.PLANTA).ToList();
 
                         }
-
+                                                                                                                                                          
                     }
                 }
                 else if (Convert.ToInt32(indice.ToString()) == 5)
@@ -1877,7 +1894,9 @@ namespace SocioSindicato.ViewsAdministrador
 					
 
 						MessageBox.Show("Socio encontrado!");
-						gridverplantas.DataSource = sociosolterosinhijo.OrderBy(s => s.NOMBRE).ToList();
+                    lbplantas.Text = "Socios Solteros Sin Hijos";
+                    lbplantas.Visible = true;
+                    gridverplantas.DataSource = sociosolterosinhijo.OrderBy(s => s.NOMBRE).ToList();
 
 
 
@@ -1960,6 +1979,8 @@ namespace SocioSindicato.ViewsAdministrador
 
 
                     MessageBox.Show("Socio encontrado!");
+                    lbplantas.Text = "Socios Casados Mayores De 40";
+                    lbplantas.Visible = true;
                     gridverplantas.DataSource = sociocasadomayor40hijomayor15.OrderBy(s => s.NOMBRE).ToList();
 
 
