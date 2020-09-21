@@ -568,9 +568,10 @@ namespace SocioSindicato.ViewsAdministrador
             }
         }
 
-     
+
 
         //     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+       
         private void btneditar_Click(object sender, EventArgs e)
         {
             using (sindicatoPFEntities context = new sindicatoPFEntities())
@@ -585,18 +586,11 @@ namespace SocioSindicato.ViewsAdministrador
                 }
                 else
                 {
-					using (sindicatoPFEntities db = new sindicatoPFEntities())
-					{
-						var oImage = db.Socio.Find(buscar_rut);
-						MemoryStream ms = new MemoryStream(oImage.imagen);
-						Bitmap bmp = new Bitmap(ms);
-						fotosocio.Image = bmp;
-						file2 = ms.ToArray();
-					}
+					
 
 					Socio nuevosocio = new Socio();
                     nuevosocio = context.Socio.Find(buscar_rut);
-                    nuevosocio.imagen = file2;
+                    nuevosocio.imagen = file;
                     nuevosocio.nombre_socio = txtnombresocio.Text;
                     nuevosocio.fecha_ingreso = Convert.ToDateTime(dateingresoempresasocio.Text);
                     nuevosocio.id_categoria = Convert.ToInt32(combocategoriasocio.SelectedValue);

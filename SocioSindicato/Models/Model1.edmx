@@ -54,7 +54,7 @@
             <PropertyRef Name="rut_socio" />
           </Key>
           <Property Name="rut_socio" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="imagen" Type="image" />
+          <Property Name="imagen" Type="image" Nullable="false" />
           <Property Name="nombre_socio" Type="varchar" MaxLength="500" Nullable="false" />
           <Property Name="fecha_ingreso" Type="datetime" />
           <Property Name="id_categoria" Type="int" Nullable="false" />
@@ -89,7 +89,7 @@
           <Property Name="clave" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="id_rol" Type="int" Nullable="false" />
         </EntityType>
-        <Association Name="FK__Conyuge__rut_soc__5070F446">
+        <Association Name="FK__Conyuge__rut_soc__36B12243">
           <End Role="Socio" Type="Self.Socio" Multiplicity="1" />
           <End Role="Conyuge" Type="Self.Conyuge" Multiplicity="*" />
           <ReferentialConstraint>
@@ -101,7 +101,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Hijo__rut_socio__5441852A">
+        <Association Name="FK__Hijo__rut_socio__37A5467C">
           <End Role="Socio" Type="Self.Socio" Multiplicity="1" />
           <End Role="Hijo" Type="Self.Hijo" Multiplicity="*" />
           <ReferentialConstraint>
@@ -113,7 +113,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Socio__id_catego__4BAC3F29">
+        <Association Name="FK__Socio__id_catego__38996AB5">
           <End Role="Categoria" Type="Self.Categoria" Multiplicity="1" />
           <End Role="Socio" Type="Self.Socio" Multiplicity="*" />
           <ReferentialConstraint>
@@ -125,7 +125,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Socio__id_planta__4CA06362">
+        <Association Name="FK__Socio__id_planta__398D8EEE">
           <End Role="Planta" Type="Self.Planta" Multiplicity="1" />
           <End Role="Socio" Type="Self.Socio" Multiplicity="*" />
           <ReferentialConstraint>
@@ -137,7 +137,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Usuario__id_rol__276EDEB3">
+        <Association Name="FK__Usuario__id_rol__3A81B327">
           <End Role="Rol" Type="Self.Rol" Multiplicity="1" />
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
           <ReferentialConstraint>
@@ -158,23 +158,23 @@
           <EntitySet Name="Socio" EntityType="Self.Socio" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="socioEliminado" EntityType="Self.socioEliminado" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__Conyuge__rut_soc__5070F446" Association="Self.FK__Conyuge__rut_soc__5070F446">
+          <AssociationSet Name="FK__Conyuge__rut_soc__36B12243" Association="Self.FK__Conyuge__rut_soc__36B12243">
             <End Role="Socio" EntitySet="Socio" />
             <End Role="Conyuge" EntitySet="Conyuge" />
           </AssociationSet>
-          <AssociationSet Name="FK__Hijo__rut_socio__5441852A" Association="Self.FK__Hijo__rut_socio__5441852A">
+          <AssociationSet Name="FK__Hijo__rut_socio__37A5467C" Association="Self.FK__Hijo__rut_socio__37A5467C">
             <End Role="Socio" EntitySet="Socio" />
             <End Role="Hijo" EntitySet="Hijo" />
           </AssociationSet>
-          <AssociationSet Name="FK__Socio__id_catego__4BAC3F29" Association="Self.FK__Socio__id_catego__4BAC3F29">
+          <AssociationSet Name="FK__Socio__id_catego__38996AB5" Association="Self.FK__Socio__id_catego__38996AB5">
             <End Role="Categoria" EntitySet="Categoria" />
             <End Role="Socio" EntitySet="Socio" />
           </AssociationSet>
-          <AssociationSet Name="FK__Socio__id_planta__4CA06362" Association="Self.FK__Socio__id_planta__4CA06362">
+          <AssociationSet Name="FK__Socio__id_planta__398D8EEE" Association="Self.FK__Socio__id_planta__398D8EEE">
             <End Role="Planta" EntitySet="Planta" />
             <End Role="Socio" EntitySet="Socio" />
           </AssociationSet>
-          <AssociationSet Name="FK__Usuario__id_rol__276EDEB3" Association="Self.FK__Usuario__id_rol__276EDEB3">
+          <AssociationSet Name="FK__Usuario__id_rol__3A81B327" Association="Self.FK__Usuario__id_rol__3A81B327">
             <End Role="Rol" EntitySet="Rol" />
             <End Role="Usuario" EntitySet="Usuario" />
           </AssociationSet>
@@ -190,7 +190,7 @@
           </Key>
           <Property Name="id_categoria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="numero_categoria" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Socio" Relationship="Self.FK__Socio__id_catego__4BAC3F29" FromRole="Categoria" ToRole="Socio" />
+          <NavigationProperty Name="Socio" Relationship="Self.FK__Socio__id_catego__38996AB5" FromRole="Categoria" ToRole="Socio" />
         </EntityType>
         <EntityType Name="Conyuge">
           <Key>
@@ -203,7 +203,7 @@
           <Property Name="nacimiento" Type="DateTime" Precision="3" />
           <Property Name="edad" Type="Int32" Nullable="false" />
           <Property Name="rut_socio" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Socio" Relationship="Self.FK__Conyuge__rut_soc__5070F446" FromRole="Conyuge" ToRole="Socio" />
+          <NavigationProperty Name="Socio" Relationship="Self.FK__Conyuge__rut_soc__36B12243" FromRole="Conyuge" ToRole="Socio" />
         </EntityType>
         <EntityType Name="Hijo">
           <Key>
@@ -215,7 +215,7 @@
           <Property Name="sexo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="nacimiento" Type="DateTime" Precision="3" />
           <Property Name="rut_socio" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Socio" Relationship="Self.FK__Hijo__rut_socio__5441852A" FromRole="Hijo" ToRole="Socio" />
+          <NavigationProperty Name="Socio" Relationship="Self.FK__Hijo__rut_socio__37A5467C" FromRole="Hijo" ToRole="Socio" />
         </EntityType>
         <EntityType Name="Planta">
           <Key>
@@ -223,7 +223,7 @@
           </Key>
           <Property Name="id_planta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Socio" Relationship="Self.FK__Socio__id_planta__4CA06362" FromRole="Planta" ToRole="Socio" />
+          <NavigationProperty Name="Socio" Relationship="Self.FK__Socio__id_planta__398D8EEE" FromRole="Planta" ToRole="Socio" />
         </EntityType>
         <EntityType Name="Rol">
           <Key>
@@ -231,14 +231,14 @@
           </Key>
           <Property Name="id_rol" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Usuario" Relationship="Self.FK__Usuario__id_rol__276EDEB3" FromRole="Rol" ToRole="Usuario" />
+          <NavigationProperty Name="Usuario" Relationship="Self.FK__Usuario__id_rol__3A81B327" FromRole="Rol" ToRole="Usuario" />
         </EntityType>
         <EntityType Name="Socio">
           <Key>
             <PropertyRef Name="rut_socio" />
           </Key>
           <Property Name="rut_socio" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="imagen" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="imagen" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
           <Property Name="nombre_socio" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="fecha_ingreso" Type="DateTime" Precision="3" />
           <Property Name="id_categoria" Type="Int32" Nullable="false" />
@@ -253,10 +253,10 @@
           <Property Name="correo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="datos_papa" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="datos_mama" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Categoria" Relationship="Self.FK__Socio__id_catego__4BAC3F29" FromRole="Socio" ToRole="Categoria" />
-          <NavigationProperty Name="Conyuge" Relationship="Self.FK__Conyuge__rut_soc__5070F446" FromRole="Socio" ToRole="Conyuge" />
-          <NavigationProperty Name="Hijo" Relationship="Self.FK__Hijo__rut_socio__5441852A" FromRole="Socio" ToRole="Hijo" />
-          <NavigationProperty Name="Planta" Relationship="Self.FK__Socio__id_planta__4CA06362" FromRole="Socio" ToRole="Planta" />
+          <NavigationProperty Name="Categoria" Relationship="Self.FK__Socio__id_catego__38996AB5" FromRole="Socio" ToRole="Categoria" />
+          <NavigationProperty Name="Conyuge" Relationship="Self.FK__Conyuge__rut_soc__36B12243" FromRole="Socio" ToRole="Conyuge" />
+          <NavigationProperty Name="Hijo" Relationship="Self.FK__Hijo__rut_socio__37A5467C" FromRole="Socio" ToRole="Hijo" />
+          <NavigationProperty Name="Planta" Relationship="Self.FK__Socio__id_planta__398D8EEE" FromRole="Socio" ToRole="Planta" />
         </EntityType>
         <EntityType Name="socioEliminado">
           <Key>
@@ -276,9 +276,9 @@
           <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="clave" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="id_rol" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Rol" Relationship="Self.FK__Usuario__id_rol__276EDEB3" FromRole="Usuario" ToRole="Rol" />
+          <NavigationProperty Name="Rol" Relationship="Self.FK__Usuario__id_rol__3A81B327" FromRole="Usuario" ToRole="Rol" />
         </EntityType>
-        <Association Name="FK__Socio__id_catego__4BAC3F29">
+        <Association Name="FK__Socio__id_catego__38996AB5">
           <End Role="Categoria" Type="Self.Categoria" Multiplicity="1" />
           <End Role="Socio" Type="Self.Socio" Multiplicity="*" />
           <ReferentialConstraint>
@@ -290,7 +290,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Conyuge__rut_soc__5070F446">
+        <Association Name="FK__Conyuge__rut_soc__36B12243">
           <End Role="Socio" Type="Self.Socio" Multiplicity="1" />
           <End Role="Conyuge" Type="Self.Conyuge" Multiplicity="*" />
           <ReferentialConstraint>
@@ -302,7 +302,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Hijo__rut_socio__5441852A">
+        <Association Name="FK__Hijo__rut_socio__37A5467C">
           <End Role="Socio" Type="Self.Socio" Multiplicity="1" />
           <End Role="Hijo" Type="Self.Hijo" Multiplicity="*" />
           <ReferentialConstraint>
@@ -314,7 +314,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Socio__id_planta__4CA06362">
+        <Association Name="FK__Socio__id_planta__398D8EEE">
           <End Role="Planta" Type="Self.Planta" Multiplicity="1" />
           <End Role="Socio" Type="Self.Socio" Multiplicity="*" />
           <ReferentialConstraint>
@@ -326,7 +326,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Usuario__id_rol__276EDEB3">
+        <Association Name="FK__Usuario__id_rol__3A81B327">
           <End Role="Rol" Type="Self.Rol" Multiplicity="1" />
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
           <ReferentialConstraint>
@@ -347,23 +347,23 @@
           <EntitySet Name="Socio" EntityType="Self.Socio" />
           <EntitySet Name="socioEliminado" EntityType="Self.socioEliminado" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" />
-          <AssociationSet Name="FK__Socio__id_catego__4BAC3F29" Association="Self.FK__Socio__id_catego__4BAC3F29">
+          <AssociationSet Name="FK__Socio__id_catego__38996AB5" Association="Self.FK__Socio__id_catego__38996AB5">
             <End Role="Categoria" EntitySet="Categoria" />
             <End Role="Socio" EntitySet="Socio" />
           </AssociationSet>
-          <AssociationSet Name="FK__Conyuge__rut_soc__5070F446" Association="Self.FK__Conyuge__rut_soc__5070F446">
+          <AssociationSet Name="FK__Conyuge__rut_soc__36B12243" Association="Self.FK__Conyuge__rut_soc__36B12243">
             <End Role="Socio" EntitySet="Socio" />
             <End Role="Conyuge" EntitySet="Conyuge" />
           </AssociationSet>
-          <AssociationSet Name="FK__Hijo__rut_socio__5441852A" Association="Self.FK__Hijo__rut_socio__5441852A">
+          <AssociationSet Name="FK__Hijo__rut_socio__37A5467C" Association="Self.FK__Hijo__rut_socio__37A5467C">
             <End Role="Socio" EntitySet="Socio" />
             <End Role="Hijo" EntitySet="Hijo" />
           </AssociationSet>
-          <AssociationSet Name="FK__Socio__id_planta__4CA06362" Association="Self.FK__Socio__id_planta__4CA06362">
+          <AssociationSet Name="FK__Socio__id_planta__398D8EEE" Association="Self.FK__Socio__id_planta__398D8EEE">
             <End Role="Planta" EntitySet="Planta" />
             <End Role="Socio" EntitySet="Socio" />
           </AssociationSet>
-          <AssociationSet Name="FK__Usuario__id_rol__276EDEB3" Association="Self.FK__Usuario__id_rol__276EDEB3">
+          <AssociationSet Name="FK__Usuario__id_rol__3A81B327" Association="Self.FK__Usuario__id_rol__3A81B327">
             <End Role="Rol" EntitySet="Rol" />
             <End Role="Usuario" EntitySet="Usuario" />
           </AssociationSet>
